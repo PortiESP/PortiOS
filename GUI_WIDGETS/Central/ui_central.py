@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'centralTXuThr.ui'
+## Form generated from reading UI file 'centralXvkOQs.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -61,7 +61,10 @@ class Ui_Central(object):
         self.label_clock.setGeometry(QRect(325, 0, 150, 50))
         font = QFont()
         font.setFamily(u"Bahnschrift Light Condensed")
-        font.setPointSize(24)
+        font.setPointSize(25)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setWeight(50)
         self.label_clock.setFont(font)
         self.label_clock.setStyleSheet(u"color:rgb(255,0,0);")
         self.label_clock.setAlignment(Qt.AlignCenter)
