@@ -6,6 +6,8 @@ class Main_GUI:
 		# Setting window
 		self.win = main_win
 
+		self.win.showFullScreen()
+
 		# Getting central GUI
 		GUI_Central = Ui_Central()
 		GUI_Central.setupUi(self.win)

@@ -1,14 +1,14 @@
 import threading
-from GUI_PACKAGES.bluetooth_controls.bt_control_panel import BT_Control_Panel
+# from GUI_PACKAGES.bluetooth_controls.bt_control_panel import BT_Control_Panel
 
 # Frame will be GUI_Central object
 class Main_funcs:
 	def main_funcs_setup(frame):
-		frame.mediaPlayer = BT_Control_Panel()
-		Main_funcs.centralSetup(frame)
-
+		# Main_funcs.centralSetup(frame)
+		pass
 
 	def centralSetup(frame):
+		frame.mediaPlayer = BT_Control_Panel()
 		# Footer buttons events
 		# frame.footerButton1.clicked.connect(lambda:frame.mediaPlayer.playback_control('previous'))
 		# frame.footerButton2.clicked.connect(lambda:)
