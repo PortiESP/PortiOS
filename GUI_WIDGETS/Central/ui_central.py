@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'centralXvkOQs.ui'
+## Form generated from reading UI file 'centralgMqmtB.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -303,18 +303,18 @@ class Ui_Central(object):
 "border:none;")
         self.line_4.setFrameShape(QFrame.HLine)
         self.line_4.setFrameShadow(QFrame.Sunken)
-        self.pushButton_9 = QPushButton(self.frame_8)
-        self.pushButton_9.setObjectName(u"pushButton_9")
-        self.pushButton_9.setGeometry(QRect(250, 10, 40, 40))
-        self.pushButton_9.setStyleSheet(u"border:none;\n"
+        self.powerCloseButton = QPushButton(self.frame_8)
+        self.powerCloseButton.setObjectName(u"powerCloseButton")
+        self.powerCloseButton.setGeometry(QRect(250, 10, 40, 40))
+        self.powerCloseButton.setStyleSheet(u"border:none;\n"
 "background:none;")
         icon6 = QIcon()
-        icon6.addFile(u"../../Recursos/png-defaults/fi-rr-cross-small.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.pushButton_9.setIcon(icon6)
-        self.pushButton_9.setIconSize(QSize(30, 30))
+        icon6.addFile(u":/icons_red/Resources/Icons/png-red/fi-rr-cross-small.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.powerCloseButton.setIcon(icon6)
+        self.powerCloseButton.setIconSize(QSize(30, 30))
         Central.setCentralWidget(self.centralwidget)
-        self.frame_volume.raise_()
         self.frame_power.raise_()
+        self.frame_volume.raise_()
         self.frame_background.raise_()
         self.stackedWidget.raise_()
         self.frame_logo.raise_()
@@ -323,7 +323,7 @@ class Ui_Central(object):
 
         self.retranslateUi(Central)
 
-        self.stackedWidget.setCurrentIndex(0)
+        self.stackedWidget.setCurrentIndex(3)
 
 
         QMetaObject.connectSlotsByName(Central)
@@ -335,7 +335,7 @@ class Ui_Central(object):
         self.pushButton_8.setText(QCoreApplication.translate("Central", u"REBOOT", None))
         self.pushButton_7.setText(QCoreApplication.translate("Central", u"SHUTDOWN", None))
         self.label_13.setText(QCoreApplication.translate("Central", u"Power", None))
-        self.pushButton_9.setText("")
+        self.powerCloseButton.setText("")
         pass
     # retranslateUi
 

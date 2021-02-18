@@ -469,7 +469,7 @@ QPushButton:hover{
      </size>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>3</number>
     </property>
     <widget class="QWidget" name="page_dashboard"/>
     <widget class="QWidget" name="page_player"/>
@@ -690,7 +690,7 @@ border:none;</string>
         <enum>Qt::Horizontal</enum>
        </property>
       </widget>
-      <widget class="QPushButton" name="pushButton_9">
+      <widget class="QPushButton" name="powerCloseButton">
        <property name="geometry">
         <rect>
          <x>250</x>
@@ -707,8 +707,8 @@ background:none;</string>
         <string/>
        </property>
        <property name="icon">
-        <iconset>
-         <normaloff>../../Recursos/png-defaults/fi-rr-cross-small.png</normaloff>../../Recursos/png-defaults/fi-rr-cross-small.png</iconset>
+        <iconset resource="../../resources.qrc">
+         <normaloff>:/icons_red/Resources/Icons/png-red/fi-rr-cross-small.png</normaloff>:/icons_red/Resources/Icons/png-red/fi-rr-cross-small.png</iconset>
        </property>
        <property name="iconSize">
         <size>
@@ -720,8 +720,8 @@ background:none;</string>
      </widget>
     </widget>
    </widget>
-   <zorder>frame_volume</zorder>
    <zorder>frame_power</zorder>
+   <zorder>frame_volume</zorder>
    <zorder>frame_background</zorder>
    <zorder>stackedWidget</zorder>
    <zorder>frame_logo</zorder>
