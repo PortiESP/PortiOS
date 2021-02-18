@@ -26,6 +26,8 @@ class Main_GUI:
 
 		# Widget funcs setup
 		Central_funcs.centralSetup(GUI_Central)
+		Apps_funcs.appsSetup(GUI_Apps, GUI_Central.stackedWidget)
+		Settings_funcs.settingsSetup(GUI_Settings)
 
 		# Page test func
 		# Central_funcs.pageTest(GUI_Central)

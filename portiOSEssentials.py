@@ -8,6 +8,8 @@ from GUI_WIDGETS.Settings.ui_design_settings import Ui_Settings_widget
 
 # Import GUI functions
 from GUI_WIDGETS.Central.central_functions import Central_funcs
+from GUI_WIDGETS.Apps_menu.apps_functions import Apps_funcs 
+from GUI_WIDGETS.Settings.settings_functions import Settings_funcs 
 
 
 

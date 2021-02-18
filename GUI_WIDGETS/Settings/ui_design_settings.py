@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'design_settingshKHuHA.ui'
+## Form generated from reading UI file 'design_settingsyjFvoy.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -66,7 +66,7 @@ class Ui_Settings_widget(object):
         self.scrollArea.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignTop)
         self.scrollAreaWidgetContents = QWidget()
         self.scrollAreaWidgetContents.setObjectName(u"scrollAreaWidgetContents")
-        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 180, 400))
+        self.scrollAreaWidgetContents.setGeometry(QRect(0, -100, 180, 400))
         self.verticalLayout = QVBoxLayout(self.scrollAreaWidgetContents)
         self.verticalLayout.setSpacing(0)
         self.verticalLayout.setObjectName(u"verticalLayout")
@@ -94,11 +94,11 @@ class Ui_Settings_widget(object):
         self.horizontalLayout_6.setSpacing(0)
         self.horizontalLayout_6.setObjectName(u"horizontalLayout_6")
         self.horizontalLayout_6.setContentsMargins(0, 0, 0, 0)
-        self.bearing_settings = QPushButton(self.frame_setting_wifi)
-        self.bearing_settings.setObjectName(u"bearing_settings")
-        self.bearing_settings.setMinimumSize(QSize(0, 40))
+        self.bearing_settingsWifi = QPushButton(self.frame_setting_wifi)
+        self.bearing_settingsWifi.setObjectName(u"bearing_settingsWifi")
+        self.bearing_settingsWifi.setMinimumSize(QSize(0, 40))
 
-        self.horizontalLayout_6.addWidget(self.bearing_settings)
+        self.horizontalLayout_6.addWidget(self.bearing_settingsWifi)
 
 
         self.verticalLayout.addWidget(self.frame_setting_wifi)
@@ -174,11 +174,11 @@ class Ui_Settings_widget(object):
         self.horizontalLayout_12.setSpacing(0)
         self.horizontalLayout_12.setObjectName(u"horizontalLayout_12")
         self.horizontalLayout_12.setContentsMargins(0, 0, 0, 0)
-        self.bearing_settingsSysteInfo = QPushButton(self.frame_setting_systemInfo)
-        self.bearing_settingsSysteInfo.setObjectName(u"bearing_settingsSysteInfo")
-        self.bearing_settingsSysteInfo.setMinimumSize(QSize(0, 40))
+        self.bearing_settingsSystemInfo = QPushButton(self.frame_setting_systemInfo)
+        self.bearing_settingsSystemInfo.setObjectName(u"bearing_settingsSystemInfo")
+        self.bearing_settingsSystemInfo.setMinimumSize(QSize(0, 40))
 
-        self.horizontalLayout_12.addWidget(self.bearing_settingsSysteInfo)
+        self.horizontalLayout_12.addWidget(self.bearing_settingsSystemInfo)
 
 
         self.verticalLayout.addWidget(self.frame_setting_systemInfo)
@@ -806,7 +806,7 @@ class Ui_Settings_widget(object):
         self.scrollArea_2.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignTop)
         self.scrollAreaWidgetContents_5 = QWidget()
         self.scrollAreaWidgetContents_5.setObjectName(u"scrollAreaWidgetContents_5")
-        self.scrollAreaWidgetContents_5.setGeometry(QRect(0, 0, 390, 440))
+        self.scrollAreaWidgetContents_5.setGeometry(QRect(0, 0, 398, 440))
         sizePolicy = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Preferred)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -1258,7 +1258,7 @@ class Ui_Settings_widget(object):
         self.scrollArea_4.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignTop)
         self.scrollAreaWidgetContents_7 = QWidget()
         self.scrollAreaWidgetContents_7.setObjectName(u"scrollAreaWidgetContents_7")
-        self.scrollAreaWidgetContents_7.setGeometry(QRect(0, 0, 390, 440))
+        self.scrollAreaWidgetContents_7.setGeometry(QRect(0, 0, 398, 440))
         self.scrollAreaWidgetContents_7.setMinimumSize(QSize(0, 440))
         self.frame_10 = QFrame(self.scrollAreaWidgetContents_7)
         self.frame_10.setObjectName(u"frame_10")
@@ -1793,12 +1793,12 @@ class Ui_Settings_widget(object):
     def retranslateUi(self, Settings_widget):
         Settings_widget.setWindowTitle(QCoreApplication.translate("Settings_widget", u"Form", None))
         self.bearing_settingsBrightness.setText(QCoreApplication.translate("Settings_widget", u"BRIGHTNESS", None))
-        self.bearing_settings.setText(QCoreApplication.translate("Settings_widget", u"WIFI", None))
+        self.bearing_settingsWifi.setText(QCoreApplication.translate("Settings_widget", u"WIFI", None))
         self.bearing_settingsBluetooth.setText(QCoreApplication.translate("Settings_widget", u"BLUETOOTH", None))
         self.bearing_settingsSound.setText(QCoreApplication.translate("Settings_widget", u"SOUND", None))
         self.bearing_settingsStatus.setText(QCoreApplication.translate("Settings_widget", u"STATUS", None))
         self.bearing_settingsGpio.setText(QCoreApplication.translate("Settings_widget", u"GPIO", None))
-        self.bearing_settingsSysteInfo.setText(QCoreApplication.translate("Settings_widget", u"SYSTEM INFO", None))
+        self.bearing_settingsSystemInfo.setText(QCoreApplication.translate("Settings_widget", u"SYSTEM INFO", None))
         self.bearing_settingsTerminal.setText(QCoreApplication.translate("Settings_widget", u"TERMINAL", None))
         self.bearing_settingsAdvanced.setText(QCoreApplication.translate("Settings_widget", u"ADVANCED", None))
         self.label_13.setText(QCoreApplication.translate("Settings_widget", u"Brightness", None))

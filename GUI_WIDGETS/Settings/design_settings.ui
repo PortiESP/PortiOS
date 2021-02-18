@@ -91,7 +91,7 @@ QScrollBar:vertical {
      <property name="geometry">
       <rect>
        <x>0</x>
-       <y>0</y>
+       <y>-100</y>
        <width>180</width>
        <height>400</height>
       </rect>
@@ -177,7 +177,7 @@ QScrollBar:vertical {
           <number>0</number>
          </property>
          <item>
-          <widget class="QPushButton" name="bearing_settings">
+          <widget class="QPushButton" name="bearing_settingsWifi">
            <property name="minimumSize">
             <size>
              <width>0</width>
@@ -377,7 +377,7 @@ QScrollBar:vertical {
           <number>0</number>
          </property>
          <item>
-          <widget class="QPushButton" name="bearing_settingsSysteInfo">
+          <widget class="QPushButton" name="bearing_settingsSystemInfo">
            <property name="minimumSize">
             <size>
              <width>0</width>
@@ -2073,7 +2073,7 @@ QScrollBar:vertical {
          <rect>
           <x>0</x>
           <y>0</y>
-          <width>390</width>
+          <width>398</width>
           <height>440</height>
          </rect>
         </property>
@@ -3356,7 +3356,7 @@ QScrollBar:vertical {
          <rect>
           <x>0</x>
           <y>0</y>
-          <width>390</width>
+          <width>398</width>
           <height>440</height>
          </rect>
         </property>
