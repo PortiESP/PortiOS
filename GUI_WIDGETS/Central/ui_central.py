@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'centralEzZQVJ.ui'
+## Form generated from reading UI file 'centralTXuThr.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -22,7 +22,8 @@ class Ui_Central(object):
         Central.resize(800, 480)
         self.centralwidget = QWidget(Central)
         self.centralwidget.setObjectName(u"centralwidget")
-        self.centralwidget.setStyleSheet(u"border:none; background:none;")
+        self.centralwidget.setStyleSheet(u"border:none; background:none;\n"
+"font-family: \"Bahnschrift Light Condensed\";")
         self.frame_logo = QFrame(self.centralwidget)
         self.frame_logo.setObjectName(u"frame_logo")
         self.frame_logo.setGeometry(QRect(315, 400, 170, 30))
@@ -59,7 +60,7 @@ class Ui_Central(object):
         self.label_clock.setObjectName(u"label_clock")
         self.label_clock.setGeometry(QRect(325, 0, 150, 50))
         font = QFont()
-        font.setFamily(u"Bahnschrift Light SemiCondensed")
+        font.setFamily(u"Bahnschrift Light Condensed")
         font.setPointSize(24)
         self.label_clock.setFont(font)
         self.label_clock.setStyleSheet(u"color:rgb(255,0,0);")
@@ -95,6 +96,7 @@ class Ui_Central(object):
         self.footerButton_1.setObjectName(u"footerButton_1")
         self.footerButton_1.setMinimumSize(QSize(0, 50))
         font1 = QFont()
+        font1.setFamily(u"Bahnschrift Light Condensed")
         font1.setPointSize(8)
         self.footerButton_1.setFont(font1)
         self.footerButton_1.setCursor(QCursor(Qt.PointingHandCursor))
@@ -272,7 +274,7 @@ class Ui_Central(object):
         self.pushButton_8.setObjectName(u"pushButton_8")
         self.pushButton_8.setGeometry(QRect(10, 130, 280, 50))
         font2 = QFont()
-        font2.setFamily(u"Bahnschrift SemiLight")
+        font2.setFamily(u"Bahnschrift Light Condensed")
         font2.setPointSize(11)
         self.pushButton_8.setFont(font2)
         self.pushButton_7 = QPushButton(self.frame_powerMenu)
@@ -286,7 +288,7 @@ class Ui_Central(object):
         self.label_13.setObjectName(u"label_13")
         self.label_13.setGeometry(QRect(10, 10, 200, 40))
         font3 = QFont()
-        font3.setFamily(u"Bahnschrift SemiLight")
+        font3.setFamily(u"Bahnschrift Light Condensed")
         font3.setPointSize(21)
         self.label_13.setFont(font3)
         self.label_13.setStyleSheet(u"color:white;")

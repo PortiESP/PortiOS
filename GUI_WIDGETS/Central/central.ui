@@ -13,7 +13,8 @@
   </property>
   <widget class="QWidget" name="centralwidget">
    <property name="styleSheet">
-    <string notr="true">border:none; background:none;</string>
+    <string notr="true">border:none; background:none;
+font-family: &quot;Bahnschrift Light Condensed&quot;;</string>
    </property>
    <widget class="QFrame" name="frame_logo">
     <property name="geometry">
@@ -130,7 +131,7 @@
      </property>
      <property name="font">
       <font>
-       <family>Bahnschrift Light SemiCondensed</family>
+       <family>Bahnschrift Light Condensed</family>
        <pointsize>24</pointsize>
       </font>
      </property>
@@ -233,6 +234,7 @@ QPushButton:hover{
         </property>
         <property name="font">
          <font>
+          <family>Bahnschrift Light Condensed</family>
           <pointsize>8</pointsize>
          </font>
         </property>
@@ -607,7 +609,7 @@ QPushButton:pressed{
       </property>
       <property name="font">
        <font>
-        <family>Bahnschrift SemiLight</family>
+        <family>Bahnschrift Light Condensed</family>
         <pointsize>11</pointsize>
        </font>
       </property>
@@ -626,7 +628,7 @@ QPushButton:pressed{
       </property>
       <property name="font">
        <font>
-        <family>Bahnschrift SemiLight</family>
+        <family>Bahnschrift Light Condensed</family>
         <pointsize>11</pointsize>
        </font>
       </property>
@@ -654,7 +656,7 @@ QPushButton:pressed{
        </property>
        <property name="font">
         <font>
-         <family>Bahnschrift SemiLight</family>
+         <family>Bahnschrift Light Condensed</family>
          <pointsize>21</pointsize>
         </font>
        </property>
@@ -726,7 +728,7 @@ background:none;</string>
  </widget>
  <resources>
   <include location="../../resources.qrc"/>
-  <include location="../resources.qrc"/>
+  <include location="../../resources.qrc"/>
  </resources>
  <connections/>
 </ui>

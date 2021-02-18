@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'dashboardzmxGhp.ui'
+## Form generated from reading UI file 'dashboardsrwnxH.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -12,6 +12,7 @@ from PySide2.QtCore import *
 from PySide2.QtGui import *
 from PySide2.QtWidgets import *
 
+import resources_rc
 import resources_rc
 
 class Ui_Dashboard_widget(object):

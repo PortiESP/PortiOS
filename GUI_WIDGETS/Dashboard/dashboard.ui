@@ -228,7 +228,7 @@ QLabel{
       <item>
        <widget class="QLabel" name="label_nums">
         <property name="pixmap">
-         <pixmap resource="../resources.qrc">:/styles/Resources/speedNumbers.png</pixmap>
+         <pixmap resource="../../resources.qrc">:/styles/Resources/speedNumbers.png</pixmap>
         </property>
         <property name="scaledContents">
          <bool>true</bool>
@@ -283,7 +283,7 @@ QLabel{
         <string/>
        </property>
        <property name="pixmap">
-        <pixmap resource="../resources.qrc">:/styles/Resources/spotify-logo.png</pixmap>
+        <pixmap resource="../../resources.qrc">:/styles/Resources/spotify-logo.png</pixmap>
        </property>
        <property name="scaledContents">
         <bool>true</bool>
@@ -468,6 +468,7 @@ QSlider::handle:horizontal{
   </widget>
  </widget>
  <resources>
+  <include location="../../resources.qrc"/>
   <include location="../resources.qrc"/>
  </resources>
  <connections/>
