@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'design_settingsWFiaGX.ui'
+## Form generated from reading UI file 'design_settingsBsIkoK.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -19,6 +19,7 @@ class Ui_Settings_widget(object):
         if not Settings_widget.objectName():
             Settings_widget.setObjectName(u"Settings_widget")
         Settings_widget.resize(800, 480)
+        Settings_widget.setStyleSheet(u"border:none;")
         self.frame_settings = QFrame(Settings_widget)
         self.frame_settings.setObjectName(u"frame_settings")
         self.frame_settings.setGeometry(QRect(50, 80, 700, 300))

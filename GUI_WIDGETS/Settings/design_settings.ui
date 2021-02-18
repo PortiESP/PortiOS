@@ -13,6 +13,9 @@
   <property name="windowTitle">
    <string>Form</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">border:none;</string>
+  </property>
   <widget class="QFrame" name="frame_settings">
    <property name="geometry">
     <rect>
