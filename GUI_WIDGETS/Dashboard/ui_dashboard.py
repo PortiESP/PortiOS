@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'dashboardsrwnxH.ui'
+## Form generated from reading UI file 'dashboardDKHptE.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -75,7 +75,7 @@ class Ui_Dashboard_widget(object):
         self.label_kmh.setMaximumSize(QSize(16777215, 38))
         font1 = QFont()
         font1.setFamily(u"Eras Light ITC")
-        font1.setPointSize(23)
+        font1.setPointSize(18)
         font1.setItalic(True)
         self.label_kmh.setFont(font1)
         self.label_kmh.setAlignment(Qt.AlignBottom|Qt.AlignHCenter)

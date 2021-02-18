@@ -144,7 +144,7 @@ QLabel{
           <property name="font">
            <font>
             <family>Eras Light ITC</family>
-            <pointsize>23</pointsize>
+            <pointsize>18</pointsize>
             <italic>true</italic>
            </font>
           </property>
