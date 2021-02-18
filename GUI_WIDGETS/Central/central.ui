@@ -12,10 +12,6 @@
    </rect>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <property name="styleSheet">
-    <string notr="true">border:none; background:none;
-font-family: &quot;Bahnschrift Light Condensed&quot;;</string>
-   </property>
    <widget class="QFrame" name="frame_logo">
     <property name="geometry">
      <rect>
@@ -202,9 +198,6 @@ QPushButton:hover{
        <height>30</height>
       </size>
      </property>
-     <property name="styleSheet">
-      <string notr="true"/>
-     </property>
      <property name="frameShape">
       <enum>QFrame::NoFrame</enum>
      </property>
@@ -357,9 +350,6 @@ QPushButton:hover{
         </property>
         <property name="cursor">
          <cursorShape>PointingHandCursor</cursorShape>
-        </property>
-        <property name="styleSheet">
-         <string notr="true"/>
         </property>
         <property name="icon">
          <iconset resource="../../resources.qrc">

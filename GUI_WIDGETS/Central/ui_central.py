@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'centralicmCUC.ui'
+## Form generated from reading UI file 'centralPDrTho.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -22,8 +22,6 @@ class Ui_Central(object):
         Central.resize(800, 480)
         self.centralwidget = QWidget(Central)
         self.centralwidget.setObjectName(u"centralwidget")
-        self.centralwidget.setStyleSheet(u"border:none; background:none;\n"
-"font-family: \"Bahnschrift Light Condensed\";")
         self.frame_logo = QFrame(self.centralwidget)
         self.frame_logo.setObjectName(u"frame_logo")
         self.frame_logo.setGeometry(QRect(315, 400, 170, 30))
@@ -88,7 +86,6 @@ class Ui_Central(object):
         self.footer_i.setGeometry(QRect(0, 20, 260, 50))
         self.footer_i.setMinimumSize(QSize(260, 50))
         self.footer_i.setMaximumSize(QSize(260, 30))
-        self.footer_i.setStyleSheet(u"")
         self.footer_i.setFrameShape(QFrame.NoFrame)
         self.footer_i.setFrameShadow(QFrame.Raised)
         self.horizontalLayout = QHBoxLayout(self.footer_i)
@@ -147,7 +144,6 @@ class Ui_Central(object):
         self.footerButton_4.setObjectName(u"footerButton_4")
         self.footerButton_4.setMinimumSize(QSize(0, 50))
         self.footerButton_4.setCursor(QCursor(Qt.PointingHandCursor))
-        self.footerButton_4.setStyleSheet(u"")
         icon3 = QIcon()
         icon3.addFile(u":/icons_red/Resources/Icons/png-red/icons-menu.png", QSize(), QIcon.Normal, QIcon.Off)
         self.footerButton_4.setIcon(icon3)

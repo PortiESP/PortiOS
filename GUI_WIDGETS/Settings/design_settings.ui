@@ -13,9 +13,6 @@
   <property name="windowTitle">
    <string>Form</string>
   </property>
-  <property name="styleSheet">
-   <string notr="true">border:none;</string>
-  </property>
   <widget class="QFrame" name="frame_settings">
    <property name="geometry">
     <rect>
@@ -52,7 +49,7 @@
 	background:transparent;
 
 }
-QWidget#scrollAreaWidgetContents{
+#scrollAreaWidgetContents{
 	background-color:rgb(54, 54, 54);
 
 }
@@ -98,9 +95,6 @@ QScrollBar:vertical {
        <width>180</width>
        <height>400</height>
       </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">border:none;</string>
      </property>
      <layout class="QVBoxLayout" name="verticalLayout">
       <property name="spacing">

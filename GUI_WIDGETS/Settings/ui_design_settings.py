@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'design_settingsBsIkoK.ui'
+## Form generated from reading UI file 'design_settingsYVQeEZ.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -19,7 +19,6 @@ class Ui_Settings_widget(object):
         if not Settings_widget.objectName():
             Settings_widget.setObjectName(u"Settings_widget")
         Settings_widget.resize(800, 480)
-        Settings_widget.setStyleSheet(u"border:none;")
         self.frame_settings = QFrame(Settings_widget)
         self.frame_settings.setObjectName(u"frame_settings")
         self.frame_settings.setGeometry(QRect(50, 80, 700, 300))
@@ -33,7 +32,7 @@ class Ui_Settings_widget(object):
 "	background:transparent;\n"
 "\n"
 "}\n"
-"QWidget#scrollAreaWidgetContents{\n"
+"#scrollAreaWidgetContents{\n"
 "	background-color:rgb(54, 54, 54);\n"
 "\n"
 "}\n"
@@ -69,7 +68,6 @@ class Ui_Settings_widget(object):
         self.scrollAreaWidgetContents = QWidget()
         self.scrollAreaWidgetContents.setObjectName(u"scrollAreaWidgetContents")
         self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 180, 400))
-        self.scrollAreaWidgetContents.setStyleSheet(u"border:none;")
         self.verticalLayout = QVBoxLayout(self.scrollAreaWidgetContents)
         self.verticalLayout.setSpacing(0)
         self.verticalLayout.setObjectName(u"verticalLayout")
