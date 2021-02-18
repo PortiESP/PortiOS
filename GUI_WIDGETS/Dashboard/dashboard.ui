@@ -173,7 +173,7 @@ QLabel{
           <property name="font">
            <font>
             <family>Bahnschrift Light Condensed</family>
-            <pointsize>64</pointsize>
+            <pointsize>58</pointsize>
             <weight>50</weight>
             <italic>false</italic>
             <bold>false</bold>
