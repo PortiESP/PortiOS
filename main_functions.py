@@ -4,24 +4,32 @@ import threading
 # Frame will be GUI_Central object
 class Main_funcs:
 	def main_funcs_setup(frame):
-		# Main_funcs.centralSetup(frame)
+		Main_funcs.centralSetup(frame)
 		pass
 
 	def centralSetup(frame):
-		frame.mediaPlayer = BT_Control_Panel()
+		frame.volumeVisivility = False
+
+		# frame.mediaPlayer = BT_Control_Panel()
 		# Footer buttons events
-		# frame.footerButton1.clicked.connect(lambda:frame.mediaPlayer.playback_control('previous'))
-		# frame.footerButton2.clicked.connect(lambda:)
-		# frame.footerButton3.clicked.connect(lambda:)
-		# frame.footerButton4.clicked.connect(lambda:)
-		# frame.footerButton5.clicked.connect(lambda:)
-		# frame.footerButton6.clicked.connect(lambda:)
+		# frame.footerButton_1.clicked.connect(lambda:frame.mediaPlayer.playback_control('previous'))
+		# frame.footerButton_2.clicked.connect(lambda:)
+		# frame.footerButton_3.clicked.connect(lambda:)
+		frame.footerButton_4.clicked.connect(lambda:Main_funcs.setPage(frame, 3))
+		frame.footerButton_5.clicked.connect(lambda:Main_funcs.toogle_volume(frame))
+		# frame.footerButton_6.clicked.connect(lambda:)
 		pass
 		
-
+	def toogle_volume(frame):
+		frame.volumeVisivility = (not frame.volumeVisivility)
+		if frame.volumeVisivility:
+			frame.frame_volume.raise_()
+		else:
+			frame.frame_volume.lower()
 
 
 	def setPage(frame, index):
+		print('Changing to page ',index)
 		frame.stackedWidget.setCurrentIndex(index)
 
 
