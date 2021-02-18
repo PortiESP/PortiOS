@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'dashboardRcuIdl.ui'
+## Form generated from reading UI file 'dashboardicrYWv.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -88,7 +88,7 @@ class Ui_Dashboard_widget(object):
         self.label_vel.setMaximumSize(QSize(9999, 9999))
         font2 = QFont()
         font2.setFamily(u"Bahnschrift Light Condensed")
-        font2.setPointSize(10)
+        font2.setPointSize(58)
         font2.setBold(False)
         font2.setItalic(False)
         font2.setUnderline(False)
