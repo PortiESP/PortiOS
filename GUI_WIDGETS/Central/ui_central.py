@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'centralgMqmtB.ui'
+## Form generated from reading UI file 'centralicmCUC.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -323,7 +323,7 @@ class Ui_Central(object):
 
         self.retranslateUi(Central)
 
-        self.stackedWidget.setCurrentIndex(3)
+        self.stackedWidget.setCurrentIndex(0)
 
 
         QMetaObject.connectSlotsByName(Central)
