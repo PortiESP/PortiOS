@@ -91,10 +91,13 @@ QScrollBar:vertical {
      <property name="geometry">
       <rect>
        <x>0</x>
-       <y>-100</y>
+       <y>0</y>
        <width>180</width>
        <height>400</height>
       </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:none;</string>
      </property>
      <layout class="QVBoxLayout" name="verticalLayout">
       <property name="spacing">
@@ -2073,7 +2076,7 @@ QScrollBar:vertical {
          <rect>
           <x>0</x>
           <y>0</y>
-          <width>398</width>
+          <width>390</width>
           <height>440</height>
          </rect>
         </property>
@@ -2945,8 +2948,8 @@ QPushButton:pressed{
         <string/>
        </property>
        <property name="icon">
-        <iconset>
-         <normaloff>../../Recursos/png-white/fi-rr-arrow-small-right.png</normaloff>../../Recursos/png-white/fi-rr-arrow-small-right.png</iconset>
+        <iconset resource="../../resources.qrc">
+         <normaloff>:/icons_white/Resources/Icons/png-white/fi-rr-arrow-small-right.png</normaloff>:/icons_white/Resources/Icons/png-white/fi-rr-arrow-small-right.png</iconset>
        </property>
        <property name="iconSize">
         <size>
@@ -3062,8 +3065,8 @@ QPushButton:pressed{
         <string/>
        </property>
        <property name="icon">
-        <iconset>
-         <normaloff>../../Recursos/png-white/fi-rr-arrow-small-right.png</normaloff>../../Recursos/png-white/fi-rr-arrow-small-right.png</iconset>
+        <iconset resource="../../resources.qrc">
+         <normaloff>:/icons_white/Resources/Icons/png-white/fi-rr-arrow-small-right.png</normaloff>:/icons_white/Resources/Icons/png-white/fi-rr-arrow-small-right.png</iconset>
        </property>
        <property name="iconSize">
         <size>
@@ -3356,7 +3359,7 @@ QScrollBar:vertical {
          <rect>
           <x>0</x>
           <y>0</y>
-          <width>398</width>
+          <width>390</width>
           <height>440</height>
          </rect>
         </property>
@@ -4959,6 +4962,8 @@ QCheckBox::indicator:checked{
    </widget>
   </widget>
  </widget>
- <resources/>
+ <resources>
+  <include location="../../resources.qrc"/>
+ </resources>
  <connections/>
 </ui>
