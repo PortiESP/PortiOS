@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'design_settingsYjcaUe.ui'
+## Form generated from reading UI file 'design_settingsWFiaGX.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -1229,7 +1229,7 @@ class Ui_Settings_widget(object):
 "	background:transparent;\n"
 "\n"
 "}\n"
-"QScrollArea QWidget{\n"
+"QScrollArea QWidget#scrollAreaWidgetContents_7{\n"
 "	background-color:rgb(20,20,20);\n"
 "\n"
 "}\n"
