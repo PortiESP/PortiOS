@@ -25,10 +25,10 @@ class Main_GUI:
 		GUI_Settings.setupUi(GUI_Central.page_settings)
 
 		# Widget funcs setup
-		Main_funcs.main_funcs_setup(GUI_Central)
+		Central_funcs.centralSetup(GUI_Central)
 
 		# Page test func
-		Main_funcs.pageTest(GUI_Central)
+		# Central_funcs.pageTest(GUI_Central)
 
 
 #######################################################

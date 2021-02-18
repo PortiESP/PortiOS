@@ -7,7 +7,7 @@ from GUI_WIDGETS.Media_player.ui_design_player import Ui_Player_widget
 from GUI_WIDGETS.Settings.ui_design_settings import Ui_Settings_widget
 
 # Import GUI functions
-from main_functions import *
+from GUI_WIDGETS.Central.central_functions import Central_funcs
 
 
 
