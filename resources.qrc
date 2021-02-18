@@ -1,0 +1,96 @@
+<RCC>
+  <qresource prefix="styles">
+    <file>Resources/speedNumbers.png</file>
+    <file>Resources/appbox.png</file>
+    <file>Resources/equalicer_background.jpg</file>
+    <file>Resources/footer_red.png</file>
+    <file>Resources/header_red.png</file>
+    <file>Resources/porti_os.png</file>
+    <file>Resources/spotify-logo.png</file>
+  </qresource>
+  <qresource prefix="icons_red">
+    <file>Resources/Icons/png-red/back.png</file>
+    <file>Resources/Icons/png-red/chrome (1).png</file>
+    <file>Resources/Icons/png-red/cloud.png</file>
+    <file>Resources/Icons/png-red/fast-forward.png</file>
+    <file>Resources/Icons/png-red/fi-rr-angle-double-small-left.png</file>
+    <file>Resources/Icons/png-red/fi-rr-angle-double-small-right.png</file>
+    <file>Resources/Icons/png-red/fi-rr-apps.png</file>
+    <file>Resources/Icons/png-red/fi-rr-arrow-small-right.png</file>
+    <file>Resources/Icons/png-red/fi-rr-cross-small.png</file>
+    <file>Resources/Icons/png-red/fi-rr-dashboard.png</file>
+    <file>Resources/Icons/png-red/fi-rr-flag.png</file>
+    <file>Resources/Icons/png-red/fi-rr-pause.png</file>
+    <file>Resources/Icons/png-red/fi-rr-play.png</file>
+    <file>Resources/Icons/png-red/fi-rr-power.png</file>
+    <file>Resources/Icons/png-red/fi-rr-refresh.png</file>
+    <file>Resources/Icons/png-red/fi-rr-settings-sliders.png</file>
+    <file>Resources/Icons/png-red/fi-rr-volume.png</file>
+    <file>Resources/Icons/png-red/icons-menu.png</file>
+    <file>Resources/Icons/png-red/idea.png</file>
+    <file>Resources/Icons/png-red/levels.png</file>
+    <file>Resources/Icons/png-red/maps-and-flags.png</file>
+    <file>Resources/Icons/png-red/minus.png</file>
+    <file>Resources/Icons/png-red/mute.png</file>
+    <file>Resources/Icons/png-red/next-1.png</file>
+    <file>Resources/Icons/png-red/pause.png</file>
+    <file>Resources/Icons/png-red/pause-fill.png</file>
+    <file>Resources/Icons/png-red/play-button.png</file>
+    <file>Resources/Icons/png-red/play-fill.png</file>
+    <file>Resources/Icons/png-red/plus.png</file>
+    <file>Resources/Icons/png-red/rewind.png</file>
+    <file>Resources/Icons/png-red/seno.png</file>
+    <file>Resources/Icons/png-red/sound-waves.png</file>
+  </qresource>
+  <qresource prefix="icons_white">
+    <file>Resources/Icons/png-white/chrome (1).png</file>
+    <file>Resources/Icons/png-white/cloud.png</file>
+    <file>Resources/Icons/png-white/fi-rr-angle-double-small-left.png</file>
+    <file>Resources/Icons/png-white/fi-rr-angle-double-small-right.png</file>
+    <file>Resources/Icons/png-white/fi-rr-apps.png</file>
+    <file>Resources/Icons/png-white/fi-rr-arrow-small-right.png</file>
+    <file>Resources/Icons/png-white/fi-rr-dashboard.png</file>
+    <file>Resources/Icons/png-white/fi-rr-flag.png</file>
+    <file>Resources/Icons/png-white/fi-rr-play.png</file>
+    <file>Resources/Icons/png-white/fi-rr-power.png</file>
+    <file>Resources/Icons/png-white/fi-rr-refresh.png</file>
+    <file>Resources/Icons/png-white/fi-rr-settings-sliders.png</file>
+    <file>Resources/Icons/png-white/icons-menu.png</file>
+    <file>Resources/Icons/png-white/idea.png</file>
+    <file>Resources/Icons/png-white/levels.png</file>
+    <file>Resources/Icons/png-white/maps-and-flags.png</file>
+    <file>Resources/Icons/png-white/pause-fill.png</file>
+    <file>Resources/Icons/png-white/play-fill.png</file>
+    <file>Resources/Icons/png-white/seno.png</file>
+  </qresource>
+  <qresource prefix="icons_black">
+    <file>Resources/Icons/png-black/back.png</file>
+    <file>Resources/Icons/png-black/chrome (1).png</file>
+    <file>Resources/Icons/png-black/cloud.png</file>
+    <file>Resources/Icons/png-black/fast-forward.png</file>
+    <file>Resources/Icons/png-black/fi-rr-angle-double-small-left.png</file>
+    <file>Resources/Icons/png-black/fi-rr-angle-double-small-right.png</file>
+    <file>Resources/Icons/png-black/fi-rr-arrow-small-right.png</file>
+    <file>Resources/Icons/png-black/fi-rr-cross-small.png</file>
+    <file>Resources/Icons/png-black/fi-rr-dashboard.png</file>
+    <file>Resources/Icons/png-black/fi-rr-power.png</file>
+    <file>Resources/Icons/png-black/fi-rr-refresh.png</file>
+    <file>Resources/Icons/png-black/fi-rr-settings-sliders.png</file>
+    <file>Resources/Icons/png-black/icons-menu.png</file>
+    <file>Resources/Icons/png-black/idea.png</file>
+    <file>Resources/Icons/png-black/levels.png</file>
+    <file>Resources/Icons/png-black/maps-and-flags.png</file>
+    <file>Resources/Icons/png-black/minus.png</file>
+    <file>Resources/Icons/png-black/musical-note (1).png</file>
+    <file>Resources/Icons/png-black/mute.png</file>
+    <file>Resources/Icons/png-black/next-1.png</file>
+    <file>Resources/Icons/png-black/pause.png</file>
+    <file>Resources/Icons/png-black/pause-fill.png</file>
+    <file>Resources/Icons/png-black/play-button.png</file>
+    <file>Resources/Icons/png-black/play-fill.png</file>
+    <file>Resources/Icons/png-black/plus.png</file>
+    <file>Resources/Icons/png-black/rewind.png</file>
+    <file>Resources/Icons/png-black/seno.png</file>
+    <file>Resources/Icons/png-black/sound-waves.png</file>
+  </qresource>
+</RCC>
