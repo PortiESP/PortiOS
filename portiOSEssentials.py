@@ -11,7 +11,8 @@ from GUI_WIDGETS.Central.central_functions import Central_funcs
 from GUI_WIDGETS.Apps_menu.apps_functions import Apps_funcs 
 from GUI_WIDGETS.Settings.settings_functions import Settings_funcs 
 
-
+# Import controllers packages
+from GUI_PACKAGES.bluetooth_controls.bt_control_panel import BT_Control_Panel
 
 # Resources import
 import resources_rc

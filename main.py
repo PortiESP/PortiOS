@@ -6,31 +6,51 @@ class Main_GUI:
 		# Setting window
 		self.win = main_win
 
+		# Setting fullscreen
 		self.win.showFullScreen()
+
+		# Setting media player
+		self.startMediaPlayer()
 
 		# Getting central GUI
 		GUI_Central = Ui_Central()
 		GUI_Central.setupUi(self.win)
 
+
 		# Getting widgets
-		GUI_Dashboard = Ui_Dashboard_widget()
-		GUI_Dashboard.setupUi(GUI_Central.page_dashboard)
-		GUI_Apps = Ui_Apps_widget()
-		GUI_Apps.setupUi(GUI_Central.page_apps)
-		GUI_Leds = Ui_Leds_widget()
-		GUI_Leds.setupUi(GUI_Central.page_leds)
-		GUI_Player = Ui_Player_widget()
-		GUI_Player.setupUi(GUI_Central.page_player)
-		GUI_Settings = Ui_Settings_widget()
-		GUI_Settings.setupUi(GUI_Central.page_settings)
+		self.GUI_Dashboard = Ui_Dashboard_widget()
+		self.GUI_Dashboard.setupUi(self.GUI_Central.page_dashboard)
+		self.GUI_Apps = Ui_Apps_widget()
+		self.GUI_Apps.setupUi(self.GUI_Central.page_apps)
+		self.GUI_Leds = Ui_Leds_widget()
+		self.GUI_Leds.setupUi(self.GUI_Central.page_leds)
+		self.GUI_Player = Ui_Player_widget()
+		self.GUI_Player.setupUi(self.GUI_Central.page_player)
+		self.GUI_Settings = Ui_Settings_widget()
+		self.GUI_Settings.setupUi(self.GUI_Central.page_settings)
 
 		# Widget funcs setup
-		Central_funcs.centralSetup(GUI_Central)
-		Apps_funcs.appsSetup(GUI_Apps, GUI_Central.stackedWidget)
-		Settings_funcs.settingsSetup(GUI_Settings)
+		self.Central_funcs.centralSetup(self.GUI_Central, self.BTController)
+		self.Apps_funcs.appsSetup(self.GUI_Apps, self.GUI_Central.stackedWidget)
+		self.Settings_funcs.settingsSetup(self.GUI_Settings)
 
 		# Page test func
-		# Central_funcs.pageTest(GUI_Central)
+
+	def startMediaPlayer(self):
+		self.BTController = BT_Control_Panel()
+		self.mediaPlayerThread = threading.Thread(target=self.mediaPlayerThreadFunc)
+
+	def mediaPlayerThreadFunc(self):
+		while self.mediaPlayerThread:
+			self.BTController.update_data()
+			if self.BTController.localVolume != self.BTController.volumeData:
+				self.BTController.set_volume(self.BTController.volumeData)
+
+			time.sleep(0.1)
+			
+
+
+
 
 
 #######################################################
