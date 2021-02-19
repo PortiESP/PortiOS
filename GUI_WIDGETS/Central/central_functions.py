@@ -20,7 +20,7 @@ class Central_funcs:
 		frame.powerCloseButton.clicked.connect(lambda:Central_funcs.toogle_power(frame))
 
 		# Setting time
-		frame.timeThread = threading.Thread(target=frame.setTime)
+		frame.timeThread = threading.Thread(target=Central_funcs.setTime)
 		frame.timeThread.start()
 
 
