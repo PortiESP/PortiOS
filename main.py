@@ -39,8 +39,10 @@ class Main_GUI:
 	def startMediaPlayer(self):
 		self.BTController = BT_Control_Panel()
 		self.mediaPlayerThread = threading.Thread(target=self.mediaPlayerThreadFunc)
+		self.mediaPlayerThread.start()
 
 	def mediaPlayerThreadFunc(self):
+		print('Media Player Thread started...')
 		while self.mediaPlayerThread:
 			self.BTController.update_data()
 			if self.BTController.localVolume != self.BTController.volumeData:
