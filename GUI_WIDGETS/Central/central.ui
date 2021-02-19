@@ -458,6 +458,11 @@ QPushButton:hover{
       <height>480</height>
      </size>
     </property>
+    <property name="styleSheet">
+     <string notr="true">QFrame{
+	border:none;
+}</string>
+    </property>
     <property name="currentIndex">
      <number>0</number>
     </property>

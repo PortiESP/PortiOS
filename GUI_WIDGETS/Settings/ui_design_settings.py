@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'design_settingsmslsSP.ui'
+## Form generated from reading UI file 'design_settingsuPtlon.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -220,9 +220,6 @@ class Ui_Settings_widget(object):
         self.stackedWidget_settings = QStackedWidget(self.frame_settings)
         self.stackedWidget_settings.setObjectName(u"stackedWidget_settings")
         self.stackedWidget_settings.setGeometry(QRect(300, 0, 400, 300))
-        self.stackedWidget_settings.setStyleSheet(u"QFrame{\n"
-"	border:none;\n"
-"}")
         self.page_brightness = QWidget()
         self.page_brightness.setObjectName(u"page_brightness")
         self.p_brightnes_title = QFrame(self.page_brightness)
