@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'design_settingssNaduG.ui'
+## Form generated from reading UI file 'design_settingsGvsEIm.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##

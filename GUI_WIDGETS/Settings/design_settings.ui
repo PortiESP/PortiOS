@@ -704,12 +704,6 @@ border:none;</string>
          <height>40</height>
         </rect>
        </property>
-       <property name="frameShape">
-        <enum>QFrame::StyledPanel</enum>
-       </property>
-       <property name="frameShadow">
-        <enum>QFrame::Raised</enum>
-       </property>
        <widget class="QFrame" name="a_border_4">
         <property name="geometry">
          <rect>
