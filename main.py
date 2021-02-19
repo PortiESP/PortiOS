@@ -10,11 +10,13 @@ class Main_GUI:
 		self.win.showFullScreen()
 
 		# Setting media player
+		self.GUI_Central.isDeviceConnected = False
 		self.startMediaPlayer()
 
 		# Getting central GUI
 		self.GUI_Central = Ui_Central()
 		self.GUI_Central.setupUi(self.win)
+
 
 
 		# Getting widgets
@@ -44,11 +46,16 @@ class Main_GUI:
 	def mediaPlayerThreadFunc(self):
 		print('Media Player Thread started...')
 		while self.mediaPlayerThread:
-			self.BTController.update_data()
+			time.sleep(0.1)
+			try:
+				self.BTController.update_data()
+				self.GUI_Central.isDeviceConnected = True
+			except dbus.exceptions.DBusException:
+				self.GUI_Central.isDeviceConnected = False
+				continue
 			if self.BTController.localVolume != self.BTController.volumeData:
 				self.BTController.set_volume(self.BTController.volumeData)
 
-			time.sleep(0.1)
 			
 
 

@@ -83,13 +83,13 @@ class BT_Control_Panel:
 				
 		
 		#Check if there is any device connected
-		# if not self.connectedDeviceObjPath:
-		# 			raise IOError('No connected devices')
+		if not self.connectedDeviceObjPath:
+			raise IOError('No connected devices')
 		
 	
 	def update_data(self):
 		self.deviceData.update(self.deviceIface.GetAll('org.bluez.Device1'))
-		# self.mediaPlayerData.update(self.playerIface.GetAll('org.bluez.MediaPlayer1'))
+		self.mediaPlayerData.update(self.playerIface.GetAll('org.bluez.MediaPlayer1'))
 		for key, value in self.playerIface.GetAll('org.bluez.MediaPlayer1').items():
 			if isinstance(value, dbus.Dictionary):
 				self.mediaPlayerData[key].update(value)

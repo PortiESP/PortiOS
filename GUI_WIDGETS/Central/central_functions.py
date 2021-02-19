@@ -10,8 +10,8 @@ class Central_funcs:
 
 		# Footer buttons events
 		frame.footerButton_1.clicked.connect(lambda:mediaPlayer.playback_control('previous'))
-		frame.footerButton_2.clicked.connect(lambda:Central_funcs.toogle_musicStatus(frame))
-		frame.footerButton_3.clicked.connect(lambda:mediaPlayer.playback_control('previous'))
+		frame.footerButton_2.clicked.connect(lambda:Central_funcs.toogle_musicStatus(frame, mediaPlayer))
+		frame.footerButton_3.clicked.connect(lambda:mediaPlayer.playback_control('next'))
 		frame.footerButton_4.clicked.connect(lambda:Central_funcs.setPage(frame, 3))
 		frame.footerButton_5.clicked.connect(lambda:Central_funcs.toogle_volume(frame))
 		frame.footerButton_6.clicked.connect(lambda:Central_funcs.toogle_power(frame))
@@ -26,12 +26,19 @@ class Central_funcs:
 		frame.timeThread.start()
 
 
-	def toogle_musicStatus(frame):
+	def toogle_musicStatus(frame, mediaPlayer):
 		# Add icon toogle
+		if frame.isConnectedDevice:
 
-		icon1 = QIcon()
-		icon1.addFile(u":/icons_red/Resources/Icons/png-red/play-button.png", QSize(), QIcon.Normal, QIcon.Off)
-		frame.footerButton_2.setIcon(icon1)
+			icon1 = QIcon()
+			if mediaPlayer.get_player_data('Status') == 'playing':
+				name = 'play-button'
+				mediaPlayer.playback_control('pause')
+			else: 
+				name = 'pause-fill'
+				mediaPlayer.playback_control('play')
+			icon1.addFile(u":/icons_red/Resources/Icons/png-red/{}.png".format(name), QSize(), QIcon.Normal, QIcon.Off)
+			frame.footerButton_2.setIcon(icon1)
 		
 		
 	def toogle_volume(frame):
