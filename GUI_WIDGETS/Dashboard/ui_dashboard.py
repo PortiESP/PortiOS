@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'dashboardLfWuIn.ui'
+## Form generated from reading UI file 'dashboardEkpIQg.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -87,8 +87,8 @@ class Ui_Dashboard_widget(object):
         self.label_vel.setMinimumSize(QSize(0, 70))
         self.label_vel.setMaximumSize(QSize(9999, 9999))
         font2 = QFont()
-        font2.setFamily(u"Bahnschrift Light Condensed")
-        font2.setPointSize(48)
+        font2.setFamily(u"DS-Digital")
+        font2.setPointSize(58)
         font2.setBold(False)
         font2.setItalic(False)
         font2.setUnderline(False)
@@ -96,7 +96,7 @@ class Ui_Dashboard_widget(object):
         font2.setStrikeOut(False)
         font2.setStyleStrategy(QFont.PreferDefault)
         self.label_vel.setFont(font2)
-        self.label_vel.setAlignment(Qt.AlignBottom|Qt.AlignHCenter)
+        self.label_vel.setAlignment(Qt.AlignHCenter|Qt.AlignTop)
 
         self.verticalLayout_3.addWidget(self.label_vel)
 
@@ -237,7 +237,7 @@ class Ui_Dashboard_widget(object):
     def retranslateUi(self, Dashboard_widget):
         Dashboard_widget.setWindowTitle(QCoreApplication.translate("Dashboard_widget", u"Form", None))
         self.label_kmh.setText(QCoreApplication.translate("Dashboard_widget", u"KM/H ", None))
-        self.label_vel.setText(QCoreApplication.translate("Dashboard_widget", u"0", None))
+        self.label_vel.setText(QCoreApplication.translate("Dashboard_widget", u"200", None))
         self.label_player_logo.setText("")
         self.label_artista.setText(QCoreApplication.translate("Dashboard_widget", u"El ultimo dia del resto de mi vida", None))
         self.label_cancion.setText(QCoreApplication.translate("Dashboard_widget", u"Avicci, Nicky Romero", None))
