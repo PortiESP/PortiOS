@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'dashboardwZIvGs.ui'
+## Form generated from reading UI file 'dashboardqwtNwO.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -205,8 +205,7 @@ class Ui_Dashboard_widget(object):
         self.frame_durationLabels.setObjectName(u"frame_durationLabels")
         self.frame_durationLabels.setMaximumSize(QSize(16777215, 20))
         self.frame_durationLabels.setStyleSheet(u"color: rgb(94, 94, 94);")
-        self.frame_durationLabels.setFrameShape(QFrame.StyledPanel)
-        self.frame_durationLabels.setFrameShadow(QFrame.Raised)
+        self.frame_durationLabels.setFrameShape(QFrame.NoFrame)
         self.horizontalLayout_4 = QHBoxLayout(self.frame_durationLabels)
         self.horizontalLayout_4.setSpacing(0)
         self.horizontalLayout_4.setObjectName(u"horizontalLayout_4")
