@@ -83,8 +83,8 @@ class BT_Control_Panel:
 				
 		
 		#Check if there is any device connected
-		if not self.connectedDeviceObjPath:
-					raise IOError('No connected devices')
+		# if not self.connectedDeviceObjPath:
+		# 			raise IOError('No connected devices')
 		
 	
 	def update_data(self):
