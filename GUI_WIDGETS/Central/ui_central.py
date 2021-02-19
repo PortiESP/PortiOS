@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'centralUwVcrb.ui'
+## Form generated from reading UI file 'centralvhCEVD.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -12,7 +12,6 @@ from PySide2.QtCore import *
 from PySide2.QtGui import *
 from PySide2.QtWidgets import *
 
-import resources_rc
 import resources_rc
 
 class Ui_Central(object):
@@ -269,17 +268,17 @@ class Ui_Central(object):
 "	background:red;\n"
 "	color:white;\n"
 "}")
-        self.pushButton_8 = QPushButton(self.frame_powerMenu)
-        self.pushButton_8.setObjectName(u"pushButton_8")
-        self.pushButton_8.setGeometry(QRect(10, 130, 280, 50))
+        self.centralRebootbutton = QPushButton(self.frame_powerMenu)
+        self.centralRebootbutton.setObjectName(u"centralRebootbutton")
+        self.centralRebootbutton.setGeometry(QRect(10, 130, 280, 50))
         font2 = QFont()
         font2.setFamily(u"Bahnschrift Light Condensed")
         font2.setPointSize(11)
-        self.pushButton_8.setFont(font2)
-        self.pushButton_7 = QPushButton(self.frame_powerMenu)
-        self.pushButton_7.setObjectName(u"pushButton_7")
-        self.pushButton_7.setGeometry(QRect(10, 70, 280, 50))
-        self.pushButton_7.setFont(font2)
+        self.centralRebootbutton.setFont(font2)
+        self.centralShutdowButton = QPushButton(self.frame_powerMenu)
+        self.centralShutdowButton.setObjectName(u"centralShutdowButton")
+        self.centralShutdowButton.setGeometry(QRect(10, 70, 280, 50))
+        self.centralShutdowButton.setFont(font2)
         self.frame_8 = QFrame(self.frame_powerMenu)
         self.frame_8.setObjectName(u"frame_8")
         self.frame_8.setGeometry(QRect(0, 0, 300, 60))
@@ -319,7 +318,7 @@ class Ui_Central(object):
 
         self.retranslateUi(Central)
 
-        self.stackedWidget.setCurrentIndex(1)
+        self.stackedWidget.setCurrentIndex(0)
 
 
         QMetaObject.connectSlotsByName(Central)
@@ -328,8 +327,8 @@ class Ui_Central(object):
     def retranslateUi(self, Central):
         self.label_clock.setText(QCoreApplication.translate("Central", u"23:23", None))
         self.footer_background.setText("")
-        self.pushButton_8.setText(QCoreApplication.translate("Central", u"REBOOT", None))
-        self.pushButton_7.setText(QCoreApplication.translate("Central", u"SHUTDOWN", None))
+        self.centralRebootbutton.setText(QCoreApplication.translate("Central", u"REBOOT", None))
+        self.centralShutdowButton.setText(QCoreApplication.translate("Central", u"SHUTDOWN", None))
         self.label_13.setText(QCoreApplication.translate("Central", u"Power", None))
         self.powerCloseButton.setText("")
         pass

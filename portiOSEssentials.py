@@ -21,6 +21,5 @@ import resources_rc
 from PySide2.QtWidgets import *
 from PySide2.QtGui import *
 from PySide2.QtWidgets import *
-import sys
-import threading
+import sys, threading
 

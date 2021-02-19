@@ -1,4 +1,4 @@
-import threading, time
+import threading, time, subprocess
 # from GUI_PACKAGES.bluetooth_controls.bt_control_panel import BT_Control_Panel
 
 # Frame will be GUI_Central object
@@ -9,15 +9,17 @@ class Central_funcs:
 		frame.powerVisivility = False
 
 		# Footer buttons events
-		# frame.footerButton_1.clicked.connect(lambda:mediaPlayer.playback_control('previous'))
-		# frame.footerButton_2.clicked.connect(lambda:Central_funcs.toogle_musicStatus(frame))
-		# frame.footerButton_3.clicked.connect(lambda:mediaPlayer.playback_control('previous'))
+		frame.footerButton_1.clicked.connect(lambda:mediaPlayer.playback_control('previous'))
+		frame.footerButton_2.clicked.connect(lambda:Central_funcs.toogle_musicStatus(frame))
+		frame.footerButton_3.clicked.connect(lambda:mediaPlayer.playback_control('previous'))
 		frame.footerButton_4.clicked.connect(lambda:Central_funcs.setPage(frame, 3))
 		frame.footerButton_5.clicked.connect(lambda:Central_funcs.toogle_volume(frame))
 		frame.footerButton_6.clicked.connect(lambda:Central_funcs.toogle_power(frame))
 
 		# Power menu
 		frame.powerCloseButton.clicked.connect(lambda:Central_funcs.toogle_power(frame))
+		frame.centralShutdownButton.clicked.connect(lambda:subprocess.run('shutdown -P now', shell=True))
+		frame.centralRebootButton.clicked.connect(lambda:subprocess.run('reboot', shell=True))
 
 		# Setting time
 		frame.timeThread = threading.Thread(target=Central_funcs.setTime)
@@ -56,7 +58,6 @@ class Central_funcs:
 	def setPage(frame, index):
 		print('Changing to page ',index)
 		frame.stackedWidget.setCurrentIndex(index)
-
 
 
 
