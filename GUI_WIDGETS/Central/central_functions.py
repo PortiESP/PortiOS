@@ -72,7 +72,7 @@ class Central_funcs:
 
 	def writeLog(msg):
 		with open('/home/pi/Desktop/GUI_Central_Log.txt', 'a') as log:
-			log.writeline(msg + ' - ' + time.strftime('%H:%M:%S'))
+			log.write(msg + ' - ' + time.strftime('%H:%M:%S') + '\n')
 
 	def pageTest(frame):
 		def hilo():
