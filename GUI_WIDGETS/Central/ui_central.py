@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'centralPDrTho.ui'
+## Form generated from reading UI file 'centralkGeRbE.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##

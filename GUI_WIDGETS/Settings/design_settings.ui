@@ -484,6 +484,11 @@ QScrollBar:vertical {
       <height>300</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel{
+	border:none;
+}</string>
+    </property>
     <widget class="QWidget" name="page_brightness">
      <widget class="QFrame" name="p_brightnes_title">
       <property name="geometry">
