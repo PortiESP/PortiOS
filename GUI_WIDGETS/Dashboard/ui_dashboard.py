@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'dashboardqwtNwO.ui'
+## Form generated from reading UI file 'dashboardLfWuIn.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -88,7 +88,7 @@ class Ui_Dashboard_widget(object):
         self.label_vel.setMaximumSize(QSize(9999, 9999))
         font2 = QFont()
         font2.setFamily(u"Bahnschrift Light Condensed")
-        font2.setPointSize(58)
+        font2.setPointSize(48)
         font2.setBold(False)
         font2.setItalic(False)
         font2.setUnderline(False)
@@ -129,22 +129,17 @@ class Ui_Dashboard_widget(object):
         self.frame_player = QFrame(self.frame_dashboard)
         self.frame_player.setObjectName(u"frame_player")
         self.frame_player.setGeometry(QRect(470, 80, 280, 280))
-        self.verticalLayout = QVBoxLayout(self.frame_player)
-        self.verticalLayout.setSpacing(0)
-        self.verticalLayout.setObjectName(u"verticalLayout")
-        self.verticalLayout.setContentsMargins(0, 0, 0, 0)
         self.label_player_logo = QLabel(self.frame_player)
         self.label_player_logo.setObjectName(u"label_player_logo")
+        self.label_player_logo.setGeometry(QRect(70, 0, 140, 140))
         self.label_player_logo.setMinimumSize(QSize(140, 140))
         self.label_player_logo.setMaximumSize(QSize(140, 140))
         self.label_player_logo.setPixmap(QPixmap(u":/styles/Resources/spotify-logo.png"))
         self.label_player_logo.setScaledContents(True)
         self.label_player_logo.setMargin(0)
-
-        self.verticalLayout.addWidget(self.label_player_logo, 0, Qt.AlignHCenter)
-
         self.frame_media_data = QFrame(self.frame_player)
         self.frame_media_data.setObjectName(u"frame_media_data")
+        self.frame_media_data.setGeometry(QRect(0, 140, 280, 65))
         self.frame_media_data.setStyleSheet(u"color:white;")
         self.verticalLayout_5 = QVBoxLayout(self.frame_media_data)
         self.verticalLayout_5.setSpacing(0)
@@ -176,40 +171,35 @@ class Ui_Dashboard_widget(object):
 
         self.verticalLayout_5.addWidget(self.label_cancion)
 
-
-        self.verticalLayout.addWidget(self.frame_media_data)
-
         self.slider_duration = QSlider(self.frame_player)
         self.slider_duration.setObjectName(u"slider_duration")
+        self.slider_duration.setGeometry(QRect(0, 210, 280, 22))
         self.slider_duration.setMaximumSize(QSize(16777215, 30))
+        self.slider_duration.setCursor(QCursor(Qt.SizeHorCursor))
+        self.slider_duration.setTabletTracking(True)
         self.slider_duration.setStyleSheet(u"\n"
 "QSlider::groove:horizontal{\n"
-"	height:1px;	\n"
+"	height:12px;	\n"
 "	width:260;\n"
-"	background:gray;\n"
+"	background:transparent;\n"
 "}\n"
 "\n"
 "QSlider::handle:horizontal{\n"
-"	border:1px solid red;\n"
 "	background:red;\n"
-"	width:10px;\n"
-"	margin:-5px;\n"
-"	border-radius:5px;	\n"
+"	width:12px;\n"
+"	border-radius:6px;	\n"
 "\n"
 "}")
         self.slider_duration.setOrientation(Qt.Horizontal)
-
-        self.verticalLayout.addWidget(self.slider_duration)
-
         self.frame_durationLabels = QFrame(self.frame_player)
         self.frame_durationLabels.setObjectName(u"frame_durationLabels")
-        self.frame_durationLabels.setMaximumSize(QSize(16777215, 20))
+        self.frame_durationLabels.setGeometry(QRect(0, 229, 280, 20))
         self.frame_durationLabels.setStyleSheet(u"color: rgb(94, 94, 94);")
         self.frame_durationLabels.setFrameShape(QFrame.NoFrame)
         self.horizontalLayout_4 = QHBoxLayout(self.frame_durationLabels)
         self.horizontalLayout_4.setSpacing(0)
         self.horizontalLayout_4.setObjectName(u"horizontalLayout_4")
-        self.horizontalLayout_4.setContentsMargins(0, 0, 0, 0)
+        self.horizontalLayout_4.setContentsMargins(4, 0, 0, 0)
         self.label_currentTime = QLabel(self.frame_durationLabels)
         self.label_currentTime.setObjectName(u"label_currentTime")
         font5 = QFont()
@@ -227,9 +217,17 @@ class Ui_Dashboard_widget(object):
 
         self.horizontalLayout_4.addWidget(self.label_duration)
 
-
-        self.verticalLayout.addWidget(self.frame_durationLabels)
-
+        self.line = QFrame(self.frame_player)
+        self.line.setObjectName(u"line")
+        self.line.setGeometry(QRect(10, 221, 260, 1))
+        self.line.setStyleSheet(u"border:1px solid gray;")
+        self.line.setFrameShape(QFrame.HLine)
+        self.line.setFrameShadow(QFrame.Sunken)
+        self.label_player_logo.raise_()
+        self.frame_media_data.raise_()
+        self.frame_durationLabels.raise_()
+        self.line.raise_()
+        self.slider_duration.raise_()
 
         self.retranslateUi(Dashboard_widget)
 
