@@ -13,8 +13,8 @@ class Main_GUI:
 		self.startMediaPlayer()
 
 		# Getting central GUI
-		GUI_Central = Ui_Central()
-		GUI_Central.setupUi(self.win)
+		self.GUI_Central = Ui_Central()
+		self.GUI_Central.setupUi(self.win)
 
 
 		# Getting widgets
