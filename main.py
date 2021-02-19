@@ -30,9 +30,9 @@ class Main_GUI:
 		self.GUI_Settings.setupUi(self.GUI_Central.page_settings)
 
 		# Widget funcs setup
-		self.Central_funcs.centralSetup(self.GUI_Central, self.BTController)
-		self.Apps_funcs.appsSetup(self.GUI_Apps, self.GUI_Central.stackedWidget)
-		self.Settings_funcs.settingsSetup(self.GUI_Settings)
+		Central_funcs.centralSetup(self.GUI_Central, self.BTController)
+		Apps_funcs.appsSetup(self.GUI_Apps, self.GUI_Central.stackedWidget)
+		Settings_funcs.settingsSetup(self.GUI_Settings)
 
 		# Page test func
 
