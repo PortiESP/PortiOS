@@ -9,10 +9,10 @@ class Central_funcs:
 		frame.powerVisivility = False
 
 		# Footer buttons events
-		if mediaPlayer:
-			frame.footerButton_1.clicked.connect(lambda:mediaPlayer.playback_control('previous'))
-			frame.footerButton_2.clicked.connect(lambda:Central_funcs.toogle_musicStatus(frame, mediaPlayer))
-			frame.footerButton_3.clicked.connect(lambda:mediaPlayer.playback_control('next'))
+	
+		frame.footerButton_1.clicked.connect(lambda:mediaPlayer.playback_control('previous'))
+		frame.footerButton_2.clicked.connect(lambda:Central_funcs.toogle_musicStatus(frame, mediaPlayer))
+		frame.footerButton_3.clicked.connect(lambda:mediaPlayer.playback_control('next'))
 		frame.footerButton_4.clicked.connect(lambda:Central_funcs.setPage(frame, 3))
 		frame.footerButton_5.clicked.connect(lambda:Central_funcs.toogle_volume(frame))
 		frame.footerButton_6.clicked.connect(lambda:Central_funcs.toogle_power(frame))

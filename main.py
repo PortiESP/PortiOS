@@ -41,12 +41,12 @@ class Main_GUI:
 	def startMediaPlayer(self):
 		try:
 			self.BTController = BT_Control_Panel()
-			Central_funcs.centralSetup(self.GUI_Central, self.BTController)
 		except IOError:
 			self.BTController = None
 			return
 		self.mediaPlayerThread = threading.Thread(target=self.mediaPlayerThreadFunc)
 		self.mediaPlayerThread.start()
+		
 
 	def mediaPlayerThreadFunc(self):
 		print('Media Player Thread started...')
