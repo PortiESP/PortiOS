@@ -1,4 +1,4 @@
-import threading, time, subprocess
+import threading, time, subprocess, os
 # from GUI_PACKAGES.bluetooth_controls.bt_control_panel import BT_Control_Panel
 
 # Frame will be GUI_Central object
@@ -25,11 +25,14 @@ class Central_funcs:
 		frame.timeThread = threading.Thread(target=Central_funcs.setTime)
 		frame.timeThread.start()
 
+		log = open('/home/pi/Desktop/GUI_Central_Log.txt', 'w')
+		log.close()
+
 
 	def toogle_musicStatus(frame, mediaPlayer):
 		# Add icon toogle
-		if frame.isConnectedDevice:
-			mediaPlayer.playback_control('next')
+		Central_funcs.writeLog(str(mediaPlayer))
+		if mediaPlayer:
 			icon1 = QIcon()
 			if mediaPlayer.get_player_data('Status') == 'playing':
 				name = 'play-button'
@@ -67,7 +70,9 @@ class Central_funcs:
 		frame.stackedWidget.setCurrentIndex(index)
 
 
-
+	def writeLog(msg):
+		with open('/home/pi/Desktop/GUI_Central_Log.txt', 'a') as log:
+			log.writeline(msg + ' - ' + time.strftime('%H:%M:%S'))
 
 	def pageTest(frame):
 		def hilo():
