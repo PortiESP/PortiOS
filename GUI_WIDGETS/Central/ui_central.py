@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'centralWoeFGJ.ui'
+## Form generated from reading UI file 'centralrahXMn.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -268,13 +268,13 @@ class Ui_Central(object):
 "	background:red;\n"
 "	color:white;\n"
 "}")
-        self.centralRebootbutton = QPushButton(self.frame_powerMenu)
-        self.centralRebootbutton.setObjectName(u"centralRebootbutton")
-        self.centralRebootbutton.setGeometry(QRect(10, 130, 280, 50))
+        self.centralRebootButton = QPushButton(self.frame_powerMenu)
+        self.centralRebootButton.setObjectName(u"centralRebootButton")
+        self.centralRebootButton.setGeometry(QRect(10, 130, 280, 50))
         font2 = QFont()
         font2.setFamily(u"Bahnschrift Light Condensed")
         font2.setPointSize(11)
-        self.centralRebootbutton.setFont(font2)
+        self.centralRebootButton.setFont(font2)
         self.centralShutdownButton = QPushButton(self.frame_powerMenu)
         self.centralShutdownButton.setObjectName(u"centralShutdownButton")
         self.centralShutdownButton.setGeometry(QRect(10, 70, 280, 50))
@@ -327,7 +327,7 @@ class Ui_Central(object):
     def retranslateUi(self, Central):
         self.label_clock.setText(QCoreApplication.translate("Central", u"23:23", None))
         self.footer_background.setText("")
-        self.centralRebootbutton.setText(QCoreApplication.translate("Central", u"REBOOT", None))
+        self.centralRebootButton.setText(QCoreApplication.translate("Central", u"REBOOT", None))
         self.centralShutdownButton.setText(QCoreApplication.translate("Central", u"SHUTDOWN", None))
         self.label_13.setText(QCoreApplication.translate("Central", u"Power", None))
         self.powerCloseButton.setText("")
