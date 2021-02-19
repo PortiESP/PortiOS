@@ -485,7 +485,7 @@ QScrollBar:vertical {
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">QLabel{
+     <string notr="true">QFrame{
 	border:none;
 }</string>
     </property>
@@ -3322,6 +3322,7 @@ QScrollArea QWidget#scrollAreaWidgetContents_7{
 	background-color:rgb(20,20,20);
 
 }
+
 
 
 /**/
