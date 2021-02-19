@@ -615,12 +615,6 @@ QSlider::handle:horizontal{
         <height>60</height>
        </rect>
       </property>
-      <property name="frameShape">
-       <enum>QFrame::StyledPanel</enum>
-      </property>
-      <property name="frameShadow">
-       <enum>QFrame::Raised</enum>
-      </property>
       <widget class="QLabel" name="label_11">
        <property name="geometry">
         <rect>
@@ -672,12 +666,6 @@ border:none;</string>
         <width>370</width>
         <height>40</height>
        </rect>
-      </property>
-      <property name="frameShape">
-       <enum>QFrame::NoFrame</enum>
-      </property>
-      <property name="frameShadow">
-       <enum>QFrame::Raised</enum>
       </property>
       <widget class="QLabel" name="label_2">
        <property name="geometry">
@@ -840,12 +828,6 @@ QCheckBox::indicator:checked{
         <height>40</height>
        </rect>
       </property>
-      <property name="frameShape">
-       <enum>QFrame::StyledPanel</enum>
-      </property>
-      <property name="frameShadow">
-       <enum>QFrame::Raised</enum>
-      </property>
       <widget class="QLabel" name="label_14">
        <property name="geometry">
         <rect>
@@ -906,12 +888,6 @@ QCheckBox::indicator:checked{
         <width>370</width>
         <height>40</height>
        </rect>
-      </property>
-      <property name="frameShape">
-       <enum>QFrame::StyledPanel</enum>
-      </property>
-      <property name="frameShadow">
-       <enum>QFrame::Raised</enum>
       </property>
       <widget class="QLabel" name="label_9">
        <property name="geometry">
@@ -1110,12 +1086,6 @@ background:gray;</string>
         <height>60</height>
        </rect>
       </property>
-      <property name="frameShape">
-       <enum>QFrame::StyledPanel</enum>
-      </property>
-      <property name="frameShadow">
-       <enum>QFrame::Raised</enum>
-      </property>
       <widget class="QLabel" name="label_17">
        <property name="geometry">
         <rect>
@@ -1171,12 +1141,6 @@ border:none;</string>
         <height>40</height>
        </rect>
       </property>
-      <property name="frameShape">
-       <enum>QFrame::NoFrame</enum>
-      </property>
-      <property name="frameShadow">
-       <enum>QFrame::Raised</enum>
-      </property>
       <widget class="QLabel" name="label_3">
        <property name="geometry">
         <rect>
@@ -1214,12 +1178,6 @@ border:none;</string>
          <height>40</height>
         </rect>
        </property>
-       <property name="frameShape">
-        <enum>QFrame::StyledPanel</enum>
-       </property>
-       <property name="frameShadow">
-        <enum>QFrame::Raised</enum>
-       </property>
        <widget class="QFrame" name="a_border_5">
         <property name="geometry">
          <rect>
@@ -1240,12 +1198,6 @@ QLabel{
 	color:white;
 	margin-bottom:1px;
 }</string>
-        </property>
-        <property name="frameShape">
-         <enum>QFrame::StyledPanel</enum>
-        </property>
-        <property name="frameShadow">
-         <enum>QFrame::Raised</enum>
         </property>
         <widget class="QLabel" name="label_8">
          <property name="geometry">
@@ -1398,12 +1350,6 @@ background:gray;</string>
         <height>40</height>
        </rect>
       </property>
-      <property name="frameShape">
-       <enum>QFrame::NoFrame</enum>
-      </property>
-      <property name="frameShadow">
-       <enum>QFrame::Raised</enum>
-      </property>
       <widget class="QLabel" name="label_21">
        <property name="geometry">
         <rect>
@@ -1441,12 +1387,6 @@ background:gray;</string>
          <height>40</height>
         </rect>
        </property>
-       <property name="frameShape">
-        <enum>QFrame::StyledPanel</enum>
-       </property>
-       <property name="frameShadow">
-        <enum>QFrame::Raised</enum>
-       </property>
        <widget class="QFrame" name="a_border_6">
         <property name="geometry">
          <rect>
@@ -1467,12 +1407,6 @@ QLabel{
 	color:white;
 	margin-bottom:1px;
 }</string>
-        </property>
-        <property name="frameShape">
-         <enum>QFrame::StyledPanel</enum>
-        </property>
-        <property name="frameShadow">
-         <enum>QFrame::Raised</enum>
         </property>
         <widget class="QLabel" name="label_22">
          <property name="geometry">
@@ -1568,12 +1502,6 @@ QCheckBox::indicator:checked{
         <height>40</height>
        </rect>
       </property>
-      <property name="frameShape">
-       <enum>QFrame::StyledPanel</enum>
-      </property>
-      <property name="frameShadow">
-       <enum>QFrame::Raised</enum>
-      </property>
       <widget class="QLabel" name="label_27">
        <property name="geometry">
         <rect>
@@ -1635,12 +1563,6 @@ QCheckBox::indicator:checked{
         <height>40</height>
        </rect>
       </property>
-      <property name="frameShape">
-       <enum>QFrame::StyledPanel</enum>
-      </property>
-      <property name="frameShadow">
-       <enum>QFrame::Raised</enum>
-      </property>
       <widget class="QLabel" name="label_29">
        <property name="geometry">
         <rect>
@@ -1662,7 +1584,7 @@ QCheckBox::indicator:checked{
 }</string>
        </property>
        <property name="text">
-        <string>Connected device name</string>
+        <string>Connected device</string>
        </property>
       </widget>
       <widget class="QLabel" name="bearing_btConnectedText">
@@ -1777,12 +1699,6 @@ QPushButton:pressed{
         <width>400</width>
         <height>60</height>
        </rect>
-      </property>
-      <property name="frameShape">
-       <enum>QFrame::StyledPanel</enum>
-      </property>
-      <property name="frameShadow">
-       <enum>QFrame::Raised</enum>
       </property>
       <widget class="QLabel" name="label_32">
        <property name="geometry">
@@ -1915,12 +1831,6 @@ QPushButton:pressed{
         <height>60</height>
        </rect>
       </property>
-      <property name="frameShape">
-       <enum>QFrame::StyledPanel</enum>
-      </property>
-      <property name="frameShadow">
-       <enum>QFrame::Raised</enum>
-      </property>
       <widget class="QLabel" name="label_38">
        <property name="geometry">
         <rect>
@@ -2003,12 +1913,6 @@ background:none;</string>
         <height>240</height>
        </rect>
       </property>
-      <property name="frameShape">
-       <enum>QFrame::NoFrame</enum>
-      </property>
-      <property name="frameShadow">
-       <enum>QFrame::Raised</enum>
-      </property>
       <widget class="QScrollArea" name="scrollArea_2">
        <property name="geometry">
         <rect>
@@ -2055,9 +1959,6 @@ QScrollBar:vertical {
    }
 
 </string>
-       </property>
-       <property name="frameShape">
-        <enum>QFrame::NoFrame</enum>
        </property>
        <property name="horizontalScrollBarPolicy">
         <enum>Qt::ScrollBarAlwaysOff</enum>
@@ -2127,12 +2028,6 @@ background:gray;</string>
            <width>370</width>
            <height>40</height>
           </rect>
-         </property>
-         <property name="frameShape">
-          <enum>QFrame::StyledPanel</enum>
-         </property>
-         <property name="frameShadow">
-          <enum>QFrame::Raised</enum>
          </property>
          <widget class="QLabel" name="label_52">
           <property name="geometry">
@@ -2373,12 +2268,6 @@ QPushButton:pressed{
            <height>40</height>
           </rect>
          </property>
-         <property name="frameShape">
-          <enum>QFrame::StyledPanel</enum>
-         </property>
-         <property name="frameShadow">
-          <enum>QFrame::Raised</enum>
-         </property>
          <widget class="QLabel" name="label_56">
           <property name="geometry">
            <rect>
@@ -2544,12 +2433,6 @@ QPushButton:pressed{
            <height>40</height>
           </rect>
          </property>
-         <property name="frameShape">
-          <enum>QFrame::StyledPanel</enum>
-         </property>
-         <property name="frameShadow">
-          <enum>QFrame::Raised</enum>
-         </property>
          <widget class="QLabel" name="label_59">
           <property name="geometry">
            <rect>
@@ -2610,12 +2493,6 @@ QPushButton:pressed{
            <width>370</width>
            <height>40</height>
           </rect>
-         </property>
-         <property name="frameShape">
-          <enum>QFrame::StyledPanel</enum>
-         </property>
-         <property name="frameShadow">
-          <enum>QFrame::Raised</enum>
          </property>
          <widget class="QLabel" name="label_61">
           <property name="geometry">
@@ -2787,12 +2664,6 @@ QPushButton:pressed{
         <height>60</height>
        </rect>
       </property>
-      <property name="frameShape">
-       <enum>QFrame::StyledPanel</enum>
-      </property>
-      <property name="frameShadow">
-       <enum>QFrame::Raised</enum>
-      </property>
       <widget class="QLabel" name="label_64">
        <property name="geometry">
         <rect>
@@ -2847,12 +2718,6 @@ border:none;</string>
         <width>370</width>
         <height>40</height>
        </rect>
-      </property>
-      <property name="frameShape">
-       <enum>QFrame::StyledPanel</enum>
-      </property>
-      <property name="frameShadow">
-       <enum>QFrame::Raised</enum>
       </property>
       <widget class="QLineEdit" name="bearing_gpioSetInput">
        <property name="geometry">
@@ -2964,12 +2829,6 @@ QPushButton:pressed{
         <width>370</width>
         <height>40</height>
        </rect>
-      </property>
-      <property name="frameShape">
-       <enum>QFrame::StyledPanel</enum>
-      </property>
-      <property name="frameShadow">
-       <enum>QFrame::Raised</enum>
       </property>
       <widget class="QLineEdit" name="bearing_gpioGetInput">
        <property name="geometry">
@@ -3112,9 +2971,6 @@ background:gray;</string>
         <height>40</height>
        </rect>
       </property>
-      <property name="frameShape">
-       <enum>QFrame::StyledPanel</enum>
-      </property>
       <property name="frameShadow">
        <enum>QFrame::Raised</enum>
       </property>
@@ -3179,12 +3035,6 @@ background:gray;</string>
         <height>40</height>
        </rect>
       </property>
-      <property name="frameShape">
-       <enum>QFrame::StyledPanel</enum>
-      </property>
-      <property name="frameShadow">
-       <enum>QFrame::Raised</enum>
-      </property>
       <widget class="QLabel" name="label_15">
        <property name="geometry">
         <rect>
@@ -3246,12 +3096,6 @@ background:gray;</string>
         <height>40</height>
        </rect>
       </property>
-      <property name="frameShape">
-       <enum>QFrame::StyledPanel</enum>
-      </property>
-      <property name="frameShadow">
-       <enum>QFrame::Raised</enum>
-      </property>
       <widget class="QLabel" name="label_4">
        <property name="geometry">
         <rect>
@@ -3291,12 +3135,6 @@ background:gray;</string>
         <width>400</width>
         <height>240</height>
        </rect>
-      </property>
-      <property name="frameShape">
-       <enum>QFrame::StyledPanel</enum>
-      </property>
-      <property name="frameShadow">
-       <enum>QFrame::Raised</enum>
       </property>
       <widget class="QScrollArea" name="scrollArea_4">
        <property name="geometry">
@@ -3376,12 +3214,6 @@ QScrollBar:vertical {
            <height>40</height>
           </rect>
          </property>
-         <property name="frameShape">
-          <enum>QFrame::StyledPanel</enum>
-         </property>
-         <property name="frameShadow">
-          <enum>QFrame::Raised</enum>
-         </property>
          <widget class="QLabel" name="label_78">
           <property name="geometry">
            <rect>
@@ -3419,12 +3251,6 @@ QScrollBar:vertical {
            <width>370</width>
            <height>40</height>
           </rect>
-         </property>
-         <property name="frameShape">
-          <enum>QFrame::StyledPanel</enum>
-         </property>
-         <property name="frameShadow">
-          <enum>QFrame::Raised</enum>
          </property>
          <widget class="QLabel" name="label_79">
           <property name="geometry">
@@ -3487,12 +3313,6 @@ QScrollBar:vertical {
            <height>40</height>
           </rect>
          </property>
-         <property name="frameShape">
-          <enum>QFrame::StyledPanel</enum>
-         </property>
-         <property name="frameShadow">
-          <enum>QFrame::Raised</enum>
-         </property>
          <widget class="QLabel" name="label_81">
           <property name="geometry">
            <rect>
@@ -3553,12 +3373,6 @@ QScrollBar:vertical {
            <width>370</width>
            <height>40</height>
           </rect>
-         </property>
-         <property name="frameShape">
-          <enum>QFrame::StyledPanel</enum>
-         </property>
-         <property name="frameShadow">
-          <enum>QFrame::Raised</enum>
          </property>
          <widget class="QLabel" name="label_83">
           <property name="geometry">
@@ -3621,12 +3435,6 @@ QScrollBar:vertical {
            <height>40</height>
           </rect>
          </property>
-         <property name="frameShape">
-          <enum>QFrame::StyledPanel</enum>
-         </property>
-         <property name="frameShadow">
-          <enum>QFrame::Raised</enum>
-         </property>
          <widget class="QLabel" name="label_85">
           <property name="geometry">
            <rect>
@@ -3688,12 +3496,6 @@ QScrollBar:vertical {
            <height>40</height>
           </rect>
          </property>
-         <property name="frameShape">
-          <enum>QFrame::StyledPanel</enum>
-         </property>
-         <property name="frameShadow">
-          <enum>QFrame::Raised</enum>
-         </property>
          <widget class="QLabel" name="label_87">
           <property name="geometry">
            <rect>
@@ -3732,12 +3534,6 @@ QScrollBar:vertical {
            <height>40</height>
           </rect>
          </property>
-         <property name="frameShape">
-          <enum>QFrame::StyledPanel</enum>
-         </property>
-         <property name="frameShadow">
-          <enum>QFrame::Raised</enum>
-         </property>
          <widget class="QLabel" name="label_98">
           <property name="geometry">
            <rect>
@@ -3775,12 +3571,6 @@ QScrollBar:vertical {
            <width>370</width>
            <height>40</height>
           </rect>
-         </property>
-         <property name="frameShape">
-          <enum>QFrame::StyledPanel</enum>
-         </property>
-         <property name="frameShadow">
-          <enum>QFrame::Raised</enum>
          </property>
          <widget class="QLabel" name="label_99">
           <property name="geometry">
@@ -3843,12 +3633,6 @@ QScrollBar:vertical {
            <height>40</height>
           </rect>
          </property>
-         <property name="frameShape">
-          <enum>QFrame::StyledPanel</enum>
-         </property>
-         <property name="frameShadow">
-          <enum>QFrame::Raised</enum>
-         </property>
          <widget class="QLabel" name="label_101">
           <property name="geometry">
            <rect>
@@ -3910,12 +3694,6 @@ QScrollBar:vertical {
            <height>40</height>
           </rect>
          </property>
-         <property name="frameShape">
-          <enum>QFrame::StyledPanel</enum>
-         </property>
-         <property name="frameShadow">
-          <enum>QFrame::Raised</enum>
-         </property>
          <widget class="QLabel" name="label_103">
           <property name="geometry">
            <rect>
@@ -3976,12 +3754,6 @@ QScrollBar:vertical {
            <width>370</width>
            <height>40</height>
           </rect>
-         </property>
-         <property name="frameShape">
-          <enum>QFrame::StyledPanel</enum>
-         </property>
-         <property name="frameShadow">
-          <enum>QFrame::Raised</enum>
          </property>
          <widget class="QLabel" name="label_105">
           <property name="geometry">
@@ -4046,12 +3818,6 @@ QScrollBar:vertical {
         <width>400</width>
         <height>60</height>
        </rect>
-      </property>
-      <property name="frameShape">
-       <enum>QFrame::StyledPanel</enum>
-      </property>
-      <property name="frameShadow">
-       <enum>QFrame::Raised</enum>
       </property>
       <widget class="QLabel" name="label_67">
        <property name="geometry">
@@ -4136,12 +3902,6 @@ background:none;</string>
         <width>400</width>
         <height>60</height>
        </rect>
-      </property>
-      <property name="frameShape">
-       <enum>QFrame::StyledPanel</enum>
-      </property>
-      <property name="frameShadow">
-       <enum>QFrame::Raised</enum>
       </property>
       <widget class="QLabel" name="label_107">
        <property name="geometry">
@@ -4274,12 +4034,6 @@ QPushButton:pressed{
         <height>300</height>
        </rect>
       </property>
-      <property name="frameShape">
-       <enum>QFrame::StyledPanel</enum>
-      </property>
-      <property name="frameShadow">
-       <enum>QFrame::Raised</enum>
-      </property>
       <widget class="QFrame" name="p_advanced_fastBoot">
        <property name="geometry">
         <rect>
@@ -4288,12 +4042,6 @@ QPushButton:pressed{
          <width>370</width>
          <height>40</height>
         </rect>
-       </property>
-       <property name="frameShape">
-        <enum>QFrame::NoFrame</enum>
-       </property>
-       <property name="frameShadow">
-        <enum>QFrame::Raised</enum>
        </property>
        <widget class="QLabel" name="label_110">
         <property name="geometry">
@@ -4459,12 +4207,6 @@ QCheckBox::indicator:checked{
          <height>60</height>
         </rect>
        </property>
-       <property name="frameShape">
-        <enum>QFrame::StyledPanel</enum>
-       </property>
-       <property name="frameShadow">
-        <enum>QFrame::Raised</enum>
-       </property>
        <widget class="QLabel" name="label_109">
         <property name="geometry">
          <rect>
@@ -4623,12 +4365,6 @@ QPushButton:pressed{
          <width>370</width>
          <height>40</height>
         </rect>
-       </property>
-       <property name="frameShape">
-        <enum>QFrame::NoFrame</enum>
-       </property>
-       <property name="frameShadow">
-        <enum>QFrame::Raised</enum>
        </property>
        <widget class="QLabel" name="label_113">
         <property name="geometry">
@@ -4793,12 +4529,6 @@ QCheckBox::indicator:checked{
          <width>370</width>
          <height>40</height>
         </rect>
-       </property>
-       <property name="frameShape">
-        <enum>QFrame::NoFrame</enum>
-       </property>
-       <property name="frameShadow">
-        <enum>QFrame::Raised</enum>
        </property>
        <widget class="QLabel" name="label_122">
         <property name="geometry">
