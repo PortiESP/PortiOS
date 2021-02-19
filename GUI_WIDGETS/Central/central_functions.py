@@ -31,7 +31,10 @@ class Central_funcs:
 
 	def toogle_musicStatus(frame, mediaPlayer):
 		# Add icon toogle
-		Central_funcs.writeLog(str(mediaPlayer.get_device_data('Name')))
+		try:
+			Central_funcs.writeLog(str(mediaPlayer.get_device_data('Name')))
+		except:
+			Central_funcs.writeLog('exception...')
 		if mediaPlayer.get_device_data('Connected'):
 			icon1 = QIcon()
 			if mediaPlayer.get_player_data('Status') == 'playing':
