@@ -459,9 +459,7 @@ QPushButton:hover{
      </size>
     </property>
     <property name="styleSheet">
-     <string notr="true">QFrame{
-	border:none;
-}</string>
+     <string notr="true">border:none;</string>
     </property>
     <property name="currentIndex">
      <number>0</number>
