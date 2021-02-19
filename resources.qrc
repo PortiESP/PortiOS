@@ -8,6 +8,9 @@
     <file>Resources/porti_os.png</file>
     <file>Resources/spotify-logo.png</file>
   </qresource>
+  <qresource prefix="fonts">
+    <file>Resources/fonts/BAHNSCHRIFT.TTF</file>
+  </qresource>
   <qresource prefix="icons_red">
     <file>Resources/Icons/png-red/back.png</file>
     <file>Resources/Icons/png-red/chrome (1).png</file>
