@@ -9,14 +9,14 @@ class Main_GUI:
 		# Setting fullscreen
 		self.win.showFullScreen()
 
-		# Setting media player
-		self.GUI_Central.isDeviceConnected = False
-		self.startMediaPlayer()
 
 		# Getting central GUI
 		self.GUI_Central = Ui_Central()
 		self.GUI_Central.setupUi(self.win)
 
+		# Setting media player
+		self.startMediaPlayer()
+		self.GUI_Central.isDeviceConnected = False
 
 
 		# Getting widgets
