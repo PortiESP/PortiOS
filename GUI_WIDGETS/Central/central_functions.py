@@ -29,7 +29,7 @@ class Central_funcs:
 	def toogle_musicStatus(frame, mediaPlayer):
 		# Add icon toogle
 		if frame.isConnectedDevice:
-
+			mediaPlayer.playback_control('next')
 			icon1 = QIcon()
 			if mediaPlayer.get_player_data('Status') == 'playing':
 				name = 'play-button'
