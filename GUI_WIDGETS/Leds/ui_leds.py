@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'ledsqKkTwN.ui'
+## Form generated from reading UI file 'ledsKWizuQ.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -31,8 +31,6 @@ class Ui_Leds_widget(object):
         font = QFont()
         font.setFamily(u"MS Shell Dlg 2")
         self.frame_leds_config.setFont(font)
-        self.frame_leds_config.setFrameShape(QFrame.StyledPanel)
-        self.frame_leds_config.setFrameShadow(QFrame.Raised)
         self.stackedWidget = QStackedWidget(self.frame_leds_config)
         self.stackedWidget.setObjectName(u"stackedWidget")
         self.stackedWidget.setGeometry(QRect(0, 50, 300, 250))

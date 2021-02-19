@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'design_playercqUDkv.ui'
+## Form generated from reading UI file 'design_playereCvDwh.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -109,8 +109,6 @@ class Ui_Player_widget(object):
         self.frame_durationLabels.setObjectName(u"frame_durationLabels")
         self.frame_durationLabels.setGeometry(QRect(120, 20, 360, 20))
         self.frame_durationLabels.setStyleSheet(u"color: rgb(94, 94, 94);")
-        self.frame_durationLabels.setFrameShape(QFrame.StyledPanel)
-        self.frame_durationLabels.setFrameShadow(QFrame.Raised)
         self.horizontalLayout_5 = QHBoxLayout(self.frame_durationLabels)
         self.horizontalLayout_5.setSpacing(0)
         self.horizontalLayout_5.setObjectName(u"horizontalLayout_5")

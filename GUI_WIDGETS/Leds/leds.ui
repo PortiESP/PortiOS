@@ -41,12 +41,6 @@
       <family>MS Shell Dlg 2</family>
      </font>
     </property>
-    <property name="frameShape">
-     <enum>QFrame::StyledPanel</enum>
-    </property>
-    <property name="frameShadow">
-     <enum>QFrame::Raised</enum>
-    </property>
     <widget class="QStackedWidget" name="stackedWidget">
      <property name="geometry">
       <rect>
