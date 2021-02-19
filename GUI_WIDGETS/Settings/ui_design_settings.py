@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'design_settingseMxlFI.ui'
+## Form generated from reading UI file 'design_settingssNaduG.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -301,8 +301,6 @@ class Ui_Settings_widget(object):
         self.frame_cb = QFrame(self.p_wifi_power)
         self.frame_cb.setObjectName(u"frame_cb")
         self.frame_cb.setGeometry(QRect(310, 0, 60, 40))
-        self.frame_cb.setFrameShape(QFrame.StyledPanel)
-        self.frame_cb.setFrameShadow(QFrame.Raised)
         self.a_border_4 = QFrame(self.frame_cb)
         self.a_border_4.setObjectName(u"a_border_4")
         self.a_border_4.setGeometry(QRect(0, 5, 60, 30))
@@ -774,7 +772,7 @@ class Ui_Settings_widget(object):
         self.scrollArea_2.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignTop)
         self.scrollAreaWidgetContents_5 = QWidget()
         self.scrollAreaWidgetContents_5.setObjectName(u"scrollAreaWidgetContents_5")
-        self.scrollAreaWidgetContents_5.setGeometry(QRect(0, 0, 390, 440))
+        self.scrollAreaWidgetContents_5.setGeometry(QRect(0, 0, 398, 440))
         sizePolicy = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Preferred)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -1206,7 +1204,7 @@ class Ui_Settings_widget(object):
         self.scrollArea_4.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignTop)
         self.scrollAreaWidgetContents_7 = QWidget()
         self.scrollAreaWidgetContents_7.setObjectName(u"scrollAreaWidgetContents_7")
-        self.scrollAreaWidgetContents_7.setGeometry(QRect(0, 0, 390, 440))
+        self.scrollAreaWidgetContents_7.setGeometry(QRect(0, 0, 398, 440))
         self.scrollAreaWidgetContents_7.setMinimumSize(QSize(0, 440))
         self.frame_10 = QFrame(self.scrollAreaWidgetContents_7)
         self.frame_10.setObjectName(u"frame_10")
@@ -1466,8 +1464,6 @@ class Ui_Settings_widget(object):
         self.frame_cb_7 = QFrame(self.p_advanced_fastBoot)
         self.frame_cb_7.setObjectName(u"frame_cb_7")
         self.frame_cb_7.setGeometry(QRect(310, 0, 60, 40))
-        self.frame_cb_7.setFrameShape(QFrame.StyledPanel)
-        self.frame_cb_7.setFrameShadow(QFrame.Raised)
         self.a_border = QFrame(self.frame_cb_7)
         self.a_border.setObjectName(u"a_border")
         self.a_border.setGeometry(QRect(0, 5, 60, 30))
@@ -1581,8 +1577,6 @@ class Ui_Settings_widget(object):
         self.frame_cb_8 = QFrame(self.p_advanced_autoPower)
         self.frame_cb_8.setObjectName(u"frame_cb_8")
         self.frame_cb_8.setGeometry(QRect(310, 0, 60, 40))
-        self.frame_cb_8.setFrameShape(QFrame.StyledPanel)
-        self.frame_cb_8.setFrameShadow(QFrame.Raised)
         self.a_border_7 = QFrame(self.frame_cb_8)
         self.a_border_7.setObjectName(u"a_border_7")
         self.a_border_7.setGeometry(QRect(0, 5, 60, 30))
@@ -1644,8 +1638,6 @@ class Ui_Settings_widget(object):
         self.frame_cb_10 = QFrame(self.p_advanced_autoDiscoverable)
         self.frame_cb_10.setObjectName(u"frame_cb_10")
         self.frame_cb_10.setGeometry(QRect(310, 0, 60, 40))
-        self.frame_cb_10.setFrameShape(QFrame.StyledPanel)
-        self.frame_cb_10.setFrameShadow(QFrame.Raised)
         self.a_border_9 = QFrame(self.frame_cb_10)
         self.a_border_9.setObjectName(u"a_border_9")
         self.a_border_9.setGeometry(QRect(0, 5, 60, 30))

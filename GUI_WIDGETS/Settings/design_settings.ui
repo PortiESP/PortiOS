@@ -1974,7 +1974,7 @@ QScrollBar:vertical {
          <rect>
           <x>0</x>
           <y>0</y>
-          <width>390</width>
+          <width>398</width>
           <height>440</height>
          </rect>
         </property>
@@ -3195,7 +3195,7 @@ QScrollBar:vertical {
          <rect>
           <x>0</x>
           <y>0</y>
-          <width>390</width>
+          <width>398</width>
           <height>440</height>
          </rect>
         </property>
@@ -4080,12 +4080,6 @@ QPushButton:pressed{
           <height>40</height>
          </rect>
         </property>
-        <property name="frameShape">
-         <enum>QFrame::StyledPanel</enum>
-        </property>
-        <property name="frameShadow">
-         <enum>QFrame::Raised</enum>
-        </property>
         <widget class="QFrame" name="a_border">
          <property name="geometry">
           <rect>
@@ -4403,12 +4397,6 @@ QPushButton:pressed{
           <height>40</height>
          </rect>
         </property>
-        <property name="frameShape">
-         <enum>QFrame::StyledPanel</enum>
-        </property>
-        <property name="frameShadow">
-         <enum>QFrame::Raised</enum>
-        </property>
         <widget class="QFrame" name="a_border_7">
          <property name="geometry">
           <rect>
@@ -4566,12 +4554,6 @@ QCheckBox::indicator:checked{
           <width>60</width>
           <height>40</height>
          </rect>
-        </property>
-        <property name="frameShape">
-         <enum>QFrame::StyledPanel</enum>
-        </property>
-        <property name="frameShadow">
-         <enum>QFrame::Raised</enum>
         </property>
         <widget class="QFrame" name="a_border_9">
          <property name="geometry">
