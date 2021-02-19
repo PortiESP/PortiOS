@@ -404,7 +404,8 @@ QSlider::handle:horizontal{
         </size>
        </property>
        <property name="styleSheet">
-        <string notr="true">color: rgb(94, 94, 94);</string>
+        <string notr="true">color: rgb(94, 94, 94);
+border:none;</string>
        </property>
        <property name="frameShape">
         <enum>QFrame::StyledPanel</enum>
