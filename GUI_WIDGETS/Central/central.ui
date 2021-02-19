@@ -610,7 +610,7 @@ QPushButton:pressed{
        <string>REBOOT</string>
       </property>
      </widget>
-     <widget class="QPushButton" name="centralShutdowButton">
+     <widget class="QPushButton" name="centralShutdownButton">
       <property name="geometry">
        <rect>
         <x>10</x>
