@@ -20,8 +20,8 @@ class Central_funcs:
 		frame.powerCloseButton.clicked.connect(lambda:Central_funcs.toogle_power(frame))
 
 		# Setting time
-		self.timeThread = threading.Thread(target=self.setTime)
-		self.timeThread.start()
+		frame.timeThread = threading.Thread(target=frame.setTime)
+		frame.timeThread.start()
 
 
 	def toogle_musicStatus(frame):
@@ -29,7 +29,7 @@ class Central_funcs:
 
 		icon1 = QIcon()
 		icon1.addFile(u":/icons_red/Resources/Icons/png-red/play-button.png", QSize(), QIcon.Normal, QIcon.Off)
-		self.footerButton_2.setIcon(icon1)
+		frame.footerButton_2.setIcon(icon1)
 		
 		
 	def toogle_volume(frame):
@@ -49,7 +49,7 @@ class Central_funcs:
 			frame.frame_power.lower()
 
 	def setTime(frame):
-		while self.timeThread:
+		while frame.timeThread:
 			frame.label_clock.setText(time.strftime('%H:%M'))
 			time.sleep(1)
 
