@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'centralQnlWcA.ui'
+## Form generated from reading UI file 'centralUwVcrb.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -189,7 +189,6 @@ class Ui_Central(object):
         self.stackedWidget.setGeometry(QRect(0, 0, 800, 480))
         self.stackedWidget.setMinimumSize(QSize(800, 480))
         self.stackedWidget.setMaximumSize(QSize(800, 480))
-        self.stackedWidget.setStyleSheet(u"border:none;")
         self.page_dashboard = QWidget()
         self.page_dashboard.setObjectName(u"page_dashboard")
         self.stackedWidget.addWidget(self.page_dashboard)
@@ -320,7 +319,7 @@ class Ui_Central(object):
 
         self.retranslateUi(Central)
 
-        self.stackedWidget.setCurrentIndex(0)
+        self.stackedWidget.setCurrentIndex(1)
 
 
         QMetaObject.connectSlotsByName(Central)
