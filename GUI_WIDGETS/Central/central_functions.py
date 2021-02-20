@@ -26,6 +26,9 @@ class Central_funcs:
 		self.frame.centralShutdownButton.clicked.connect(lambda:subprocess.run('shutdown -P now', shell=True))
 		self.frame.centralRebootButton.clicked.connect(lambda:subprocess.run('reboot', shell=True))
 
+		# Slider volume
+		self.frame.slider_volume.sliderMoved.connect(lambda:self.mediaPlayer.set_volume(str(self.frame.slider_volume.value())))
+
 		# Setting time
 		self.frame.timeThread = threading.Thread(target=self.setTime)
 		self.frame.timeThread.start()
