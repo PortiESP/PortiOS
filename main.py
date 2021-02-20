@@ -15,8 +15,10 @@ class Main_GUI:
 		self.GUI_Central.setupUi(self.win)
 
 		# Setting media player
-		self.startMediaPlayer()
 		self.GUI_Central.isDeviceConnected = False
+		self.BTController = None
+
+		self.startMediaPlayer()
 
 
 		# Getting widgets
