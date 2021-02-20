@@ -60,7 +60,8 @@ class Main_GUI:
 			# Check for connected devices
 			if checkDevice == False: 
 				# BT statis icon off
-				icon = QIcon().addFile(u":/icons-gray/Resources/Icons/bt_states/bluetooth_gray.png", QSize(), QIcon.Normal, QIcon.Off)
+				icon = QIcon()
+				icon.addFile(u":/icons-gray/Resources/Icons/bt_states/bluetooth_gray.png", QSize(), QIcon.Normal, QIcon.Off)
 				self.GUI_Central.footerButton_2.setIcon(icon)
 				self.isConnectedDevice = False
 				self.writeLog('No bt connection...')
@@ -75,7 +76,8 @@ class Main_GUI:
 				self.isConnectedDevice = True
 				self.volumeSinc = 0
 				# BT status icon on
-				icon = QIcon().addFile(u":/icons-gray/Resources/Icons/bt_states/bluetooth_blue.png", QSize(), QIcon.Normal, QIcon.Off)
+				icon = QIcon()
+				icon.addFile(u":/icons-gray/Resources/Icons/bt_states/bluetooth_blue.png", QSize(), QIcon.Normal, QIcon.Off)
 				self.GUI_Central.footerButton_2.setIcon(icon)				
 				self.writeLog('Connection success...')
 
