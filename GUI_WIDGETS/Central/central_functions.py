@@ -5,7 +5,7 @@ from PySide2.QtCore import QSize
 
 # Frame will be GUI_Central object
 class Central_funcs:
-	def __init__(self, frame, mediaPlayer):
+	def centralSetup(self, frame, mediaPlayer):
 		self.frame = frame
 		self.mediaPlayer = mediaPlayer
 		# Flags
@@ -14,21 +14,21 @@ class Central_funcs:
 
 		# Footer buttons events
 
-		frame.footerButton_1.clicked.connect(lambda:mediaPlayer.playback_control('previous'))
-		frame.footerButton_2.clicked.connect(self.toogle_musicStatus)
-		frame.footerButton_3.clicked.connect(lambda:mediaPlayer.playback_control('next'))
-		frame.footerButton_4.clicked.connect(lambda:self.setPage(3))
-		frame.footerButton_5.clicked.connect(self.toogle_volume)
-		frame.footerButton_6.clicked.connect(self.toogle_power)
+		self.frame.footerButton_1.clicked.connect(lambda:mediaPlayer.playback_control('previous'))
+		self.frame.footerButton_2.clicked.connect(self.toogle_musicStatus)
+		self.frame.footerButton_3.clicked.connect(lambda:mediaPlayer.playback_control('next'))
+		self.frame.footerButton_4.clicked.connect(lambda:self.setPage(3))
+		self.frame.footerButton_5.clicked.connect(self.toogle_volume)
+		self.frame.footerButton_6.clicked.connect(self.toogle_power)
 
 		# Power menu
-		frame.powerCloseButton.clicked.connect(self.toogle_power)
-		frame.centralShutdownButton.clicked.connect(lambda:subprocess.run('shutdown -P now', shell=True))
-		frame.centralRebootButton.clicked.connect(lambda:subprocess.run('reboot', shell=True))
+		self.frame.powerCloseButton.clicked.connect(self.toogle_power)
+		self.frame.centralShutdownButton.clicked.connect(lambda:subprocess.run('shutdown -P now', shell=True))
+		self.frame.centralRebootButton.clicked.connect(lambda:subprocess.run('reboot', shell=True))
 
 		# Setting time
-		frame.timeThread = threading.Thread(target=Central_funcs.setTime, args=(frame,))
-		frame.timeThread.start()
+		self.frame.timeThread = threading.Thread(target=Central_funcs.setTime)
+		self.frame.timeThread.start()
 
 		mediaPlayer.bus.add_signal_receiver(Central_funcs.mediaDataChanged, 
 											dbus_interface = "org.freedesktop.DBus.Properties",
