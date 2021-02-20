@@ -74,7 +74,7 @@ class Main_GUI:
 				time.sleep(1)
 				self.BTController.setupInterfaces()
 				self.isConnectedDevice = True
-				self.volumeSinc = 0
+				self.centralf.volumeSinc = 0
 				# BT status icon on
 				icon = QIcon()
 				icon.addFile(u":/icons-gray/Resources/Icons/bt_states/bluetooth_blue.png", QSize(), QIcon.Normal, QIcon.Off)
@@ -87,11 +87,11 @@ class Main_GUI:
 			self.BTController.update_data()
 			
 			# Sincronize volume
-			if self.volumeSinc != self.BTController.volumeData:
+			if self.centralf.volumeSinc != self.BTController.volumeData:
 				self.writeLog('Volume changed to: ' + str(self.BTController.volumeData))
 				self.BTController.set_volume(str(self.BTController.volumeData), maxlevel=127)
-				self.volumeSinc = self.BTController.volumeData
-				self.GUI_Central.slider_volume.setValue(self.volumeSinc)
+				self.centralf.volumeSinc = self.BTController.volumeData
+				self.GUI_Central.slider_volume.setValue(self.centralf.volumeSinc)
 
 	def writeLog(self, msg):
 		with open('/home/pi/Desktop/GUI_Log.txt', 'a') as log:

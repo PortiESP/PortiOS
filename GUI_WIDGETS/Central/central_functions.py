@@ -28,8 +28,11 @@ class Central_funcs:
 
 		# Slider volume
 		def sliderVolumeEvent():
-			self.mediaPlayer.set_volume(str(self.frame.slider_volume.value()))
-			self.mediaPlayer.volumeIface.Set('org.bluez.MediaTransport1', 'Volume', dbus.UInt16(self.frame.slider_volume.value()))
+			value = self.frame.slider_volume.value()
+			self.mediaPlayer.volumeIface.Set('org.bluez.MediaTransport1', 'Volume', dbus.UInt16(value))
+			self.mediaPlayer.set_volume(str(value))
+			self.volumeSinc = value
+
 		self.frame.slider_volume.sliderMoved.connect(sliderVolumeEvent)
 
 		# Setting time
