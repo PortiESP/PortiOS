@@ -41,7 +41,7 @@ class Central_funcs:
 		if data[0] == 'Volume':
 				self.writeLog('Volume changed to: ' + str(self.mediaPlayer.volumeData))
 				self.mediaPlayer.set_volume(str(self.mediaPlayer.volumeData), maxlevel=127)
-				self.GUI_Central.slider_volume.setValue(data[1])
+				self.frame.slider_volume.setValue(data[1])
 
 
 
