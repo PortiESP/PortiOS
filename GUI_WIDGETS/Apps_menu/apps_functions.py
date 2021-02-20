@@ -3,7 +3,8 @@
 
 class Apps_funcs:
 
-	def appsSetup(frame, widget):
+	def appsSetup(self, frame, widget):
+		
 		# Apps buttons
 		# frame.pushButton.clicked.connect(lambda:)
 		# frame.pushButton_2.clicked.connect(lambda:)

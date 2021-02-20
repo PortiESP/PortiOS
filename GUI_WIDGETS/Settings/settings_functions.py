@@ -1,17 +1,19 @@
 
 
 class Settings_funcs:
-	def settingsSetup(frame):
-		frame.bearing_settingsBrightness.clicked.connect(lambda:Settings_funcs.setPage(frame, 0))
-		frame.bearing_settingsWifi.clicked.connect(lambda:Settings_funcs.setPage(frame, 1))
-		frame.bearing_settingsBluetooth.clicked.connect(lambda:Settings_funcs.setPage(frame, 2))
-		frame.bearing_settingsSound.clicked.connect(lambda:Settings_funcs.setPage(frame, 3))
-		frame.bearing_settingsStatus.clicked.connect(lambda:Settings_funcs.setPage(frame, 4))
-		frame.bearing_settingsGpio.clicked.connect(lambda:Settings_funcs.setPage(frame, 5))
-		frame.bearing_settingsSystemInfo.clicked.connect(lambda:Settings_funcs.setPage(frame, 6))
-		frame.bearing_settingsTerminal.clicked.connect(lambda:Settings_funcs.setPage(frame, 7))
-		frame.bearing_settingsAdvanced.clicked.connect(lambda:Settings_funcs.setPage(frame, 8))
+	def settingsSetup(self, frame):
+		self.frame = frame
 
-	def setPage(frame, index):
+		self.frame.bearing_settingsBrightness.clicked.connect(lambda:Settings_funcs.setPage(0))
+		self.frame.bearing_settingsWifi.clicked.connect(lambda:Settings_funcs.setPage(1))
+		self.frame.bearing_settingsBluetooth.clicked.connect(lambda:Settings_funcs.setPage(2))
+		self.frame.bearing_settingsSound.clicked.connect(lambda:Settings_funcs.setPage(3))
+		self.frame.bearing_settingsStatus.clicked.connect(lambda:Settings_funcs.setPage(4))
+		self.frame.bearing_settingsGpio.clicked.connect(lambda:Settings_funcs.setPage(5))
+		self.frame.bearing_settingsSystemInfo.clicked.connect(lambda:Settings_funcs.setPage(6))
+		self.frame.bearing_settingsTerminal.clicked.connect(lambda:Settings_funcs.setPage(7))
+		self.frame.bearing_settingsAdvanced.clicked.connect(lambda:Settings_funcs.setPage(8))
+
+	def setPage(self, index):
 		print('Changing to page ',index)
-		frame.stackedWidget_settings.setCurrentIndex(index)
+		self.frame.stackedWidget_settings.setCurrentIndex(index)
