@@ -9,7 +9,7 @@ class Central_funcs:
 		frame.powerVisivility = False
 
 		# Footer buttons events
-	
+
 		frame.footerButton_1.clicked.connect(lambda:mediaPlayer.playback_control('previous'))
 		frame.footerButton_2.clicked.connect(lambda:Central_funcs.toogle_musicStatus(frame, mediaPlayer))
 		frame.footerButton_3.clicked.connect(lambda:mediaPlayer.playback_control('next'))
@@ -33,7 +33,7 @@ class Central_funcs:
 	def toogle_musicStatus(frame, mediaPlayer):
 		# Add icon toogle
 		try:
-			Central_funcs.writeLog(str(mediaPlayer.get_device_data('Name')))
+			Central_funcs.writeLog(str(mediaPlayer.get_device_data('Connected')))
 		except:
 			Central_funcs.writeLog('exception...')
 		if mediaPlayer.get_device_data('Connected'):
