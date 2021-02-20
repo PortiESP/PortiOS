@@ -15,6 +15,7 @@ class Main_GUI:
 		self.GUI_Central.setupUi(self.win)
 
 		# Setting media player
+		self.BTController = None
 		self.startMediaPlayer()
 
 
