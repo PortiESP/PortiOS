@@ -9,6 +9,9 @@ class Main_GUI:
 		# Setting fullscreen
 		self.win.showFullScreen()
 
+		# Create log file
+		log = open('/home/pi/Desktop/GUI_Central_Log.txt', 'w')
+		log.close()
 
 		# Getting central GUI
 		self.GUI_Central = Ui_Central()
@@ -50,7 +53,7 @@ class Main_GUI:
 		while self.mediaPlayerThread:
 			time.sleep(0.1)
 			checkDevice = BTController.checkConnectedDevices()
-			self.writeLog('Connection status' + str(checkDevice))
+			self.writeLog('Connection status: ' + str(checkDevice))
 			# Check for connected devices
 			if checkDevice == False:
 				self.isConnectedDevice = False
@@ -75,7 +78,7 @@ class Main_GUI:
 				self.BTController.set_volume(self.BTController.volumeData)
 
 	def writeLog(self, msg):
-		with open('/home/pi/Desktop/GUI_Central_Log.txt', 'a') as log:
+		with open('/home/pi/Desktop/GUI_Log.txt', 'a') as log:
 			log.write(msg + ' - ' + time.strftime('%H:%M:%S') + '\n')
 			
 
