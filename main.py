@@ -64,6 +64,8 @@ class Main_GUI:
 
 			# Setup on new connection
 			if self.isConnectedDevice == False and checkDevice == True:
+				self.writeLog('Connecting...')
+				time.sleep(1)
 				self.BTController.setupInterfaces()
 				self.isConnectedDevice = True
 				self.writeLog('Connection success...')
