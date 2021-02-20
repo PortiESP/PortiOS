@@ -39,13 +39,22 @@ class Main_GUI:
 		# Page test func
 
 	def startMediaPlayer(self):
-		try:
-			self.BTController = BT_Control_Panel()
-		except IOError:
-			self.BTController = None
-			return
-		self.mediaPlayerThread = threading.Thread(target=self.mediaPlayerThreadFunc)
+		def conection(self):
+			while 1:
+				try:
+					self.BTController = BT_Control_Panel()
+					self.mediaPlayerThread = threading.Thread(target=self.mediaPlayerThreadFunc)
+					self.mediaPlayerThread.start()
+					self.writeLog('BT connected succesfully')
+					return
+				except IOError:
+					self.BTController = None
+				self.writeLog('BT not connected')
+				time.sleep(0.1)
+
+		self.mediaPlayerThread = threading.Thread(target=conection)
 		self.mediaPlayerThread.start()
+		
 		
 
 	def mediaPlayerThreadFunc(self):
