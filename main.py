@@ -84,6 +84,7 @@ class Main_GUI:
 				self.writeLog('Volume changed to: ' + str(self.BTController.volumeData))
 				self.BTController.set_volume(str(self.BTController.volumeData), maxlevel=127)
 				self.volumeSinc = self.BTController.volumeData
+				self.GUI_Central.slider_volume.setValue(self.volumeSinc)
 
 	def writeLog(self, msg):
 		with open('/home/pi/Desktop/GUI_Log.txt', 'a') as log:
