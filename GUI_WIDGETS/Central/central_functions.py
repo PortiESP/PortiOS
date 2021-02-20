@@ -30,7 +30,7 @@ class Central_funcs:
 		self.frame.timeThread = threading.Thread(target=self.setTime, args=(self,))
 		self.frame.timeThread.start()
 
-		mediaPlayer.bus.add_signal_receiver(self..mediaDataChanged, 
+		mediaPlayer.bus.add_signal_receiver(self.mediaDataChanged, 
 											dbus_interface = "org.freedesktop.DBus.Properties",
             								signal_name = "PropertiesChanged",
             								 )
