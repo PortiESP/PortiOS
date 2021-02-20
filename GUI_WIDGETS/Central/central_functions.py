@@ -33,7 +33,7 @@ class Central_funcs:
             								signal_name = "PropertiesChanged",
             								 )
 
-	def mediaDataChanged(_, data, _):
+	def mediaDataChanged(_, data, __):
 		print(data)
 
 
