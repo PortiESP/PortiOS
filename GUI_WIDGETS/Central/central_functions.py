@@ -28,7 +28,14 @@ class Central_funcs:
 		frame.timeThread = threading.Thread(target=Central_funcs.setTime, args=(frame,))
 		frame.timeThread.start()
 
-		
+		mediaPlayer.bus.add_signal_receiver(Central_funcs, 
+											dbus_interface = "org.freedesktop.DBus.Properties",
+            								signal_name = "PropertiesChanged",
+            								 )
+
+	def mediaDataCanged(mediaPlayer):
+		print(mediaPlayer)
+
 
 
 	def toogle_musicStatus(frame, mediaPlayer):
@@ -41,7 +48,7 @@ class Central_funcs:
 			else: 
 				name = 'pause-fill'
 				mediaPlayer.playback_control('play')
-			icon1.addFile(u":/icons_red/Resources/Icons/png-red/{}.png".format(name), QSize(), QIcon.Normal, QIcon.Off)
+			icon1.addFile(u":/icons_red/Resources/Icons/png-red/{}.png".format(name), QSize(24, 24), QIcon.Normal, QIcon.Off)
 			frame.footerButton_2.setIcon(icon1)
 		
 		
