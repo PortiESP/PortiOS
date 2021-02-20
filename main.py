@@ -54,18 +54,16 @@ class Main_GUI:
 		self.writeLog('Media Player Thread started...')
 
 		while 1:
-			time.sleep(0.1)
+			time.sleep(1)
 			checkDevice = self.BTController.checkConnectedDevices()
-			# self.writeLog('Connection status: ' + str(checkDevice))
 			# Check for connected devices
-			if checkDevice == False: 
+			if self.isConnectedDevice == True and checkDevice == False:
 				# BT statis icon off
 				icon = QIcon()
 				icon.addFile(u":/icons-gray/Resources/Icons/bt_states/bluetooth_gray.png", QSize(), QIcon.Normal, QIcon.Off)
 				self.GUI_Central.bluetoothStatusButton.setIcon(icon)
 				self.isConnectedDevice = False
 				self.writeLog('No bt connection...')
-				time.sleep(0.4)
 				continue
 
 			# Setup on new connection
@@ -81,17 +79,10 @@ class Main_GUI:
 				self.GUI_Central.bluetoothStatusButton.setIcon(icon)				
 				self.writeLog('Connection success...')
 
+			# Central clock
+			self.GUI_Central.label_clock.setText(time.strftime('%H:%M'))
 
 
-			# Update data
-			self.BTController.update_data()
-			
-			# Sincronize volume
-			if self.centralf.volumeSinc != self.BTController.volumeData:
-				self.writeLog('Volume changed to: ' + str(self.BTController.volumeData))
-				self.BTController.set_volume(str(self.BTController.volumeData), maxlevel=127)
-				self.centralf.volumeSinc = self.BTController.volumeData
-				self.GUI_Central.slider_volume.setValue(self.centralf.volumeSinc)
 
 	def writeLog(self, msg):
 		with open('/home/pi/Desktop/GUI_Log.txt', 'a') as log:

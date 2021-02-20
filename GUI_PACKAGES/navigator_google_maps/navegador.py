@@ -133,6 +133,6 @@ if __name__ == '__main__':
 	
 	nav.iniciar_viaje()
 	# nav.pruebas()
-	nav.select_instrucciones()
-	# nav.mini_nav()
+	# nav.select_instrucciones()
+	nav.mini_nav()
 	pass

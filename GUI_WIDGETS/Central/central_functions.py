@@ -27,17 +27,7 @@ class Central_funcs:
 		self.frame.centralRebootButton.clicked.connect(lambda:subprocess.run('reboot', shell=True))
 
 		# Slider volume
-		def sliderVolumeEvent():
-			value = self.frame.slider_volume.value()
-			self.mediaPlayer.volumeIface.Set('org.bluez.MediaTransport1', 'Volume', dbus.UInt16(value))
-			self.mediaPlayer.set_volume(str(value))
-			self.volumeSinc = value
-
-		self.frame.slider_volume.sliderMoved.connect(sliderVolumeEvent)
-
-		# Setting time
-		self.frame.timeThread = threading.Thread(target=self.setTime)
-		self.frame.timeThread.start()
+		self.frame.slider_volume.sliderMoved.connect(lambda:self.mediaPlayer.volumeIface.Set('org.bluez.MediaTransport1', 'Volume', dbus.UInt16(self.frame.slider_volume.value())))
 
 		mediaPlayer.bus.add_signal_receiver(self.mediaDataChanged, 
 											dbus_interface = "org.freedesktop.DBus.Properties",
@@ -47,6 +37,11 @@ class Central_funcs:
 	def mediaDataChanged(self, _, data, __):
 		data = list(dict(data).items())[0]
 		if data[0] == 'Status': self.toogle_musicStatus()
+
+		if data[0] == 'Volume':
+				self.writeLog('Volume changed to: ' + str(self.mediaPlayer.volumeData))
+				self.mediaPlayer.set_volume(str(self.mediaPlayer.volumeData), maxlevel=127)
+				self.GUI_Central.slider_volume.setValue(data[1])
 
 
 
@@ -79,11 +74,6 @@ class Central_funcs:
 			self.frame.frame_power.raise_()
 		else:
 			self.frame.frame_power.lower()
-
-	def setTime(self):
-		while self.frame.timeThread:
-			self.frame.label_clock.setText(time.strftime('%H:%M'))
-			time.sleep(1)
 
 	def setPage(self, index):
 		print('Changing to page ',index)
