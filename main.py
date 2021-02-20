@@ -47,11 +47,13 @@ class Main_GUI:
 		while self.mediaPlayerThread:
 			time.sleep(0.1)
 			
-
-			# Updata BT data
-			if not self.BTController.update_data():
+			while not self.BTController.update_data():
 				self.writeLog('Connection error...')
+				self.BTController = BT_Control_Panel()
 				continue
+			# Updata BT data
+			
+				
 			
 
 
