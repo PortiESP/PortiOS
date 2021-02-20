@@ -5,7 +5,7 @@ from PySide2.QtCore import QSize
 
 # Frame will be GUI_Central object
 class Central_funcs:
-	def centralSetup(self, frame, mediaPlayer):
+	def __init__(self, frame, mediaPlayer):
 		self.frame = frame
 		self.mediaPlayer = mediaPlayer
 		# Flags
