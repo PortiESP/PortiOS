@@ -544,7 +544,7 @@ QSlider::handle:vertical{
 }</string>
      </property>
      <property name="maximum">
-      <number>100</number>
+      <number>127</number>
      </property>
     </widget>
     <widget class="Line" name="line">
@@ -737,13 +737,13 @@ background:none;</string>
      </widget>
     </widget>
    </widget>
+   <zorder>frame_volume</zorder>
    <zorder>frame_power</zorder>
    <zorder>frame_background</zorder>
    <zorder>stackedWidget</zorder>
    <zorder>frame_logo</zorder>
    <zorder>frame_header</zorder>
    <zorder>frame_footer</zorder>
-   <zorder>frame_volume</zorder>
   </widget>
  </widget>
  <resources>

@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'centralFDXUDt.ui'
+## Form generated from reading UI file 'centralazvolJ.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -241,7 +241,7 @@ class Ui_Central(object):
 "	border-radius:3px;	\n"
 "\n"
 "}")
-        self.slider_volume.setMaximum(100)
+        self.slider_volume.setMaximum(127)
         self.line = QFrame(self.frame_volume)
         self.line.setObjectName(u"line")
         self.line.setGeometry(QRect(20, 25, 1, 150))
@@ -317,13 +317,13 @@ class Ui_Central(object):
         self.powerCloseButton.setIcon(icon7)
         self.powerCloseButton.setIconSize(QSize(30, 30))
         Central.setCentralWidget(self.centralwidget)
+        self.frame_volume.raise_()
         self.frame_power.raise_()
         self.frame_background.raise_()
         self.stackedWidget.raise_()
         self.frame_logo.raise_()
         self.frame_header.raise_()
         self.frame_footer.raise_()
-        self.frame_volume.raise_()
 
         self.retranslateUi(Central)
 
