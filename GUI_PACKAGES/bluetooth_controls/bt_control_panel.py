@@ -10,8 +10,7 @@ class BT_Control_Panel:
 		self.rootObj = self.bus.get_object('org.bluez', '/')
 
 		self.mgrInterface = dbus.Interface(self.rootObj, 'org.freedesktop.DBus.ObjectManager')
-		#diccionario con todos los objetos 
-		self.objects = self.mgrInterface.GetManagedObjects()
+
 
 		
 		#Lista con (str) de los objetos de los dispositivos guardados

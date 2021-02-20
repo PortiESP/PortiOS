@@ -16,6 +16,7 @@ class Main_GUI:
 
 		# Setting media player
 		self.isConnectedDevice = False
+		self.BTController = BT_Control_Panel()
 		self.startMediaPlayer()
 
 
@@ -39,7 +40,6 @@ class Main_GUI:
 		# Page test func
 
 	def startMediaPlayer(self):
-		self.BTController = BT_Control_Panel()
 		self.mediaPlayerThread = threading.Thread(target=self.mediaPlayerThreadFunc)
 		self.mediaPlayerThread.start()
 
@@ -71,6 +71,9 @@ class Main_GUI:
 			if self.BTController.localVolume != self.BTController.volumeData:
 				self.BTController.set_volume(self.BTController.volumeData)
 
+	def writeLog(msg):
+			with open('/home/pi/Desktop/GUI_Central_Log.txt', 'a') as log:
+				log.write(msg + ' - ' + time.strftime('%H:%M:%S') + '\n')
 			
 
 
