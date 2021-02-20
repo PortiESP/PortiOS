@@ -26,8 +26,7 @@ class Central_funcs:
 		frame.timeThread = threading.Thread(target=Central_funcs.setTime)
 		frame.timeThread.start()
 
-		log = open('/home/pi/Desktop/GUI_Central_Log.txt', 'w')
-		log.close()
+		
 
 
 	def toogle_musicStatus(frame, mediaPlayer):
