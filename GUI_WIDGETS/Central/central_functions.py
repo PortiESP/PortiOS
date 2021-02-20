@@ -86,15 +86,3 @@ class Central_funcs:
 		self.frame.stackedWidget.setCurrentIndex(index)
 
 
-	def writeLog(self, msg):
-		with open('/home/pi/Desktop/GUI_Log.txt', 'a') as log:
-			log.write(msg + ' - ' + time.strftime('%H:%M:%S') + '\n')
-
-	def pageTest(self):
-		def hilo():
-			while 1:
-				page = int(input('Page: '))
-				self.setPage(page)
-
-		t1 = threading.Thread(target=hilo)
-		t1.start()
