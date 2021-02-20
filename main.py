@@ -44,17 +44,18 @@ class Main_GUI:
 		self.mediaPlayerThread.start()
 
 	def mediaPlayerThreadFunc(self):
-		print('Media Player Thread started...')
+		self.writeLog('Media Player Thread started...')
 
 		while self.mediaPlayerThread:
 			time.sleep(0.1)
 			# Check for connected devices
-			if not BTController.checkConnectedDevices():
+			if BTController.checkConnectedDevices() == False:
 				self.isConnectedDevice = False
 				self.writeLog('No bt connection...')
 				time.sleep(0.4)
 				continue
-				
+				exit
+
 			# Setup on new connection
 			if self.isConnectedDevice == False and BTController.checkConnectedDevices() == True:
 				self.BTController.setupInterfaces()
