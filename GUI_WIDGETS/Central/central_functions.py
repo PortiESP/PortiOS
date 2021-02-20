@@ -31,10 +31,13 @@ class Central_funcs:
 		mediaPlayer.bus.add_signal_receiver(Central_funcs.mediaDataChanged, 
 											dbus_interface = "org.freedesktop.DBus.Properties",
             								signal_name = "PropertiesChanged",
+            								arg0 = frame,
+            								arg1 = mediaPlayer
             								 )
 
-	def mediaDataChanged(_, data, __):
-		print(data)
+	def mediaDataChanged(_, data, __, **kw):
+		data = dict(data).keys()[0]
+		if data == 'Status': Central_funcs.toogle_musicStatus(kw['arg0'], kw['arg1'])
 
 
 
