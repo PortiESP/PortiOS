@@ -37,12 +37,9 @@ class Central_funcs:
 
 	def mediaDataChanged(self, _, data, __):
 		data = list(dict(data).items())[0]
-		if data[0] == 'Status': self.toogle_musicStatus()
-
-
-
-	def toogle_musicStatus(self):
-		
+		if data[0] == 'Status': self.toogle_musicStatus()	
+	
+	def toogle_musicStatus(self):	
 		if self.mediaPlayer.checkConnectedDevices():
 			icon1 = QIcon()
 			if self.mediaPlayer.get_player_data('Status') == 'playing':
