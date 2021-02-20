@@ -79,7 +79,7 @@ class Main_GUI:
 			self.writeLog('Volume local: ' + str(self.BTController.localVolume))
 			# Sincronize volume
 			if self.BTController.localVolume != self.BTController.volumeData:
-				self.writeLog('Volume changed to: ' + self.BTController.volumeData)
+				self.writeLog('Volume changed to: ' + str(self.BTController.volumeData))
 				self.BTController.set_volume(self.BTController.volumeData)
 
 	def writeLog(self, msg):
