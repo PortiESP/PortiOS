@@ -15,7 +15,7 @@ class Main_GUI:
 		self.GUI_Central.setupUi(self.win)
 
 		# Setting media player
-		self.BTController = BT_Control_Panel()
+		self.BTController = None
 		self.startMediaPlayer()
 
 
@@ -47,10 +47,13 @@ class Main_GUI:
 		while self.mediaPlayerThread:
 			time.sleep(0.1)
 			
-			while not self.BTController.update_data():
-				self.writeLog('Connection error...')
+			while not self.BTController:
 				self.BTController = BT_Control_Panel()
-				self.BTController.update_data()
+				if not self.BTController.update_data():
+					self.BTController = None
+					self.writeLog('Connection error...')
+				else:
+					self.writeLog('Connection success...')
 				continue
 			# Updata BT data
 			
