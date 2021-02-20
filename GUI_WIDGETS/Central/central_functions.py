@@ -27,7 +27,7 @@ class Central_funcs:
 		self.frame.centralRebootButton.clicked.connect(lambda:subprocess.run('reboot', shell=True))
 
 		# Slider volume
-		self.frame.slider_volume.sliderMoved.connect(lambda:self.mediaPlayer.volumeIface.Set('org.bluez.MediaTransport1', 'Volume', dbus.UInt16(self.frame.slider_volume.value())))
+		self.frame.slider_volume.valueChanged.connect(lambda:self.mediaPlayer.volumeIface.Set('org.bluez.MediaTransport1', 'Volume', dbus.UInt16(self.frame.slider_volume.value())))
 
 		mediaPlayer.bus.add_signal_receiver(self.mediaDataChanged, 
 											dbus_interface = "org.freedesktop.DBus.Properties",
