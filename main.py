@@ -50,6 +50,7 @@ class Main_GUI:
 			while not self.BTController.update_data():
 				self.writeLog('Connection error...')
 				self.BTController = BT_Control_Panel()
+				self.BTController.update_data()
 				continue
 			# Updata BT data
 			
