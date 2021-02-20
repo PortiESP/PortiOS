@@ -27,14 +27,12 @@ class Central_funcs:
 		self.frame.centralRebootButton.clicked.connect(lambda:subprocess.run('reboot', shell=True))
 
 		# Setting time
-		self.frame.timeThread = threading.Thread(target=Central_funcs.setTime)
+		self.frame.timeThread = threading.Thread(target=Central_funcs.setTime, args=(self,))
 		self.frame.timeThread.start()
 
 		mediaPlayer.bus.add_signal_receiver(Central_funcs.mediaDataChanged, 
 											dbus_interface = "org.freedesktop.DBus.Properties",
             								signal_name = "PropertiesChanged",
-            								arg0 = frame,
-            								arg1 = mediaPlayer
             								 )
 
 	def mediaDataChanged(self, _, data, __):
