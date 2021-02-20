@@ -1,4 +1,4 @@
-import threading, time, subprocess, os
+import threading, time, subprocess, os, dbus
 from PySide2.QtGui import QIcon
 from PySide2.QtCore import QSize
 # from GUI_PACKAGES.bluetooth_controls.bt_control_panel import BT_Control_Panel
@@ -29,7 +29,7 @@ class Central_funcs:
 		# Slider volume
 		def sliderVolumeEvent():
 			self.mediaPlayer.set_volume(str(self.frame.slider_volume.value()))
-			self.mediaPlayer.volumeIface.Set('org.bluez.MediaTransport1', 'Volume', mediaPlayer.bus.UInt16(self.frame.slider_volume.value()))
+			self.mediaPlayer.volumeIface.Set('org.bluez.MediaTransport1', 'Volume', dbus.UInt16(self.frame.slider_volume.value()))
 		self.frame.slider_volume.sliderMoved.connect(sliderVolumeEvent)
 
 		# Setting time
