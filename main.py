@@ -10,7 +10,7 @@ class Main_GUI:
 		self.win.showFullScreen()
 
 		# Create log file
-		log = open('/home/pi/Desktop/GUI_Central_Log.txt', 'w')
+		log = open('/home/pi/Desktop/GUI_Log.txt', 'w')
 		log.close()
 
 		# Getting central GUI
@@ -52,7 +52,7 @@ class Main_GUI:
 
 		while 1:
 			time.sleep(0.1)
-			checkDevice = BTController.checkConnectedDevices()
+			checkDevice = self.BTController.checkConnectedDevices()
 			self.writeLog('Connection status: ' + str(checkDevice))
 			# Check for connected devices
 			if checkDevice == False:
