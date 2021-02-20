@@ -38,7 +38,7 @@ class Central_funcs:
 		print('Data changed:')
 		print(list(dict(data).items()))
 		data = list(dict(data).items())[0]
-		if str(data[0]) == 'Status': self.toogle_musicStatus()
+		if str(data[0]) == 'Status': self.toogle_musicStatus(str(data[1]))
 
 		if str(data[0]) == 'Volume':
 				self.writeLog('Volume changed to: ' + str(data[1]))
@@ -47,14 +47,19 @@ class Central_funcs:
 
 
 
-	def toogle_musicStatus(self):
+	def toogle_musicStatus(self, setStatus=None):
 		
 		if self.mediaPlayer.checkConnectedDevices():
+			status = self.mediaPlayer.get_player_data('Status')
+			if setStatus: 
+				if setStatus == 'playing': status = 'paused'
+				elif setStatus == 'paused': status = 'playing'
+				
 			icon1 = QIcon()
-			if self.mediaPlayer.get_player_data('Status') == 'playing':
+			if status == 'playing':
 				name = 'play-fill'
 				self.mediaPlayer.playback_control('pause')
-			else: 
+			elif status == 'paused':
 				name = 'pause-fill'
 				self.mediaPlayer.playback_control('play')
 			icon1.addFile(u":/icons_red/Resources/Icons/png-red/{}.png".format(name), QSize(30, 30), QIcon.Normal, QIcon.Off)
