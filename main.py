@@ -55,11 +55,13 @@ class Main_GUI:
 				else:
 					self.writeLog('Connection success...')
 				continue
-			# Updata BT data
-			
-				
-			
 
+
+
+
+			# Updata BT data
+			self.BTController.update_data()
+				
 
 			# Sincronize volume
 			if self.BTController.localVolume != self.BTController.volumeData:
