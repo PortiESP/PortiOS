@@ -43,9 +43,11 @@ class BT_Control_Panel:
 				self.muteid = i.split(',')[0][-1]
 		self.mute = 1
 		self.localVolume = subprocess.run([f'amixer cget numid={self.numid}'], capture_output=True, text=True, shell=True).stdout.split('=')[-1].strip().split(',')
-		
-		
-		
+				
+	def setupInterfaces(self):
+		#diccionario con todos los objetos 
+		self.objects = self.mgrInterface.GetManagedObjects()
+
 		#Setting up Paths, Data and Ifaces
 		for objPath, interfaces in self.objects.items():
 			#Get BT adapter
@@ -81,7 +83,13 @@ class BT_Control_Panel:
 					self.volumeIface = dbus.Interface(self.bus.get_object('org.bluez', self.fdObjPath), 'org.freedesktop.DBus.Properties')
 					self.volumeData = self.volumeIface.Get('org.bluez.MediaTransport1', 'Volume')
 			
-		
+	def checkConnectedDevices(self):
+		self.objects = self.mgrInterface.GetManagedObjects()
+		for objPath, interfaces in self.objects.items():
+			if re.match('/org/bluez/hci0/dev_[0-9A-Z]{2}_[0-9A-Z]{2}_[0-9A-Z]{2}_[0-9A-Z]{2}_[0-9A-Z]{2}_[0-9A-Z]{2}$', objPath):
+				if self.objects[objPath]['org.bluez.Device1']['Connected'] == 1:
+					return True
+		return False
 	
 	def update_data(self):
 		try:

@@ -15,8 +15,8 @@ class Main_GUI:
 		self.GUI_Central.setupUi(self.win)
 
 		# Setting media player
+		self.isConnectedDevice = False
 		self.startMediaPlayer()
-		self.GUI_Central.isDeviceConnected = False
 
 
 		# Getting widgets
@@ -45,14 +45,28 @@ class Main_GUI:
 
 	def mediaPlayerThreadFunc(self):
 		print('Media Player Thread started...')
+
 		while self.mediaPlayerThread:
 			time.sleep(0.1)
-			try:
-				self.BTController.update_data()
-				self.GUI_Central.isDeviceConnected = True
-			except dbus.exceptions.DBusException:
-				self.GUI_Central.isDeviceConnected = False
+			# Check for connected devices
+			if not BTController.checkConnectedDevices():
+				self.isConnectedDevice = False
+				self.writeLog('No bt connection...')
+				time.sleep(0.4)
 				continue
+				
+			# Setup on new connection
+			if self.isConnectedDevice == False and BTController.checkConnectedDevices() == True:
+				self.BTController.setupInterfaces()
+				self.isConnectedDevice = True
+				self.writeLog('Connection success...')
+
+
+
+			# Update data
+			self.BTController.update_data()
+
+			# Sincronize volume
 			if self.BTController.localVolume != self.BTController.volumeData:
 				self.BTController.set_volume(self.BTController.volumeData)
 
