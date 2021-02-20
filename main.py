@@ -75,8 +75,8 @@ class Main_GUI:
 			# Update data
 			self.BTController.update_data()
 			
-			self.writeLog('Volume data: ' + self.BTController.volumeData)
-			self.writeLog('Volume local: ' + self.BTController.localVolume)
+			self.writeLog('Volume data: ' + str(self.BTController.volumeData))
+			self.writeLog('Volume local: ' + str(self.BTController.localVolume))
 			# Sincronize volume
 			if self.BTController.localVolume != self.BTController.volumeData:
 				self.writeLog('Volume changed to: ' + self.BTController.volumeData)
