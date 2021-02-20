@@ -40,7 +40,7 @@ class Main_GUI:
 		# Page test func
 
 	def startMediaPlayer(self):
-		self.writeLog('Media Player Thread started...')
+		self.writeLog('Media Player Thread starting...')
 		self.mediaPlayerThread = threading.Thread(target=self.mediaPlayerThreadFunc)
 		self.mediaPlayerThread.start()
 
@@ -49,8 +49,10 @@ class Main_GUI:
 
 		while self.mediaPlayerThread:
 			time.sleep(0.1)
+			checkDevice = BTController.checkConnectedDevices()
+			self.writeLog('Connection status' + str(checkDevice))
 			# Check for connected devices
-			if BTController.checkConnectedDevices() == False:
+			if checkDevice == False:
 				self.isConnectedDevice = False
 				self.writeLog('No bt connection...')
 				time.sleep(0.4)
@@ -58,7 +60,7 @@ class Main_GUI:
 				exit
 
 			# Setup on new connection
-			if self.isConnectedDevice == False and BTController.checkConnectedDevices() == True:
+			if self.isConnectedDevice == False and checkDevice == True:
 				self.BTController.setupInterfaces()
 				self.isConnectedDevice = True
 				self.writeLog('Connection success...')
