@@ -50,7 +50,7 @@ class Main_GUI:
 	def mediaPlayerThreadFunc(self):
 		self.writeLog('Media Player Thread started...')
 
-		while self.mediaPlayerThread:
+		while 1:
 			time.sleep(0.1)
 			checkDevice = BTController.checkConnectedDevices()
 			self.writeLog('Connection status: ' + str(checkDevice))
