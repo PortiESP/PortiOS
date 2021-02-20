@@ -15,9 +15,6 @@ class Main_GUI:
 		self.GUI_Central.setupUi(self.win)
 
 		# Setting media player
-		self.GUI_Central.isDeviceConnected = False
-		self.BTController = None
-
 		self.startMediaPlayer()
 
 
@@ -41,39 +38,35 @@ class Main_GUI:
 		# Page test func
 
 	def startMediaPlayer(self):
-		def conection(self):
-			while 1:
-				try:
-					self.BTController = BT_Control_Panel()
-					self.mediaPlayerThread = threading.Thread(target=self.mediaPlayerThreadFunc)
-					self.mediaPlayerThread.start()
-					self.writeLog('BT connected succesfully')
-					return
-				except IOError:
-					self.BTController = None
-				self.writeLog('BT not connected')
-				time.sleep(0.1)
-
-		self.mediaPlayerThread = threading.Thread(target=conection)
+		self.mediaPlayerThread = threading.Thread(target=self.mediaPlayerThreadFunc)
 		self.mediaPlayerThread.start()
-		
-		
 
 	def mediaPlayerThreadFunc(self):
 		print('Media Player Thread started...')
 		while self.mediaPlayerThread:
 			time.sleep(0.1)
+
+			# check if there is a connected device
+			if not self.BTController:
+				self.writeLog('No devices connected...')
+				try:
+					self.BTController = BT_Control_Panel()
+					Central_funcs.centralSetup(self.GUI_Central, self.BTController)
+				except IOError:
+					self.BTController = None
+					continue
+			# Updata BT data
 			try:
 				self.BTController.update_data()
-				self.GUI_Central.isDeviceConnected = True
 			except dbus.exceptions.DBusException:
-				self.GUI_Central.isDeviceConnected = False
-				continue
+				self.BTController = None
+
+			# Sincronize volume
 			if self.BTController.localVolume != self.BTController.volumeData:
 				self.writeLog('Volume set to: ', self.BTController.volumeData)
 				self.BTController.set_volume(self.BTController.volumeData)
 
-			
+			self.writeLog('Conection succeess...')
 	def writeLog(self, msg):
 			with open('/home/pi/Desktop/GUI_Central_Log.txt', 'a') as log:
 				log.write(msg + ' - ' + time.strftime('%H:%M:%S') + '\n')
