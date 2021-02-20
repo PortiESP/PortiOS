@@ -9,9 +9,6 @@ class Main_GUI:
 		# Setting fullscreen
 		# self.win.showFullScreen()
 
-		# Create log file
-		log = open('/home/pi/Desktop/GUI_Log.txt', 'w')
-		log.close()
 
 		# Getting central GUI
 		self.GUI_Central = Ui_Central()
@@ -46,12 +43,10 @@ class Main_GUI:
 		# Page test func
 
 	def startMediaPlayer(self):
-		self.writeLog('Media Player Thread starting...')
 		self.mediaPlayerThread = threading.Thread(target=self.mediaPlayerThreadFunc)
 		self.mediaPlayerThread.start()
 
 	def mediaPlayerThreadFunc(self):
-		self.writeLog('Media Player Thread started...')
 
 		while 1:
 			time.sleep(1)
@@ -63,12 +58,10 @@ class Main_GUI:
 				icon.addFile(u":/icons-gray/Resources/Icons/bt_states/bluetooth_gray.png", QSize(), QIcon.Normal, QIcon.Off)
 				self.GUI_Central.bluetoothStatusButton.setIcon(icon)
 				self.isConnectedDevice = False
-				self.writeLog('No bt connection...')
 				continue
 
 			# Setup on new connection
 			if self.isConnectedDevice == False and checkDevice == True:
-				self.writeLog('Connecting...')
 				time.sleep(1)
 				self.BTController.setupInterfaces()
 				self.isConnectedDevice = True
@@ -77,16 +70,11 @@ class Main_GUI:
 				icon = QIcon()
 				icon.addFile(u":/icons-gray/Resources/Icons/bt_states/bluetooth_blue.png", QSize(), QIcon.Normal, QIcon.Off)
 				self.GUI_Central.bluetoothStatusButton.setIcon(icon)				
-				self.writeLog('Connection success...')
 
 			# Central clock
 			self.GUI_Central.label_clock.setText(time.strftime('%H:%M'))
 
 
-
-	def writeLog(self, msg):
-		with open('/home/pi/Desktop/GUI_Log.txt', 'a') as log:
-			log.write(msg + ' - ' + time.strftime('%H:%M:%S') + '\n')
 			
 
 

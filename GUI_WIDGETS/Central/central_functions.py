@@ -41,7 +41,6 @@ class Central_funcs:
 		if str(data[0]) == 'Status': self.toogle_musicStatus(str(data[1]))
 
 		if str(data[0]) == 'Volume':
-				self.writeLog('Volume changed to: ' + str(data[1]))
 				self.mediaPlayer.set_volume(str(data[1]), maxlevel=127)
 				self.frame.slider_volume.setValue(int(data[1]))
 
