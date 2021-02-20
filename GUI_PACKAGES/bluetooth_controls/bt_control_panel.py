@@ -80,21 +80,20 @@ class BT_Control_Panel:
 					self.fdObjPath = fd_regex[0]
 					self.volumeIface = dbus.Interface(self.bus.get_object('org.bluez', self.fdObjPath), 'org.freedesktop.DBus.Properties')
 					self.volumeData = self.volumeIface.Get('org.bluez.MediaTransport1', 'Volume')
-				
-		
-		#Check if there is any device connected
-		if not self.connectedDeviceObjPath:
-			raise IOError('No connected devices')
+			
 		
 	
 	def update_data(self):
-		self.deviceData.update(self.deviceIface.GetAll('org.bluez.Device1'))
-		self.mediaPlayerData.update(self.playerIface.GetAll('org.bluez.MediaPlayer1'))
-		for key, value in self.playerIface.GetAll('org.bluez.MediaPlayer1').items():
-			if isinstance(value, dbus.Dictionary):
-				self.mediaPlayerData[key].update(value)
-			else: self.mediaPlayerData[key] = value
-		self.volumeData = self.volumeIface.Get('org.bluez.MediaTransport1', 'Volume')
+		try:
+			self.deviceData.update(self.deviceIface.GetAll('org.bluez.Device1'))
+			self.mediaPlayerData.update(self.playerIface.GetAll('org.bluez.MediaPlayer1'))
+			for key, value in self.playerIface.GetAll('org.bluez.MediaPlayer1').items():
+				if isinstance(value, dbus.Dictionary):
+					self.mediaPlayerData[key].update(value)
+				else: self.mediaPlayerData[key] = value
+			self.volumeData = self.volumeIface.Get('org.bluez.MediaTransport1', 'Volume')
+		except AttributeError:
+			return False
 
 	
 	# Play,Stop,Next...

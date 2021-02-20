@@ -15,7 +15,7 @@ class Main_GUI:
 		self.GUI_Central.setupUi(self.win)
 
 		# Setting media player
-		self.BTController = None
+		self.BTController = BT_Control_Panel()
 		self.startMediaPlayer()
 
 
@@ -46,21 +46,14 @@ class Main_GUI:
 		print('Media Player Thread started...')
 		while self.mediaPlayerThread:
 			time.sleep(0.1)
+			
 
-			# check if there is a connected device
-			if not self.BTController:
-				self.writeLog('No devices connected...')
-				try:
-					self.BTController = BT_Control_Panel()
-					Central_funcs.centralSetup(self.GUI_Central, self.BTController)
-				except IOError:
-					self.BTController = None
-					continue
 			# Updata BT data
-			try:
-				self.BTController.update_data()
-			except dbus.exceptions.DBusException:
-				self.BTController = None
+			if not self.BTController.update_data():
+				self.writeLog('Connection error...')
+				continue
+			
+
 
 			# Sincronize volume
 			if self.BTController.localVolume != self.BTController.volumeData:
