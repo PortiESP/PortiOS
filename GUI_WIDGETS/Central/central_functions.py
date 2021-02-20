@@ -5,22 +5,24 @@ from PySide2.QtCore import QSize
 
 # Frame will be GUI_Central object
 class Central_funcs:
-	def centralSetup(frame, mediaPlayer):
+	def centralSetup(self, frame, mediaPlayer):
+		self.frame = frame
+		self.mediaPlayer = mediaPlayer
 		# Flags
-		frame.volumeVisivility = False
-		frame.powerVisivility = False
+		self.frame.volumeVisivility = False
+		self.frame.powerVisivility = False
 
 		# Footer buttons events
 
 		frame.footerButton_1.clicked.connect(lambda:mediaPlayer.playback_control('previous'))
-		frame.footerButton_2.clicked.connect(lambda:Central_funcs.toogle_musicStatus(frame, mediaPlayer))
+		frame.footerButton_2.clicked.connect(self.toogle_musicStatus)
 		frame.footerButton_3.clicked.connect(lambda:mediaPlayer.playback_control('next'))
-		frame.footerButton_4.clicked.connect(lambda:Central_funcs.setPage(frame, 3))
-		frame.footerButton_5.clicked.connect(lambda:Central_funcs.toogle_volume(frame))
-		frame.footerButton_6.clicked.connect(lambda:Central_funcs.toogle_power(frame))
+		frame.footerButton_4.clicked.connect(lambda:self.setPage(3))
+		frame.footerButton_5.clicked.connect(self.toogle_volume)
+		frame.footerButton_6.clicked.connect(self.toogle_power)
 
 		# Power menu
-		frame.powerCloseButton.clicked.connect(lambda:Central_funcs.toogle_power(frame))
+		frame.powerCloseButton.clicked.connect(self.toogle_power)
 		frame.centralShutdownButton.clicked.connect(lambda:subprocess.run('shutdown -P now', shell=True))
 		frame.centralRebootButton.clicked.connect(lambda:subprocess.run('reboot', shell=True))
 
@@ -35,61 +37,61 @@ class Central_funcs:
             								arg1 = mediaPlayer
             								 )
 
-	def mediaDataChanged(_, data, __, **kw):
+	def mediaDataChanged(self, _, data, __):
 		data = dict(data).keys()[0]
-		if data == 'Status': Central_funcs.toogle_musicStatus(kw['arg0'], kw['arg1'])
+		if data == 'Status': self.toogle_musicStatus()
 
 
 
-	def toogle_musicStatus(frame, mediaPlayer):
+	def toogle_musicStatus(self):
 		
-		if mediaPlayer.get_device_data('Connected'):
+		if self.mediaPlayer.checkConnectedDevices():
 			icon1 = QIcon()
-			if mediaPlayer.get_player_data('Status') == 'playing':
+			if self.mediaPlayer.get_player_data('Status') == 'playing':
 				name = 'play-button'
-				mediaPlayer.playback_control('pause')
+				self.mediaPlayer.playback_control('pause')
 			else: 
 				name = 'pause-fill'
-				mediaPlayer.playback_control('play')
+				self.mediaPlayer.playback_control('play')
 			icon1.addFile(u":/icons_red/Resources/Icons/png-red/{}.png".format(name), QSize(24, 24), QIcon.Normal, QIcon.Off)
-			frame.footerButton_2.setIcon(icon1)
+			self.frame.footerButton_2.setIcon(icon1)
 		
 		
-	def toogle_volume(frame):
+	def toogle_volume(self):
 		print('Toogleing volume')
-		frame.volumeVisivility = (not frame.volumeVisivility)
-		if frame.volumeVisivility:
-			frame.frame_volume.raise_()
+		self.frame.volumeVisivility = (not self.frame.volumeVisivility)
+		if self.frame.volumeVisivility:
+			self.frame.frame_volume.raise_()
 		else:
-			frame.frame_volume.lower()
+			self.frame.frame_volume.lower()
 
-	def toogle_power(frame):
+	def toogle_power(self):
 		print('Toogleing power')
-		frame.powerVisivility = (not frame.powerVisivility)
-		if frame.powerVisivility:
-			frame.frame_power.raise_()
+		self.frame.powerVisivility = (not self.frame.powerVisivility)
+		if self.frame.powerVisivility:
+			self.frame.frame_power.raise_()
 		else:
-			frame.frame_power.lower()
+			self.frame.frame_power.lower()
 
-	def setTime(frame):
-		while frame.timeThread:
-			frame.label_clock.setText(time.strftime('%H:%M'))
+	def setTime(self):
+		while self.frame.timeThread:
+			self.frame.label_clock.setText(time.strftime('%H:%M'))
 			time.sleep(1)
 
-	def setPage(frame, index):
+	def setPage(self, index):
 		print('Changing to page ',index)
-		frame.stackedWidget.setCurrentIndex(index)
+		self.frame.stackedWidget.setCurrentIndex(index)
 
 
-	def writeLog(msg):
+	def writeLog(self, msg):
 		with open('/home/pi/Desktop/GUI_Log.txt', 'a') as log:
 			log.write(msg + ' - ' + time.strftime('%H:%M:%S') + '\n')
 
-	def pageTest(frame):
+	def pageTest(self):
 		def hilo():
 			while 1:
 				page = int(input('Page: '))
-				Central_funcs.setPage(frame, page)
+				Central_funcs.setPage(page)
 
 		t1 = threading.Thread(target=hilo)
 		t1.start()
