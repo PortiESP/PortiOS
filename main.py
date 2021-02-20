@@ -53,7 +53,7 @@ class Main_GUI:
 		while 1:
 			time.sleep(0.1)
 			checkDevice = self.BTController.checkConnectedDevices()
-			self.writeLog('Connection status: ' + str(checkDevice))
+			# self.writeLog('Connection status: ' + str(checkDevice))
 			# Check for connected devices
 			if checkDevice == False:
 				self.isConnectedDevice = False
@@ -68,6 +68,7 @@ class Main_GUI:
 				time.sleep(1)
 				self.BTController.setupInterfaces()
 				self.isConnectedDevice = True
+				self.volumeSinc = 0
 				self.writeLog('Connection success...')
 
 
@@ -75,12 +76,11 @@ class Main_GUI:
 			# Update data
 			self.BTController.update_data()
 			
-			self.writeLog('Volume data: ' + str(self.BTController.volumeData))
-			self.writeLog('Volume local: ' + str(self.BTController.localVolume))
 			# Sincronize volume
-			if self.BTController.localVolume != self.BTController.volumeData:
+			if self.volumeSinc != self.BTController.volumeData
 				self.writeLog('Volume changed to: ' + str(self.BTController.volumeData))
 				self.BTController.set_volume(str(self.BTController.volumeData))
+				self.volumeSinc = self.BTController.volumeData
 
 	def writeLog(self, msg):
 		with open('/home/pi/Desktop/GUI_Log.txt', 'a') as log:
