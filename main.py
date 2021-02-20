@@ -7,7 +7,7 @@ class Main_GUI:
 		self.win = main_win
 
 		# Setting fullscreen
-		self.win.showFullScreen()
+		# self.win.showFullScreen()
 
 		# Create log file
 		log = open('/home/pi/Desktop/GUI_Log.txt', 'w')
