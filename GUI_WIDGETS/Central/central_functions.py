@@ -27,10 +27,10 @@ class Central_funcs:
 		self.frame.centralRebootButton.clicked.connect(lambda:subprocess.run('reboot', shell=True))
 
 		# Setting time
-		self.frame.timeThread = threading.Thread(target=Central_funcs.setTime, args=(self,))
+		self.frame.timeThread = threading.Thread(target=self.setTime, args=(self,))
 		self.frame.timeThread.start()
 
-		mediaPlayer.bus.add_signal_receiver(Central_funcs.mediaDataChanged, 
+		mediaPlayer.bus.add_signal_receiver(self..mediaDataChanged, 
 											dbus_interface = "org.freedesktop.DBus.Properties",
             								signal_name = "PropertiesChanged",
             								 )
@@ -89,7 +89,7 @@ class Central_funcs:
 		def hilo():
 			while 1:
 				page = int(input('Page: '))
-				Central_funcs.setPage(page)
+				self.setPage(page)
 
 		t1 = threading.Thread(target=hilo)
 		t1.start()
