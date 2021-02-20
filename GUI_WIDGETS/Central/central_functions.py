@@ -51,7 +51,7 @@ class Central_funcs:
 			else: 
 				name = 'pause-fill'
 				self.mediaPlayer.playback_control('play')
-			icon1.addFile(u":/icons_red/Resources/Icons/png-red/{}.png".format(name), QSize(24, 24), QIcon.Normal, QIcon.Off)
+			icon1.addFile(u":/icons_red/Resources/Icons/png-red/{}.png".format(name), QSize(30, 30), QIcon.Normal, QIcon.Off)
 			self.frame.footerButton_2.setIcon(icon1)
 		
 		
