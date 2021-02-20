@@ -15,7 +15,6 @@ class Main_GUI:
 		self.GUI_Central.setupUi(self.win)
 
 		# Setting media player
-		self.BTController = None
 		self.startMediaPlayer()
 
 
@@ -46,29 +45,27 @@ class Main_GUI:
 		print('Media Player Thread started...')
 		while self.mediaPlayerThread:
 			time.sleep(0.1)
-			
+
+			# check if there is a connected device
 			if not self.BTController:
-				self.BTController = BT_Control_Panel()
-				if not self.BTController.update_data():
+				try:
+					self.BTController = BT_Control_Panel()
+					Central_funcs.centralSetup(self.GUI_Central, self.BTController)
+				except IOError:
 					self.BTController = None
-					self.writeLog('Connection error...')
-				else:
-					self.writeLog('Connection success...')
-				continue
-
-
-
-
+					continue
 			# Updata BT data
-			self.BTController.update_data()
-				
+			try:
+				self.BTController.update_data()
+			except dbus.exceptions.DBusException:
+				self.BTController = None
 
 			# Sincronize volume
 			if self.BTController.localVolume != self.BTController.volumeData:
 				self.writeLog('Volume set to: ', self.BTController.volumeData)
 				self.BTController.set_volume(self.BTController.volumeData)
 
-			self.writeLog('Conection succeess...')
+			
 	def writeLog(self, msg):
 			with open('/home/pi/Desktop/GUI_Central_Log.txt', 'a') as log:
 				log.write(msg + ' - ' + time.strftime('%H:%M:%S') + '\n')
