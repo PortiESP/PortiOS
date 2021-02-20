@@ -80,7 +80,7 @@ class Main_GUI:
 			# Sincronize volume
 			if self.BTController.localVolume != self.BTController.volumeData:
 				self.writeLog('Volume changed to: ' + str(self.BTController.volumeData))
-				self.BTController.set_volume(self.BTController.volumeData)
+				self.BTController.set_volume(int(self.BTController.volumeData))
 
 	def writeLog(self, msg):
 		with open('/home/pi/Desktop/GUI_Log.txt', 'a') as log:
