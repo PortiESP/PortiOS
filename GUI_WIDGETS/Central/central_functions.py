@@ -35,6 +35,8 @@ class Central_funcs:
             								 )
 
 	def mediaDataChanged(self, _, data, __):
+		print('Data changed:')
+		print(data)
 		data = list(dict(data).items())[0]
 		if data[0] == 'Status': self.toogle_musicStatus()
 
