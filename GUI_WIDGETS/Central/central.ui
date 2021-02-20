@@ -497,9 +497,9 @@ QPushButton:hover{
     <property name="geometry">
      <rect>
       <x>652</x>
-      <y>234</y>
+      <y>200</y>
       <width>40</width>
-      <height>180</height>
+      <height>200</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -522,7 +522,7 @@ QPushButton:hover{
        <x>5</x>
        <y>25</y>
        <width>30</width>
-       <height>130</height>
+       <height>150</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -553,7 +553,7 @@ QSlider::handle:vertical{
        <x>20</x>
        <y>25</y>
        <width>1</width>
-       <height>130</height>
+       <height>150</height>
       </rect>
      </property>
      <property name="styleSheet">

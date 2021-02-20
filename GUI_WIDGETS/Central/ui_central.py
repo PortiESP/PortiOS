@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'centralnCUPNC.ui'
+## Form generated from reading UI file 'centralFDXUDt.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -213,7 +213,7 @@ class Ui_Central(object):
         self.stackedWidget.addWidget(self.page_leds)
         self.frame_volume = QFrame(self.centralwidget)
         self.frame_volume.setObjectName(u"frame_volume")
-        self.frame_volume.setGeometry(QRect(652, 234, 40, 180))
+        self.frame_volume.setGeometry(QRect(652, 200, 40, 200))
         self.frame_volume.setStyleSheet(u"QFrame#frame_volume{\n"
 "	\n"
 "	background:rgba(57, 57, 57, 200);\n"
@@ -224,7 +224,7 @@ class Ui_Central(object):
         self.frame_volume.setFrameShadow(QFrame.Raised)
         self.slider_volume = QSlider(self.frame_volume)
         self.slider_volume.setObjectName(u"slider_volume")
-        self.slider_volume.setGeometry(QRect(5, 25, 30, 130))
+        self.slider_volume.setGeometry(QRect(5, 25, 30, 150))
         self.slider_volume.setStyleSheet(u"\n"
 "QSlider::groove:vertical{\n"
 "	width:20px;\n"
@@ -244,7 +244,7 @@ class Ui_Central(object):
         self.slider_volume.setMaximum(100)
         self.line = QFrame(self.frame_volume)
         self.line.setObjectName(u"line")
-        self.line.setGeometry(QRect(20, 25, 1, 130))
+        self.line.setGeometry(QRect(20, 25, 1, 150))
         self.line.setStyleSheet(u"border:1px solid gray;")
         self.line.setFrameShape(QFrame.VLine)
         self.line.setFrameShadow(QFrame.Sunken)
