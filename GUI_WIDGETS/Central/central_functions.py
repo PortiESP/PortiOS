@@ -27,7 +27,7 @@ class Central_funcs:
 		self.frame.centralRebootButton.clicked.connect(lambda:subprocess.run('reboot', shell=True))
 
 		# Setting time
-		self.frame.timeThread = threading.Thread(target=self.setTime, args=(self,))
+		self.frame.timeThread = threading.Thread(target=self.setTime)
 		self.frame.timeThread.start()
 
 		mediaPlayer.bus.add_signal_receiver(self.mediaDataChanged, 
