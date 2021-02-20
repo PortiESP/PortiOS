@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'centralrahXMn.ui'
+## Form generated from reading UI file 'centraluxUGhd.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -112,7 +112,7 @@ class Ui_Central(object):
         self.footerButton_2.setMinimumSize(QSize(0, 50))
         self.footerButton_2.setCursor(QCursor(Qt.PointingHandCursor))
         icon1 = QIcon()
-        icon1.addFile(u":/icons_red/Resources/Icons/png-red/play-button.png", QSize(), QIcon.Normal, QIcon.Off)
+        icon1.addFile(u":/icons_red/Resources/Icons/png-red/play-fill.png", QSize(), QIcon.Normal, QIcon.Off)
         self.footerButton_2.setIcon(icon1)
         self.footerButton_2.setIconSize(QSize(24, 24))
 
