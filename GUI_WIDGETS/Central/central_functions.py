@@ -28,13 +28,13 @@ class Central_funcs:
 		frame.timeThread = threading.Thread(target=Central_funcs.setTime, args=(frame,))
 		frame.timeThread.start()
 
-		mediaPlayer.bus.add_signal_receiver(Central_funcs, 
+		mediaPlayer.bus.add_signal_receiver(Central_funcs.mediaDataChanged, 
 											dbus_interface = "org.freedesktop.DBus.Properties",
             								signal_name = "PropertiesChanged",
             								 )
 
-	def mediaDataCanged(mediaPlayer):
-		print(mediaPlayer)
+	def mediaDataCanged(*args):
+		print(args)
 
 
 
