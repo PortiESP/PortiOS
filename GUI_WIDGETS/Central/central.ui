@@ -144,6 +144,32 @@
       <set>Qt::AlignCenter</set>
      </property>
     </widget>
+    <widget class="QPushButton" name="bluetoothStatusButton">
+     <property name="geometry">
+      <rect>
+       <x>459</x>
+       <y>10</y>
+       <width>24</width>
+       <height>24</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:none;</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset resource="../../resources.qrc">
+       <normaloff>:/icons-gray/Resources/Icons/bt_states/bluetooth_gray.png</normaloff>:/icons-gray/Resources/Icons/bt_states/bluetooth_gray.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>22</width>
+       <height>22</height>
+      </size>
+     </property>
+    </widget>
    </widget>
    <widget class="QFrame" name="frame_footer">
     <property name="geometry">

@@ -58,12 +58,12 @@ class Main_GUI:
 			checkDevice = self.BTController.checkConnectedDevices()
 			# self.writeLog('Connection status: ' + str(checkDevice))
 			# Check for connected devices
-			if checkDevice == False:
+			if checkDevice == False: 
+        		GUI_Central.footerButton_2.setIcon(QIcon().addFile(u":/icons-gray/Resources/Icons/bt_states/bluetooth_gray.png", QSize(), QIcon.Normal, QIcon.Off))
 				self.isConnectedDevice = False
 				self.writeLog('No bt connection...')
 				time.sleep(0.4)
 				continue
-				exit
 
 			# Setup on new connection
 			if self.isConnectedDevice == False and checkDevice == True:
@@ -72,7 +72,7 @@ class Main_GUI:
 				self.BTController.setupInterfaces()
 				self.isConnectedDevice = True
 				self.volumeSinc = 0
-				self.writeLog('Connection success...')
+        		GUI_Central.footerButton_2.setIcon(QIcon().addFile(u":/icons-gray/Resources/Icons/bt_states/bluetooth_gray.png", QSize(), QIcon.Normal, QIcon.Off))				self.writeLog('Connection success...')
 
 
 

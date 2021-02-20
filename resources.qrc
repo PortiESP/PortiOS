@@ -8,6 +8,10 @@
     <file>Resources/porti_os.png</file>
     <file>Resources/spotify-logo.png</file>
   </qresource>
+  <qresource prefix="icons-gray">
+    <file>Resources/Icons/bt_states/bluetooth_gray.png</file>
+    <file>Resources/Icons/bt_states/bluetooth_blue.png</file>
+  </qresource>
   <qresource prefix="fonts">
     <file>Resources/fonts/BAHNSCHRIFT.TTF</file>
   </qresource>
