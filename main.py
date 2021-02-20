@@ -47,7 +47,7 @@ class Main_GUI:
 		while self.mediaPlayerThread:
 			time.sleep(0.1)
 			
-			while not self.BTController:
+			if not self.BTController:
 				self.BTController = BT_Control_Panel()
 				if not self.BTController.update_data():
 					self.BTController = None
