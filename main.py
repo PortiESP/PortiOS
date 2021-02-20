@@ -16,6 +16,7 @@ class Main_GUI:
 
 		# Setting media player
 		self.startMediaPlayer()
+		self.GUI_Central.isDeviceConnected = False
 
 
 		# Getting widgets
@@ -38,6 +39,12 @@ class Main_GUI:
 		# Page test func
 
 	def startMediaPlayer(self):
+		try:
+			self.BTController = BT_Control_Panel()
+			Central_funcs.centralSetup(self.GUI_Central, self.BTController)
+		except IOError:
+			self.BTController = None
+			
 		self.mediaPlayerThread = threading.Thread(target=self.mediaPlayerThreadFunc)
 		self.mediaPlayerThread.start()
 
@@ -45,22 +52,12 @@ class Main_GUI:
 		print('Media Player Thread started...')
 		while self.mediaPlayerThread:
 			time.sleep(0.1)
-
-			# check if there is a connected device
-			if not self.BTController:
-				try:
-					self.BTController = BT_Control_Panel()
-					Central_funcs.centralSetup(self.GUI_Central, self.BTController)
-				except IOError:
-					self.BTController = None
-					continue
-			# Updata BT data
 			try:
 				self.BTController.update_data()
+				self.GUI_Central.isDeviceConnected = True
 			except dbus.exceptions.DBusException:
-				self.BTController = None
-
-			# Sincronize volume
+				self.GUI_Central.isDeviceConnected = False
+				continue
 			if self.BTController.localVolume != self.BTController.volumeData:
 				self.writeLog('Volume set to: ', self.BTController.volumeData)
 				self.BTController.set_volume(self.BTController.volumeData)
