@@ -4,6 +4,7 @@ import threading, time, subprocess, os
 # Frame will be GUI_Central object
 class Central_funcs:
 	def centralSetup(frame, mediaPlayer):
+		self.frame = frame
 		# Flags
 		frame.volumeVisivility = False
 		frame.powerVisivility = False
@@ -59,9 +60,9 @@ class Central_funcs:
 		else:
 			frame.frame_power.lower()
 
-	def setTime(frame):
-		while frame.timeThread:
-			frame.label_clock.setText(time.strftime('%H:%M'))
+	def setTime():
+		while self.frame.timeThread:
+			self.frame.label_clock.setText(time.strftime('%H:%M'))
 			time.sleep(1)
 
 	def setPage(frame, index):
