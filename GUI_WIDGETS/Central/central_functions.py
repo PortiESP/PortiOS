@@ -27,7 +27,7 @@ class Central_funcs:
 		self.frame.centralRebootButton.clicked.connect(lambda:subprocess.run('reboot', shell=True))
 
 		# Slider volume
-		self.frame.slider_volume.valueChanged.connect(lambda:self.mediaPlayer.volumeIface.Set('org.bluez.MediaTransport1', 'Volume', dbus.UInt16(self.frame.slider_volume.value())))
+		self.frame.slider_volume.valueChanged.connect(lambda:self.mediaPlayer.set_volume(self.frame.slider_volume.value(), maxlevel=127))
 
 		mediaPlayer.bus.add_signal_receiver(self.mediaDataChanged, 
 											dbus_interface = "org.freedesktop.DBus.Properties",
@@ -54,7 +54,7 @@ class Central_funcs:
 			if setStatus: 
 				if setStatus == 'playing': status = 'paused'
 				elif setStatus == 'paused': status = 'playing'
-				
+
 			icon1 = QIcon()
 			if status == 'playing':
 				name = 'play-fill'
