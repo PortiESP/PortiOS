@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'centraluxUGhd.ui'
+## Form generated from reading UI file 'centralPvBQNi.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -65,6 +65,14 @@ class Ui_Central(object):
         self.label_clock.setFont(font)
         self.label_clock.setStyleSheet(u"color:rgb(255,0,0);")
         self.label_clock.setAlignment(Qt.AlignCenter)
+        self.bluetoothStatusButton = QPushButton(self.frame_header)
+        self.bluetoothStatusButton.setObjectName(u"bluetoothStatusButton")
+        self.bluetoothStatusButton.setGeometry(QRect(459, 10, 24, 24))
+        self.bluetoothStatusButton.setStyleSheet(u"border:none;")
+        icon = QIcon()
+        icon.addFile(u":/icons-gray/Resources/Icons/bt_states/bluetooth_gray.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.bluetoothStatusButton.setIcon(icon)
+        self.bluetoothStatusButton.setIconSize(QSize(22, 22))
         self.frame_footer = QFrame(self.centralwidget)
         self.frame_footer.setObjectName(u"frame_footer")
         self.frame_footer.setGeometry(QRect(0, 410, 800, 430))
@@ -100,9 +108,9 @@ class Ui_Central(object):
         self.footerButton_1.setFont(font1)
         self.footerButton_1.setCursor(QCursor(Qt.PointingHandCursor))
         self.footerButton_1.setMouseTracking(False)
-        icon = QIcon()
-        icon.addFile(u":/icons_red/Resources/Icons/png-red/fi-rr-angle-double-small-left.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.footerButton_1.setIcon(icon)
+        icon1 = QIcon()
+        icon1.addFile(u":/icons_red/Resources/Icons/png-red/fi-rr-angle-double-small-left.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.footerButton_1.setIcon(icon1)
         self.footerButton_1.setIconSize(QSize(24, 24))
 
         self.horizontalLayout.addWidget(self.footerButton_1)
@@ -111,9 +119,9 @@ class Ui_Central(object):
         self.footerButton_2.setObjectName(u"footerButton_2")
         self.footerButton_2.setMinimumSize(QSize(0, 50))
         self.footerButton_2.setCursor(QCursor(Qt.PointingHandCursor))
-        icon1 = QIcon()
-        icon1.addFile(u":/icons_red/Resources/Icons/png-red/play-fill.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.footerButton_2.setIcon(icon1)
+        icon2 = QIcon()
+        icon2.addFile(u":/icons_red/Resources/Icons/png-red/play-fill.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.footerButton_2.setIcon(icon2)
         self.footerButton_2.setIconSize(QSize(24, 24))
 
         self.horizontalLayout.addWidget(self.footerButton_2)
@@ -122,9 +130,9 @@ class Ui_Central(object):
         self.footerButton_3.setObjectName(u"footerButton_3")
         self.footerButton_3.setMinimumSize(QSize(0, 50))
         self.footerButton_3.setCursor(QCursor(Qt.PointingHandCursor))
-        icon2 = QIcon()
-        icon2.addFile(u":/icons_red/Resources/Icons/png-red/fi-rr-angle-double-small-right.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.footerButton_3.setIcon(icon2)
+        icon3 = QIcon()
+        icon3.addFile(u":/icons_red/Resources/Icons/png-red/fi-rr-angle-double-small-right.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.footerButton_3.setIcon(icon3)
         self.footerButton_3.setIconSize(QSize(24, 24))
 
         self.horizontalLayout.addWidget(self.footerButton_3)
@@ -143,9 +151,9 @@ class Ui_Central(object):
         self.footerButton_4.setObjectName(u"footerButton_4")
         self.footerButton_4.setMinimumSize(QSize(0, 50))
         self.footerButton_4.setCursor(QCursor(Qt.PointingHandCursor))
-        icon3 = QIcon()
-        icon3.addFile(u":/icons_red/Resources/Icons/png-red/icons-menu.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.footerButton_4.setIcon(icon3)
+        icon4 = QIcon()
+        icon4.addFile(u":/icons_red/Resources/Icons/png-red/icons-menu.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.footerButton_4.setIcon(icon4)
         self.footerButton_4.setIconSize(QSize(30, 30))
 
         self.horizontalLayout_2.addWidget(self.footerButton_4)
@@ -154,9 +162,9 @@ class Ui_Central(object):
         self.footerButton_5.setObjectName(u"footerButton_5")
         self.footerButton_5.setMinimumSize(QSize(0, 50))
         self.footerButton_5.setCursor(QCursor(Qt.PointingHandCursor))
-        icon4 = QIcon()
-        icon4.addFile(u":/icons_red/Resources/Icons/png-red/levels.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.footerButton_5.setIcon(icon4)
+        icon5 = QIcon()
+        icon5.addFile(u":/icons_red/Resources/Icons/png-red/levels.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.footerButton_5.setIcon(icon5)
         self.footerButton_5.setIconSize(QSize(30, 30))
 
         self.horizontalLayout_2.addWidget(self.footerButton_5)
@@ -165,9 +173,9 @@ class Ui_Central(object):
         self.footerButton_6.setObjectName(u"footerButton_6")
         self.footerButton_6.setMinimumSize(QSize(0, 50))
         self.footerButton_6.setCursor(QCursor(Qt.PointingHandCursor))
-        icon5 = QIcon()
-        icon5.addFile(u":/icons_red/Resources/Icons/png-red/fi-rr-power.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.footerButton_6.setIcon(icon5)
+        icon6 = QIcon()
+        icon6.addFile(u":/icons_red/Resources/Icons/png-red/fi-rr-power.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.footerButton_6.setIcon(icon6)
         self.footerButton_6.setIconSize(QSize(24, 24))
 
         self.horizontalLayout_2.addWidget(self.footerButton_6)
@@ -303,9 +311,9 @@ class Ui_Central(object):
         self.powerCloseButton.setGeometry(QRect(250, 10, 40, 40))
         self.powerCloseButton.setStyleSheet(u"border:none;\n"
 "background:none;")
-        icon6 = QIcon()
-        icon6.addFile(u":/icons_red/Resources/Icons/png-red/fi-rr-cross-small.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.powerCloseButton.setIcon(icon6)
+        icon7 = QIcon()
+        icon7.addFile(u":/icons_red/Resources/Icons/png-red/fi-rr-cross-small.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.powerCloseButton.setIcon(icon7)
         self.powerCloseButton.setIconSize(QSize(30, 30))
         Central.setCentralWidget(self.centralwidget)
         self.frame_power.raise_()
@@ -326,6 +334,7 @@ class Ui_Central(object):
 
     def retranslateUi(self, Central):
         self.label_clock.setText(QCoreApplication.translate("Central", u"23:23", None))
+        self.bluetoothStatusButton.setText("")
         self.footer_background.setText("")
         self.centralRebootButton.setText(QCoreApplication.translate("Central", u"REBOOT", None))
         self.centralShutdownButton.setText(QCoreApplication.translate("Central", u"SHUTDOWN", None))
