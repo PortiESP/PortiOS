@@ -77,7 +77,7 @@ class Main_GUI:
 			self.BTController.update_data()
 			
 			# Sincronize volume
-			if self.volumeSinc != self.BTController.volumeData
+			if self.volumeSinc != self.BTController.volumeData:
 				self.writeLog('Volume changed to: ' + str(self.BTController.volumeData))
 				self.BTController.set_volume(str(self.BTController.volumeData))
 				self.volumeSinc = self.BTController.volumeData
