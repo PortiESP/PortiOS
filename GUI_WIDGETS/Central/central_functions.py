@@ -1,4 +1,5 @@
 import threading, time, subprocess, os
+from PySide2.QtGui import QIcon
 # from GUI_PACKAGES.bluetooth_controls.bt_control_panel import BT_Control_Panel
 
 # Frame will be GUI_Central object
