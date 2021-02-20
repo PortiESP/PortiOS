@@ -46,7 +46,7 @@ class Central_funcs:
 		if self.mediaPlayer.checkConnectedDevices():
 			icon1 = QIcon()
 			if self.mediaPlayer.get_player_data('Status') == 'playing':
-				name = 'play-button'
+				name = 'play-fill'
 				self.mediaPlayer.playback_control('pause')
 			else: 
 				name = 'pause-fill'
