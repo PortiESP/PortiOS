@@ -27,7 +27,10 @@ class Central_funcs:
 		self.frame.centralRebootButton.clicked.connect(lambda:subprocess.run('reboot', shell=True))
 
 		# Slider volume
-		self.frame.slider_volume.sliderMoved.connect(lambda:self.mediaPlayer.set_volume(str(self.frame.slider_volume.value())))
+		def sliderEvent():
+			self.mediaPlayer.set_volume(str(self.frame.slider_volume.value()))
+			self.BTController.volumeIface.Set('org.bluez.MediaTransport1', 'Volume', self.frame.slider_volume.value())
+		self.frame.slider_volume.sliderMoved.connect(sliderEvent)
 
 		# Setting time
 		self.frame.timeThread = threading.Thread(target=self.setTime)
