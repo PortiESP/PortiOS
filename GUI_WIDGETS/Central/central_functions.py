@@ -38,12 +38,12 @@ class Central_funcs:
 		print('Data changed:')
 		print(list(dict(data).items()))
 		data = list(dict(data).items())[0]
-		if data[0] == 'Status': self.toogle_musicStatus()
+		if str(data[0]) == 'Status': self.toogle_musicStatus()
 
-		if data[0] == 'Volume':
-				self.writeLog('Volume changed to: ' + str(self.mediaPlayer.volumeData))
-				self.mediaPlayer.set_volume(str(self.mediaPlayer.volumeData), maxlevel=127)
-				self.frame.slider_volume.setValue(data[1])
+		if str(data[0]) == 'Volume':
+				self.writeLog('Volume changed to: ' + str(data[1]))
+				self.mediaPlayer.set_volume(str(data[1]), maxlevel=127)
+				self.frame.slider_volume.setValue(int(data[1]))
 
 
 
