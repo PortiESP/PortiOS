@@ -13,7 +13,8 @@ class Dashboard_funcs:
 			self.GUI_Dashboard.label_cancion.setText(str(dict(self.BTController.get_player_data('Track'))['Title'] ))
 			self.GUI_Dashboard.label_artista.setText(str(dict(self.BTController.get_player_data('Track'))['Artist']))	
 			if str(data[0]) == 'Track' and 'Title' not in data[1].keys():
-				self.GUI_Dashboard.label_duration.setText(Dashboard_funcs.formatDuration(self.BTController.playerIface.Get('org.bluez.MediaPlayer1', 'Duration')))
+				print('Setting duration')
+				self.GUI_Dashboard.label_duration.setText(Dashboard_funcs.formatDuration(data[1]['Duration']))
 		except KeyError:
 			pass
 
