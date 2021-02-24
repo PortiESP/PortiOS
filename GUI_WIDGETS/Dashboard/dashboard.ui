@@ -312,7 +312,7 @@ QLabel{
        <number>0</number>
       </property>
       <item>
-       <widget class="QLabel" name="label_artista3">
+       <widget class="QLabel" name="label_cancion">
         <property name="font">
          <font>
           <family>Bahnschrift SemiLight</family>

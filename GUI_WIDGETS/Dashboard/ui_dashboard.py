@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'dashboardEkpIQg.ui'
+## Form generated from reading UI file 'dashboarducVaIo.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -145,31 +145,31 @@ class Ui_Dashboard_widget(object):
         self.verticalLayout_5.setSpacing(0)
         self.verticalLayout_5.setObjectName(u"verticalLayout_5")
         self.verticalLayout_5.setContentsMargins(0, 0, 0, 0)
-        self.label_artista = QLabel(self.frame_media_data)
-        self.label_artista.setObjectName(u"label_artista")
+        self.label_cancion = QLabel(self.frame_media_data)
+        self.label_cancion.setObjectName(u"label_cancion")
         font3 = QFont()
         font3.setFamily(u"Bahnschrift SemiLight")
         font3.setPointSize(14)
         font3.setKerning(True)
-        self.label_artista.setFont(font3)
-        self.label_artista.setStyleSheet(u"color: rgb(247, 247, 247);")
-        self.label_artista.setScaledContents(False)
-        self.label_artista.setAlignment(Qt.AlignCenter)
-        self.label_artista.setWordWrap(True)
-
-        self.verticalLayout_5.addWidget(self.label_artista)
-
-        self.label_cancion = QLabel(self.frame_media_data)
-        self.label_cancion.setObjectName(u"label_cancion")
-        font4 = QFont()
-        font4.setFamily(u"Bahnschrift SemiLight")
-        font4.setPointSize(12)
-        self.label_cancion.setFont(font4)
-        self.label_cancion.setStyleSheet(u"color: rgb(186, 186, 186);")
-        self.label_cancion.setAlignment(Qt.AlignHCenter|Qt.AlignTop)
+        self.label_cancion.setFont(font3)
+        self.label_cancion.setStyleSheet(u"color: rgb(247, 247, 247);")
+        self.label_cancion.setScaledContents(False)
+        self.label_cancion.setAlignment(Qt.AlignCenter)
         self.label_cancion.setWordWrap(True)
 
         self.verticalLayout_5.addWidget(self.label_cancion)
+
+        self.label_artista = QLabel(self.frame_media_data)
+        self.label_artista.setObjectName(u"label_artista")
+        font4 = QFont()
+        font4.setFamily(u"Bahnschrift SemiLight")
+        font4.setPointSize(12)
+        self.label_artista.setFont(font4)
+        self.label_artista.setStyleSheet(u"color: rgb(186, 186, 186);")
+        self.label_artista.setAlignment(Qt.AlignHCenter|Qt.AlignTop)
+        self.label_artista.setWordWrap(True)
+
+        self.verticalLayout_5.addWidget(self.label_artista)
 
         self.slider_duration = QSlider(self.frame_player)
         self.slider_duration.setObjectName(u"slider_duration")
@@ -239,8 +239,8 @@ class Ui_Dashboard_widget(object):
         self.label_kmh.setText(QCoreApplication.translate("Dashboard_widget", u"KM/H ", None))
         self.label_vel.setText(QCoreApplication.translate("Dashboard_widget", u"200", None))
         self.label_player_logo.setText("")
-        self.label_artista.setText(QCoreApplication.translate("Dashboard_widget", u"El ultimo dia del resto de mi vida", None))
-        self.label_cancion.setText(QCoreApplication.translate("Dashboard_widget", u"Avicci, Nicky Romero", None))
+        self.label_cancion.setText(QCoreApplication.translate("Dashboard_widget", u"El ultimo dia del resto de mi vida", None))
+        self.label_artista.setText(QCoreApplication.translate("Dashboard_widget", u"Avicci, Nicky Romero", None))
         self.label_currentTime.setText(QCoreApplication.translate("Dashboard_widget", u"0:00", None))
         self.label_duration.setText(QCoreApplication.translate("Dashboard_widget", u"3:23", None))
     # retranslateUi
