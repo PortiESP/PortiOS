@@ -50,7 +50,7 @@ class Central_funcs:
 
 
 
-	def toogle_musicStatus(self, trigger = 'pc'):
+	def toogle_musicStatus(self, trigger='pc'):
 		
 		if self.mediaPlayer.checkConnectedDevices():	
 			icon1 = QIcon()
