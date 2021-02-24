@@ -9,7 +9,7 @@ class Dashboard_funcs:
 	def changeMusicInfo(self, data):
 		# Setting labels
 		try:
-			if data.has_key('Title'):
+			if dict(data).has_key('Title'):
 				self.GUI_Dashboard.label_cancion.setText(data['Title']) 
 				self.GUI_Dashboard.label_artista.setText(data['Artist'])
 			else:
