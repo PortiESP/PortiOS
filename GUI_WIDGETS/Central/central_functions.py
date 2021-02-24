@@ -7,7 +7,7 @@ from main import *
 class Central_funcs(Main_GUI):
 
 	def centralSetup(self):
-		self = main_gui
+		
 		self.frame = self.GUI_Central
 		# Flags
 		self.frame.volumeVisivility = False
