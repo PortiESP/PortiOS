@@ -41,7 +41,7 @@ class Main_GUI:
 		# Widget funcs setup
 		Central_funcs.centralSetup(self)
 		Apps_funcs.appsSetup(self)
-		Settings_funcs.Settings_funcs(self)
+		Settings_funcs.settingsSetup(self)
 
 
 		# Page test func
