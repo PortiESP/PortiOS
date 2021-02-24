@@ -42,6 +42,7 @@ class Main_GUI:
 		Central_funcs.centralSetup(self)
 		Apps_funcs.appsSetup(self)
 		Settings_funcs.settingsSetup(self)
+		Dashboard_funcs.dashboardSetup(self)
 
 
 		# Page test func
@@ -68,14 +69,18 @@ class Main_GUI:
 
 	def mediaDataChanged(self, _, data, __):
 		print('Data changed:')
-		print(list(dict(data).items()))
-		data = list(dict(data).items())[0]
+		event = list(dict(data).items())
+		print(event)
+		data = event[0]
 		if str(data[0]) == 'Status': 
 			self.musicStatus = str(data[1])
 			self.toogle_musicStatus(self.musicStatus)
 
-		if str(data[0]) == 'Volume':
-				self.GUI_Central.slider_volume.setValue(int(data[1]))
+		elif str(data[0]) == 'Volume':
+			self.GUI_Central.slider_volume.setValue(int(data[1]))
+
+		elif str(data[0]) == 'Track':
+			Dashboard_funcs.changeMusicInfo(self, dict(data[1]))
 
 	def startMediaPlayer(self):
 		self.mediaPlayerThread = threading.Thread(target=self.mediaPlayerThreadFunc)
