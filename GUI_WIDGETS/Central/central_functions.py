@@ -55,11 +55,11 @@ class Central_funcs:
 			icon1 = QIcon()
 			if status == 'playing':
 				name = 'pause-fill'
-				if trigger='pc':
+				if trigger == 'pc':
 					self.mediaPlayer.playback_control('pause')
 			elif status == 'paused':
 				name = 'play-fill'
-				if trigger='pc':
+				if trigger == 'pc':
 					self.mediaPlayer.playback_control('pause')
 			icon1.addFile(u":/icons_red/Resources/Icons/png-red/{}.png".format(name), QSize(30, 30), QIcon.Normal, QIcon.Off)
 			self.frame.footerButton_2.setIcon(icon1)
