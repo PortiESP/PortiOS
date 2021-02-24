@@ -43,7 +43,7 @@ class Main_GUI:
 	def toogle_musicStatus(self, setStatus=None):
 		
 		if self.BTController.checkConnectedDevices():
-			status = self.BTController.get_player_data('Status')
+			status = str(self.BTController.get_player_data('Status'))
 			print(status)
 			if setStatus: 
 				if setStatus == 'playing': status = 'paused'
@@ -66,7 +66,7 @@ class Main_GUI:
 		print(event)
 		data = event[0]
 		if str(data[0]) == 'Status': 
-			self.toogle_musicStatus(self.BTController.get_player_data('Status'))
+			self.toogle_musicStatus(str(self.BTController.get_player_data('Status')))
 
 		elif str(data[0]) == 'Volume':
 			self.GUI_Central.slider_volume.setValue(int(data[1]))
@@ -124,7 +124,7 @@ class Main_GUI:
 				self.BTController.set_volume(str(sliderValue), maxlevel=127)
 
 			# Music current time
-			if self.BTController.get_player_data('Status')== 'playing':
+			if str(self.BTController.get_player_data('Status')) == 'playing':
 				currentMusicTime = self.BTController.get_player_data('Position')
 				currentMusicTime =  Dashboard_funcs.formatDuration(int(currentMusicTime))
 				self.GUI_Dashboard.label_currentTime.setText(currentMusicTime)
