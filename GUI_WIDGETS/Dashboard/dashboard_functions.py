@@ -6,13 +6,14 @@ class Dashboard_funcs:
 	def dashboardSetup(self):
 		Gauge_funcs.setDefaults(self)
 
-	def changeMusicInfo(self):
+	def changeMusicInfo(self, data=None):
 		print('Updated labels')
 		# Setting labels
 		try:
 			self.GUI_Dashboard.label_cancion.setText(str(dict(self.BTController.get_player_data('Track'))['Title'] ))
 			self.GUI_Dashboard.label_artista.setText(str(dict(self.BTController.get_player_data('Track'))['Artist']))	
-			self.GUI_Dashboard.label_duration.setText(Dashboard_funcs.formatDuration(self.BTController.playerIface.Get('org.bluez.MediaPlayer1', 'Duration')))
+			if 'title' not in data[1].keys():
+				self.GUI_Dashboard.label_duration.setText(Dashboard_funcs.formatDuration(self.BTController.playerIface.Get('org.bluez.MediaPlayer1', 'Duration')))
 		except KeyError:
 			pass
 
