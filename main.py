@@ -11,6 +11,9 @@ class Main_GUI:
 
 		# Local volume (default)
 		self.localVolume = 100
+		# Music status
+		self.musicStatus = 'paused'
+
 
 
 		# Getting central GUI
@@ -45,6 +48,37 @@ class Main_GUI:
 
 		# Page test func
 
+	def toogle_musicStatus(self, setStatus=None):
+		
+		if self.BTController.checkConnectedDevices():
+			status = self.BTController.playerIface.Get('org.bluez.MediaPlayer1', 'Status')
+			print(status)
+			if setStatus: 
+				if setStatus == 'playing': status = 'paused'
+				elif setStatus == 'paused': status = 'playing'
+
+			icon1 = QIcon()
+			if status == 'playing':
+				name = 'play-fill'
+				self.BTController.playback_control('pause')
+			elif status == 'paused':
+				name = 'pause-fill'
+				self.BTController.playback_control('play')
+			icon1.addFile(u":/icons_red/Resources/Icons/png-red/{}.png".format(name), QSize(30, 30), QIcon.Normal, QIcon.Off)
+			self.frame.footerButton_2.setIcon(icon1)
+
+
+	def mediaDataChanged(self, _, data, __):
+		print('Data changed:')
+		print(list(dict(data).items()))
+		data = list(dict(data).items())[0]
+		if str(data[0]) == 'Status': 
+			self.musicStatus = str(data[1])
+			self.GUI_Central.toogle_musicStatus(self.musicStatus)
+
+		if str(data[0]) == 'Volume':
+				self.GUI_Central.slider_volume.setValue(int(data[1]))
+
 	def startMediaPlayer(self):
 		self.mediaPlayerThread = threading.Thread(target=self.mediaPlayerThreadFunc)
 		self.mediaPlayerThread.start()
@@ -55,8 +89,8 @@ class Main_GUI:
 			time.sleep(1)
 			checkDevice = self.BTController.checkConnectedDevices()
 			# Check for connected devices
+			# Setting BT status disconnected
 			if self.isConnectedDevice == True and checkDevice == False:
-				# BT statis icon off
 				icon = QIcon()
 				icon.addFile(u":/icons-gray/Resources/Icons/bt_states/bluetooth_gray.png", QSize(), QIcon.Normal, QIcon.Off)
 				self.GUI_Central.bluetoothStatusButton.setIcon(icon)
@@ -72,7 +106,11 @@ class Main_GUI:
 				# BT status icon on
 				icon = QIcon()
 				icon.addFile(u":/icons-gray/Resources/Icons/bt_states/bluetooth_blue.png", QSize(), QIcon.Normal, QIcon.Off)
-				self.GUI_Central.bluetoothStatusButton.setIcon(icon)				
+				self.GUI_Central.bluetoothStatusButton.setIcon(icon)
+				self.BTController.bus.add_signal_receiver(self.mediaDataChanged, 
+											dbus_interface = "org.freedesktop.DBus.Properties",
+            								signal_name = "PropertiesChanged",
+            								 )
 
 			# Central clock
 			self.GUI_Central.label_clock.setText(time.strftime('%H:%M'))
