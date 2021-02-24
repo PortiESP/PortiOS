@@ -39,7 +39,7 @@ class Main_GUI:
 		self.GUI_Settings.setupUi(self.GUI_Central.page_settings)
 
 		# Widget funcs setup
-		self.centralf = Central_funcs()
+		self.centralf = Central_funcs(self.GUI_Central)
 		self.appsf = Apps_funcs()
 		self.settingsf = Settings_funcs()
 

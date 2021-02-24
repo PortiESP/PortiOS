@@ -5,12 +5,12 @@ from main import *
 
 # Frame will be GUI_Central object
 class Central_funcs(Main_GUI):
-	def __init__(self):
-		self.centralSetup()
+	def __init__(self, frame):
+		self.centralSetup(frame)
 
 
-	def centralSetup(self):
-		self.frame = self.super().GUI_Central
+	def centralSetup(self, frame):
+		self.frame = frame
 		# Flags
 		self.frame.volumeVisivility = False
 		self.frame.powerVisivility = False
