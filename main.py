@@ -43,7 +43,7 @@ class Main_GUI:
 	def toogle_musicStatus(self, setStatus=None):
 		
 		if self.BTController.checkConnectedDevices():
-			status = str(self.BTController.playerIface.Get('org.bluez.MediaPlayer1', 'Status'))
+			status = self.BTController.get_player_data('Status')
 			print(status)
 			if setStatus: 
 				if setStatus == 'playing': status = 'paused'
@@ -66,7 +66,7 @@ class Main_GUI:
 		print(event)
 		data = event[0]
 		if str(data[0]) == 'Status': 
-			self.toogle_musicStatus(str(self.BTController.playerIface.Get('org.bluez.MediaPlayer1', 'Status')))
+			self.toogle_musicStatus(self.BTController.get_player_data('Status'))
 
 		elif str(data[0]) == 'Volume':
 			self.GUI_Central.slider_volume.setValue(int(data[1]))
@@ -103,8 +103,8 @@ class Main_GUI:
 				icon = QIcon()
 				icon.addFile(u":/icons-gray/Resources/Icons/bt_states/bluetooth_blue.png", QSize(), QIcon.Normal, QIcon.Off)
 				self.GUI_Central.bluetoothStatusButton.setIcon(icon)
-				self.GUI_Central.slider_volume.setValue(self.BTController.volumeIface.Get('org.bluez.MediaTransport1', 'Volume'))
-				if str(self.BTController.playerIface.Get('org.bluez.MediaPlayer1', 'Status')) == 'playing':
+				self.GUI_Central.slider_volume.setValue(self.BTController.get_volume_data())
+				if str(self.BTController.get_player_data('Status')) == 'playing':
 					self.toogle_musicStatus(setStatus='playing')
 				self.BTController.bus.add_signal_receiver(self.mediaDataChanged, 
 											dbus_interface = "org.freedesktop.DBus.Properties",
@@ -124,8 +124,8 @@ class Main_GUI:
 				self.BTController.set_volume(str(sliderValue), maxlevel=127)
 
 			# Music current time
-			if str(self.BTController.playerIface.Get('org.bluez.MediaPlayer1', 'Status')) == 'playing':
-				currentMusicTime = self.BTController.playerIface.Get('org.bluez.MediaPlayer1', 'Position')
+			if self.BTController.get_player_data('Status')== 'playing':
+				currentMusicTime = self.BTController.get_player_data('Position')
 				currentMusicTime =  Dashboard_funcs.formatDuration(int(currentMusicTime))
 				self.GUI_Dashboard.label_currentTime.setText(currentMusicTime)
 				print('Time elapsed --> ' + currentMusicTime)

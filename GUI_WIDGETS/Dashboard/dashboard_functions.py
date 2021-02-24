@@ -6,17 +6,12 @@ class Dashboard_funcs:
 	def dashboardSetup(self):
 		Gauge_funcs.setDefaults(self)
 
-	def changeMusicInfo(self, data):
+	def changeMusicInfo(self):
 		# Setting labels
-		try:
-			if 'Title' in data.keys():
-				self.GUI_Dashboard.label_cancion.setText(str(self.BTController.playerIface.Get('org.bluez.MediaPlayer1', 'Track')['Title'] ))
-				self.GUI_Dashboard.label_artista.setText(str(self.BTController.playerIface.Get('org.bluez.MediaPlayer1', 'Track')['Artist']))
-			else:
-				self.GUI_Dashboard.label_duration.setText(Dashboard_funcs.formatDuration(self.BTController.playerIface.Get('org.bluez.MediaPlayer1', 'Duration')))
-		except KeyError:
-			pass
-
+		self.GUI_Dashboard.label_cancion.setText(str(self.BTController.get_player_data('Track')['Title'] ))
+		self.GUI_Dashboard.label_artista.setText(str(self.BTController.get_player_data('Track')['Artist']))	
+		self.GUI_Dashboard.label_duration.setText(Dashboard_funcs.formatDuration(self.BTController.playerIface.Get('org.bluez.MediaPlayer1', 'Duration')))
+		
 	def formatDuration(duration):
 		duration /= 1000
 		mins = int(duration / 60)
