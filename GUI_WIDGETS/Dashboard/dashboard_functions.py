@@ -10,10 +10,10 @@ class Dashboard_funcs:
 		# Setting labels
 		try:
 			if 'Title' in data.keys():
-				self.GUI_Dashboard.label_cancion.setText(data['Title']) 
-				self.GUI_Dashboard.label_artista.setText(data['Artist'])
+				self.GUI_Dashboard.label_cancion.setText(str(self.BTController.playerIface.Get('org.bluez.MediaPlayer1', 'Track')['Title'] ))
+				self.GUI_Dashboard.label_artista.setText(str(self.BTController.playerIface.Get('org.bluez.MediaPlayer1', 'Track')['Artist']))
 			else:
-				self.GUI_Dashboard.label_duration.setText(Dashboard_funcs.formatDuration(data['Duration']))
+				self.GUI_Dashboard.label_duration.setText(Dashboard_funcs.formatDuration(self.BTController.playerIface.Get('org.bluez.MediaPlayer1', 'Duration')))
 		except KeyError:
 			pass
 

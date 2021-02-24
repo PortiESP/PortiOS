@@ -9,13 +9,6 @@ class Main_GUI:
 		# Setting fullscreen
 		# self.win.showFullScreen()
 
-		# Local volume
-		self.localVolume = None
-		# Music status
-		self.musicStatus = 'paused'
-
-
-
 		# Getting central GUI
 		self.GUI_Central = Ui_Central()
 		self.GUI_Central.setupUi(self.win)
@@ -73,8 +66,7 @@ class Main_GUI:
 		print(event)
 		data = event[0]
 		if str(data[0]) == 'Status': 
-			self.musicStatus = str(data[1])
-			self.toogle_musicStatus(self.musicStatus)
+			self.toogle_musicStatus(str(self.BTController.playerIface.Get('org.bluez.MediaPlayer1', 'Status')))
 
 		elif str(data[0]) == 'Volume':
 			self.GUI_Central.slider_volume.setValue(int(data[1]))
@@ -132,7 +124,7 @@ class Main_GUI:
 				self.BTController.set_volume(str(sliderValue), maxlevel=127)
 
 			# Music current time
-			if self.musicStatus == 'playing':
+			if str(self.BTController.playerIface.Get('org.bluez.MediaPlayer1', 'Status')) == 'playing':
 				currentMusicTime = self.BTController.playerIface.Get('org.bluez.MediaPlayer1', 'Position')
 				currentMusicTime =  Dashboard_funcs.formatDuration(int(currentMusicTime))
 				self.GUI_Dashboard.label_currentTime.setText(currentMusicTime)
