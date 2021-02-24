@@ -4,7 +4,7 @@ from main import *
 # from GUI_PACKAGES.bluetooth_controls.bt_control_panel import BT_Control_Panel
 
 # Frame will be GUI_Central object
-class Central_funcs:
+class Central_funcs(Main_GUI):
 	def centralSetup(self, frame, mediaPlayer):
 		self.frame = frame
 		self.mediaPlayer = mediaPlayer
