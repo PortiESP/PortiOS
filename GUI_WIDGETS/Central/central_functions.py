@@ -5,7 +5,7 @@ from main import *
 
 # Frame will be GUI_Central object
 class Central_funcs(Main_GUI):
-	def __init__():
+	def __init__(self):
 		self.centralSetup()
 
 
