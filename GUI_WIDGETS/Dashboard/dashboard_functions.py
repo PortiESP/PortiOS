@@ -19,4 +19,4 @@ class Dashboard_funcs:
 		duration /= 1000
 		mins = int(duration / 60)
 		segs = int(((duration / 60) - mins) * 60)
-		return str(mins) + ':' + str(segs)
+		return str(mins) + ':' + f'{str(segs):02}'
