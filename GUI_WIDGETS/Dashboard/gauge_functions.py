@@ -38,7 +38,7 @@ class Gauge_funcs:
 
 	def setGaugeShadow(self, flag, blur=20, color=(0,0,0)):
 
-		shadow = QGraphicsDropShadowEffect(self.GUI_Dashboard)
+		shadow = QGraphicsDropShadowEffect(self.GUI_Dashboard.frame_gauge)
 		shadow.setBlurRadius(blur)
 		shadow.setXOffset(0)
 		shadow.setYOffset(0)
