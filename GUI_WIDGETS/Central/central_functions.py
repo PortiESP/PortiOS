@@ -47,7 +47,7 @@ class Central_funcs:
 
 
 
-	def toogle_musicStatus(self):
+	def toogle_musicStatus(self, trigger='phone'):
 		
 		if self.mediaPlayer.checkConnectedDevices():
 			status = self.mediaPlayer.playerIface.Get('org.bluez.MediaPlayer1', 'Status')
@@ -55,10 +55,12 @@ class Central_funcs:
 			icon1 = QIcon()
 			if status == 'playing':
 				name = 'pause-fill'
-				self.mediaPlayer.playback_control('pause')
+				if trigger='pc':
+					self.mediaPlayer.playback_control('pause')
 			elif status == 'paused':
 				name = 'play-fill'
-				self.mediaPlayer.playback_control('pause')
+				if trigger='pc':
+					self.mediaPlayer.playback_control('pause')
 			icon1.addFile(u":/icons_red/Resources/Icons/png-red/{}.png".format(name), QSize(30, 30), QIcon.Normal, QIcon.Off)
 			self.frame.footerButton_2.setIcon(icon1)
 		
