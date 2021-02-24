@@ -1,4 +1,4 @@
-from gauge_functions import Gauge_funcs
+from GUI_WIDGETS.Dashboard.gauge_functions import *
 
 
 class Dashboard_funcs:
