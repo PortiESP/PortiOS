@@ -42,7 +42,7 @@ class Central_funcs:
 
 		if str(data[0]) == 'Volume':
 				self.mediaPlayer.set_volume(str(data[1]), maxlevel=127)
-				self.frame.slider_volume.setValue(int(data[1]))
+				
 
 
 
