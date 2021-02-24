@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'centralazvolJ.ui'
+## Form generated from reading UI file 'centralKQFgPV.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -242,6 +242,7 @@ class Ui_Central(object):
 "\n"
 "}")
         self.slider_volume.setMaximum(127)
+        self.slider_volume.setValue(50)
         self.line = QFrame(self.frame_volume)
         self.line.setObjectName(u"line")
         self.line.setGeometry(QRect(20, 25, 1, 150))

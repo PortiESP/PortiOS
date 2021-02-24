@@ -8,17 +8,17 @@ class Central_funcs(Main_GUI):
 	def __init__():
 		self.centralSetup()
 
-		
+
 	def centralSetup(self):
-		self.frame = self.win
+		self.frame = self.GUI_Central
 		# Flags
 		self.frame.volumeVisivility = False
 		self.frame.powerVisivility = False
 
 		# Footer buttons events
-		self.frame.footerButton_1.clicked.connect(lambda:BTController.playback_control('previous'))
+		self.frame.footerButton_1.clicked.connect(lambda:self.BTController.playback_control('previous'))
 		self.frame.footerButton_2.clicked.connect(self.toogle_musicStatus)
-		self.frame.footerButton_3.clicked.connect(lambda:BTController.playback_control('next'))
+		self.frame.footerButton_3.clicked.connect(lambda:self.BTController.playback_control('next'))
 		self.frame.footerButton_4.clicked.connect(lambda:self.setPage(3))
 		self.frame.footerButton_5.clicked.connect(self.toogle_volume)
 		self.frame.footerButton_6.clicked.connect(self.toogle_power)
@@ -28,29 +28,6 @@ class Central_funcs(Main_GUI):
 		self.frame.centralShutdownButton.clicked.connect(lambda:subprocess.run('shutdown -P now', shell=True))
 		self.frame.centralRebootButton.clicked.connect(lambda:subprocess.run('reboot', shell=True))
 
-		# Slider default
-		self.frame.slider_volume.setValue(100)	
-
-
-
-	def toogle_musicStatus(self, setStatus=None):
-		
-		if self.BTController.checkConnectedDevices():
-			status = self.BTController.playerIface.Get('org.bluez.MediaPlayer1', 'Status')
-			print(status)
-			if setStatus: 
-				if setStatus == 'playing': status = 'paused'
-				elif setStatus == 'paused': status = 'playing'
-
-			icon1 = QIcon()
-			if status == 'playing':
-				name = 'play-fill'
-				self.BTController.playback_control('pause')
-			elif status == 'paused':
-				name = 'pause-fill'
-				self.BTController.playback_control('play')
-			icon1.addFile(u":/icons_red/Resources/Icons/png-red/{}.png".format(name), QSize(30, 30), QIcon.Normal, QIcon.Off)
-			self.frame.footerButton_2.setIcon(icon1)
 		
 		
 	def toogle_volume(self):

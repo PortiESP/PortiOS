@@ -9,8 +9,8 @@ class Main_GUI:
 		# Setting fullscreen
 		# self.win.showFullScreen()
 
-		# Local volume (default)
-		self.localVolume = 100
+		# Local volume
+		self.localVolume = None
 		# Music status
 		self.musicStatus = 'paused'
 
@@ -64,7 +64,7 @@ class Main_GUI:
 				name = 'pause-fill'
 				self.BTController.playback_control('play')
 			icon1.addFile(u":/icons_red/Resources/Icons/png-red/{}.png".format(name), QSize(30, 30), QIcon.Normal, QIcon.Off)
-			self.frame.footerButton_2.setIcon(icon1)
+			self.GUI_Central.footerButton_2.setIcon(icon1)
 
 
 	def mediaDataChanged(self, _, data, __):
@@ -86,6 +86,8 @@ class Main_GUI:
 
 		while 1:
 			time.sleep(1)
+
+			##################### CONNECTIONS MANAGER ###################################
 			checkDevice = self.BTController.checkConnectedDevices()
 			# Check for connected devices
 			# Setting BT status disconnected
@@ -109,6 +111,9 @@ class Main_GUI:
 											dbus_interface = "org.freedesktop.DBus.Properties",
             								signal_name = "PropertiesChanged",
             								 )
+			###########################################################################
+
+			# THREAD SETUP
 
 			# Central clock
 			self.GUI_Central.label_clock.setText(time.strftime('%H:%M'))
