@@ -11,7 +11,6 @@ class Central_funcs:
 		# Flags
 		self.frame.volumeVisivility = False
 		self.frame.powerVisivility = False
-		self.musicStatus = 'paused'
 
 		# Footer buttons events
 
@@ -40,8 +39,7 @@ class Central_funcs:
 		print(list(dict(data).items()))
 		data = list(dict(data).items())[0]
 		if str(data[0]) == 'Status': 
-			self.musicStatus = str(data[1])
-			self.toogle_musicStatus(self.musicStatus)
+			self.toogle_musicStatus()
 
 		if str(data[0]) == 'Volume':
 				self.mediaPlayer.set_volume(str(data[1]), maxlevel=127)
@@ -49,15 +47,11 @@ class Central_funcs:
 
 
 
-	def toogle_musicStatus(self, setStatus=None):
+	def toogle_musicStatus(self):
 		
 		if self.mediaPlayer.checkConnectedDevices():
 			status = self.mediaPlayer.playerIface.Get('org.bluez.MediaPlayer1', 'Status')
-			print(status)
-			if setStatus: 
-				if setStatus == 'playing': status = 'paused'
-				elif setStatus == 'paused': status = 'playing'
-
+			
 			icon1 = QIcon()
 			if status == 'playing':
 				name = 'play-fill'
