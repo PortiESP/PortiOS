@@ -9,9 +9,11 @@ class Dashboard_funcs:
 	def changeMusicInfo(self, data):
 		# Setting labels
 		try:
-			self.GUI_Dashboard.label_duration.setText(Dashboard_funcs.formatDuration(data['Duration']))
-			self.GUI_Dashboard.label_cancion.setText(data['Title']) 
-			self.GUI_Dashboard.label_artista.setText(data['Artist'])
+			if data.has_key('Title'):
+				self.GUI_Dashboard.label_cancion.setText(data['Title']) 
+				self.GUI_Dashboard.label_artista.setText(data['Artist'])
+			else:
+				self.GUI_Dashboard.label_duration.setText(Dashboard_funcs.formatDuration(data['Duration']))
 		except KeyError:
 			pass
 
