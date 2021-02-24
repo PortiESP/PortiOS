@@ -71,7 +71,9 @@ class Main_GUI:
 		elif str(data[0]) == 'Volume':
 			self.GUI_Central.slider_volume.setValue(int(data[1]))
 
-		Dashboard_funcs.changeMusicInfo(self, data)
+		elif str(data[0]) == 'Track':
+			Dashboard_funcs.changeMusicInfo(self, (data[0], dict(data[1])))
+
 
 	def startMediaPlayer(self):
 		self.mediaPlayerThread = threading.Thread(target=self.mediaPlayerThreadFunc)
