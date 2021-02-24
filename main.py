@@ -18,6 +18,7 @@ class Main_GUI:
 
 		# Getting central GUI
 		self.GUI_Central = Ui_Central()
+		self.GUI_Central.setupUi(self.win)
 
 		# Setting media player
 		self.isConnectedDevice = False
@@ -38,10 +39,9 @@ class Main_GUI:
 		self.GUI_Settings.setupUi(self.GUI_Central.page_settings)
 
 		# Widget funcs setup
-		self.centralf = Central_funcs()
 		self.appsf = Apps_funcs()
 		self.settingsf = Settings_funcs()
-		self.centralf.centralSetup(self.GUI_Central, self.BTController)
+
 		self.appsf.appsSetup(self.GUI_Apps, self.GUI_Central.stackedWidget)
 		self.settingsf.settingsSetup(self.GUI_Settings)
 
@@ -101,7 +101,6 @@ class Main_GUI:
 				time.sleep(1)
 				self.BTController.setupInterfaces()
 				self.isConnectedDevice = True
-				self.centralf.volumeSinc = 0
 				# BT status icon on
 				icon = QIcon()
 				icon.addFile(u":/icons-gray/Resources/Icons/bt_states/bluetooth_blue.png", QSize(), QIcon.Normal, QIcon.Off)
