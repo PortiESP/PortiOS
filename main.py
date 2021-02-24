@@ -81,7 +81,7 @@ class Main_GUI:
 			sliderValue = self.GUI_Central.slider_volume.value()
 			if sliderValue != self.localVolume:
 				self.localVolume = sliderValue
-				self.BTController.set_volume(sliderValue, maxlevel=127)
+				self.BTController.set_volume(str(sliderValue), maxlevel=127)
 
 
 			
