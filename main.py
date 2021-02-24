@@ -108,7 +108,7 @@ class Main_GUI:
 				self.BTController.setupInterfaces()
 				self.isConnectedDevice = True
 				# BT status icon on
-				self.BTController.volumeIface.GetAll('org.freedesktop.DBus.Properties')
+				print(self.BTController.volumeIface.GetAll('org.freedesktop.DBus.Properties'))
 				icon = QIcon()
 				icon.addFile(u":/icons-gray/Resources/Icons/bt_states/bluetooth_blue.png", QSize(), QIcon.Normal, QIcon.Off)
 				self.GUI_Central.bluetoothStatusButton.setIcon(icon)
