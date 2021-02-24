@@ -44,9 +44,9 @@ class Gauge_funcs:
 		shadow.setYOffset(0)
 		shadow.setColor(QColor(*color))
 		if flag:
-			self.GUI_Dashboard.gaugeBackground.setGraphicsEffect(shadow)
+			self.GUI_Dashboard.gaugeInnerCircle.setGraphicsEffect(shadow)
 		else:
-			self.GUI_Dashboard.gaugeBackground.setGraphicsEffect(None)
+			self.GUI_Dashboard.gaugeInnerCircle.setGraphicsEffect(None)
 
 	# Set speed in label and update progressbar
 	def setSpeed(self, speed):
