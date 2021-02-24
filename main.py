@@ -74,7 +74,7 @@ class Main_GUI:
 		data = list(dict(data).items())[0]
 		if str(data[0]) == 'Status': 
 			self.musicStatus = str(data[1])
-			self.GUI_Central.toogle_musicStatus(self.musicStatus)
+			self.toogle_musicStatus(self.musicStatus)
 
 		if str(data[0]) == 'Volume':
 				self.GUI_Central.slider_volume.setValue(int(data[1]))
