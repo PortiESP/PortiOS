@@ -7,7 +7,8 @@ class Dashboard_funcs:
 		Gauge_funcs.setDefaults(self)
 
 	def changeMusicInfo(self, data=None):
-		print('Updated labels')
+		print('Updated labels: ', data[0], ' = ', data[1])
+
 		# Setting labels
 		try:
 			self.GUI_Dashboard.label_cancion.setText(str(dict(self.BTController.get_player_data('Track'))['Title'] ))
