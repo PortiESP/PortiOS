@@ -11,6 +11,7 @@ class Central_funcs:
 		# Flags
 		self.frame.volumeVisivility = False
 		self.frame.powerVisivility = False
+		self.musicStatus = None
 
 		# Footer buttons events
 
@@ -38,7 +39,9 @@ class Central_funcs:
 		print('Data changed:')
 		print(list(dict(data).items()))
 		data = list(dict(data).items())[0]
-		if str(data[0]) == 'Status': self.toogle_musicStatus(str(data[1]))
+		if str(data[0]) == 'Status': 
+			self.musicStatus = str(data[1])
+			self.toogle_musicStatus(trigger='phone')
 
 		if str(data[0]) == 'Volume':
 				self.mediaPlayer.set_volume(str(data[1]), maxlevel=127)
@@ -46,21 +49,19 @@ class Central_funcs:
 
 
 
-	def toogle_musicStatus(self, setStatus=None):
+	def toogle_musicStatus(self, trigger = 'pc'):
 		
-		if self.mediaPlayer.checkConnectedDevices():
-			status = self.mediaPlayer.get_player_data('Status')
-			if setStatus: 
-				if setStatus == 'playing': status = 'paused'
-				elif setStatus == 'paused': status = 'playing'
-
+		if self.mediaPlayer.checkConnectedDevices():	
 			icon1 = QIcon()
-			if status == 'playing':
-				name = 'play-fill'
-				self.mediaPlayer.playback_control('pause')
-			elif status == 'paused':
+			if self.musicStatus == 'playing':
 				name = 'pause-fill'
-				self.mediaPlayer.playback_control('play')
+				if trigger == 'pc':
+					self.mediaPlayer.playback_control('pause')
+			elif self.musicStatus == 'paused':
+				name = 'play-fill'
+				if trigger == 'pc':
+					self.mediaPlayer.playback_control('play')
+
 			icon1.addFile(u":/icons_red/Resources/Icons/png-red/{}.png".format(name), QSize(30, 30), QIcon.Normal, QIcon.Off)
 			self.frame.footerButton_2.setIcon(icon1)
 		
