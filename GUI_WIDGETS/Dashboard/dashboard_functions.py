@@ -15,7 +15,7 @@ class Dashboard_funcs:
 		except KeyError:
 			pass
 
-	def formatDuration(self, duration):
+	def formatDuration(duration):
 		duration /= 1000
 		mins = duration // 60
 		segs = int((duration % 60) * 60)
