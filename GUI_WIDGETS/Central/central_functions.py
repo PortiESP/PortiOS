@@ -58,7 +58,7 @@ class Central_funcs:
 				name = 'pause-fill'
 				if trigger == 'pc':
 					self.mediaPlayer.playback_control('pause')
-			elif self.musicStatus == 'paused':
+			else self.musicStatus == 'paused':
 				name = 'play-fill'
 				if trigger == 'pc':
 					self.mediaPlayer.playback_control('play')
