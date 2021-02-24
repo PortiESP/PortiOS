@@ -12,6 +12,7 @@ class Dashboard_funcs:
 		self.GUI_Dashboard.label_artista.setText(str(dict(self.BTController.get_player_data('Track'))['Artist']))	
 		self.GUI_Dashboard.label_duration.setText(Dashboard_funcs.formatDuration(self.BTController.playerIface.Get('org.bluez.MediaPlayer1', 'Duration')))
 		
+		
 	def formatDuration(duration):
 		duration /= 1000
 		mins = int(duration / 60)

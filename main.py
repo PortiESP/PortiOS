@@ -129,6 +129,9 @@ class Main_GUI:
 				currentMusicTime =  Dashboard_funcs.formatDuration(int(currentMusicTime))
 				self.GUI_Dashboard.label_currentTime.setText(currentMusicTime)
 				print('Time elapsed --> ' + currentMusicTime)
+				
+				if self.GUI_Dashboard.label_currentTime.text() == 'No data':
+					Dashboard_funcs.changeMusicInfo(self)
 
 
 			
