@@ -39,10 +39,10 @@ class Main_GUI:
 		self.GUI_Settings.setupUi(self.GUI_Central.page_settings)
 
 		# Widget funcs setup
-		self.centralf = Central_funcs()
+		Central_funcs.centralSetup()
+		
 		self.appsf = Apps_funcs()
 		self.settingsf = Settings_funcs()
-		self.centralf.centralSetup()
 		self.appsf.appsSetup(self.GUI_Apps, self.GUI_Central.stackedWidget)
 		self.settingsf.settingsSetup(self.GUI_Settings)
 

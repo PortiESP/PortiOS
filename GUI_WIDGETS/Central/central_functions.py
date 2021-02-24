@@ -1,51 +1,43 @@
-import sys
-sys.path.append("../../.")
-from main import *
-# from GUI_PACKAGES.bluetooth_controls.bt_control_panel import BT_Control_Panel
-
-# Frame will be GUI_Central object
-class Central_funcs(Main_GUI):
-
+# GUI_Central.will be GUI_Central object
+class Central_funcs:
 	def centralSetup(self):
-		
-		self.frame = self.GUI_Central
 		# Flags
-		self.frame.volumeVisivility = False
-		self.frame.powerVisivility = False
+		self.GUI_Central.volumeVisivility = False
+		self.GUI_Central.powerVisivility = False
 
 		# Footer buttons events
-		self.frame.footerButton_1.clicked.connect(lambda:self.BTController.playback_control('previous'))
-		self.frame.footerButton_2.clicked.connect(self.toogle_musicStatus)
-		self.frame.footerButton_3.clicked.connect(lambda:self.BTController.playback_control('next'))
-		self.frame.footerButton_4.clicked.connect(lambda:self.setPage(3))
-		self.frame.footerButton_5.clicked.connect(self.toogle_volume)
-		self.frame.footerButton_6.clicked.connect(self.toogle_power)
+		self.GUI_Central.footerButton_1.clicked.connect(lambda:self.BTController.playback_control('previous'))
+		self.GUI_Central.footerButton_2.clicked.connect(self.toogle_musicStatus)
+		self.GUI_Central.footerButton_3.clicked.connect(lambda:self.BTController.playback_control('next'))
+		self.GUI_Central.footerButton_4.clicked.connect(lambda:self.setPage(3))
+		self.GUI_Central.footerButton_5.clicked.connect(self.toogle_volume)
+		self.GUI_Central.footerButton_6.clicked.connect(self.toogle_power)
 
 		# Power menu
-		self.frame.powerCloseButton.clicked.connect(self.toogle_power)
-		self.frame.centralShutdownButton.clicked.connect(lambda:subprocess.run('shutdown -P now', shell=True))
-		self.frame.centralRebootButton.clicked.connect(lambda:subprocess.run('reboot', shell=True))
+		self.GUI_Central.powerCloseButton.clicked.connect(self.toogle_power)
+		self.GUI_Central.centralShutdownButton.clicked.connect(lambda:subprocess.run('shutdown -P now', shell=True))
+		self.GUI_Central.centralRebootButton.clicked.connect(lambda:subprocess.run('reboot', shell=True))
 
 		
 		
 	def toogle_volume(self):
 		print('Toogleing volume')
-		self.frame.volumeVisivility = (not self.frame.volumeVisivility)
-		if self.frame.volumeVisivility:
-			self.frame.frame_volume.raise_()
+		self.GUI_Central.volumeVisivility = (not self.GUI_Central.volumeVisivility)
+		if self.GUI_Central.volumeVisivility:
+			self.GUI_Central.frame_volume.raise_()
 		else:
-			self.frame.frame_volume.lower()
+			self.GUI_Central.frame_volume.lower()
 
 	def toogle_power(self):
 		print('Toogleing power')
-		self.frame.powerVisivility = (not self.frame.powerVisivility)
-		if self.frame.powerVisivility:
-			self.frame.frame_power.raise_()
+		self.GUI_Central.powerVisivility = (not self.GUI_Central.powerVisivility)
+		if self.GUI_Central.powerVisivility:
+			self.GUI_Central.frame_power.raise_()
 		else:
-			self.frame.frame_power.lower()
+			self.GUI_Central.frame_power.lower()
 
 	def setPage(self, index):
 		print('Changing to page ',index)
-		self.frame.stackedWidget.setCurrentIndex(index)
+		self.GUI_Central.stackedWidget.setCurrentIndex(index)
 
 
