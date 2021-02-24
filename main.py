@@ -50,7 +50,7 @@ class Main_GUI:
 	def toogle_musicStatus(self, setStatus=None):
 		
 		if self.BTController.checkConnectedDevices():
-			status = self.BTController.playerIface.Get('org.bluez.MediaPlayer1', 'Status')
+			status = self.BTController.playerIface.Get('org.freedesktop.DBus.Properties', 'Status')
 			print(status)
 			if setStatus: 
 				if setStatus == 'playing': status = 'paused'
@@ -133,7 +133,7 @@ class Main_GUI:
 
 			# Music current time
 			if self.musicStatus == 'playing':
-				currentMusicTime = self.BTController.playerIface.Get('org.bluez.MediaPlayer1', 'Position')
+				currentMusicTime = self.BTController.playerIface.Get('org.freedesktop.DBus.Properties', 'Position')
 				currentMusicTime =  Dashboard_funcs.formatDuration(int(currentMusicTime))
 				self.GUI_Dashboard.label_currentTime.setText(currentMusicTime)
 				print('Time elapsed --> ' + currentMusicTime)
