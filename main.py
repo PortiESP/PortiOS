@@ -50,7 +50,7 @@ class Main_GUI:
 	def toogle_musicStatus(self, setStatus=None):
 		
 		if self.BTController.checkConnectedDevices():
-			status = self.BTController.playerIface.Get('org.freedesktop.DBus.Properties', 'Status')
+			status = str(self.BTController.playerIface.Get('org.bluez.MediaPlayer1', 'Status'))
 			print(status)
 			if setStatus: 
 				if setStatus == 'playing': status = 'paused'
@@ -108,12 +108,11 @@ class Main_GUI:
 				self.BTController.setupInterfaces()
 				self.isConnectedDevice = True
 				# BT status icon on
-				print(self.BTController.volumeIface.GetAll('org.freedesktop.DBus.Properties'))
 				icon = QIcon()
 				icon.addFile(u":/icons-gray/Resources/Icons/bt_states/bluetooth_blue.png", QSize(), QIcon.Normal, QIcon.Off)
 				self.GUI_Central.bluetoothStatusButton.setIcon(icon)
 				self.GUI_Central.slider_volume.setValue(self.BTController.volumeIface.Get('org.bluez.MediaTransport1', 'Volume'))
-				if str(self.BTController.volumeIface.Get('org.freedesktop.DBus.Properties', 'Status')) == 'playing':
+				if str(self.BTController.playerIface.Get('org.bluez.MediaPlayer1', 'Status')) == 'playing':
 					self.toogle_musicStatus(setStatus='playing')
 				self.BTController.bus.add_signal_receiver(self.mediaDataChanged, 
 											dbus_interface = "org.freedesktop.DBus.Properties",
@@ -134,7 +133,7 @@ class Main_GUI:
 
 			# Music current time
 			if self.musicStatus == 'playing':
-				currentMusicTime = self.BTController.playerIface.Get('org.freedesktop.DBus.Properties', 'Position')
+				currentMusicTime = self.BTController.playerIface.Get('org.bluez.MediaPlayer1', 'Position')
 				currentMusicTime =  Dashboard_funcs.formatDuration(int(currentMusicTime))
 				self.GUI_Dashboard.label_currentTime.setText(currentMusicTime)
 				print('Time elapsed --> ' + currentMusicTime)
