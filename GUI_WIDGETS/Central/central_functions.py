@@ -14,7 +14,6 @@ class Central_funcs:
 		self.musicStatus = 'paused'
 
 		# Footer buttons events
-
 		self.frame.footerButton_1.clicked.connect(lambda:mediaPlayer.playback_control('previous'))
 		self.frame.footerButton_2.clicked.connect(self.toogle_musicStatus)
 		self.frame.footerButton_3.clicked.connect(lambda:mediaPlayer.playback_control('next'))
@@ -27,6 +26,8 @@ class Central_funcs:
 		self.frame.centralShutdownButton.clicked.connect(lambda:subprocess.run('shutdown -P now', shell=True))
 		self.frame.centralRebootButton.clicked.connect(lambda:subprocess.run('reboot', shell=True))
 
+		# Slider default
+		self.frame.slider_volume.setValue(100)
 
 		mediaPlayer.bus.add_signal_receiver(self.mediaDataChanged, 
 											dbus_interface = "org.freedesktop.DBus.Properties",
@@ -42,7 +43,7 @@ class Central_funcs:
 			self.toogle_musicStatus(self.musicStatus)
 
 		if str(data[0]) == 'Volume':
-				self.frame.slider_volume.setValue(str(data[1]))
+				self.frame.slider_volume.setValue(int(data[1]))
 				
 
 
