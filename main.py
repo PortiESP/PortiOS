@@ -40,11 +40,9 @@ class Main_GUI:
 
 		# Widget funcs setup
 		Central_funcs.centralSetup(self)
+		Apps_funcs.Settings_funcs(self)
+		Settings_funcs.appsSetup(self)
 
-		self.appsf = Apps_funcs()
-		self.settingsf = Settings_funcs()
-		self.appsf.appsSetup(self.GUI_Apps, self.GUI_Central.stackedWidget)
-		self.settingsf.settingsSetup(self.GUI_Settings)
 
 		# Page test func
 

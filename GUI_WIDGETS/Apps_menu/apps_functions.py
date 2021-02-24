@@ -3,12 +3,11 @@
 
 class Apps_funcs:
 
-	def appsSetup(self, frame, widget):
-		
+	def appsSetup(self):
 		# Apps buttons
 		# frame.pushButton.clicked.connect(lambda:)
 		# frame.pushButton_2.clicked.connect(lambda:)
-		frame.pushButton_3.clicked.connect(lambda:widget.setCurrentIndex(4))
-		frame.pushButton_4.clicked.connect(lambda:widget.setCurrentIndex(0))
-		frame.pushButton_5.clicked.connect(lambda:widget.setCurrentIndex(1))
-		frame.pushButton_6.clicked.connect(lambda:widget.setCurrentIndex(2))
+		self.GUI_Apps.pushButton_3.clicked.connect(lambda:self.GUI_Central.stackedWidget.setCurrentIndex(4))
+		self.GUI_Apps.pushButton_4.clicked.connect(lambda:self.GUI_Central.stackedWidget.setCurrentIndex(0))
+		self.GUI_Apps.pushButton_5.clicked.connect(lambda:self.GUI_Central.stackedWidget.setCurrentIndex(1))
+		self.GUI_Apps.pushButton_6.clicked.connect(lambda:self.GUI_Central.stackedWidget.setCurrentIndex(2))
