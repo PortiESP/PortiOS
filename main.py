@@ -18,7 +18,6 @@ class Main_GUI:
 
 		# Getting central GUI
 		self.GUI_Central = Ui_Central()
-		self.GUI_Central.setupUi(self.win)
 
 		# Setting media player
 		self.isConnectedDevice = False

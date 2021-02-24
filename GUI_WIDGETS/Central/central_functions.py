@@ -1,21 +1,24 @@
-import threading, time, sys, subprocess, os, dbus
+import sys
 sys.path.append("../../.")
 from main import *
 # from GUI_PACKAGES.bluetooth_controls.bt_control_panel import BT_Control_Panel
 
 # Frame will be GUI_Central object
 class Central_funcs(Main_GUI):
-	def centralSetup(self, frame, mediaPlayer):
-		self.frame = frame
-		self.mediaPlayer = mediaPlayer
+	def __init__():
+		self.centralSetup()
+
+		
+	def centralSetup(self):
+		self.frame = self.win
 		# Flags
 		self.frame.volumeVisivility = False
 		self.frame.powerVisivility = False
 
 		# Footer buttons events
-		self.frame.footerButton_1.clicked.connect(lambda:mediaPlayer.playback_control('previous'))
+		self.frame.footerButton_1.clicked.connect(lambda:BTController.playback_control('previous'))
 		self.frame.footerButton_2.clicked.connect(self.toogle_musicStatus)
-		self.frame.footerButton_3.clicked.connect(lambda:mediaPlayer.playback_control('next'))
+		self.frame.footerButton_3.clicked.connect(lambda:BTController.playback_control('next'))
 		self.frame.footerButton_4.clicked.connect(lambda:self.setPage(3))
 		self.frame.footerButton_5.clicked.connect(self.toogle_volume)
 		self.frame.footerButton_6.clicked.connect(self.toogle_power)
