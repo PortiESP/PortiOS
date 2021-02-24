@@ -244,9 +244,9 @@ QLabel{
     <property name="geometry">
      <rect>
       <x>470</x>
-      <y>80</y>
+      <y>50</y>
       <width>280</width>
-      <height>280</height>
+      <height>300</height>
      </rect>
     </property>
     <widget class="QLabel" name="label_player_logo">
@@ -289,7 +289,7 @@ QLabel{
        <x>0</x>
        <y>140</y>
        <width>280</width>
-       <height>65</height>
+       <height>100</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -324,7 +324,7 @@ QLabel{
          <string notr="true">color: rgb(247, 247, 247);</string>
         </property>
         <property name="text">
-         <string>El ultimo dia del resto de mi vida</string>
+         <string>No data</string>
         </property>
         <property name="scaledContents">
          <bool>false</bool>
@@ -339,6 +339,12 @@ QLabel{
       </item>
       <item>
        <widget class="QLabel" name="label_artista">
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>40</height>
+         </size>
+        </property>
         <property name="font">
          <font>
           <family>Bahnschrift SemiLight</family>
@@ -349,7 +355,7 @@ QLabel{
          <string notr="true">color: rgb(186, 186, 186);</string>
         </property>
         <property name="text">
-         <string>Avicci, Nicky Romero</string>
+         <string>No data</string>
         </property>
         <property name="alignment">
          <set>Qt::AlignHCenter|Qt::AlignTop</set>
@@ -365,7 +371,7 @@ QLabel{
      <property name="geometry">
       <rect>
        <x>0</x>
-       <y>210</y>
+       <y>260</y>
        <width>280</width>
        <height>22</height>
       </rect>
@@ -405,7 +411,7 @@ QSlider::handle:horizontal{
      <property name="geometry">
       <rect>
        <x>0</x>
-       <y>229</y>
+       <y>280</y>
        <width>280</width>
        <height>20</height>
       </rect>
@@ -457,7 +463,7 @@ QSlider::handle:horizontal{
          </font>
         </property>
         <property name="text">
-         <string>3:23</string>
+         <string>0:00</string>
         </property>
         <property name="alignment">
          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -470,7 +476,7 @@ QSlider::handle:horizontal{
      <property name="geometry">
       <rect>
        <x>10</x>
-       <y>221</y>
+       <y>271</y>
        <width>260</width>
        <height>1</height>
       </rect>

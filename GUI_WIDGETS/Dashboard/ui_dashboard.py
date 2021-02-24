@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'dashboarducVaIo.ui'
+## Form generated from reading UI file 'dashboardZVBNLO.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -128,7 +128,7 @@ class Ui_Dashboard_widget(object):
         self.gaugeBackground.raise_()
         self.frame_player = QFrame(self.frame_dashboard)
         self.frame_player.setObjectName(u"frame_player")
-        self.frame_player.setGeometry(QRect(470, 80, 280, 280))
+        self.frame_player.setGeometry(QRect(470, 50, 280, 300))
         self.label_player_logo = QLabel(self.frame_player)
         self.label_player_logo.setObjectName(u"label_player_logo")
         self.label_player_logo.setGeometry(QRect(70, 0, 140, 140))
@@ -139,7 +139,7 @@ class Ui_Dashboard_widget(object):
         self.label_player_logo.setMargin(0)
         self.frame_media_data = QFrame(self.frame_player)
         self.frame_media_data.setObjectName(u"frame_media_data")
-        self.frame_media_data.setGeometry(QRect(0, 140, 280, 65))
+        self.frame_media_data.setGeometry(QRect(0, 140, 280, 100))
         self.frame_media_data.setStyleSheet(u"color:white;")
         self.verticalLayout_5 = QVBoxLayout(self.frame_media_data)
         self.verticalLayout_5.setSpacing(0)
@@ -161,6 +161,7 @@ class Ui_Dashboard_widget(object):
 
         self.label_artista = QLabel(self.frame_media_data)
         self.label_artista.setObjectName(u"label_artista")
+        self.label_artista.setMaximumSize(QSize(16777215, 40))
         font4 = QFont()
         font4.setFamily(u"Bahnschrift SemiLight")
         font4.setPointSize(12)
@@ -173,7 +174,7 @@ class Ui_Dashboard_widget(object):
 
         self.slider_duration = QSlider(self.frame_player)
         self.slider_duration.setObjectName(u"slider_duration")
-        self.slider_duration.setGeometry(QRect(0, 210, 280, 22))
+        self.slider_duration.setGeometry(QRect(0, 260, 280, 22))
         self.slider_duration.setMaximumSize(QSize(16777215, 30))
         self.slider_duration.setCursor(QCursor(Qt.SizeHorCursor))
         self.slider_duration.setTabletTracking(True)
@@ -193,7 +194,7 @@ class Ui_Dashboard_widget(object):
         self.slider_duration.setOrientation(Qt.Horizontal)
         self.frame_durationLabels = QFrame(self.frame_player)
         self.frame_durationLabels.setObjectName(u"frame_durationLabels")
-        self.frame_durationLabels.setGeometry(QRect(0, 229, 280, 20))
+        self.frame_durationLabels.setGeometry(QRect(0, 280, 280, 20))
         self.frame_durationLabels.setStyleSheet(u"color: rgb(94, 94, 94);")
         self.frame_durationLabels.setFrameShape(QFrame.NoFrame)
         self.horizontalLayout_4 = QHBoxLayout(self.frame_durationLabels)
@@ -219,7 +220,7 @@ class Ui_Dashboard_widget(object):
 
         self.line = QFrame(self.frame_player)
         self.line.setObjectName(u"line")
-        self.line.setGeometry(QRect(10, 221, 260, 1))
+        self.line.setGeometry(QRect(10, 271, 260, 1))
         self.line.setStyleSheet(u"border:1px solid gray;")
         self.line.setFrameShape(QFrame.HLine)
         self.line.setFrameShadow(QFrame.Sunken)
@@ -239,9 +240,9 @@ class Ui_Dashboard_widget(object):
         self.label_kmh.setText(QCoreApplication.translate("Dashboard_widget", u"KM/H ", None))
         self.label_vel.setText(QCoreApplication.translate("Dashboard_widget", u"200", None))
         self.label_player_logo.setText("")
-        self.label_cancion.setText(QCoreApplication.translate("Dashboard_widget", u"El ultimo dia del resto de mi vida", None))
-        self.label_artista.setText(QCoreApplication.translate("Dashboard_widget", u"Avicci, Nicky Romero", None))
+        self.label_cancion.setText(QCoreApplication.translate("Dashboard_widget", u"No data", None))
+        self.label_artista.setText(QCoreApplication.translate("Dashboard_widget", u"No data", None))
         self.label_currentTime.setText(QCoreApplication.translate("Dashboard_widget", u"0:00", None))
-        self.label_duration.setText(QCoreApplication.translate("Dashboard_widget", u"3:23", None))
+        self.label_duration.setText(QCoreApplication.translate("Dashboard_widget", u"0:00", None))
     # retranslateUi
 
