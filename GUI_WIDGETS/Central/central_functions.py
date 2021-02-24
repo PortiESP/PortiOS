@@ -10,7 +10,7 @@ class Central_funcs(Main_GUI):
 
 
 	def centralSetup(self):
-		self.frame = self.GUI_Central
+		self.frame = self.super().GUI_Central
 		# Flags
 		self.frame.volumeVisivility = False
 		self.frame.powerVisivility = False
