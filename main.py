@@ -112,7 +112,7 @@ class Main_GUI:
 				icon.addFile(u":/icons-gray/Resources/Icons/bt_states/bluetooth_blue.png", QSize(), QIcon.Normal, QIcon.Off)
 				self.GUI_Central.bluetoothStatusButton.setIcon(icon)
 				self.GUI_Central.slider_volume.setValue(self.BTController.volumeIface.Get('org.bluez.MediaTransport1', 'Volume'))
-				if str(self.BTController.volumeIface.Get('org.bluez.MediaPlayer1', 'Status')) == 'playing':
+				if str(self.BTController.volumeIface.Get('org.freedesktop.DBus.Properties', 'Status')) == 'playing':
 					self.toogle_musicStatus(setStatus='playing')
 				self.BTController.bus.add_signal_receiver(self.mediaDataChanged, 
 											dbus_interface = "org.freedesktop.DBus.Properties",
