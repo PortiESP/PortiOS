@@ -105,7 +105,7 @@ class Main_GUI:
 				self.GUI_Central.slider_volume.setValue(self.BTController.get_volume_data())
 				if str(self.BTController.get_player_data('Status')) == 'playing':
 					self.toogle_musicStatus(setStatus='playing')
-					Dashboard_funcs.changeMusicInfo(self)
+					
 				self.BTController.bus.add_signal_receiver(self.mediaDataChanged, 
 											dbus_interface = "org.freedesktop.DBus.Properties",
             								signal_name = "PropertiesChanged",
@@ -129,9 +129,8 @@ class Main_GUI:
 				currentMusicTime =  Dashboard_funcs.formatDuration(int(currentMusicTime))
 				self.GUI_Dashboard.label_currentTime.setText(currentMusicTime)
 				print('Time elapsed --> ' + currentMusicTime)
+
 				
-				if self.GUI_Dashboard.label_currentTime.text() == 'No data':
-					Dashboard_funcs.changeMusicInfo(self)
 
 
 			
