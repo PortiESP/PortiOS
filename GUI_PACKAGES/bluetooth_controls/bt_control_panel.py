@@ -41,7 +41,7 @@ class BT_Control_Panel:
 			elif re.findall('Master Playback Switch', i):
 				self.muteid = i.split(',')[0][-1]
 		self.mute = 1
-		self.localVolume = subprocess.run([f'amixer cget numid={self.numid}'], capture_output=True, text=True, shell=True).stdout.split('=')[-1].strip().split(',')
+		self.localVolume = lambda: subprocess.run([f'amixer cget numid={self.numid}'], capture_output=True, text=True, shell=True).stdout.split('=')[-1].strip().split(',')
 				
 	def setupInterfaces(self):
 		#diccionario con todos los objetos 

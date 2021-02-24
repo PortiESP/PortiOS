@@ -119,8 +119,8 @@ class Main_GUI:
 
 			# Volume slider
 			sliderValue = self.GUI_Central.slider_volume.value()
-			if sliderValue != self.localVolume:
-				self.localVolume = sliderValue
+			if sliderValue != self.BTController.localVolume:
+				self.BTController.localVolume = sliderValue
 				self.BTController.set_volume(str(sliderValue), maxlevel=127)
 
 			# Music current time
