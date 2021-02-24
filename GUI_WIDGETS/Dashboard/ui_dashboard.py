@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'dashboardZVBNLO.ui'
+## Form generated from reading UI file 'dashboardfSGpDU.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -139,7 +139,7 @@ class Ui_Dashboard_widget(object):
         self.label_player_logo.setMargin(0)
         self.frame_media_data = QFrame(self.frame_player)
         self.frame_media_data.setObjectName(u"frame_media_data")
-        self.frame_media_data.setGeometry(QRect(0, 140, 280, 100))
+        self.frame_media_data.setGeometry(QRect(0, 140, 280, 120))
         self.frame_media_data.setStyleSheet(u"color:white;")
         self.verticalLayout_5 = QVBoxLayout(self.frame_media_data)
         self.verticalLayout_5.setSpacing(0)

@@ -289,7 +289,7 @@ QLabel{
        <x>0</x>
        <y>140</y>
        <width>280</width>
-       <height>100</height>
+       <height>120</height>
       </rect>
      </property>
      <property name="styleSheet">
