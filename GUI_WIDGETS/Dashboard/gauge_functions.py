@@ -1,9 +1,8 @@
 from PySide2.QtCore import *
 from PySide2.QtGui import *
 from PySide2.QtWidgets import *
-import dashboard_functions
 
-class Gauge_funcs(Dashboard_funcs):
+class Gauge_funcs:
 	def setDefaults(self):
 		# Arc of min degree and max degree
 		self.GUI_Dashboard.DEGREE_RANGE = [240, 300] 
