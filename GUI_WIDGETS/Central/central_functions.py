@@ -30,7 +30,24 @@ class Central_funcs:
 
 
 
-	
+	def toogle_musicStatus(self, setStatus=None):
+		
+		if self.BTController.checkConnectedDevices():
+			status = self.BTController.playerIface.Get('org.bluez.MediaPlayer1', 'Status')
+			print(status)
+			if setStatus: 
+				if setStatus == 'playing': status = 'paused'
+				elif setStatus == 'paused': status = 'playing'
+
+			icon1 = QIcon()
+			if status == 'playing':
+				name = 'play-fill'
+				self.BTController.playback_control('pause')
+			elif status == 'paused':
+				name = 'pause-fill'
+				self.BTController.playback_control('play')
+			icon1.addFile(u":/icons_red/Resources/Icons/png-red/{}.png".format(name), QSize(30, 30), QIcon.Normal, QIcon.Off)
+			self.frame.footerButton_2.setIcon(icon1)
 		
 		
 	def toogle_volume(self):
