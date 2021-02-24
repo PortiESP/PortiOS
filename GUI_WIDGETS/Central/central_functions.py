@@ -9,12 +9,12 @@ class Central_funcs:
 		self.GUI_Central.footerButton_1.clicked.connect(lambda:self.BTController.playback_control('previous'))
 		self.GUI_Central.footerButton_2.clicked.connect(self.toogle_musicStatus)
 		self.GUI_Central.footerButton_3.clicked.connect(lambda:self.BTController.playback_control('next'))
-		self.GUI_Central.footerButton_4.clicked.connect(lambda:self.setPage(3))
-		self.GUI_Central.footerButton_5.clicked.connect(self.toogle_volume)
-		self.GUI_Central.footerButton_6.clicked.connect(self.toogle_power)
+		self.GUI_Central.footerButton_4.clicked.connect(lambda:self.setPage(self, 3))
+		self.GUI_Central.footerButton_5.clicked.connect(lambda:self.toogle_volume(self))
+		self.GUI_Central.footerButton_6.clicked.connect(lambda:self.toogle_power(self))
 
 		# Power menu
-		self.GUI_Central.powerCloseButton.clicked.connect(self.toogle_power)
+		self.GUI_Central.powerCloseButton.clicked.connect(lambda:self.toogle_power(self))
 		self.GUI_Central.centralShutdownButton.clicked.connect(lambda:subprocess.run('shutdown -P now', shell=True))
 		self.GUI_Central.centralRebootButton.clicked.connect(lambda:subprocess.run('reboot', shell=True))
 
