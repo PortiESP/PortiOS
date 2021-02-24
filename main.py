@@ -42,7 +42,7 @@ class Main_GUI:
 		self.centralf = Central_funcs()
 		self.appsf = Apps_funcs()
 		self.settingsf = Settings_funcs()
-
+		self.centralf.centralSetup()
 		self.appsf.appsSetup(self.GUI_Apps, self.GUI_Central.stackedWidget)
 		self.settingsf.settingsSetup(self.GUI_Settings)
 

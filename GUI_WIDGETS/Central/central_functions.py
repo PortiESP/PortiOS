@@ -5,21 +5,18 @@ from main import *
 
 # Frame will be GUI_Central object
 class Central_funcs(Main_GUI):
-	def __init__(self):
-		self.centralSetup()
-
 
 	def centralSetup(self):
-		PARENT = main_gui
-		self.frame = PARENT.GUI_Central
+		self = main_gui
+		self.frame = self.GUI_Central
 		# Flags
 		self.frame.volumeVisivility = False
 		self.frame.powerVisivility = False
 
 		# Footer buttons events
-		self.frame.footerButton_1.clicked.connect(lambda:PARENT.BTController.playback_control('previous'))
-		self.frame.footerButton_2.clicked.connect(PARENT.toogle_musicStatus)
-		self.frame.footerButton_3.clicked.connect(lambda:PARENT.BTController.playback_control('next'))
+		self.frame.footerButton_1.clicked.connect(lambda:self.BTController.playback_control('previous'))
+		self.frame.footerButton_2.clicked.connect(self.toogle_musicStatus)
+		self.frame.footerButton_3.clicked.connect(lambda:self.BTController.playback_control('next'))
 		self.frame.footerButton_4.clicked.connect(lambda:self.setPage(3))
 		self.frame.footerButton_5.clicked.connect(self.toogle_volume)
 		self.frame.footerButton_6.clicked.connect(self.toogle_power)
