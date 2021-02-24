@@ -1,7 +1,7 @@
 
 
 class Settings_funcs:
-	def settingsSetup(self, frame):
+	def settingsSetup(self):
 		
 
 		self.GUI_Settings.bearing_settingsBrightness.clicked.connect(lambda:Settings_funcs.setPage(self, 0))
@@ -16,4 +16,4 @@ class Settings_funcs:
 
 	def setPage(self, index):
 		print('Changing to page ',index)
-		self.frame.stackedWidget_settings.setCurrentIndex(index)
+		self.GUI_Settings.stackedWidget_settings.setCurrentIndex(index)
