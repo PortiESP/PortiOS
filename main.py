@@ -128,6 +128,13 @@ class Main_GUI:
 				self.localVolume = sliderValue
 				self.BTController.set_volume(str(sliderValue), maxlevel=127)
 
+			# Music current time
+			if self.musicStatus == 'playing':
+				currentMusicTime = self.BTController.playerIface.Get("org.freedesktop.DBus.Properties", 'Position')
+				currentMusicTime =  Dashboard_funcs.formatDuration(int(currentMusicTime))
+				self.GUI_Dashboard.label_currentTime.setText(currentMusicTime)
+				print('Time elapsed --> ' currentMusicTime)
+
 
 			
 
