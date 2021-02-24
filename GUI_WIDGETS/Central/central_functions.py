@@ -41,6 +41,7 @@ class Central_funcs:
 		data = list(dict(data).items())[0]
 		if str(data[0]) == 'Status': 
 			self.musicStatus = str(data[1])
+			print(self.musicStatus)
 			self.toogle_musicStatus(trigger='phone')
 
 		if str(data[0]) == 'Volume':
