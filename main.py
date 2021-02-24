@@ -130,7 +130,7 @@ class Main_GUI:
 
 			# Music current time
 			if self.musicStatus == 'playing':
-				currentMusicTime = self.BTController.playerIface.Get("org.freedesktop.DBus.Properties", 'Position')
+				currentMusicTime = self.BTController.playerIface.Get(self.BTController.playerObjPath, 'Position')
 				currentMusicTime =  Dashboard_funcs.formatDuration(int(currentMusicTime))
 				self.GUI_Dashboard.label_currentTime.setText(currentMusicTime)
 				print('Time elapsed --> ' + currentMusicTime)
