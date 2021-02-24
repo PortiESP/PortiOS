@@ -74,6 +74,12 @@ class Main_GUI:
 			# Central clock
 			self.GUI_Central.label_clock.setText(time.strftime('%H:%M'))
 
+			# Volume slider
+			sliderValue = self.GUI_Central.slider_volume.value()
+			if sliderValue != self.GUI_Central.localVolume:
+				self.GUI_Central.localVolume = sliderValue
+				self.BTController.set_volume(sliderValue, maxlevel=127)
+
 
 			
 

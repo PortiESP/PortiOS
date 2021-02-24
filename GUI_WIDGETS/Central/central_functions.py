@@ -28,7 +28,7 @@ class Central_funcs:
 		self.frame.centralRebootButton.clicked.connect(lambda:subprocess.run('reboot', shell=True))
 
 		# Slider volume
-		# self.frame.slider_volume.valueChanged.connect(lambda:self.mediaPlayer.set_volume(str(self.frame.slider_volume.value()), maxlevel=127))
+		self.localVolume = 100
 
 		mediaPlayer.bus.add_signal_receiver(self.mediaDataChanged, 
 											dbus_interface = "org.freedesktop.DBus.Properties",
@@ -44,7 +44,7 @@ class Central_funcs:
 			self.toogle_musicStatus(self.musicStatus)
 
 		if str(data[0]) == 'Volume':
-				self.mediaPlayer.set_volume(str(data[1]), maxlevel=127)
+				self.frame.slider_volume.setValue(str(data[1]))
 				
 
 
