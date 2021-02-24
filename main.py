@@ -9,6 +9,9 @@ class Main_GUI:
 		# Setting fullscreen
 		# self.win.showFullScreen()
 
+		# Local volume (default)
+		self.localVolume = 100
+
 
 		# Getting central GUI
 		self.GUI_Central = Ui_Central()
@@ -76,8 +79,8 @@ class Main_GUI:
 
 			# Volume slider
 			sliderValue = self.GUI_Central.slider_volume.value()
-			if sliderValue != self.GUI_Central.localVolume:
-				self.GUI_Central.localVolume = sliderValue
+			if sliderValue != self.localVolume:
+				self.localVolume = sliderValue
 				self.BTController.set_volume(sliderValue, maxlevel=127)
 
 

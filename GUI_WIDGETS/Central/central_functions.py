@@ -27,8 +27,6 @@ class Central_funcs:
 		self.frame.centralShutdownButton.clicked.connect(lambda:subprocess.run('shutdown -P now', shell=True))
 		self.frame.centralRebootButton.clicked.connect(lambda:subprocess.run('reboot', shell=True))
 
-		# Slider volume
-		self.localVolume = 100
 
 		mediaPlayer.bus.add_signal_receiver(self.mediaDataChanged, 
 											dbus_interface = "org.freedesktop.DBus.Properties",
