@@ -17,6 +17,6 @@ class Dashboard_funcs:
 
 	def formatDuration(duration):
 		duration /= 1000
-		mins = duration // 60
-		segs = int((duration % 60) * 60)
-		return str(mins) + ':' + str(segs)
+		mins = int(duration / 60)
+		segs = int(((duration / 60) - mins) * 60)
+		return str(mins) + ':' + str(segs)[:1]
