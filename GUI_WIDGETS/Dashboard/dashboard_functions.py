@@ -1,6 +1,5 @@
 from GUI_WIDGETS.Dashboard.gauge_functions import *
 
-
 class Dashboard_funcs:
 
 	def dashboardSetup(self):
@@ -19,7 +18,7 @@ class Dashboard_funcs:
 			
 		except KeyError:
 			pass
-		
+
 
 	def formatDuration(duration):
 		duration = int(duration)
