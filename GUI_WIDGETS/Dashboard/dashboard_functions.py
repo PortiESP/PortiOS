@@ -14,7 +14,8 @@ class Dashboard_funcs:
 			self.GUI_Dashboard.label_cancion.setText(str(dict(self.BTController.get_player_data('Track'))['Title'] ))
 			self.GUI_Dashboard.label_artista.setText(str(dict(self.BTController.get_player_data('Track'))['Artist']))	
 			
-			if data[0] == 'Track' and len(data[1]) == 1:				
+			if data[0] == 'Track' and len(data[1]) == 1:
+				print('duration ------> ', Dashboard_funcs.formatDuration(data[1]['Duration']))				
 				self.GUI_Dashboard.label_duration.setText(Dashboard_funcs.formatDuration(data[1]['Duration']))
 		except KeyError:
 			pass
