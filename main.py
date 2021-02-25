@@ -108,6 +108,7 @@ class Main_GUI:
 				icon.addFile(u":/icons-gray/Resources/Icons/bt_states/bluetooth_blue.png", QSize(), QIcon.Normal, QIcon.Off)
 				self.GUI_Central.bluetoothStatusButton.setIcon(icon)
 				self.GUI_Central.slider_volume.setValue(self.BTController.get_volume_data())
+				self.trackDuration = self.BTController.get_player_data('Track')['Duration']
 				if str(self.BTController.get_player_data('Status')) == 'playing':
 					self.toogle_musicStatus(setStatus='playing')
 					
@@ -133,9 +134,9 @@ class Main_GUI:
 				if str(self.BTController.get_player_data('Status')) == 'playing':
 					currentMusicTime = self.BTController.get_player_data('Position')
 					Dashboard_funcs.moveDurationSlider(self, int(currentMusicTime/1000))
-					currentMusicTime =  Dashboard_funcs.formatDuration(int(currentMusicTime))
-					self.GUI_Dashboard.label_currentTime.setText(currentMusicTime)
-					print('Time elapsed --> ' + currentMusicTime)
+					currentMusicTimeF =  Dashboard_funcs.formatDuration(int(currentMusicTime))
+					self.GUI_Dashboard.label_currentTime.setText(currentMusicTimeF)
+					print('Time elapsed --> ' + currentMusicTimeF)
 
 				
 

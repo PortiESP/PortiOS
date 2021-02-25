@@ -97,15 +97,23 @@ class BT_Control_Panel:
 	
 	
 	def get_player_data(self, data):
-		return self.playerIface.Get('org.bluez.MediaPlayer1', data)
+		try:
+			return self.playerIface.Get('org.bluez.MediaPlayer1', data)
+		except: return False
 	
 	def get_device_data(self, data):
-		return self.deviceIface.Get('org.bluez.Device1', data)
+		try:
+			return self.deviceIface.Get('org.bluez.Device1', data)
+		except: return False
 
 	def get_volume_data(self):
-		return int(self.volumeIface.Get('org.bluez.MediaTransport1', 'Volume'))
+		try:
+			return int(self.volumeIface.Get('org.bluez.MediaTransport1', 'Volume'))
+		except: return False
 
 	def get_adapter_data(self, data):
-		return self.adapterData[data]
+		try:
+			return self.adapterData[data]
+		except: return False
 
 
