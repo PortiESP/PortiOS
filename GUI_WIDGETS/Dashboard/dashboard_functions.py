@@ -8,10 +8,12 @@ class Dashboard_funcs:
 
 	def changeMusicInfo(self):
 		# Setting labels
+		track = self.BTController.get_player_data('Track')
 		try:
-			self.GUI_Dashboard.label_duration.setText(str(Dashboard_funcs.formatDuration( self.BTController.get_player_data('Track')['Duration'])))	
-			self.GUI_Dashboard.label_cancion.setText(str(dict(self.BTController.get_player_data('Track'))['Title'] ))
-			self.GUI_Dashboard.label_artista.setText(str(dict(self.BTController.get_player_data('Track'))['Artist']))	
+			if len(track) == 1:
+				self.GUI_Dashboard.label_duration.setText(str(Dashboard_funcs.formatDuration( track['Duration'])))
+			self.GUI_Dashboard.label_cancion.setText(str(dict(track['Title'] )))
+			self.GUI_Dashboard.label_artista.setText(str(dict(track['Artist'])))	
 			
 			
 		except KeyError:
