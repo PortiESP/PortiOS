@@ -18,6 +18,13 @@ class Main_GUI:
 		self.BTController = BT_Control_Panel()
 		self.startMediaPlayer()
 
+		# Media info
+		self.track = None # Track info dictionary
+		self.trackDuration = None # Duration of the actual track
+		self.currentMusicTime = None # Music position in microseconds
+		self.currentMusicTimeF = None # Formated music porsition time (M:SS)
+
+
 
 		# Getting widgets
 		self.GUI_Dashboard = Ui_Dashboard_widget()
@@ -135,11 +142,11 @@ class Main_GUI:
 
 				# Music current time
 				if str(self.BTController.get_player_data('Status')) == 'playing':
-					currentMusicTime = self.BTController.get_player_data('Position')
-					Dashboard_funcs.moveDurationSlider(self, int(currentMusicTime/1000))
-					currentMusicTimeF =  Dashboard_funcs.formatDuration(int(currentMusicTime))
-					self.GUI_Dashboard.label_currentTime.setText(currentMusicTimeF)
-					print('Time elapsed --> ' + currentMusicTimeF)
+					self.currentMusicTime = self.BTController.get_player_data('Position')
+					Dashboard_funcs.moveDurationSlider(self, int(self.currentMusicTime/1000))
+					self.currentMusicTimeF =  Dashboard_funcs.formatDuration(int(self.currentMusicTime))
+					self.GUI_Dashboard.label_currentTime.setText(self.currentMusicTimeF)
+					print('Time elapsed --> ' + self.currentMusicTimeF)
 
 				
 

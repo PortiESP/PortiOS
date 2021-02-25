@@ -7,15 +7,17 @@ class Dashboard_funcs:
 
 	def changeMusicInfo(self):
 		# Setting labels
-		track = self.BTController.get_player_data('Track')
+		self.track = self.BTController.get_player_data('Track')
+
 		try:
-			if len(track) == 1:
-				self.trackDuration = track['Duration']
+			if len(self.track) == 1:
+				self.trackDuration = self.track['Duration']
 				self.GUI_Dashboard.label_duration.setText(str(Dashboard_funcs.formatDuration( self.trackDuration)))
 				self.GUI_Dashboard.slider_duration.setMaximum(int(self.trackDuration/1000))
 
-			self.GUI_Dashboard.label_cancion.setText(str(track['Title']))
-			self.GUI_Dashboard.label_artista.setText(str(track['Artist']))	 
+			self.GUI_Dashboard.label_cancion.setText(str(self.track['Title']))
+			self.GUI_Dashboard.label_artista.setText(str(self.track['Artist']))	
+
 			
 			
 		except KeyError:
