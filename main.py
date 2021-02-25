@@ -62,7 +62,7 @@ class Main_GUI:
 
 	def mediaDataChanged(self, _, data, __):
 		print('Data changed:')
-		event = list(dict(data).items())
+		event = dict(data)
 		print(event)
 		data = event[0]
 		if str(data[0]) == 'Status': 
