@@ -20,7 +20,7 @@ class Dashboard_funcs:
 			
 		except KeyError:
 			pass
-	def moveDurationSlider(position):
+	def moveDurationSlider(self, position):
 		# Map value for get lineDurationTop
 		WValue = (260 / self.trackDuration) * position
 		# Setting slider value and line width
