@@ -75,7 +75,7 @@ class Main_GUI:
 			self.GUI_Central.slider_volume.setValue(int(values))
 		
 
-		Dashboard_funcs.changeMusicInfo(self, data=(key, list(values)))
+		Dashboard_funcs.changeMusicInfo(self, data=(key, values))
 
 
 	def startMediaPlayer(self):

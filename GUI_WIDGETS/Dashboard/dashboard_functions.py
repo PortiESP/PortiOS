@@ -7,16 +7,15 @@ class Dashboard_funcs:
 		Gauge_funcs.setDefaults(self)
 
 	def changeMusicInfo(self, data=None):
-		print('Updated labels: ', data[0], ' = ', data[1])
+		print('Updated labels: ', data[0], ' = ', dict(data[1]).items())
 
 		# Setting labels
 		try:
 			self.GUI_Dashboard.label_cancion.setText(str(dict(self.BTController.get_player_data('Track'))['Title'] ))
 			self.GUI_Dashboard.label_artista.setText(str(dict(self.BTController.get_player_data('Track'))['Artist']))	
+			self.GUI_Dashboard.label_duration.setText(str(dict(self.BTController.get_player_data('Track'))['Duration']))	
 			
-			if data[0] == 'Track' and len(data[1]) == 1:
-				print('duration ------> ', Dashboard_funcs.formatDuration(data[1]['Duration']))				
-				self.GUI_Dashboard.label_duration.setText(Dashboard_funcs.formatDuration(data[1]['Duration']))
+			
 		except KeyError:
 			pass
 
