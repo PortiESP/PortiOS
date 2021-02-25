@@ -118,7 +118,6 @@ class Main_GUI:
 				icon.addFile(u":/icons-gray/Resources/Icons/bt_states/bluetooth_blue.png", QSize(), QIcon.Normal, QIcon.Off)
 				self.GUI_Central.bluetoothStatusButton.setIcon(icon)
 				self.GUI_Central.slider_volume.setValue(self.BTController.get_volume_data())
-				self.trackDuration = self.BTController.get_player_data('Track')['Duration']
 				if str(self.BTController.get_player_data('Status')) == 'playing':
 					self.toogle_musicStatus(setStatus='playing')
 					
