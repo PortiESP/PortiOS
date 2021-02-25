@@ -132,6 +132,7 @@ class Main_GUI:
 				# Music current time
 				if str(self.BTController.get_player_data('Status')) == 'playing':
 					currentMusicTime = self.BTController.get_player_data('Position')
+					Dashboard_funcs.moveDurationSlider(int(currentMusicTime/1000))
 					currentMusicTime =  Dashboard_funcs.formatDuration(int(currentMusicTime))
 					self.GUI_Dashboard.label_currentTime.setText(currentMusicTime)
 					print('Time elapsed --> ' + currentMusicTime)

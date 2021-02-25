@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'dashboardMjOOuG.ui'
+## Form generated from reading UI file 'dashboardoGaYbp.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -191,6 +191,7 @@ class Ui_Dashboard_widget(object):
 "	border-radius:6px;	\n"
 "\n"
 "}")
+        self.slider_duration.setMaximum(100)
         self.slider_duration.setOrientation(Qt.Horizontal)
         self.frame_durationLabels = QFrame(self.frame_player)
         self.frame_durationLabels.setObjectName(u"frame_durationLabels")
@@ -218,16 +219,23 @@ class Ui_Dashboard_widget(object):
 
         self.horizontalLayout_4.addWidget(self.label_duration)
 
-        self.line = QFrame(self.frame_player)
-        self.line.setObjectName(u"line")
-        self.line.setGeometry(QRect(10, 271, 260, 1))
-        self.line.setStyleSheet(u"border:1px solid gray;")
-        self.line.setFrameShape(QFrame.HLine)
-        self.line.setFrameShadow(QFrame.Sunken)
+        self.lineDurationTop = QFrame(self.frame_player)
+        self.lineDurationTop.setObjectName(u"lineDurationTop")
+        self.lineDurationTop.setGeometry(QRect(10, 271, 0, 1))
+        self.lineDurationTop.setStyleSheet(u"border:1px solid red;")
+        self.lineDurationTop.setFrameShape(QFrame.HLine)
+        self.lineDurationTop.setFrameShadow(QFrame.Sunken)
+        self.lineDuratioBottom = QFrame(self.frame_player)
+        self.lineDuratioBottom.setObjectName(u"lineDuratioBottom")
+        self.lineDuratioBottom.setGeometry(QRect(10, 271, 260, 1))
+        self.lineDuratioBottom.setStyleSheet(u"border:1px solid gray;")
+        self.lineDuratioBottom.setFrameShape(QFrame.HLine)
+        self.lineDuratioBottom.setFrameShadow(QFrame.Sunken)
         self.label_player_logo.raise_()
         self.frame_media_data.raise_()
         self.frame_durationLabels.raise_()
-        self.line.raise_()
+        self.lineDuratioBottom.raise_()
+        self.lineDurationTop.raise_()
         self.slider_duration.raise_()
 
         self.retranslateUi(Dashboard_widget)
