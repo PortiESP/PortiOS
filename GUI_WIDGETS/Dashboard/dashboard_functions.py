@@ -12,13 +12,15 @@ class Dashboard_funcs:
 		try:
 			if len(track) == 1:
 				self.GUI_Dashboard.label_duration.setText(str(Dashboard_funcs.formatDuration( track['Duration'])))
-			
+
 			self.GUI_Dashboard.label_cancion.setText(str(track['Title']))
 			self.GUI_Dashboard.label_artista.setText(str(track['Artist']))	 
 			
 			
 		except KeyError:
 			pass
+		except dbus.exceptions.DBusException:
+			print ('Connection lost')
 
 	def formatDuration(duration):
 		duration = int(duration)
