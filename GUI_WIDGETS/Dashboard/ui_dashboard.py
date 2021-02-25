@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'dashboardfSGpDU.ui'
+## Form generated from reading UI file 'dashboardMjOOuG.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -238,7 +238,7 @@ class Ui_Dashboard_widget(object):
     def retranslateUi(self, Dashboard_widget):
         Dashboard_widget.setWindowTitle(QCoreApplication.translate("Dashboard_widget", u"Form", None))
         self.label_kmh.setText(QCoreApplication.translate("Dashboard_widget", u"KM/H ", None))
-        self.label_vel.setText(QCoreApplication.translate("Dashboard_widget", u"200", None))
+        self.label_vel.setText(QCoreApplication.translate("Dashboard_widget", u"0", None))
         self.label_player_logo.setText("")
         self.label_cancion.setText(QCoreApplication.translate("Dashboard_widget", u"No data", None))
         self.label_artista.setText(QCoreApplication.translate("Dashboard_widget", u"No data", None))
