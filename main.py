@@ -129,7 +129,7 @@ class Main_GUI:
 				self.BTController.set_volume(str(sliderValue), maxlevel=127)
 
 			# Music current time
-			if str(self.BTController.get_player_data('Status')) == 'playing':
+			if str(self.BTController.get_player_data('Status')) == 'playing' and checkDevice == True:
 				currentMusicTime = self.BTController.get_player_data('Position')
 				currentMusicTime =  Dashboard_funcs.formatDuration(int(currentMusicTime))
 				self.GUI_Dashboard.label_currentTime.setText(currentMusicTime)
