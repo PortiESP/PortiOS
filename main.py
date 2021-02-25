@@ -62,9 +62,8 @@ class Main_GUI:
 
 	def mediaDataChanged(self, _, data, __):
 		print('Data changed:')
-		event = dict(data)
-		print(event)
-		data = event[0]
+		print(data)
+		
 		if str(data[0]) == 'Status': 
 			self.toogle_musicStatus(str(self.BTController.get_player_data('Status')))
 
