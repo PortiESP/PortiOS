@@ -11,7 +11,7 @@ class Dashboard_funcs:
 		try:
 			self.GUI_Dashboard.label_cancion.setText(str(dict(self.BTController.get_player_data('Track'))['Title'] ))
 			self.GUI_Dashboard.label_artista.setText(str(dict(self.BTController.get_player_data('Track'))['Artist']))	
-			self.GUI_Dashboard.label_duration.setText(str(dict(Dashboard_funcs.formatDuration( self.BTController.get_player_data('Track'))['Duration'])))	
+			self.GUI_Dashboard.label_duration.setText(str(dict(Dashboard_funcs.formatDuration( self.BTController.get_player_data('Duration')))))	
 			
 			
 		except KeyError:
