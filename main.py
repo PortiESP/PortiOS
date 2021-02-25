@@ -75,9 +75,9 @@ class Main_GUI:
 			self.GUI_Central.slider_volume.setValue(int(values))
 		
 		elif key == 'Position':
-			Dashboard_funcs.moveDurationSlider(values)
+			Dashboard_funcs.moveDurationSlider(self, values)
 
-			
+
 		Dashboard_funcs.changeMusicInfo(self)
 
 
