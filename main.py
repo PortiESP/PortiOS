@@ -63,15 +63,15 @@ class Main_GUI:
 	def mediaDataChanged(self, _, data, __):
 		print('Data changed:')
 		print(data)
-		
-		if str(data[0]) == 'Status': 
+
+		if str(data.keys()[0]) == 'Status': 
 			self.toogle_musicStatus(str(self.BTController.get_player_data('Status')))
 
-		elif str(data[0]) == 'Volume':
-			self.GUI_Central.slider_volume.setValue(int(data[1]))
+		elif str(data.keys()[0]) == 'Volume':
+			self.GUI_Central.slider_volume.setValue(int(data['Volume']))
 
-		elif str(data[0]) == 'Track':
-			Dashboard_funcs.changeMusicInfo(self, data=(data[0], data[1]))
+		elif str(data.keys()[0]) == 'Track':
+			Dashboard_funcs.changeMusicInfo(self, data=data['duration'])
 
 
 	def startMediaPlayer(self):
