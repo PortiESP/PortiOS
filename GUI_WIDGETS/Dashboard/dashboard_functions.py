@@ -8,13 +8,17 @@ class Dashboard_funcs:
 
 	def changeMusicInfo(self):
 		# Setting labels
-		self.GUI_Dashboard.label_cancion.setText(str(dict(self.BTController.get_player_data('Track'))['Title'] ))
-		self.GUI_Dashboard.label_artista.setText(str(dict(self.BTController.get_player_data('Track'))['Artist']))
-		duration = self.BTController.get_player_data('Track')['Duration']
-		print(duration)
-		
+		try:
+			self.GUI_Dashboard.label_duration.setText(str(dict(Dashboard_funcs.formatDuration( self.BTController.get_player_data('Track')['Duration']))))	
+			self.GUI_Dashboard.label_cancion.setText(str(dict(self.BTController.get_player_data('Track'))['Title'] ))
+			self.GUI_Dashboard.label_artista.setText(str(dict(self.BTController.get_player_data('Track'))['Artist']))	
+			
+			
+		except KeyError:
+			pass
 
 	def formatDuration(duration):
+		duration = int(duration)
 		duration /= 1000
 		mins = int(duration / 60)
 		segs = int(((duration / 60) - mins) * 60)
