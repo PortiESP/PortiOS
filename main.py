@@ -72,7 +72,7 @@ class Main_GUI:
 			self.GUI_Central.slider_volume.setValue(int(data[1]))
 
 		elif str(data[0]) == 'Track':
-			Dashboard_funcs.changeMusicInfo(self, data=(data[0], dict(data[1])))
+			Dashboard_funcs.changeMusicInfo(self, data=(data[0], data[1]))
 
 
 	def startMediaPlayer(self):
