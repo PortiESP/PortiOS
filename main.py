@@ -75,6 +75,7 @@ class Main_GUI:
 			self.GUI_Central.slider_volume.setValue(int(values))
 
 		elif key == 'Track' and len(values) == 1:
+			print('###################')
 			Dashboard_funcs.changeMusicInfo(self, data=values)
 
 
