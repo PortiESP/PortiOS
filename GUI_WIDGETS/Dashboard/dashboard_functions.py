@@ -1,4 +1,5 @@
 from GUI_WIDGETS.Dashboard.gauge_functions import *
+from math import ceil
 
 class Dashboard_funcs:
 
@@ -33,7 +34,7 @@ class Dashboard_funcs:
 
 	def formatDuration(duration):
 		duration = int(duration)
-		duration /= 1000
+		duration = ceil(duration / 1000)
 		mins = int(duration / 60)
 		segs = int(((duration / 60) - mins) * 60)
 		return str(mins) + ':' + f'{segs:02}'
