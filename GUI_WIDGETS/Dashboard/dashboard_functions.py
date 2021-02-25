@@ -10,7 +10,7 @@ class Dashboard_funcs:
 		# Setting labels
 		self.GUI_Dashboard.label_cancion.setText(str(dict(self.BTController.get_player_data('Track'))['Title'] ))
 		self.GUI_Dashboard.label_artista.setText(str(dict(self.BTController.get_player_data('Track'))['Artist']))
-		duration = BTController.get_player_data('Track')['Duration']
+		duration = self.BTController.get_player_data('Track')['Duration']
 		print(duration)
 		
 
