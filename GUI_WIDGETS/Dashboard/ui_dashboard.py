@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'dashboardoGaYbp.ui'
+## Form generated from reading UI file 'dashboardNXqSRS.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -222,6 +222,7 @@ class Ui_Dashboard_widget(object):
         self.lineDurationTop = QFrame(self.frame_player)
         self.lineDurationTop.setObjectName(u"lineDurationTop")
         self.lineDurationTop.setGeometry(QRect(10, 271, 0, 1))
+        self.lineDurationTop.setMaximumSize(QSize(260, 16777215))
         self.lineDurationTop.setStyleSheet(u"border:1px solid red;")
         self.lineDurationTop.setFrameShape(QFrame.HLine)
         self.lineDurationTop.setFrameShadow(QFrame.Sunken)

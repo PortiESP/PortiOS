@@ -485,6 +485,12 @@ QSlider::handle:horizontal{
        <height>1</height>
       </rect>
      </property>
+     <property name="maximumSize">
+      <size>
+       <width>260</width>
+       <height>16777215</height>
+      </size>
+     </property>
      <property name="styleSheet">
       <string notr="true">border:1px solid red;</string>
      </property>
