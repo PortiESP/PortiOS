@@ -122,18 +122,19 @@ class Main_GUI:
 			# Central clock
 			self.GUI_Central.label_clock.setText(time.strftime('%H:%M'))
 
-			# Volume slider
-			sliderValue = self.GUI_Central.slider_volume.value()
-			if sliderValue != self.BTController.localVolume:
-				self.BTController.localVolume = sliderValue
-				self.BTController.set_volume(str(sliderValue), maxlevel=127)
+			if checkDevice:
+				# Volume slider
+				sliderValue = self.GUI_Central.slider_volume.value()
+				if sliderValue != self.BTController.localVolume:
+					self.BTController.localVolume = sliderValue
+					self.BTController.set_volume(str(sliderValue), maxlevel=127)
 
-			# Music current time
-			if str(self.BTController.get_player_data('Status')) == 'playing' and checkDevice == True:
-				currentMusicTime = self.BTController.get_player_data('Position')
-				currentMusicTime =  Dashboard_funcs.formatDuration(int(currentMusicTime))
-				self.GUI_Dashboard.label_currentTime.setText(currentMusicTime)
-				print('Time elapsed --> ' + currentMusicTime)
+				# Music current time
+				if str(self.BTController.get_player_data('Status')) == 'playing':
+					currentMusicTime = self.BTController.get_player_data('Position')
+					currentMusicTime =  Dashboard_funcs.formatDuration(int(currentMusicTime))
+					self.GUI_Dashboard.label_currentTime.setText(currentMusicTime)
+					print('Time elapsed --> ' + currentMusicTime)
 
 				
 
