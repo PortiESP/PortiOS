@@ -6,7 +6,7 @@ class Dashboard_funcs:
 	def dashboardSetup(self):
 		Gauge_funcs.setDefaults(self)
 
-	def changeMusicInfo(self, data=None):
+	def changeMusicInfo(self):
 		print('Updated labels: ', data[0], ' = ', data[1])
 
 		# Setting labels
