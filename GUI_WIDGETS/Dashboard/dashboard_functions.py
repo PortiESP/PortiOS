@@ -19,8 +19,7 @@ class Dashboard_funcs:
 			
 		except KeyError:
 			pass
-		except dbus.exceptions.DBusException:
-			print ('Connection lost')
+		
 
 	def formatDuration(duration):
 		duration = int(duration)
