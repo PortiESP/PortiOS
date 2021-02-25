@@ -9,7 +9,7 @@ class Dashboard_funcs:
 	def changeMusicInfo(self):
 		# Setting labels
 		try:
-			self.GUI_Dashboard.label_duration.setText(str(dict(Dashboard_funcs.formatDuration( self.BTController.get_player_data('Track')['Duration']))))	
+			self.GUI_Dashboard.label_duration.setText(str(Dashboard_funcs.formatDuration( self.BTController.get_player_data('Track')['Duration'])))	
 			self.GUI_Dashboard.label_cancion.setText(str(dict(self.BTController.get_player_data('Track'))['Title'] ))
 			self.GUI_Dashboard.label_artista.setText(str(dict(self.BTController.get_player_data('Track'))['Artist']))	
 			
