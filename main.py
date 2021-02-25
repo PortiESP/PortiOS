@@ -89,6 +89,7 @@ class Main_GUI:
 
 			##################### CONNECTIONS MANAGER ###################################
 			checkDevice = self.BTController.checkConnectedDevices()
+			print('Device:' checkDevice)
 			# Check for connected devices
 			# Setting BT status disconnected
 			if self.isConnectedDevice == True and checkDevice == False:
