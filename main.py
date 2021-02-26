@@ -20,6 +20,8 @@ class Main_GUI:
 
 		# Media info
 		self.track = None # Track info dictionary
+		self.songTitle = None
+		self.songArtist = None
 		self.trackDuration = None # Duration of the actual track
 		self.currentMusicTime = None # Music position in microseconds
 		self.currentMusicTimeF = None # Formated music porsition time (M:SS)
@@ -85,7 +87,11 @@ class Main_GUI:
 		elif key == 'Track':
 			self.track = values
 			if len(self.track) == 1:
-				self.trackDuration = self.track['Duration']
+				self.trackDuration = int(self.track['Duration'])
+			else:	
+				self.songTitle = str(self.track['Title'])
+				self.songArtist = str(self.track['Artist'])
+
 			Dashboard_funcs.changeMusicInfo(self)
 
 
@@ -156,7 +162,7 @@ class Main_GUI:
 				if str(self.BTController.get_player_data('Status')) == 'playing':
 					# Formatin time 
 					self.currentMusicTime = self.BTController.get_player_data('Position')
-					self.currentMusicTimeF =  self.formatDuration(int(self.currentMusicTime))
+					self.currentMusicTimeF =  self.formatDuration(self.currentMusicTime)
 					
 					# Dashboard player
 					if self.GUI_Central.appsWidget.currentIndex() == 0:

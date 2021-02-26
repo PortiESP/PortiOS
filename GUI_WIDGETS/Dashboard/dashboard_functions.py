@@ -9,13 +9,14 @@ class Dashboard_funcs:
 	def changeMusicInfo(self):
 		# Setting labels and slider
 		try:
-			# Duration
-			self.GUI_Dashboard.label_duration.setText(str(self.formatDuration( self.trackDuration)))
-			self.GUI_Dashboard.slider_duration.setMaximum(int(self.trackDuration))
+			# Set duration data to sliderMax and progress line
+			if len(self.track) == 1:
+				self.GUI_Dashboard.label_duration.setText(str(self.formatDuration(self.trackDuration)))
+				self.GUI_Dashboard.slider_duration.setMaximum(self.trackDuration)
 
-			# Song info
-			self.GUI_Dashboard.label_cancion.setText(str(self.track['Title']))
-			self.GUI_Dashboard.label_artista.setText(str(self.track['Artist']))	
+			# Song info to labels
+			self.GUI_Dashboard.label_cancion.setText(self.songTitle)
+			self.GUI_Dashboard.label_artista.setText(self.songArtist)	
 			
 		except KeyError:
 			pass
