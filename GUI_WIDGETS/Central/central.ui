@@ -161,7 +161,7 @@
      </property>
      <property name="icon">
       <iconset resource="../../resources.qrc">
-       <normaloff>:/icons-gray/Resources/Icons/bt_states/bluetooth_gray.png</normaloff>:/icons-gray/Resources/Icons/bt_states/bluetooth_gray.png</iconset>
+       <normaloff>:/bt_icons/Resources/Icons/bt_states/bluetooth_gray.png</normaloff>:/bt_icons/Resources/Icons/bt_states/bluetooth_gray.png</iconset>
      </property>
      <property name="iconSize">
       <size>

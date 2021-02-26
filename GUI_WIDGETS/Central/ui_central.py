@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'centralKQFgPV.ui'
+## Form generated from reading UI file 'centralNPaerH.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -70,7 +70,7 @@ class Ui_Central(object):
         self.bluetoothStatusButton.setGeometry(QRect(459, 10, 24, 24))
         self.bluetoothStatusButton.setStyleSheet(u"border:none;")
         icon = QIcon()
-        icon.addFile(u":/icons-gray/Resources/Icons/bt_states/bluetooth_gray.png", QSize(), QIcon.Normal, QIcon.Off)
+        icon.addFile(u":/bt_icons/Resources/Icons/bt_states/bluetooth_gray.png", QSize(), QIcon.Normal, QIcon.Off)
         self.bluetoothStatusButton.setIcon(icon)
         self.bluetoothStatusButton.setIconSize(QSize(22, 22))
         self.frame_footer = QFrame(self.centralwidget)

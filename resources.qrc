@@ -8,7 +8,11 @@
     <file>Resources/porti_os.png</file>
     <file>Resources/spotify-logo.png</file>
   </qresource>
-  <qresource prefix="icons-gray">
+  <qresource prefix="color_icons">
+    <file>Resources/Icons/color_icons/color_gray.png</file>
+    <file>Resources/Icons/color_icons/color_lightgray.png</file>
+  </qresource>
+  <qresource prefix="bt_icons">
     <file>Resources/Icons/bt_states/bluetooth_gray.png</file>
     <file>Resources/Icons/bt_states/bluetooth_blue.png</file>
   </qresource>

@@ -102,7 +102,7 @@ class Main_GUI:
 			# Setting BT status disconnected
 			if self.isConnectedDevice == True and checkDevice == False:
 				icon = QIcon()
-				icon.addFile(u":/icons-gray/Resources/Icons/bt_states/bluetooth_gray.png", QSize(), QIcon.Normal, QIcon.Off)
+				icon.addFile(u":/bt_icons/Resources/Icons/bt_states/bluetooth_gray.png", QSize(), QIcon.Normal, QIcon.Off)
 				self.GUI_Central.bluetoothStatusButton.setIcon(icon)
 				self.isConnectedDevice = False
 				continue
@@ -114,7 +114,7 @@ class Main_GUI:
 				self.isConnectedDevice = True
 				# BT status icon on
 				icon = QIcon()
-				icon.addFile(u":/icons-gray/Resources/Icons/bt_states/bluetooth_blue.png", QSize(), QIcon.Normal, QIcon.Off)
+				icon.addFile(u":/bt_icons/Resources/Icons/bt_states/bluetooth_blue.png", QSize(), QIcon.Normal, QIcon.Off)
 				self.GUI_Central.bluetoothStatusButton.setIcon(icon)
 				self.GUI_Central.slider_volume.setValue(self.BTController.get_volume_data())
 				if str(self.BTController.get_player_data('Status')) == 'playing':
