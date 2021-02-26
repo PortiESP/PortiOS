@@ -92,7 +92,7 @@ class Main_GUI:
 
 	def formatDuration(self, duration):
 		duration = int(duration)
-		duration = ceil(duration / 1000)
+		duration = duration / 1000
 		mins = int(duration / 60)
 		segs = int(((duration / 60) - mins) * 60)
 		return str(mins) + ':' + f'{segs:02}'
