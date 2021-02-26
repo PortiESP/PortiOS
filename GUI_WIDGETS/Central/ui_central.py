@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'centralNPaerH.ui'
+## Form generated from reading UI file 'centralInrdJh.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -191,26 +191,26 @@ class Ui_Central(object):
         self.footer_background.raise_()
         self.footer_i.raise_()
         self.footer_d.raise_()
-        self.stackedWidget = QStackedWidget(self.centralwidget)
-        self.stackedWidget.setObjectName(u"stackedWidget")
-        self.stackedWidget.setGeometry(QRect(0, 0, 800, 480))
-        self.stackedWidget.setMinimumSize(QSize(800, 480))
-        self.stackedWidget.setMaximumSize(QSize(800, 480))
+        self.appsWidget = QStackedWidget(self.centralwidget)
+        self.appsWidget.setObjectName(u"appsWidget")
+        self.appsWidget.setGeometry(QRect(0, 0, 800, 480))
+        self.appsWidget.setMinimumSize(QSize(800, 480))
+        self.appsWidget.setMaximumSize(QSize(800, 480))
         self.page_dashboard = QWidget()
         self.page_dashboard.setObjectName(u"page_dashboard")
-        self.stackedWidget.addWidget(self.page_dashboard)
+        self.appsWidget.addWidget(self.page_dashboard)
         self.page_player = QWidget()
         self.page_player.setObjectName(u"page_player")
-        self.stackedWidget.addWidget(self.page_player)
+        self.appsWidget.addWidget(self.page_player)
         self.page_settings = QWidget()
         self.page_settings.setObjectName(u"page_settings")
-        self.stackedWidget.addWidget(self.page_settings)
+        self.appsWidget.addWidget(self.page_settings)
         self.page_apps = QWidget()
         self.page_apps.setObjectName(u"page_apps")
-        self.stackedWidget.addWidget(self.page_apps)
+        self.appsWidget.addWidget(self.page_apps)
         self.page_leds = QWidget()
         self.page_leds.setObjectName(u"page_leds")
-        self.stackedWidget.addWidget(self.page_leds)
+        self.appsWidget.addWidget(self.page_leds)
         self.frame_volume = QFrame(self.centralwidget)
         self.frame_volume.setObjectName(u"frame_volume")
         self.frame_volume.setGeometry(QRect(652, 200, 40, 200))
@@ -321,14 +321,14 @@ class Ui_Central(object):
         self.frame_volume.raise_()
         self.frame_power.raise_()
         self.frame_background.raise_()
-        self.stackedWidget.raise_()
+        self.appsWidget.raise_()
         self.frame_logo.raise_()
         self.frame_header.raise_()
         self.frame_footer.raise_()
 
         self.retranslateUi(Central)
 
-        self.stackedWidget.setCurrentIndex(0)
+        self.appsWidget.setCurrentIndex(0)
 
 
         QMetaObject.connectSlotsByName(Central)

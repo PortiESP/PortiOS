@@ -3,7 +3,7 @@
 class Player_funcs:
 	def playerSetup(self):
 		# Control buttons
-		self.GUI_Player.pushButton
+		pass
 
 		
 

@@ -40,6 +40,6 @@ class Central_funcs:
 
 	def setPage(self, index):
 		print('Changing to page ',index)
-		self.GUI_Central.stackedWidget.setCurrentIndex(index)
+		self.GUI_Central.appsWidget.setCurrentIndex(index)
 
 

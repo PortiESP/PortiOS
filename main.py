@@ -82,10 +82,13 @@ class Main_GUI:
 		elif key == 'Volume':
 			self.GUI_Central.slider_volume.setValue(int(values))
 		
-		
+		elif key == 'Track':
+			self.track = values
+			if len(self.track) == 1:
+				self.trackDuration = self.track['Duration']
+			Dashboard_funcs.changeMusicInfo(self)
 
 
-		Dashboard_funcs.changeMusicInfo(self)
 	def formatDuration(self, duration):
 		duration = int(duration)
 		duration = ceil(duration / 1000)
@@ -151,10 +154,18 @@ class Main_GUI:
 
 				# Music current time
 				if str(self.BTController.get_player_data('Status')) == 'playing':
+					# Formatin time 
 					self.currentMusicTime = self.BTController.get_player_data('Position')
-					Dashboard_funcs.moveDurationSlider(self, self.currentMusicTime)
 					self.currentMusicTimeF =  self.formatDuration(int(self.currentMusicTime))
-					self.GUI_Dashboard.label_currentTime.setText(self.currentMusicTimeF)
+					
+					# Dashboard player
+					if self.GUI_Central.appsWidget.currentIndex() == 0:
+						self.GUI_Dashboard.label_currentTime.setText(self.currentMusicTimeF)
+						Dashboard_funcs.moveDurationSlider(self, self.currentMusicTime)
+
+					# Media player
+					elif self.GUI_Central.appsWidget.currentIndex() == 1:
+						pass
 					print('Time elapsed --> ' + self.currentMusicTimeF)
 
 				

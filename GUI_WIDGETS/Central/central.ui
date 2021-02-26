@@ -463,7 +463,7 @@ QPushButton:hover{
     <zorder>footer_i</zorder>
     <zorder>footer_d</zorder>
    </widget>
-   <widget class="QStackedWidget" name="stackedWidget">
+   <widget class="QStackedWidget" name="appsWidget">
     <property name="geometry">
      <rect>
       <x>0</x>
@@ -743,7 +743,7 @@ background:none;</string>
    <zorder>frame_volume</zorder>
    <zorder>frame_power</zorder>
    <zorder>frame_background</zorder>
-   <zorder>stackedWidget</zorder>
+   <zorder>appsWidget</zorder>
    <zorder>frame_logo</zorder>
    <zorder>frame_header</zorder>
    <zorder>frame_footer</zorder>
