@@ -76,15 +76,17 @@ class BT_Control_Panel:
 	
 	# Play,Stop,Next...
 	def playback_control(self, cmd):
-		if cmd == 'next': self.controlsIface.Next()
-		elif cmd == 'previous': self.controlsIface.Previous()
-		elif cmd == 'play': self.controlsIface.Play()
-		elif cmd == 'pause': self.controlsIface.Pause()
-		elif cmd == 'stop': self.controlsIface.Stop()
-		elif cmd == 'fastforward': self.controlsIface.FastForward(); self.controlsIface.Play()
-		elif cmd == 'rewind': self.controlsIface.Rewind(); self.controlsIface.Play()
-		else: return False
-					
+		try:
+			if cmd == 'next': self.controlsIface.Next()
+			elif cmd == 'previous': self.controlsIface.Previous()
+			elif cmd == 'play': self.controlsIface.Play()
+			elif cmd == 'pause': self.controlsIface.Pause()
+			elif cmd == 'stop': self.controlsIface.Stop()
+			elif cmd == 'fastforward': self.controlsIface.FastForward(); self.controlsIface.Play()
+			elif cmd == 'rewind': self.controlsIface.Rewind(); self.controlsIface.Play()
+			else: return False
+		except:
+			print('Playback_control error catched...!')	
 					
 	#Set volume value for RPi
 	#The max value parameter indicates the max value you are using, default = 100
