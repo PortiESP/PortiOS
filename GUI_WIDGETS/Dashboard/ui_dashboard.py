@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'dashboardZzUlXe.ui'
+## Form generated from reading UI file 'dashboardIYMjOG.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -154,7 +154,7 @@ class Ui_Dashboard_widget(object):
         self.label_cancion.setFont(font3)
         self.label_cancion.setStyleSheet(u"color: rgb(247, 247, 247);")
         self.label_cancion.setScaledContents(False)
-        self.label_cancion.setAlignment(Qt.AlignCenter)
+        self.label_cancion.setAlignment(Qt.AlignBottom|Qt.AlignHCenter)
         self.label_cancion.setWordWrap(True)
 
         self.verticalLayout_5.addWidget(self.label_cancion)

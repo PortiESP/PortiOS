@@ -331,7 +331,7 @@ QLabel{
          <bool>false</bool>
         </property>
         <property name="alignment">
-         <set>Qt::AlignCenter</set>
+         <set>Qt::AlignBottom|Qt::AlignHCenter</set>
         </property>
         <property name="wordWrap">
          <bool>true</bool>
