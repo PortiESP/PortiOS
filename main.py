@@ -170,12 +170,12 @@ class Main_GUI:
 					# Dashboard player
 					if self.GUI_Central.appsWidget.currentIndex() == 0:
 						self.GUI_Dashboard.label_currentTime.setText(self.currentMusicTimeF)
-						Dashboard_funcs.moveDurationSlider(self, self.currentMusicTime)
+						self.GUI_Dashboard.slider_duration.setValue(position)
 
 					# Media player
 					elif self.GUI_Central.appsWidget.currentIndex() == 1:
 						self.GUI_Player.label_currentTime.setText(self.currentMusicTimeF)
-						Player_funcs.moveDurationSlider(self, self.currentMusicTime)
+						self.GUI_Player.slider_duration.setValue(position)
 
 					print('Time elapsed --> ' + self.currentMusicTimeF)
 

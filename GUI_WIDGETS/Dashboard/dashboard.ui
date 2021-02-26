@@ -392,16 +392,20 @@ QLabel{
      <property name="styleSheet">
       <string notr="true">
 QSlider::groove:horizontal{
-	height:12px;	
-	width:260;
-	background:transparent;
+	height:1px;	
+	width:248px;
+	background:gray;
 }
 
 QSlider::handle:horizontal{
 	background:red;
 	width:12px;
+	margin:-6px;
 	border-radius:6px;	
 
+}
+QSlider::sub-page:horizontal{
+	background:red;
 }</string>
      </property>
      <property name="maximum">
@@ -476,49 +480,9 @@ QSlider::handle:horizontal{
       </item>
      </layout>
     </widget>
-    <widget class="Line" name="lineDurationTop">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>271</y>
-       <width>0</width>
-       <height>1</height>
-      </rect>
-     </property>
-     <property name="maximumSize">
-      <size>
-       <width>260</width>
-       <height>16777215</height>
-      </size>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">border:1px solid red;</string>
-     </property>
-     <property name="orientation">
-      <enum>Qt::Horizontal</enum>
-     </property>
-    </widget>
-    <widget class="Line" name="lineDuratioBottom">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>271</y>
-       <width>260</width>
-       <height>1</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">border:1px solid gray;</string>
-     </property>
-     <property name="orientation">
-      <enum>Qt::Horizontal</enum>
-     </property>
-    </widget>
     <zorder>label_player_logo</zorder>
     <zorder>frame_media_data</zorder>
     <zorder>frame_durationLabels</zorder>
-    <zorder>lineDuratioBottom</zorder>
-    <zorder>lineDurationTop</zorder>
     <zorder>slider_duration</zorder>
    </widget>
   </widget>

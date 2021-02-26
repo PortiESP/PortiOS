@@ -23,12 +23,3 @@ class Player_funcs:
 			
 		except KeyError:
 			pass
-			
-	def moveDurationSlider(self, position):
-		if not self.trackDuration: return
-		# Map value for get lineDurationTop
-		WValue = (360 / (self.trackDuration/1000)) * (position/1000)
-
-		# Setting slider value and line width
-		self.GUI_Player.slider_duration.setValue(position)
-		self.GUI_Player.lineDurationTop.setGeometry(QRect(70, 15, WValue, 1))

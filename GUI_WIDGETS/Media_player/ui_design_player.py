@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'design_playerFfXHTi.ui'
+## Form generated from reading UI file 'design_playerlVODIr.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -89,7 +89,7 @@ class Ui_Player_widget(object):
         self.frame_3.setGeometry(QRect(150, 300, 500, 40))
         self.frame_durationLabels = QFrame(self.frame_3)
         self.frame_durationLabels.setObjectName(u"frame_durationLabels")
-        self.frame_durationLabels.setGeometry(QRect(80, 20, 360, 20))
+        self.frame_durationLabels.setGeometry(QRect(70, 20, 360, 20))
         self.frame_durationLabels.setStyleSheet(u"color: rgb(94, 94, 94);")
         self.horizontalLayout_5 = QHBoxLayout(self.frame_durationLabels)
         self.horizontalLayout_5.setSpacing(0)
@@ -112,18 +112,6 @@ class Ui_Player_widget(object):
 
         self.horizontalLayout_5.addWidget(self.label_duration)
 
-        self.lineDurationTop = QFrame(self.frame_3)
-        self.lineDurationTop.setObjectName(u"lineDurationTop")
-        self.lineDurationTop.setGeometry(QRect(70, 15, 0, 1))
-        self.lineDurationTop.setStyleSheet(u"border:1px solid red;")
-        self.lineDurationTop.setFrameShape(QFrame.HLine)
-        self.lineDurationTop.setFrameShadow(QFrame.Sunken)
-        self.lineDuratioBottom = QFrame(self.frame_3)
-        self.lineDuratioBottom.setObjectName(u"lineDuratioBottom")
-        self.lineDuratioBottom.setGeometry(QRect(70, 15, 360, 1))
-        self.lineDuratioBottom.setStyleSheet(u"border:1px solid gray;")
-        self.lineDuratioBottom.setFrameShape(QFrame.HLine)
-        self.lineDuratioBottom.setFrameShadow(QFrame.Sunken)
         self.slider_duration = QSlider(self.frame_3)
         self.slider_duration.setObjectName(u"slider_duration")
         self.slider_duration.setGeometry(QRect(70, 5, 360, 20))
@@ -132,23 +120,23 @@ class Ui_Player_widget(object):
         self.slider_duration.setTabletTracking(True)
         self.slider_duration.setStyleSheet(u"\n"
 "QSlider::groove:horizontal{\n"
-"	height:12px;	\n"
-"	\n"
-"	background:transparent;\n"
+"	height:1px;	\n"
+"	width:348px;\n"
+"	background:gray;\n"
 "}\n"
 "\n"
 "QSlider::handle:horizontal{\n"
 "	background:red;\n"
 "	width:12px;\n"
+"	margin:-6px;\n"
 "	border-radius:6px;	\n"
 "\n"
+"}\n"
+"QSlider::sub-page:horizontal{\n"
+"	background:red;\n"
 "}")
         self.slider_duration.setMaximum(100)
         self.slider_duration.setOrientation(Qt.Horizontal)
-        self.frame_durationLabels.raise_()
-        self.lineDuratioBottom.raise_()
-        self.lineDurationTop.raise_()
-        self.slider_duration.raise_()
         self.frame_4 = QFrame(self.frame_player)
         self.frame_4.setObjectName(u"frame_4")
         self.frame_4.setGeometry(QRect(100, 240, 600, 60))

@@ -22,15 +22,3 @@ class Dashboard_funcs:
 			
 		except KeyError:
 			pass
-			
-	def moveDurationSlider(self, position):
-		if not self.trackDuration: return
-		# Map value for get lineDurationTop
-		WValue = (260 / (self.trackDuration/1000)) * (position/1000)
-
-		# Setting slider value and line width
-		self.GUI_Dashboard.slider_duration.setValue(position)
-		self.GUI_Dashboard.lineDurationTop.setGeometry(QRect(10, 271, WValue, 1))
-
-
-	
