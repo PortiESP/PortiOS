@@ -57,7 +57,7 @@
       <number>0</number>
      </property>
      <item>
-      <widget class="QPushButton" name="pushButton">
+      <widget class="QPushButton" name="backButton">
        <property name="minimumSize">
         <size>
          <width>0</width>
@@ -68,7 +68,7 @@
         <string/>
        </property>
        <property name="icon">
-        <iconset>
+        <iconset resource="../../resources.qrc">
          <normaloff>:/icons_red/Resources/Icons/png-red/back.png</normaloff>:/icons_red/Resources/Icons/png-red/back.png</iconset>
        </property>
        <property name="iconSize">
@@ -80,7 +80,7 @@
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="pushButton_2">
+      <widget class="QPushButton" name="rewindButton">
        <property name="minimumSize">
         <size>
          <width>0</width>
@@ -91,7 +91,7 @@
         <string/>
        </property>
        <property name="icon">
-        <iconset>
+        <iconset resource="../../resources.qrc">
          <normaloff>:/icons_red/Resources/Icons/png-red/rewind.png</normaloff>:/icons_red/Resources/Icons/png-red/rewind.png</iconset>
        </property>
        <property name="iconSize">
@@ -103,7 +103,7 @@
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="pushButton_3">
+      <widget class="QPushButton" name="playButton">
        <property name="minimumSize">
         <size>
          <width>0</width>
@@ -114,7 +114,7 @@
         <string/>
        </property>
        <property name="icon">
-        <iconset>
+        <iconset resource="../../resources.qrc">
          <normaloff>:/icons_red/Resources/Icons/png-red/play-button.png</normaloff>:/icons_red/Resources/Icons/png-red/play-button.png</iconset>
        </property>
        <property name="iconSize">
@@ -126,7 +126,7 @@
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="pushButton_4">
+      <widget class="QPushButton" name="forwardButton">
        <property name="minimumSize">
         <size>
          <width>0</width>
@@ -137,7 +137,7 @@
         <string/>
        </property>
        <property name="icon">
-        <iconset>
+        <iconset resource="../../resources.qrc">
          <normaloff>:/icons_red/Resources/Icons/png-red/fast-forward.png</normaloff>:/icons_red/Resources/Icons/png-red/fast-forward.png</iconset>
        </property>
        <property name="iconSize">
@@ -149,7 +149,7 @@
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="pushButton_5">
+      <widget class="QPushButton" name="nextButton">
        <property name="minimumSize">
         <size>
          <width>0</width>
@@ -160,7 +160,7 @@
         <string/>
        </property>
        <property name="icon">
-        <iconset>
+        <iconset resource="../../resources.qrc">
          <normaloff>:/icons_red/Resources/Icons/png-red/next-1.png</normaloff>:/icons_red/Resources/Icons/png-red/next-1.png</iconset>
        </property>
        <property name="iconSize">
@@ -182,35 +182,6 @@
       <height>40</height>
      </rect>
     </property>
-    <widget class="QSlider" name="horizontalSlider">
-     <property name="geometry">
-      <rect>
-       <x>100</x>
-       <y>5</y>
-       <width>400</width>
-       <height>20</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QSlider::groove:horizontal{
-	height:1px;	
-	width:340px;
-	background:gray;
-
-}
-
-QSlider::handle:horizontal{
-	background:red;
-	width:10px;
-	margin:-5px;
-	border-radius:5px;	
-
-}</string>
-     </property>
-     <property name="orientation">
-      <enum>Qt::Horizontal</enum>
-     </property>
-    </widget>
     <widget class="QFrame" name="frame_durationLabels">
      <property name="geometry">
       <rect>
@@ -273,6 +244,85 @@ QSlider::handle:horizontal{
       </item>
      </layout>
     </widget>
+    <widget class="Line" name="lineDurationTop">
+     <property name="geometry">
+      <rect>
+       <x>120</x>
+       <y>15</y>
+       <width>0</width>
+       <height>1</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:1px solid red;</string>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+    <widget class="Line" name="lineDuratioBottom">
+     <property name="geometry">
+      <rect>
+       <x>120</x>
+       <y>15</y>
+       <width>360</width>
+       <height>1</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:1px solid gray;</string>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+    <widget class="QSlider" name="slider_duration">
+     <property name="geometry">
+      <rect>
+       <x>120</x>
+       <y>5</y>
+       <width>360</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>16777215</width>
+       <height>30</height>
+      </size>
+     </property>
+     <property name="cursor">
+      <cursorShape>SizeHorCursor</cursorShape>
+     </property>
+     <property name="tabletTracking">
+      <bool>true</bool>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">
+QSlider::groove:horizontal{
+	height:12px;	
+	
+	background:transparent;
+}
+
+QSlider::handle:horizontal{
+	background:red;
+	width:12px;
+	border-radius:6px;	
+
+}</string>
+     </property>
+     <property name="maximum">
+      <number>100</number>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+    <zorder>frame_durationLabels</zorder>
+    <zorder>lineDuratioBottom</zorder>
+    <zorder>lineDurationTop</zorder>
+    <zorder>slider_duration</zorder>
    </widget>
    <widget class="QFrame" name="frame_4">
     <property name="geometry">
@@ -300,7 +350,7 @@ QSlider::handle:horizontal{
       <number>0</number>
      </property>
      <item>
-      <widget class="QLabel" name="label">
+      <widget class="QLabel" name="label_cancion">
        <property name="minimumSize">
         <size>
          <width>0</width>
@@ -325,7 +375,7 @@ QSlider::handle:horizontal{
       </widget>
      </item>
      <item>
-      <widget class="QLabel" name="label_2">
+      <widget class="QLabel" name="label_artista">
        <property name="font">
         <font>
          <family>Bahnschrift SemiLight</family>
@@ -356,7 +406,7 @@ QSlider::handle:horizontal{
     </property>
     <layout class="QHBoxLayout" name="horizontalLayout_2">
      <item>
-      <widget class="QLabel" name="label_3">
+      <widget class="QLabel" name="label_albumPhoto">
        <property name="minimumSize">
         <size>
          <width>140</width>
@@ -374,7 +424,7 @@ QSlider::handle:horizontal{
 border-radius:1px;</string>
        </property>
        <property name="pixmap">
-        <pixmap>:/icons_black/Resources/Icons/png-black/musical-note (1).png</pixmap>
+        <pixmap resource="../../resources.qrc">:/icons_black/Resources/Icons/png-black/musical-note (1).png</pixmap>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -393,7 +443,7 @@ border-radius:1px;</string>
      </rect>
     </property>
     <property name="pixmap">
-     <pixmap>:/styles/Resources/equalicer_background.jpg</pixmap>
+     <pixmap resource="../../resources.qrc">:/styles/Resources/equalicer_background.jpg</pixmap>
     </property>
    </widget>
    <zorder>label_4</zorder>
@@ -404,7 +454,7 @@ border-radius:1px;</string>
   </widget>
  </widget>
  <resources>
-  <include location="../resources.qrc"/>
+  <include location="../../resources.qrc"/>
  </resources>
  <connections/>
 </ui>

@@ -43,6 +43,7 @@ class Main_GUI:
 		Apps_funcs.appsSetup(self)
 		Settings_funcs.settingsSetup(self)
 		Dashboard_funcs.dashboardSetup(self)
+		Player_funcs.playerSetup(self)
 
 
 		# Page test func
@@ -85,6 +86,13 @@ class Main_GUI:
 
 
 		Dashboard_funcs.changeMusicInfo(self)
+	def formatDuration(self, duration):
+		duration = int(duration)
+		duration = ceil(duration / 1000)
+		mins = int(duration / 60)
+		segs = int(((duration / 60) - mins) * 60)
+		return str(mins) + ':' + f'{segs:02}'
+
 
 
 	def startMediaPlayer(self):
@@ -131,6 +139,8 @@ class Main_GUI:
 			# Central clock
 			self.GUI_Central.label_clock.setText(time.strftime('%H:%M'))
 
+
+			# When device is connected
 			if checkDevice:
 				# Volume slider
 				sliderValue = self.GUI_Central.slider_volume.value()
@@ -141,8 +151,8 @@ class Main_GUI:
 				# Music current time
 				if str(self.BTController.get_player_data('Status')) == 'playing':
 					self.currentMusicTime = self.BTController.get_player_data('Position')
-					Dashboard_funcs.moveDurationSlider(self, int(self.currentMusicTime/1000))
-					self.currentMusicTimeF =  Dashboard_funcs.formatDuration(int(self.currentMusicTime))
+					Dashboard_funcs.moveDurationSlider(self, self.currentMusicTime)
+					self.currentMusicTimeF =  self.formatDuration(int(self.currentMusicTime))
 					self.GUI_Dashboard.label_currentTime.setText(self.currentMusicTimeF)
 					print('Time elapsed --> ' + self.currentMusicTimeF)
 

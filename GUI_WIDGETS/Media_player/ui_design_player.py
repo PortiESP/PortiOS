@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'design_playereCvDwh.ui'
+## Form generated from reading UI file 'design_playersYVQHS.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -34,77 +34,59 @@ class Ui_Player_widget(object):
         self.horizontalLayout.setSpacing(0)
         self.horizontalLayout.setObjectName(u"horizontalLayout")
         self.horizontalLayout.setContentsMargins(0, 0, 0, 0)
-        self.pushButton = QPushButton(self.frame_2)
-        self.pushButton.setObjectName(u"pushButton")
-        self.pushButton.setMinimumSize(QSize(0, 50))
+        self.backButton = QPushButton(self.frame_2)
+        self.backButton.setObjectName(u"backButton")
+        self.backButton.setMinimumSize(QSize(0, 50))
         icon = QIcon()
         icon.addFile(u":/icons_red/Resources/Icons/png-red/back.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.pushButton.setIcon(icon)
-        self.pushButton.setIconSize(QSize(20, 20))
+        self.backButton.setIcon(icon)
+        self.backButton.setIconSize(QSize(20, 20))
 
-        self.horizontalLayout.addWidget(self.pushButton)
+        self.horizontalLayout.addWidget(self.backButton)
 
-        self.pushButton_2 = QPushButton(self.frame_2)
-        self.pushButton_2.setObjectName(u"pushButton_2")
-        self.pushButton_2.setMinimumSize(QSize(0, 50))
+        self.rewindButton = QPushButton(self.frame_2)
+        self.rewindButton.setObjectName(u"rewindButton")
+        self.rewindButton.setMinimumSize(QSize(0, 50))
         icon1 = QIcon()
         icon1.addFile(u":/icons_red/Resources/Icons/png-red/rewind.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.pushButton_2.setIcon(icon1)
-        self.pushButton_2.setIconSize(QSize(30, 30))
+        self.rewindButton.setIcon(icon1)
+        self.rewindButton.setIconSize(QSize(30, 30))
 
-        self.horizontalLayout.addWidget(self.pushButton_2)
+        self.horizontalLayout.addWidget(self.rewindButton)
 
-        self.pushButton_3 = QPushButton(self.frame_2)
-        self.pushButton_3.setObjectName(u"pushButton_3")
-        self.pushButton_3.setMinimumSize(QSize(0, 50))
+        self.playButton = QPushButton(self.frame_2)
+        self.playButton.setObjectName(u"playButton")
+        self.playButton.setMinimumSize(QSize(0, 50))
         icon2 = QIcon()
         icon2.addFile(u":/icons_red/Resources/Icons/png-red/play-button.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.pushButton_3.setIcon(icon2)
-        self.pushButton_3.setIconSize(QSize(30, 30))
+        self.playButton.setIcon(icon2)
+        self.playButton.setIconSize(QSize(30, 30))
 
-        self.horizontalLayout.addWidget(self.pushButton_3)
+        self.horizontalLayout.addWidget(self.playButton)
 
-        self.pushButton_4 = QPushButton(self.frame_2)
-        self.pushButton_4.setObjectName(u"pushButton_4")
-        self.pushButton_4.setMinimumSize(QSize(0, 50))
+        self.forwardButton = QPushButton(self.frame_2)
+        self.forwardButton.setObjectName(u"forwardButton")
+        self.forwardButton.setMinimumSize(QSize(0, 50))
         icon3 = QIcon()
         icon3.addFile(u":/icons_red/Resources/Icons/png-red/fast-forward.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.pushButton_4.setIcon(icon3)
-        self.pushButton_4.setIconSize(QSize(30, 30))
+        self.forwardButton.setIcon(icon3)
+        self.forwardButton.setIconSize(QSize(30, 30))
 
-        self.horizontalLayout.addWidget(self.pushButton_4)
+        self.horizontalLayout.addWidget(self.forwardButton)
 
-        self.pushButton_5 = QPushButton(self.frame_2)
-        self.pushButton_5.setObjectName(u"pushButton_5")
-        self.pushButton_5.setMinimumSize(QSize(0, 50))
+        self.nextButton = QPushButton(self.frame_2)
+        self.nextButton.setObjectName(u"nextButton")
+        self.nextButton.setMinimumSize(QSize(0, 50))
         icon4 = QIcon()
         icon4.addFile(u":/icons_red/Resources/Icons/png-red/next-1.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.pushButton_5.setIcon(icon4)
-        self.pushButton_5.setIconSize(QSize(20, 20))
+        self.nextButton.setIcon(icon4)
+        self.nextButton.setIconSize(QSize(20, 20))
 
-        self.horizontalLayout.addWidget(self.pushButton_5)
+        self.horizontalLayout.addWidget(self.nextButton)
 
         self.frame_3 = QFrame(self.frame_player)
         self.frame_3.setObjectName(u"frame_3")
         self.frame_3.setGeometry(QRect(100, 300, 600, 40))
-        self.horizontalSlider = QSlider(self.frame_3)
-        self.horizontalSlider.setObjectName(u"horizontalSlider")
-        self.horizontalSlider.setGeometry(QRect(100, 5, 400, 20))
-        self.horizontalSlider.setStyleSheet(u"QSlider::groove:horizontal{\n"
-"	height:1px;	\n"
-"	width:340px;\n"
-"	background:gray;\n"
-"\n"
-"}\n"
-"\n"
-"QSlider::handle:horizontal{\n"
-"	background:red;\n"
-"	width:10px;\n"
-"	margin:-5px;\n"
-"	border-radius:5px;	\n"
-"\n"
-"}")
-        self.horizontalSlider.setOrientation(Qt.Horizontal)
         self.frame_durationLabels = QFrame(self.frame_3)
         self.frame_durationLabels.setObjectName(u"frame_durationLabels")
         self.frame_durationLabels.setGeometry(QRect(120, 20, 360, 20))
@@ -130,6 +112,43 @@ class Ui_Player_widget(object):
 
         self.horizontalLayout_5.addWidget(self.label_duration)
 
+        self.lineDurationTop = QFrame(self.frame_3)
+        self.lineDurationTop.setObjectName(u"lineDurationTop")
+        self.lineDurationTop.setGeometry(QRect(120, 15, 0, 1))
+        self.lineDurationTop.setStyleSheet(u"border:1px solid red;")
+        self.lineDurationTop.setFrameShape(QFrame.HLine)
+        self.lineDurationTop.setFrameShadow(QFrame.Sunken)
+        self.lineDuratioBottom = QFrame(self.frame_3)
+        self.lineDuratioBottom.setObjectName(u"lineDuratioBottom")
+        self.lineDuratioBottom.setGeometry(QRect(120, 15, 360, 1))
+        self.lineDuratioBottom.setStyleSheet(u"border:1px solid gray;")
+        self.lineDuratioBottom.setFrameShape(QFrame.HLine)
+        self.lineDuratioBottom.setFrameShadow(QFrame.Sunken)
+        self.slider_duration = QSlider(self.frame_3)
+        self.slider_duration.setObjectName(u"slider_duration")
+        self.slider_duration.setGeometry(QRect(120, 5, 360, 20))
+        self.slider_duration.setMaximumSize(QSize(16777215, 30))
+        self.slider_duration.setCursor(QCursor(Qt.SizeHorCursor))
+        self.slider_duration.setTabletTracking(True)
+        self.slider_duration.setStyleSheet(u"\n"
+"QSlider::groove:horizontal{\n"
+"	height:12px;	\n"
+"	\n"
+"	background:transparent;\n"
+"}\n"
+"\n"
+"QSlider::handle:horizontal{\n"
+"	background:red;\n"
+"	width:12px;\n"
+"	border-radius:6px;	\n"
+"\n"
+"}")
+        self.slider_duration.setMaximum(100)
+        self.slider_duration.setOrientation(Qt.Horizontal)
+        self.frame_durationLabels.raise_()
+        self.lineDuratioBottom.raise_()
+        self.lineDurationTop.raise_()
+        self.slider_duration.raise_()
         self.frame_4 = QFrame(self.frame_player)
         self.frame_4.setObjectName(u"frame_4")
         self.frame_4.setGeometry(QRect(100, 240, 600, 60))
@@ -137,44 +156,44 @@ class Ui_Player_widget(object):
         self.verticalLayout.setSpacing(0)
         self.verticalLayout.setObjectName(u"verticalLayout")
         self.verticalLayout.setContentsMargins(0, 0, 0, 0)
-        self.label = QLabel(self.frame_4)
-        self.label.setObjectName(u"label")
-        self.label.setMinimumSize(QSize(0, 40))
+        self.label_cancion = QLabel(self.frame_4)
+        self.label_cancion.setObjectName(u"label_cancion")
+        self.label_cancion.setMinimumSize(QSize(0, 40))
         font1 = QFont()
         font1.setFamily(u"Bahnschrift SemiLight")
         font1.setPointSize(14)
-        self.label.setFont(font1)
-        self.label.setStyleSheet(u"color:white;")
-        self.label.setAlignment(Qt.AlignCenter)
+        self.label_cancion.setFont(font1)
+        self.label_cancion.setStyleSheet(u"color:white;")
+        self.label_cancion.setAlignment(Qt.AlignCenter)
 
-        self.verticalLayout.addWidget(self.label)
+        self.verticalLayout.addWidget(self.label_cancion)
 
-        self.label_2 = QLabel(self.frame_4)
-        self.label_2.setObjectName(u"label_2")
+        self.label_artista = QLabel(self.frame_4)
+        self.label_artista.setObjectName(u"label_artista")
         font2 = QFont()
         font2.setFamily(u"Bahnschrift SemiLight")
         font2.setPointSize(11)
-        self.label_2.setFont(font2)
-        self.label_2.setStyleSheet(u"color: rgb(204, 204, 204);")
-        self.label_2.setAlignment(Qt.AlignHCenter|Qt.AlignTop)
+        self.label_artista.setFont(font2)
+        self.label_artista.setStyleSheet(u"color: rgb(204, 204, 204);")
+        self.label_artista.setAlignment(Qt.AlignHCenter|Qt.AlignTop)
 
-        self.verticalLayout.addWidget(self.label_2)
+        self.verticalLayout.addWidget(self.label_artista)
 
         self.frame_5 = QFrame(self.frame_player)
         self.frame_5.setObjectName(u"frame_5")
         self.frame_5.setGeometry(QRect(100, 80, 600, 160))
         self.horizontalLayout_2 = QHBoxLayout(self.frame_5)
         self.horizontalLayout_2.setObjectName(u"horizontalLayout_2")
-        self.label_3 = QLabel(self.frame_5)
-        self.label_3.setObjectName(u"label_3")
-        self.label_3.setMinimumSize(QSize(140, 140))
-        self.label_3.setMaximumSize(QSize(140, 140))
-        self.label_3.setStyleSheet(u"background-color: qlineargradient(spread:pad, x1:0.5, y1:0, x2:0.5, y2:1, stop:0.0681818 rgba(255, 255, 255, 255), stop:1 rgba(152, 152, 152, 255));\n"
+        self.label_albumPhoto = QLabel(self.frame_5)
+        self.label_albumPhoto.setObjectName(u"label_albumPhoto")
+        self.label_albumPhoto.setMinimumSize(QSize(140, 140))
+        self.label_albumPhoto.setMaximumSize(QSize(140, 140))
+        self.label_albumPhoto.setStyleSheet(u"background-color: qlineargradient(spread:pad, x1:0.5, y1:0, x2:0.5, y2:1, stop:0.0681818 rgba(255, 255, 255, 255), stop:1 rgba(152, 152, 152, 255));\n"
 "border-radius:1px;")
-        self.label_3.setPixmap(QPixmap(u":/icons_black/Resources/Icons/png-black/musical-note (1).png"))
-        self.label_3.setAlignment(Qt.AlignCenter)
+        self.label_albumPhoto.setPixmap(QPixmap(u":/icons_black/Resources/Icons/png-black/musical-note (1).png"))
+        self.label_albumPhoto.setAlignment(Qt.AlignCenter)
 
-        self.horizontalLayout_2.addWidget(self.label_3)
+        self.horizontalLayout_2.addWidget(self.label_albumPhoto)
 
         self.label_4 = QLabel(self.frame_player)
         self.label_4.setObjectName(u"label_4")
@@ -193,14 +212,14 @@ class Ui_Player_widget(object):
 
     def retranslateUi(self, Player_widget):
         Player_widget.setWindowTitle(QCoreApplication.translate("Player_widget", u"Form", None))
-        self.pushButton.setText("")
-        self.pushButton_2.setText("")
-        self.pushButton_3.setText("")
-        self.pushButton_4.setText("")
-        self.pushButton_5.setText("")
+        self.backButton.setText("")
+        self.rewindButton.setText("")
+        self.playButton.setText("")
+        self.forwardButton.setText("")
+        self.nextButton.setText("")
         self.label_currentTime.setText(QCoreApplication.translate("Player_widget", u"0:00", None))
         self.label_duration.setText(QCoreApplication.translate("Player_widget", u"3:23", None))
-        self.label.setText(QCoreApplication.translate("Player_widget", u"Speechless (feat. Erika Sirola)", None))
-        self.label_2.setText(QCoreApplication.translate("Player_widget", u"Robin Schulz, Erika Sirola", None))
+        self.label_cancion.setText(QCoreApplication.translate("Player_widget", u"Speechless (feat. Erika Sirola)", None))
+        self.label_artista.setText(QCoreApplication.translate("Player_widget", u"Robin Schulz, Erika Sirola", None))
     # retranslateUi
 
