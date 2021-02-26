@@ -88,7 +88,7 @@ QCheckBox:checked{
 
 }
 QCheckBox::indicator {
-	width:19px;
+	width:18.5px;
    background:transparent;
 }</string>
      </property>
