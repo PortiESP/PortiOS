@@ -99,6 +99,7 @@ class Main_GUI:
 		self.mediaPlayerThread = threading.Thread(target=self.mediaPlayerThreadFunc)
 		self.mediaPlayerThread.start()
 
+
 	def mediaPlayerThreadFunc(self):
 
 		while 1:
