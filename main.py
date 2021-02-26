@@ -84,6 +84,7 @@ class Main_GUI:
 		
 		elif key == 'Track':
 			self.track = values
+			print(self.track)
 			if len(self.track) == 1:
 				self.trackDuration = self.track['Duration']
 			Dashboard_funcs.changeMusicInfo(self)
