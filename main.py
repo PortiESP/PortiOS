@@ -92,10 +92,9 @@ class Main_GUI:
 				self.songTitle = str(self.track['Title'])
 				self.songArtist = str(self.track['Artist'])
 			
-			if self.GUI_Central.appsWidget.currentIndex() == 0:
-				Dashboard_funcs.changeMusicInfo(self)
-			elif self.GUI_Central.appsWidget.currentIndex() == 1:
-				Player_funcs.changeMusicInfo(self)
+			# Updating labels on all pages
+			Dashboard_funcs.changeMusicInfo(self)		
+			Player_funcs.changeMusicInfo(self)
 
 
 
@@ -175,7 +174,8 @@ class Main_GUI:
 
 					# Media player
 					elif self.GUI_Central.appsWidget.currentIndex() == 1:
-						pass
+						self.GUI_Player.label_currentTime.setText(self.currentMusicTimeF)
+						Player_funcs.moveDurationSlider(self, self.currentMusicTime)
 
 					print('Time elapsed --> ' + self.currentMusicTimeF)
 
