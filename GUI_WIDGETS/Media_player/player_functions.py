@@ -27,7 +27,7 @@ class Player_funcs:
 	def moveDurationSlider(self, position):
 		if not self.trackDuration: return
 		# Map value for get lineDurationTop
-		WValue = (260 / (self.trackDuration/1000)) * (position/1000)
+		WValue = (360 / (self.trackDuration/1000)) * (position/1000)
 
 		# Setting slider value and line width
 		self.GUI_Player.slider_duration.setValue(position)
