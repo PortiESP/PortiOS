@@ -84,7 +84,6 @@ class Main_GUI:
 		
 		elif key == 'Track':
 			self.track = values
-			print(self.track)
 			if len(self.track) == 1:
 				self.trackDuration = self.track['Duration']
 			Dashboard_funcs.changeMusicInfo(self)
@@ -92,7 +91,7 @@ class Main_GUI:
 
 	def formatDuration(self, duration):
 		duration = int(duration)
-		duration = duration / 1000
+		duration = ceil(duration / 1000)
 		mins = int(duration / 60)
 		segs = int(((duration / 60) - mins) * 60)
 		return str(mins) + ':' + f'{segs:02}'
