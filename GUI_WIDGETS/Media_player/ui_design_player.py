@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'design_playersYVQHS.ui'
+## Form generated from reading UI file 'design_playerFfXHTi.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -86,10 +86,10 @@ class Ui_Player_widget(object):
 
         self.frame_3 = QFrame(self.frame_player)
         self.frame_3.setObjectName(u"frame_3")
-        self.frame_3.setGeometry(QRect(100, 300, 600, 40))
+        self.frame_3.setGeometry(QRect(150, 300, 500, 40))
         self.frame_durationLabels = QFrame(self.frame_3)
         self.frame_durationLabels.setObjectName(u"frame_durationLabels")
-        self.frame_durationLabels.setGeometry(QRect(120, 20, 360, 20))
+        self.frame_durationLabels.setGeometry(QRect(80, 20, 360, 20))
         self.frame_durationLabels.setStyleSheet(u"color: rgb(94, 94, 94);")
         self.horizontalLayout_5 = QHBoxLayout(self.frame_durationLabels)
         self.horizontalLayout_5.setSpacing(0)
@@ -114,19 +114,19 @@ class Ui_Player_widget(object):
 
         self.lineDurationTop = QFrame(self.frame_3)
         self.lineDurationTop.setObjectName(u"lineDurationTop")
-        self.lineDurationTop.setGeometry(QRect(120, 15, 0, 1))
+        self.lineDurationTop.setGeometry(QRect(70, 15, 0, 1))
         self.lineDurationTop.setStyleSheet(u"border:1px solid red;")
         self.lineDurationTop.setFrameShape(QFrame.HLine)
         self.lineDurationTop.setFrameShadow(QFrame.Sunken)
         self.lineDuratioBottom = QFrame(self.frame_3)
         self.lineDuratioBottom.setObjectName(u"lineDuratioBottom")
-        self.lineDuratioBottom.setGeometry(QRect(120, 15, 360, 1))
+        self.lineDuratioBottom.setGeometry(QRect(70, 15, 360, 1))
         self.lineDuratioBottom.setStyleSheet(u"border:1px solid gray;")
         self.lineDuratioBottom.setFrameShape(QFrame.HLine)
         self.lineDuratioBottom.setFrameShadow(QFrame.Sunken)
         self.slider_duration = QSlider(self.frame_3)
         self.slider_duration.setObjectName(u"slider_duration")
-        self.slider_duration.setGeometry(QRect(120, 5, 360, 20))
+        self.slider_duration.setGeometry(QRect(70, 5, 360, 20))
         self.slider_duration.setMaximumSize(QSize(16777215, 30))
         self.slider_duration.setCursor(QCursor(Qt.SizeHorCursor))
         self.slider_duration.setTabletTracking(True)

@@ -172,6 +172,7 @@ class Main_GUI:
 					# Media player
 					elif self.GUI_Central.appsWidget.currentIndex() == 1:
 						pass
+						
 					print('Time elapsed --> ' + self.currentMusicTimeF)
 
 				

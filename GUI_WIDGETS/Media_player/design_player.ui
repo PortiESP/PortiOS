@@ -176,16 +176,16 @@
    <widget class="QFrame" name="frame_3">
     <property name="geometry">
      <rect>
-      <x>100</x>
+      <x>150</x>
       <y>300</y>
-      <width>600</width>
+      <width>500</width>
       <height>40</height>
      </rect>
     </property>
     <widget class="QFrame" name="frame_durationLabels">
      <property name="geometry">
       <rect>
-       <x>120</x>
+       <x>80</x>
        <y>20</y>
        <width>360</width>
        <height>20</height>
@@ -247,7 +247,7 @@
     <widget class="Line" name="lineDurationTop">
      <property name="geometry">
       <rect>
-       <x>120</x>
+       <x>70</x>
        <y>15</y>
        <width>0</width>
        <height>1</height>
@@ -263,7 +263,7 @@
     <widget class="Line" name="lineDuratioBottom">
      <property name="geometry">
       <rect>
-       <x>120</x>
+       <x>70</x>
        <y>15</y>
        <width>360</width>
        <height>1</height>
@@ -279,7 +279,7 @@
     <widget class="QSlider" name="slider_duration">
      <property name="geometry">
       <rect>
-       <x>120</x>
+       <x>70</x>
        <y>5</y>
        <width>360</width>
        <height>20</height>
