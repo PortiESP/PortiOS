@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'dashboardIYMjOG.ui'
+## Form generated from reading UI file 'dashboardUgnugl.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -142,7 +142,7 @@ class Ui_Dashboard_widget(object):
         self.frame_media_data.setGeometry(QRect(0, 140, 280, 120))
         self.frame_media_data.setStyleSheet(u"color:white;")
         self.verticalLayout_5 = QVBoxLayout(self.frame_media_data)
-        self.verticalLayout_5.setSpacing(0)
+        self.verticalLayout_5.setSpacing(5)
         self.verticalLayout_5.setObjectName(u"verticalLayout_5")
         self.verticalLayout_5.setContentsMargins(0, 0, 0, 0)
         self.label_cancion = QLabel(self.frame_media_data)
