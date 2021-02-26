@@ -91,8 +91,12 @@ class Main_GUI:
 			else:	
 				self.songTitle = str(self.track['Title'])
 				self.songArtist = str(self.track['Artist'])
+			
+			if self.GUI_Central.appsWidget.currentIndex() == 0:
+				Dashboard_funcs.changeMusicInfo(self)
+			elif self.GUI_Central.appsWidget.currentIndex() == 1:
+				Player_funcs.changeMusicInfo(self)
 
-			Dashboard_funcs.changeMusicInfo(self)
 
 
 	def formatDuration(self, duration):
@@ -172,7 +176,7 @@ class Main_GUI:
 					# Media player
 					elif self.GUI_Central.appsWidget.currentIndex() == 1:
 						pass
-						
+
 					print('Time elapsed --> ' + self.currentMusicTimeF)
 
 				
