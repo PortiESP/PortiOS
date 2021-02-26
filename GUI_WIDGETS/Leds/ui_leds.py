@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'ledskoDZZe.ui'
+## Form generated from reading UI file 'ledsjecQKA.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -56,7 +56,7 @@ class Ui_Leds_widget(object):
 "\n"
 "}\n"
 "QCheckBox::indicator {\n"
-"	width:18.5px;\n"
+"	width:18px;\n"
 "   background:transparent;\n"
 "}")
         self.frameLedButtons = QFrame(self.frame_leds)
