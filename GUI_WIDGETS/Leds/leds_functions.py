@@ -17,9 +17,21 @@ class Leds_funcs:
 		# Color picker
 		# self.GUI_Leds.ledsColorPickerButton.clicked.connect()
 
+		# On/off Button
+		# self.GUI_Leds.ledsOnOffButton.clicked.connect()
+
+
 		self.GUI_Leds.ledsSliderRed.valueChanged.connect(lambda: Leds_funcs.colorValueSetup(self, 0))
 		self.GUI_Leds.ledsSliderGreen.valueChanged.connect(lambda: Leds_funcs.colorValueSetup(self, 1))
 		self.GUI_Leds.ledsSliderBlue.valueChanged.connect(lambda: Leds_funcs.colorValueSetup(self, 2))
+
+		# Power button shadow
+		self.shadow = QGraphicsDropShadowEffect(self)
+		self.shadow.setBlurRadius(40)
+		self.shadow.setXOffset(0)
+		self.shadow.setYOffset(0)
+		self.shadow.setColor(QColor(0,0,0))
+		self.GUI_Leds.labelOnOffBackground.setGraphicsEffect(self.shadow)
 
 	def colorValueSetup(self, index):
 		if index == 0:
