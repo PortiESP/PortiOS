@@ -25,14 +25,7 @@ class Leds_funcs:
 		self.GUI_Leds.ledsSliderGreen.valueChanged.connect(lambda: Leds_funcs.colorValueSetup(self, 1))
 		self.GUI_Leds.ledsSliderBlue.valueChanged.connect(lambda: Leds_funcs.colorValueSetup(self, 2))
 
-		# Power button shadow
-		self.shadow = QGraphicsDropShadowEffect(self.win)
-		self.shadow.setBlurRadius(50)
-		self.shadow.setXOffset(0)
-		self.shadow.setYOffset(0)
-		self.shadow.setColor(QColor(0,0,0))
-		self.GUI_Leds.labelOnOffBackground.setGraphicsEffect(self.shadow)
-		self.GUI_Leds.ledsBulb.setGraphicsEffect(self.shadow)
+		
 
 	def colorValueSetup(self, index):
 		if index == 0:
