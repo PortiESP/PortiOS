@@ -32,6 +32,7 @@ class Leds_funcs:
 		self.shadow.setYOffset(0)
 		self.shadow.setColor(QColor(0,0,0))
 		self.GUI_Leds.labelOnOffBackground.setGraphicsEffect(self.shadow)
+		self.GUI_Leds.ledsBulb.setGraphicsEffect(self.shadow)
 
 	def colorValueSetup(self, index):
 		if index == 0:
