@@ -8,11 +8,11 @@ class Leds_funcs:
 		self.GUI_Leds.ledColor = (0,0,0)
 
 		# Programs buttons
-		self.GUI_Leds.ledsProgramJumpButton.clicked.connect()
-		self.GUI_Leds.ledsProgramFadeButton.clicked.connect()
-		self.GUI_Leds.ledsProgramRandomButton.clicked.connect()
-		self.GUI_Leds.ledsProgramFlashButton.clicked.connect()
-		self.GUI_Leds.ledsProgramPoliceButton.clicked.connect()
+		# self.GUI_Leds.ledsProgramJumpButton.clicked.connect()
+		# self.GUI_Leds.ledsProgramFadeButton.clicked.connect()
+		# self.GUI_Leds.ledsProgramRandomButton.clicked.connect()
+		# self.GUI_Leds.ledsProgramFlashButton.clicked.connect()
+		# self.GUI_Leds.ledsProgramPoliceButton.clicked.connect()
 
 		# Color picker
 		self.GUI_Leds.ledsColorPickerButton.clicked.connect()
