@@ -7,12 +7,12 @@ from selenium.webdriver.chrome.options import Options
 import time
 
 class Navegador:
-	def __init__(self):
+	def __init__(self, driverPath):
 		self.chrome_options = Options()
 		self.chrome_options.add_argument("--kiosk")
 		self.chrome_options.add_experimental_option("useAutomationExtension", False)
 		self.chrome_options.add_experimental_option("excludeSwitches",["enable-automation"])
-		self.driver = webdriver.Chrome(options=self.chrome_options, executable_path='chromedriver.exe')
+		self.driver = webdriver.Chrome(options=self.chrome_options, executable_path=driverPath)
 		self.current_window_handler = None
 		self.instruccion_index = 0
 		self.instrucciones_viaje = []
@@ -127,7 +127,7 @@ class Navegador:
 
 
 if __name__ == '__main__':
-	nav = Navegador()
+	nav = Navegador('chromedriver.exe')
 	nav.direccion('Boadilla del monte', 'Aluche')
 	
 	nav.iniciar_viaje()
