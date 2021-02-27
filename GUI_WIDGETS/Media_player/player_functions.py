@@ -7,7 +7,7 @@ class Player_funcs:
 		# Control buttons
 		self. GUI_Player.backButton.clicked.connect(lambda:self.BTController.playback_controls('previous'))
 		self. GUI_Player.rewindButton.clicked.connect(lambda:self.BTController.playback_controls('rewind'))
-		self. GUI_Player.playButton.clicked.connect(Player_funcs.toogle_play)
+		self. GUI_Player.playButton.clicked.connect(self.toogle_musicStatus)
 		self. GUI_Player.forwardButton.clicked.connect(lambda:self.BTController.playback_controls('fastforward'))
 		self. GUI_Player.nextButton.clicked.connect(lambda:self.BTController.playback_controls('next'))
 
