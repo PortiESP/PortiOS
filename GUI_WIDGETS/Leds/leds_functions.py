@@ -54,6 +54,8 @@ class Leds_funcs:
 			self.GUI_Leds.slidersList[i].setValue(color[i])
 			Leds_funcs.colorValueSetup(self, i)
 
+		print('Setted color: ', color)
+
 
 
 
