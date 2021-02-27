@@ -21,7 +21,7 @@ class Apps_funcs:
 		self.GUI_Apps.chrome_options.add_experimental_option("excludeSwitches",["enable-automation"])
 		self.GUI_Apps.chrome_options.add_argument("--start-maximized")
 		self.GUI_Apps.driver = webdriver.Chrome(options=self.GUI_Apps.chrome_options)
-		self.GUI_Apps.drive.get('https://www.google.es/')
+		self.GUI_Apps.driver.get('https://www.google.es/')
 
 
 
