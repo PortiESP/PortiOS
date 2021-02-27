@@ -52,7 +52,7 @@ class Leds_funcs:
 		# Setting slider value and set valuesoption
 		for i in range(3): 
 			self.GUI_Leds.slidersList[i].setValue(color[i])
-			Led_funcs.colorValueSetup(self, i)
+			Leds_funcs.colorValueSetup(self, i)
 
 
 
