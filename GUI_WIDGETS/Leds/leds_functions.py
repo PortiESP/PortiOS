@@ -5,7 +5,7 @@ from PySide2.QtWidgets import *
 class Leds_funcs:
 	def ledsSetup(self):
 		# Color 
-		self.GUI_Leds.ledColor = (0,0,0)
+		self.GUI_Leds.ledColor = [0,0,0]
 
 		# Programs buttons
 		# self.GUI_Leds.ledsProgramJumpButton.clicked.connect()
