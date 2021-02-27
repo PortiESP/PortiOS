@@ -5,7 +5,7 @@ class Apps_funcs:
 
 	def appsSetup(self):
 		# Apps buttons
-		frame.pushButton.clicked.connect(lambda: Apps_funcs.openBrowser(self))
+		self.GUI_Apps.pushButton.clicked.connect(lambda: Apps_funcs.openBrowser(self))
 		# frame.pushButton_2.clicked.connect(lambda:)
 		self.GUI_Apps.pushButton_3.clicked.connect(lambda:self.GUI_Central.appsWidget.setCurrentIndex(4))
 		self.GUI_Apps.pushButton_4.clicked.connect(lambda:self.GUI_Central.appsWidget.setCurrentIndex(0))
