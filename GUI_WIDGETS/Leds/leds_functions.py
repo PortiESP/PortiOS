@@ -27,7 +27,7 @@ class Leds_funcs:
 
 		# Power button shadow
 		self.shadow = QGraphicsDropShadowEffect(self.win)
-		self.shadow.setBlurRadius(40)
+		self.shadow.setBlurRadius(50)
 		self.shadow.setXOffset(0)
 		self.shadow.setYOffset(0)
 		self.shadow.setColor(QColor(0,0,0))
