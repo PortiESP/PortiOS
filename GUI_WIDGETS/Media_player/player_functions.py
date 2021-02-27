@@ -5,11 +5,11 @@ from PySide2.QtWidgets import *
 class Player_funcs:
 	def playerSetup(self):
 		# Control buttons
-		self. GUI_Player.backButton.clicked.connect(lambda:self.BTController.playback_controls('previous'))
-		self. GUI_Player.rewindButton.clicked.connect(lambda:self.BTController.playback_controls('rewind'))
+		self. GUI_Player.backButton.clicked.connect(lambda:self.BTController.playback_control('previous'))
+		self. GUI_Player.rewindButton.clicked.connect(lambda:self.BTController.playback_control('rewind'))
 		self. GUI_Player.playButton.clicked.connect(self.toogle_musicStatus)
-		self. GUI_Player.forwardButton.clicked.connect(lambda:self.BTController.playback_controls('fastforward'))
-		self. GUI_Player.nextButton.clicked.connect(lambda:self.BTController.playback_controls('next'))
+		self. GUI_Player.forwardButton.clicked.connect(lambda:self.BTController.playback_control('fastforward'))
+		self. GUI_Player.nextButton.clicked.connect(lambda:self.BTController.playback_control('next'))
 
 
 	def changeMusicInfo(self):
