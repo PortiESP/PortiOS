@@ -17,5 +17,5 @@ class Apps_funcs:
 	def openBrowser(self):
 		self.GUI_Apps.chrome_options = Options()
 		self.GUI_Apps.chrome_options.add_argument("--start-maximizef")
-		self.GUI_Apps.driver = webdriver.Chrome(options=self.chrome_options, executable_path='GUI_PACKAGES/navigator_google_maps/chromedriver.exe')
+		self.GUI_Apps.driver = webdriver.Chrome(options=self.GUI_Apps.chrome_options, executable_path='GUI_PACKAGES/navigator_google_maps/chromedriver.exe')
 		self.GUI_Apps.drive.get('https://www.google.es/')
