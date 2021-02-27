@@ -47,9 +47,9 @@ class Leds_funcs:
 
 	def pickColor(self):
 		# Getting color without alpha
-		color = QColorDialog.getColor()[1:]
+		color = QColorDialog.getColor().getRgb()[1:]
 
-		# Setting slider value and set values
+		# Setting slider value and set valuesoption
 		for i in range(3): 
 			self.GUI_Leds.slidersList[i].setValue(color[i])
 			Led_funcs.colorValueSetup(self, i)
