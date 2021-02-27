@@ -9,6 +9,7 @@ class Leds_funcs:
 		self.GUI_Leds.slidersList = (self.GUI_Leds.ledsSliderRed,
 									 self.GUI_Leds.ledsSliderGreen,
 									 self.GUI_Leds.ledsSliderBlue)
+		self.GUI_Leds.ledPower = False
 
 		# Programs buttons
 		# self.GUI_Leds.ledsProgramJumpButton.clicked.connect()
@@ -21,7 +22,7 @@ class Leds_funcs:
 		self.GUI_Leds.ledsColorPickerButton.clicked.connect(lambda: Leds_funcs.pickColor(self))
 
 		# On/off Button
-		# self.GUI_Leds.ledsOnOffButton.clicked.connect()
+		self.GUI_Leds.ledsOnOffButton.clicked.connect(lambda: Leds_funcs.toogleLedPower(self))
 
 
 		self.GUI_Leds.ledsSliderRed.valueChanged.connect(lambda: Leds_funcs.colorValueSetup(self, 0))
@@ -58,5 +59,10 @@ class Leds_funcs:
 
 
 
+	def toogleLedPower(self):
 
+		self.GUI_Leds.ledPower = not self.GUI_Leds.ledPower
+
+
+		print('Led power is: ', self.GUI_Leds.ledPower)
 
