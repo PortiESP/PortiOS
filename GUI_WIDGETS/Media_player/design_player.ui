@@ -335,10 +335,13 @@ QSlider::sub-page:horizontal{
         <string notr="true">color:white;</string>
        </property>
        <property name="text">
-        <string>Speechless (feat. Erika Sirola)</string>
+        <string>No data</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
+       </property>
+       <property name="wordWrap">
+        <bool>true</bool>
        </property>
       </widget>
      </item>
@@ -354,10 +357,13 @@ QSlider::sub-page:horizontal{
         <string notr="true">color: rgb(204, 204, 204);</string>
        </property>
        <property name="text">
-        <string>Robin Schulz, Erika Sirola</string>
+        <string>no data</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignHCenter|Qt::AlignTop</set>
+       </property>
+       <property name="wordWrap">
+        <bool>true</bool>
        </property>
       </widget>
      </item>
@@ -423,6 +429,7 @@ border-radius:1px;</string>
  </widget>
  <resources>
   <include location="../../resources.qrc"/>
+  <include location="../../../../../resources.qrc"/>
  </resources>
  <connections/>
 </ui>

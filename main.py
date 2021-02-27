@@ -67,7 +67,10 @@ class Main_GUI:
 				name = 'pause-fill'
 				self.BTController.playback_control('play')
 			icon1.addFile(u":/icons_red/Resources/Icons/png-red/{}.png".format(name), QSize(30, 30), QIcon.Normal, QIcon.Off)
+			# Changing central and player icon
 			self.GUI_Central.footerButton_2.setIcon(icon1)
+			self.GUI_Player.playButton.setIcon(icon1)
+
 
 
 	def mediaDataChanged(self, _, data, __):
