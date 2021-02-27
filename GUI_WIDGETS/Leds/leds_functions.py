@@ -15,7 +15,7 @@ class Leds_funcs:
 		# self.GUI_Leds.ledsProgramPoliceButton.clicked.connect()
 
 		# Color picker
-Leds.		# self.GUI_Leds.ledsColorPickerButton.clicked.connect()
+		# self.GUI_Leds.ledsColorPickerButton.clicked.connect()
 
 		self.GUI_Leds.ledsSliderRed.valueChanged.connect(Leds_funcs.colorValueSetup(self, 0))
 		self.GUI_Leds.ledsSliderGreen.valueChanged.connect(Leds_funcs.colorValueSetup(self, 1))
