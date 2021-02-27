@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'ledsqHLWxx.ui'
+## Form generated from reading UI file 'ledsiqEvgk.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -54,7 +54,7 @@ class Ui_Leds_widget(object):
 "QCheckBox::indicator {\n"
 "	width:60px;\n"
 "	height:60px;\n"
-"	background:rgba(0, 0, 0, 100);\n"
+"	background:rgba(0, 0, 0, 170);\n"
 "	border-radius:30px;\n"
 "}\n"
 "QCheckBox::indicator:checked {\n"

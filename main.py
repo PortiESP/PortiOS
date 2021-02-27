@@ -46,6 +46,7 @@ class Main_GUI:
 		Settings_funcs.settingsSetup(self)
 		Dashboard_funcs.dashboardSetup(self)
 		Player_funcs.playerSetup(self)
+		Leds_funcs.ledsSetup(self)
 
 
 		# Page test func

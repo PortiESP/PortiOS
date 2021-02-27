@@ -12,6 +12,7 @@ from GUI_WIDGETS.Apps_menu.apps_functions import Apps_funcs
 from GUI_WIDGETS.Settings.settings_functions import Settings_funcs 
 from GUI_WIDGETS.Dashboard.dashboard_functions import Dashboard_funcs
 from GUI_WIDGETS.Media_player.player_functions import Player_funcs
+from GUI_WIDGETS.Leds.leds_functions import Leds_funcs
 
 # Import controllers packages
 from GUI_PACKAGES.bluetooth_controls.bt_control_panel import BT_Control_Panel
