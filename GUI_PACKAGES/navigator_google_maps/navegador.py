@@ -12,7 +12,8 @@ class Navegador:
 		self.chrome_options.add_argument("--kiosk")
 		self.chrome_options.add_experimental_option("useAutomationExtension", False)
 		self.chrome_options.add_experimental_option("excludeSwitches",["enable-automation"])
-		self.driver = webdriver.Chrome(options=self.chrome_options, executable_path=driverPath)
+		###### executable_path=driverPath ######
+		self.driver = webdriver.Chrome(options=self.chrome_options)
 		self.current_window_handler = None
 		self.instruccion_index = 0
 		self.instrucciones_viaje = []
@@ -127,7 +128,7 @@ class Navegador:
 
 
 if __name__ == '__main__':
-	nav = Navegador('chromedriver.exe')
+	nav = Navegador()
 	nav.direccion('Boadilla del monte', 'Aluche')
 	
 	nav.iniciar_viaje()
