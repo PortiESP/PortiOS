@@ -24,6 +24,6 @@ import resources_rc
 from PySide2.QtWidgets import *
 from PySide2.QtGui import *
 from PySide2.QtCore import *
-import sys, threading, time
+import sys, threading, time, selenium
 from math import ceil
 
