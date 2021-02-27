@@ -15,7 +15,7 @@ class Leds_funcs:
 		# self.GUI_Leds.ledsProgramPoliceButton.clicked.connect()
 
 		# Color picker
-		# self.GUI_Leds.ledsColorPickerButton.clicked.connect()
+Leds.		# self.GUI_Leds.ledsColorPickerButton.clicked.connect()
 
 		self.GUI_Leds.ledsSliderRed.valueChanged.connect(Leds_funcs.colorValueSetup(self, 0))
 		self.GUI_Leds.ledsSliderGreen.valueChanged.connect(Leds_funcs.colorValueSetup(self, 1))
@@ -23,13 +23,13 @@ class Leds_funcs:
 
 	def colorValueSetup(self, index):
 		if index == 0:
-			self.GUI_ledColor[0] = self.GUI_Leds.ledsSliderRed.value()
+			self.GUI_Leds.ledColor[0] = self.GUI_Leds.ledsSliderRed.value()
 			self.GUI_Leds.ledsLabelRed.setText(self.GUI_Leds.ledsSliderRed.value())
 		elif index == 1:
-			self.GUI_ledColor[1] = self.GUI_Leds.ledsSliderGreen.value()
+			self.GUI_Leds.ledColor[1] = self.GUI_Leds.ledsSliderGreen.value()
 			self.GUI_Leds.ledsLabelGreen.setText(self.GUI_Leds.ledsSliderGreen.value())
 		elif index == 2:
-			self.GUI_ledColor[2] = self.GUI_Leds.ledsSliderBlue.value()
+			self.GUI_Leds.ledColor[2] = self.GUI_Leds.ledsSliderBlue.value()
 			self.GUI_Leds.ledsLabelBlue.setText(self.GUI_Leds.ledsSliderBlue.value())
 
 		self.GUI_Leds.ledsBulb.setStyleSheet(f"background:rgb({self.GUI_Leds.ledColor});")
