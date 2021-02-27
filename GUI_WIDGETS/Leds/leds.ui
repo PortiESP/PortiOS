@@ -74,6 +74,9 @@
        <pointsize>25</pointsize>
       </font>
      </property>
+     <property name="focusPolicy">
+      <enum>Qt::NoFocus</enum>
+     </property>
      <property name="styleSheet">
       <string notr="true">QCheckBox{
 	border-radius:30px;

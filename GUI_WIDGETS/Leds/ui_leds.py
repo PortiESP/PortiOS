@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'ledsiqEvgk.ui'
+## Form generated from reading UI file 'ledsZQNVnl.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -43,6 +43,7 @@ class Ui_Leds_widget(object):
         font.setFamily(u"Bahnschrift SemiBold Condensed")
         font.setPointSize(25)
         self.ledsOnOffButton.setFont(font)
+        self.ledsOnOffButton.setFocusPolicy(Qt.NoFocus)
         self.ledsOnOffButton.setStyleSheet(u"QCheckBox{\n"
 "	border-radius:30px;\n"
 "	\n"
