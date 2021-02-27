@@ -24,12 +24,12 @@ class Leds_funcs:
 	def colorValueSetup(self, index):
 		if index == 0:
 			self.GUI_Leds.ledColor[0] = self.GUI_Leds.ledsSliderRed.value()
-			self.GUI_Leds.ledsValueRed.setText(self.GUI_Leds.ledsSliderRed.value())
+			self.GUI_Leds.ledsValueRed.setText(str(self.GUI_Leds.ledsSliderRed.value()))
 		elif index == 1:
 			self.GUI_Leds.ledColor[1] = self.GUI_Leds.ledsSliderGreen.value()
-			self.GUI_Leds.ledsValueGreen.setText(self.GUI_Leds.ledsSliderGreen.value())
+			self.GUI_Leds.ledsValueGreen.setText(str(self.GUI_Leds.ledsSliderGreen.value()))
 		elif index == 2:
 			self.GUI_Leds.ledColor[2] = self.GUI_Leds.ledsSliderBlue.value()
-			self.GUI_Leds.ledsValueBlue.setText(self.GUI_Leds.ledsSliderBlue.value())
+			self.GUI_Leds.ledsValueBlue.setText(str(self.GUI_Leds.ledsSliderBlue.value()))
 
 		self.GUI_Leds.ledsBulb.setStyleSheet(u"background:rgb({});".format(self.GUI_Leds.ledColor))
