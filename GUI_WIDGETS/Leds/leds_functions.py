@@ -32,4 +32,4 @@ class Leds_funcs:
 			self.GUI_Leds.ledColor[2] = self.GUI_Leds.ledsSliderBlue.value()
 			self.GUI_Leds.ledsValueBlue.setText(self.GUI_Leds.ledsSliderBlue.value())
 
-		self.GUI_Leds.ledsBulb.setStyleSheet(f"background:rgb({self.GUI_Leds.ledColor});")
+		self.GUI_Leds.ledsBulb.setStyleSheet(u"background:rgb({});".format(self.GUI_Leds.ledColor))
