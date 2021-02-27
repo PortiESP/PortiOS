@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'ledsWygTNa.ui'
+## Form generated from reading UI file 'ledswicbeh.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -61,20 +61,20 @@ class Ui_Leds_widget(object):
 "QCheckBox::indicator:checked {\n"
 "		background:rgba(0, 0, 0, 0);\n"
 "}")
-        self.label_5 = QLabel(self.frameLedsBulb)
-        self.label_5.setObjectName(u"label_5")
-        self.label_5.setGeometry(QRect(95, 95, 60, 60))
+        self.labelOnOffBackground = QLabel(self.frameLedsBulb)
+        self.labelOnOffBackground.setObjectName(u"labelOnOffBackground")
+        self.labelOnOffBackground.setGeometry(QRect(95, 95, 60, 60))
         font1 = QFont()
         font1.setFamily(u"Bahnschrift SemiBold SemiConden")
         font1.setPointSize(20)
-        self.label_5.setFont(font1)
-        self.label_5.setStyleSheet(u"color:white;\n"
+        self.labelOnOffBackground.setFont(font1)
+        self.labelOnOffBackground.setStyleSheet(u"color:white;\n"
 "border: 2px solid white;\n"
 "border-radius:30px;\n"
 "background-color: rgba(0, 0, 0, 100);")
-        self.label_5.setAlignment(Qt.AlignCenter)
+        self.labelOnOffBackground.setAlignment(Qt.AlignCenter)
         self.ledsBulb.raise_()
-        self.label_5.raise_()
+        self.labelOnOffBackground.raise_()
         self.ledsOnOffButton.raise_()
         self.frameLedButtons = QFrame(self.frame_leds)
         self.frameLedButtons.setObjectName(u"frameLedButtons")
@@ -386,7 +386,7 @@ class Ui_Leds_widget(object):
 
     def retranslateUi(self, Leds_widget):
         Leds_widget.setWindowTitle(QCoreApplication.translate("Leds_widget", u"Form", None))
-        self.label_5.setText(QCoreApplication.translate("Leds_widget", u"I", None))
+        self.labelOnOffBackground.setText(QCoreApplication.translate("Leds_widget", u"I", None))
         self.ledsProgramJumpButton.setText(QCoreApplication.translate("Leds_widget", u"Jump", None))
         self.ledsProgramFadeButton.setText(QCoreApplication.translate("Leds_widget", u"Fade", None))
         self.ledsProgramRandomButton.setText(QCoreApplication.translate("Leds_widget", u"Random", None))
