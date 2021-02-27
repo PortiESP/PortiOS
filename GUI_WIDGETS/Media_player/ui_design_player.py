@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'design_playerlVODIr.ui'
+## Form generated from reading UI file 'design_playerMhNkzJ.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -12,6 +12,7 @@ from PySide2.QtCore import *
 from PySide2.QtGui import *
 from PySide2.QtWidgets import *
 
+import resources_rc
 import resources_rc
 
 class Ui_Player_widget(object):
@@ -153,6 +154,7 @@ class Ui_Player_widget(object):
         self.label_cancion.setFont(font1)
         self.label_cancion.setStyleSheet(u"color:white;")
         self.label_cancion.setAlignment(Qt.AlignCenter)
+        self.label_cancion.setWordWrap(True)
 
         self.verticalLayout.addWidget(self.label_cancion)
 
@@ -164,6 +166,7 @@ class Ui_Player_widget(object):
         self.label_artista.setFont(font2)
         self.label_artista.setStyleSheet(u"color: rgb(204, 204, 204);")
         self.label_artista.setAlignment(Qt.AlignHCenter|Qt.AlignTop)
+        self.label_artista.setWordWrap(True)
 
         self.verticalLayout.addWidget(self.label_artista)
 
@@ -207,7 +210,7 @@ class Ui_Player_widget(object):
         self.nextButton.setText("")
         self.label_currentTime.setText(QCoreApplication.translate("Player_widget", u"0:00", None))
         self.label_duration.setText(QCoreApplication.translate("Player_widget", u"3:23", None))
-        self.label_cancion.setText(QCoreApplication.translate("Player_widget", u"Speechless (feat. Erika Sirola)", None))
-        self.label_artista.setText(QCoreApplication.translate("Player_widget", u"Robin Schulz, Erika Sirola", None))
+        self.label_cancion.setText(QCoreApplication.translate("Player_widget", u"No data", None))
+        self.label_artista.setText(QCoreApplication.translate("Player_widget", u"no data", None))
     # retranslateUi
 
