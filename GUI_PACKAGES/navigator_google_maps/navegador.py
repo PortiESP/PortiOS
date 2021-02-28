@@ -7,10 +7,11 @@ from selenium.webdriver.chrome.options import Options
 import time
 
 class Navegador:
-	def __init__(self):
+	def __init__(self, fullScreen=True):
 		# Setting chrome
 		self.chrome_options = Options()
-		self.chrome_options.add_argument("--kiosk")
+		if fullScreen:
+			self.chrome_options.add_argument("--kiosk")
 		self.chrome_options.add_experimental_option("useAutomationExtension", False)
 		self.chrome_options.add_experimental_option("excludeSwitches",["enable-automation"])
 		self.driver = webdriver.Chrome(options=self.chrome_options)
