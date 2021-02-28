@@ -38,15 +38,11 @@ class Apps_funcs:
 		self.GUI_Apps.navThead.join()
 
 	def navInstructions(self):
-		try:
+		
 			self.GUI_Apps.navigator.iniciar_viaje()
 			self.GUI_Apps.endNavigation()
 
 			self.GUI_Apps.navigator.mini_nav()
-		except:
-			try:
-				self.GUI_Apps.endNavigation()
-			except:
-				pass
+		
 
 		
