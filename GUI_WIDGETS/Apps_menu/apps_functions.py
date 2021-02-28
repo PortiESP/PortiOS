@@ -7,6 +7,7 @@ import threading
 class Apps_funcs:
 
 	def appsSetup(self):
+		self.GUI_Apps.navigator = None
 		# Apps buttons
 		self.GUI_Apps.pushButton.clicked.connect(lambda: Apps_funcs.openBrowser(self))
 		self.GUI_Apps.pushButton_2.clicked.connect(lambda: Apps_funcs.openNavigator(self))
@@ -25,14 +26,14 @@ class Apps_funcs:
 		self.GUI_Apps.driver.get('https://www.google.es/')
 
 	def openNavigator(self):
-		nav = Navegador()
+		self.GUI_Apps.navigator = Navegador()
 
 		navThread = threading.Thread(target=lambda: Apps_funcs.navInstructions(self))
 		navThread.start()
 
 	def navInstructions(self):
-		nav.iniciar_viaje()
-		nav.mini_nav()
+		self.GUI_Apps.navigator.iniciar_viaje()
+		self.GUI_Apps.navigator.mini_nav()
 
 
 
