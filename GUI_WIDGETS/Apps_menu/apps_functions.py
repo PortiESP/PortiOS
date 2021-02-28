@@ -35,7 +35,7 @@ class Apps_funcs:
 	def endNavigation(self):
 		print('Ending maps')
 		self.GUI_Apps.navigator.exit()
-		self.GUI_Apps.navThead.join()
+		self.GUI_Apps.navThread.join()
 
 	def navInstructions(self):
 		
