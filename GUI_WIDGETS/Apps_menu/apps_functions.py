@@ -32,14 +32,20 @@ class Apps_funcs:
 		self.GUI_Apps.navThread = threading.Thread(target=lambda: Apps_funcs.navInstructions(self))
 		self.GUI_Apps.navThread.start()
 
+	def endNavigation(self):
+		self.GUI_Apps.navigator.exit()
+		self.GUI_Apps.navThead.join()
+		print('Ended maps')
+
 	def navInstructions(self):
 		try:
 			self.GUI_Apps.navigator.iniciar_viaje()
+			self.GUI_Apps.endNavigation()
+
 			self.GUI_Apps.navigator.mini_nav()
 		except:
 			try:
-				self.GUI_Apps.navigator.exit()
-				self.GUI_Apps.navThread.join()
+				self.GUI_Apps.endNavigation()
 			except:
 				pass
 
