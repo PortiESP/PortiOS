@@ -39,10 +39,9 @@ class Apps_funcs:
 
 	def navInstructions(self):
 		
-			self.GUI_Apps.navigator.iniciar_viaje()
-			self.GUI_Apps.endNavigation()
-
-			self.GUI_Apps.navigator.mini_nav()
+		self.GUI_Apps.navigator.iniciar_viaje()
+		Apps_funcs.endNavigation(self)
+		self.GUI_Apps.navigator.mini_nav()
 		
 
 		
