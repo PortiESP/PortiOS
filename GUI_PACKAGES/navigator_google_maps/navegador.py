@@ -84,14 +84,14 @@ class Navegador:
 
 		
 	# CONTROL
-	def siguiente_instruccion(self):
+	def siguiente_instruccion(self, setScroll=False):
 		if self.instruccion_index < len(self.instrucciones_viaje)-1:
 			self.__style(self.resetItemStyles)
 			self.instruccion_index += 1
 			self.__style(self.selectedItemStyles)
 			self.actual_point =  self.instrucciones_viaje[self.instruccion_index]
 			self.actual_point.click()
-			if self.actual_point.location['y'] > (self.windowHeight - self.actual_point.size['height'] - 20):
+			if setScroll and self.actual_point.location['y'] > (self.windowHeight - self.actual_point.size['height'] - 20):
 				print(self.actual_point.location['y'])
 				print((self.windowHeight - self.actual_point.size['height']- 30))
 				self.scroll(self.actual_point.size['height'] - 20)	
