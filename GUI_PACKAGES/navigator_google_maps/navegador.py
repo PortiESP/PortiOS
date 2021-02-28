@@ -50,8 +50,8 @@ class Navegador:
 		self.driver.switch_to.window(wh)
 
 	def __obtener_instrucciones(self):
-		time.sleep(0.5)
 		WebDriverWait(self.driver, 120).until(lambda x: self.driver.find_elements_by_class_name('directions-mode-group'))
+		time.sleep(1)
 		self.bloques_direcciones = self.driver.find_elements_by_class_name(self.groups_class_name)
 		self.instrucciones_viaje = self.driver.find_elements_by_class_name(self.instructions_class_name)
 		self.instrucciones_titles = self.driver.find_elements_by_class_name(self.instructionsTitle_class_name)
