@@ -25,7 +25,8 @@ class Apps_funcs:
 		self.GUI_Apps.driver = webdriver.Chrome(options=self.GUI_Apps.chrome_options)
 		self.GUI_Apps.driver.get('https://www.google.es/')
 
-	def openNavigator(self):
+	def openNavigator(self):7
+		print('Starting maps')
 		self.GUI_Apps.navigator = Navegador(fullScreen=False)
 
 		self.GUI_Apps.navThread = threading.Thread(target=lambda: Apps_funcs.navInstructions(self))
