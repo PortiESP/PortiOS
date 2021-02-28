@@ -27,7 +27,7 @@ class Apps_funcs:
 	def openNavigator(self):
 		nav = Navegador()
 
-		navThread = threading.Thread(target=lambda: Apps_funcs.navInstruction(self))
+		navThread = threading.Thread(target=lambda: Apps_funcs.navInstructions(self))
 		navThread.start()
 
 	def navInstructions(self):
