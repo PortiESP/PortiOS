@@ -22,7 +22,7 @@ class Navegador:
 		self.xpaths_title = []
 		self.cookie_accepted = False
 
-		self.driver.get('https://www.google.es/maps')
+		self.driver.get('https://www.google.es/maps/dir/')
 		self.current_window_handler = self.driver.current_window_handle
 		if not self.cookie_accepted:
 			if self.__aceptar_privacidad(): self.cookie_accepted = True
@@ -47,7 +47,7 @@ class Navegador:
 		self.driver.switch_to.window(wh)
 
 	def __obtener_instrucciones(self):
-		WebDriverWait(self.driver, 60).until(lambda x: self.driver.find_elements_by_class_name('directions-mode-group'))
+		WebDriverWait(self.driver, 120).until(lambda x: self.driver.find_elements_by_class_name('directions-mode-group'))
 		self.bloques_direcciones = self.driver.find_elements_by_class_name('directions-mode-group')
 		for bloque in self.bloques_direcciones:
 			lista = self.driver.find_elements_by_xpath(f'/html/body/jsl/div[3]/div[9]/div[8]/div/div[1]/div/div/div[5]/div/div/div[1]/div/div[2]/div[3]/div[1]/div[{len(self.instrucciones_dict)+2}]/div/div/div')		
