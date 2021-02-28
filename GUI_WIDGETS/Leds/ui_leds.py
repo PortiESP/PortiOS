@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'ledswicbeh.ui'
+## Form generated from reading UI file 'ledsPkiAGi.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -18,7 +18,7 @@ class Ui_Leds_widget(object):
     def setupUi(self, Leds_widget):
         if not Leds_widget.objectName():
             Leds_widget.setObjectName(u"Leds_widget")
-        Leds_widget.resize(796, 480)
+        Leds_widget.resize(800, 480)
         self.frame_leds = QFrame(Leds_widget)
         self.frame_leds.setObjectName(u"frame_leds")
         self.frame_leds.setGeometry(QRect(0, 0, 800, 480))
