@@ -26,6 +26,8 @@ class Apps_funcs:
 		self.GUI_Apps.driver.get('https://www.google.es/')
 
 	def openNavigator(self):
+		if self.GUI_Apps.navigator: return
+		
 		print('Starting maps')
 		self.GUI_Apps.navigator = Navegador(fullScreen=False)
 
@@ -35,13 +37,16 @@ class Apps_funcs:
 	def endNavigation(self):
 		print('Ending maps')
 		self.GUI_Apps.navigator.exit()
-		self.GUI_Apps.navThread.join()
+		self.GUI_Apps.navigator = None
 
 	def navInstructions(self):
-		
-		self.GUI_Apps.navigator.iniciar_viaje()
-		Apps_funcs.endNavigation(self)
-		self.GUI_Apps.navigator.mini_nav()
-		
+		try:		
+			self.GUI_Apps.navigator.iniciar_viaje()
+
+			# Control function
+			self.GUI_Apps.navigator.mini_nav()
+			# ~~~~~~~~~~~~~~~~
+		except:
+			Apps_funcs.endNavigation(self)
 
 		
