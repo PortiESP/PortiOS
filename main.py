@@ -1,5 +1,4 @@
 from portiOSEssentials import *
-from GUI_PACKAGES.navigator_google_maps.navegador import Navegador
 
 #######################################################
 class Main_GUI:
