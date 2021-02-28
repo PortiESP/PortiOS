@@ -28,13 +28,18 @@ class Apps_funcs:
 	def openNavigator(self):
 		self.GUI_Apps.navigator = Navegador(fullScreen=False)
 
-		navThread = threading.Thread(target=lambda: Apps_funcs.navInstructions(self))
-		navThread.start()
+		self.GUI_Apps.navThread = threading.Thread(target=lambda: Apps_funcs.navInstructions(self))
+		self.GUI_Apps.navThread.start()
 
 	def navInstructions(self):
-		self.GUI_Apps.navigator.iniciar_viaje()
-		self.GUI_Apps.navigator.mini_nav()
-
-
+		try:
+			self.GUI_Apps.navigator.iniciar_viaje()
+			self.GUI_Apps.navigator.mini_nav()
+		except:
+			try:
+				self.GUI_Apps.navigator.exit()
+				self.GUI_Apps.navThread.join()
+			except:
+				pass
 
 		
