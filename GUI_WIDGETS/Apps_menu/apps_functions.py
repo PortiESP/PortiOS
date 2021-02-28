@@ -1,7 +1,7 @@
 from selenium.webdriver.chrome.options import Options
 from selenium import webdriver
 from GUI_PACKAGES.navigator_google_maps.navegador import Navegador
-
+import threading
 
 
 class Apps_funcs:
