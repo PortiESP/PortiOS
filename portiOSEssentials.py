@@ -25,6 +25,8 @@ import resources_rc
 from PySide2.QtWidgets import *
 from PySide2.QtGui import *
 from PySide2.QtCore import *
+from selenium.webdriver.chrome.options import Options
+from selenium import webdriver
 import sys, threading, time, selenium
 from math import ceil
 
