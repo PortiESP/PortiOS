@@ -77,7 +77,6 @@ class Main_GUI:
 		def volThread():
 			s = self.GUI_Central.slider_volume.value()
 			self.BTController.set_local_volume(s, maxlevel=127)
-			self.BTController.set_remote_volume(s, maxlevel=127)
 			
 
 		t1 = threading.Thread(target=volThread)
@@ -95,9 +94,8 @@ class Main_GUI:
 			self.toggle_musicStatus(str(self.BTController.get_player_data('Status')))
 
 		elif key == 'Volume':
-			if int(values) != self.GUI_Central.slider_volume.value():
-				self.GUI_Central.slider_volume.setValue(int(values))
-				self.BTController.set_local_volume(int(values), maxlevel=127)
+			self.GUI_Central.slider_volume.setValue(int(values))
+			self.BTController.set_local_volume(int(values), maxlevel=127)
 		
 		elif key == 'Track':
 			self.track = values
