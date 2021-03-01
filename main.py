@@ -87,6 +87,7 @@ class Main_GUI:
 
 		elif key == 'Volume':
 			self.GUI_Central.slider_volume.setValue(int(values))
+			self.BTController.set_local_volume(int(values), maxlevel=127)
 		
 		elif key == 'Track':
 			self.track = values
