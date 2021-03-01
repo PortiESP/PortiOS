@@ -156,9 +156,6 @@ class Main_GUI:
 			# Central clock
 			self.GUI_Central.label_clock.setText(time.strftime('%H:%M'))
 
-			# Set volme slider event
-			self.GUI_Central.slider_volume.valueChanged.connect(lambda: self.BTController.set_volume(self.GUI_Central.slider_volume.value(), maxlevel=127))
-
 			# When device is connected
 			if checkDevice:
 
