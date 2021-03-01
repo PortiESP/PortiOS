@@ -34,7 +34,6 @@ class BT_Control_Panel:
 			if re.findall('Master Playback Volume', i):
 				self.numid = i.split(',')[0][-1]
 			
-		self.localVolume = self.get_local_volume()
 				
 	def setupInterfaces(self):
 		#diccionario con todos los objetos 
@@ -93,7 +92,6 @@ class BT_Control_Panel:
 	def set_local_volume(self, level, maxlevel=100):
 		#Format the level to base 65536
 		levelf = str(self.formatBase(level, maxlevel, 65536))
-		self.localVolume = levelf
 		subprocess.run([f'amixer cset numid={self.numid} {str(levelf)}'], capture_output=True, text=True, shell=True)
 		
 	def set_remote_volume(self, level, maxlevel=100):
