@@ -156,14 +156,11 @@ class Main_GUI:
 			# Central clock
 			self.GUI_Central.label_clock.setText(time.strftime('%H:%M'))
 
+			# Set volme slider event
+			self.GUI_Central.slider_volume.valueChanged.connect(lambda: self.BTController.set_volume(self.GUI_Central.slider_volume.value(), maxlevel=127))
 
 			# When device is connected
 			if checkDevice:
-				# Volume slider
-				sliderValue = self.GUI_Central.slider_volume.value()
-				if sliderValue != self.BTController.localVolume:
-					self.BTController.localVolume = sliderValue
-					self.BTController.set_volume(str(sliderValue), maxlevel=127)
 
 				# Music current time
 				if str(self.BTController.get_player_data('Status')) == 'playing':

@@ -34,7 +34,7 @@ class BT_Control_Panel:
 			if re.findall('Master Playback Volume', i):
 				self.numid = i.split(',')[0][-1]
 			
-		self.localVolume = subprocess.run([f'amixer cget numid={self.numid}'], capture_output=True, text=True, shell=True).stdout.split('=')[-1].strip().split(',')
+		self.localVolume = self.get_local_volume()
 				
 	def setupInterfaces(self):
 		#diccionario con todos los objetos 
@@ -96,7 +96,8 @@ class BT_Control_Panel:
 		self.localVolume = levelr(level)
 		subprocess.run([f'amixer cset numid={self.numid} {str(self.localVolume)}'], capture_output=True, text=True, shell=True)
 		
-	
+	def get_local_volume(self):
+		return subprocess.run([f'amixer cget numid={self.numid}'], capture_output=True, text=True, shell=True).stdout.split('=')[-1].strip().split(',')
 	
 	def get_player_data(self, data):
 		try:
