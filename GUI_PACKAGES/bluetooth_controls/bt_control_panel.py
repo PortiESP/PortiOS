@@ -125,7 +125,6 @@ class BT_Control_Panel:
 
 	def formatBase(self, value, base1, base2):
 		result = int((value /  base1) * base2)
-		print(f'Formating: \n\tValue > {value}\n\tBase1 > {base1}\n\tResult > {result}\n\tBase2 > {base2}')
 		return result
 
 

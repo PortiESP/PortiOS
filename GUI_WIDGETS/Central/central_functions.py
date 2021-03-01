@@ -12,7 +12,7 @@ class Central_funcs:
 		self.GUI_Central.footerButton_3.clicked.connect(lambda:self.BTController.playback_control('next'))
 		self.GUI_Central.footerButton_4.clicked.connect(lambda:Central_funcs.setPage(self, 3))
 		self.GUI_Central.footerButton_5.clicked.connect(lambda:Central_funcs.toggle_volume(self))
-		self.GUI_Central.footerButton_6.clicked.connect(lambda:Central_funcs.toggle_power(self))
+		self.GUI_Central.footerButton_6.clicked.connect(self.toggle_power)
 
 		# Power menu
 		self.GUI_Central.powerCloseButton.clicked.connect(lambda:Central_funcs.toggle_power(self))
@@ -41,16 +41,6 @@ class Central_funcs:
 		print('Changing to page ',index)
 		self.GUI_Central.appsWidget.setCurrentIndex(index)
 
-	def SyncVolume(self):
-		def volThread():
-			s = self.GUI_Central.slider_volume.value()
-			print('Slider value = ', s)
-			self.BTController.set_local_volume(s, maxlevel=127)
-			self.BTController.set_remote_volume(s, maxlevel=127)
-
-
-
-		t1 = threading.Thread(target=volThread)
-		t1.start()
+	
 
 

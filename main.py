@@ -72,7 +72,17 @@ class Main_GUI:
 			self.GUI_Central.footerButton_2.setIcon(icon1)
 			self.GUI_Player.playButton.setIcon(icon1)
 
+	def SyncVolume(self, syncRemote = True):
+		def volThread():
+			s = self.GUI_Central.slider_volume.value()
+			print('Slider value = ', s)
+			self.BTController.set_local_volume(s, maxlevel=127)
+			if syncRemote:
+				self.BTController.set_remote_volume(s, maxlevel=127)
 
+
+		t1 = threading.Thread(target=volThread)
+		t1.start()
 
 	def mediaDataChanged(self, _, data, __):
 		print('Data changed:')
@@ -86,8 +96,7 @@ class Main_GUI:
 			self.toggle_musicStatus(str(self.BTController.get_player_data('Status')))
 
 		elif key == 'Volume':
-			self.GUI_Central.slider_volume.setValue(int(values))
-			self.BTController.set_local_volume(int(values), maxlevel=127)
+			self.GUI_Central.slider_volume.setValue(int(values), setRemote=False)
 		
 		elif key == 'Track':
 			self.track = values
