@@ -26,6 +26,7 @@ class Main_GUI:
 		self.currentMusicTime = None # Music position in microseconds
 		self.currentMusicTimeF = None # Formated music porsition time (M:SS)
 
+		self.sliderMoving = False
 
 		# Getting widgets
 		self.GUI_Dashboard = Ui_Dashboard_widget()
@@ -76,9 +77,12 @@ class Main_GUI:
 		def volThread():
 			s = self.GUI_Central.slider_volume.value()
 			self.BTController.set_local_volume(s, maxlevel=127)
-			if not moved:
-				self.BTController.set_remote_volume(s, maxlevel=127)
-			
+			self.BTController.set_remote_volume(s, maxlevel=127)
+		
+		if moved:
+			self.sliderMoving = True
+		
+
 
 		t1 = threading.Thread(target=volThread)
 		t1.start()
@@ -94,7 +98,10 @@ class Main_GUI:
 		if key == 'Status': 
 			self.toggle_musicStatus(str(self.BTController.get_player_data('Status')))
 
-		elif key == 'Volume':	
+		elif key == 'Volume':
+			if self.sliderMoving: 
+				self.sliderMoving = False
+				return 
 			self.GUI_Central.slider_volume.setValue(int(values))
 			self.sliderSyncVolume()
 				
