@@ -73,16 +73,11 @@ class Main_GUI:
 			self.GUI_Player.playButton.setIcon(icon1)
 
 	# The sync system updates with the slider value
-	def sliderSyncVolume(self, moved=False):
+	def sliderSyncVolume(self):
 		def volThread():
 			s = self.GUI_Central.slider_volume.value()
 			self.BTController.set_local_volume(s, maxlevel=127)
-			self.BTController.set_remote_volume(s, maxlevel=127)
 		
-		if moved:
-			self.sliderMoving = True
-		
-
 
 		t1 = threading.Thread(target=volThread)
 		t1.start()
@@ -99,11 +94,8 @@ class Main_GUI:
 			self.toggle_musicStatus(str(self.BTController.get_player_data('Status')))
 
 		elif key == 'Volume':
-			if self.sliderMoving: 
-				self.sliderMoving = False
-				return 
 			self.GUI_Central.slider_volume.setValue(int(values))
-			self.sliderSyncVolume()
+			
 				
 		
 		elif key == 'Track':
