@@ -1,4 +1,4 @@
-import subprocess
+import subprocess, threading
 
 class Central_funcs:
 	def centralSetup(self):
@@ -19,7 +19,7 @@ class Central_funcs:
 		self.GUI_Central.centralShutdownButton.clicked.connect(lambda:subprocess.run('shutdown -P now', shell=True))
 		self.GUI_Central.centralRebootButton.clicked.connect(lambda:subprocess.run('reboot', shell=True))
 
-		self.GUI_Central.slider_volume.valueChanged.connect(lambda: self.BTController.set_volume(self.GUI_Central.slider_volume.value(), maxlevel=127))
+		self.GUI_Central.slider_volume.valueChanged.connect(lambda:Central_funcs.SyncVolume(self))
 		
 	def toggle_volume(self):
 		print('Toogleing volume')
@@ -40,5 +40,13 @@ class Central_funcs:
 	def setPage(self, index):
 		print('Changing to page ',index)
 		self.GUI_Central.appsWidget.setCurrentIndex(index)
+
+	def SyncVolume(self):
+		def volThread(t):
+			self.BTController.set_volume(self.GUI_Central.slider_volume.value(), maxlevel=127)
+			t.join()
+
+		t1 = threading.Thread(target=volThread, args=(t1,))
+		t1.start()
 
 
