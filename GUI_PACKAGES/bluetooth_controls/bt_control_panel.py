@@ -97,7 +97,7 @@ class BT_Control_Panel:
 		subprocess.run([f'amixer cset numid={self.numid} {str(levelf)}'], capture_output=True, text=True, shell=True)
 		
 	def set_remote_volume(self, level, maxlevel=100):
-		level = self.formatBase(level, maxlevel, 127)
+		level = str(self.formatBase(level, maxlevel, 127))
 		self.volumeIface.Set('org.bluez.MediaTransport1', 'Volume', level)
 
 	def get_local_volume(self):
