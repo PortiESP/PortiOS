@@ -25,7 +25,6 @@ class Main_GUI:
 		self.trackDuration = None # Duration of the actual track
 		self.currentMusicTime = None # Music position in microseconds
 		self.currentMusicTimeF = None # Formated music porsition time (M:SS)
-		self.remoteVolSync = True # Bool for ¿Is remote sync needed? while sincronizing local & remote data
 
 
 
@@ -96,8 +95,9 @@ class Main_GUI:
 			self.toggle_musicStatus(str(self.BTController.get_player_data('Status')))
 
 		elif key == 'Volume':
-			self.GUI_Central.slider_volume.setValue(int(values))
-			self.BTController.set_local_volume(int(values))
+			if int(values) != self.GUI_Central.slider_volume.value():
+				self.GUI_Central.slider_volume.setValue(int(values))
+				self.BTController.set_local_volume(int(values))
 		
 		elif key == 'Track':
 			self.track = values
