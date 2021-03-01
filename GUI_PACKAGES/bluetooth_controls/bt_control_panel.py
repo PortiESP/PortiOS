@@ -101,7 +101,7 @@ class BT_Control_Panel:
 		self.volumeIface.Set('org.bluez.MediaTransport1', 'Volume', level)
 
 	def get_local_volume(self):
-		return subprocess.run([f'amixer cget numid={self.numid}'], capture_output=True, text=True, shell=True).stdout.split('=')[-1].strip().split(',')
+		return subprocess.run([f'amixer cget numid={self.numid}'], capture_output=True, text=True, shell=True).stdout.split('=')[-1].strip().split(',')[0]
 	
 	def get_player_data(self, data):
 		try:
