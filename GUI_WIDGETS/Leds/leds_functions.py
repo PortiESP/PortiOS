@@ -22,7 +22,7 @@ class Leds_funcs:
 		self.GUI_Leds.ledsColorPickerButton.clicked.connect(lambda: Leds_funcs.pickColor(self))
 
 		# On/off Button
-		self.GUI_Leds.ledsOnOffButton.clicked.connect(lambda: Leds_funcs.toogleLedPower(self))
+		self.GUI_Leds.ledsOnOffButton.clicked.connect(lambda: Leds_funcs.toggleLedPower(self))
 
 
 		self.GUI_Leds.ledsSliderRed.valueChanged.connect(lambda: Leds_funcs.colorValueSetup(self, 0))
@@ -59,7 +59,7 @@ class Leds_funcs:
 
 
 
-	def toogleLedPower(self):
+	def toggleLedPower(self):
 
 		self.GUI_Leds.ledPower = not self.GUI_Leds.ledPower
 

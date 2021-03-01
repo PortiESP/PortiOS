@@ -51,7 +51,7 @@ class Main_GUI:
 
 		# Page test func
 
-	def toogle_musicStatus(self, setStatus=None):
+	def toggle_musicStatus(self, setStatus=None):
 		
 		if self.BTController.checkConnectedDevices():
 			status = str(self.BTController.get_player_data('Status'))
@@ -83,7 +83,7 @@ class Main_GUI:
 
 
 		if key == 'Status': 
-			self.toogle_musicStatus(str(self.BTController.get_player_data('Status')))
+			self.toggle_musicStatus(str(self.BTController.get_player_data('Status')))
 
 		elif key == 'Volume':
 			self.GUI_Central.slider_volume.setValue(int(values))
@@ -143,7 +143,7 @@ class Main_GUI:
 				self.GUI_Central.bluetoothStatusButton.setIcon(icon)
 				self.GUI_Central.slider_volume.setValue(self.BTController.get_volume_data())
 				if str(self.BTController.get_player_data('Status')) == 'playing':
-					self.toogle_musicStatus(setStatus='playing')
+					self.toggle_musicStatus(setStatus='playing')
 					
 				self.BTController.bus.add_signal_receiver(self.mediaDataChanged, 
 											dbus_interface = "org.freedesktop.DBus.Properties",
