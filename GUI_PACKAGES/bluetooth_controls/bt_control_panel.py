@@ -33,6 +33,7 @@ class BT_Control_Panel:
 		for i in subprocess.run(['amixer controls'], capture_output=True, text=True, shell=True).stdout.split('\n'):
 			if re.findall('Master Playback Volume', i):
 				self.numid = i.split(',')[0][-1]
+				print('Volulume id: ', self.numid)
 			
 				
 	def setupInterfaces(self):
@@ -122,6 +123,8 @@ class BT_Control_Panel:
 		except: return False
 
 	def formatBase(self, value, base1, base2):
-		 return int(value /  base1)*base2
+		result = int(value /  base1)*base2
+		print(f'Formating: \n\tValue > {value}\n\tBase1 > {base1}\n\tResult > {result}\n\tBase2 > {base2}')
+		return result
 
 
