@@ -72,6 +72,7 @@ class Main_GUI:
 			self.GUI_Central.footerButton_2.setIcon(icon1)
 			self.GUI_Player.playButton.setIcon(icon1)
 
+	# The sync system updates with the slider value
 	def SyncVolume(self, syncRemote = True):
 		def volThread():
 			s = self.GUI_Central.slider_volume.value()
