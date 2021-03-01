@@ -19,7 +19,7 @@ class Central_funcs:
 		self.GUI_Central.centralShutdownButton.clicked.connect(lambda:subprocess.run('shutdown -P now', shell=True))
 		self.GUI_Central.centralRebootButton.clicked.connect(lambda:subprocess.run('reboot', shell=True))
 
-		self.GUI_Central.slider_volume.valueChanged.connect(self.SyncVolume)
+		self.GUI_Central.slider_volume.sliderMoved.connect(self.sliderSyncVolume)
 		
 	def toggle_volume(self):
 		print('Toogleing volume')
