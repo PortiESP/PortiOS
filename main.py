@@ -55,7 +55,7 @@ class Main_GUI:
 		
 		if self.BTController.checkConnectedDevices():
 			status = str(self.BTController.get_player_data('Status'))
-			print(status)
+			print('Status: ', status)
 			if setStatus: 
 				if setStatus == 'playing': status = 'paused'
 				elif setStatus == 'paused': status = 'playing'

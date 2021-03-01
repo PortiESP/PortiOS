@@ -1,4 +1,3 @@
-
 import subprocess
 
 class Central_funcs:
