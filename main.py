@@ -25,7 +25,7 @@ class Main_GUI:
 		self.trackDuration = None # Duration of the actual track
 		self.currentMusicTime = None # Music position in microseconds
 		self.currentMusicTimeF = None # Formated music porsition time (M:SS)
-
+		self.syncRemote = True
 
 
 		# Getting widgets
@@ -73,10 +73,12 @@ class Main_GUI:
 			self.GUI_Player.playButton.setIcon(icon1)
 
 	# The sync system updates with the slider value
-	def sliderSyncVolume(self):
+	def sliderSyncVolume(self, moved=False):
 		def volThread():
 			s = self.GUI_Central.slider_volume.value()
 			self.BTController.set_local_volume(s, maxlevel=127)
+			if not moved:
+				self.BTController.set_remote_volume(s, maxlevel=127)
 			
 
 		t1 = threading.Thread(target=volThread)
@@ -93,9 +95,10 @@ class Main_GUI:
 		if key == 'Status': 
 			self.toggle_musicStatus(str(self.BTController.get_player_data('Status')))
 
-		elif key == 'Volume':
+		elif key == 'Volume':	
 			self.GUI_Central.slider_volume.setValue(int(values))
-			self.BTController.set_local_volume(int(values), maxlevel=127)
+			self.sliderSyncVolume()
+				
 		
 		elif key == 'Track':
 			self.track = values
