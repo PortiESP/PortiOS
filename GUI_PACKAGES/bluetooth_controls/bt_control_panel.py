@@ -92,12 +92,12 @@ class BT_Control_Panel:
 	#The max value parameter indicates the max value you are using, default = 100
 	def set_local_volume(self, level, maxlevel=100):
 		#Format the level to base 65536
-		levelf = str((int(level) /  maxlevel) * 65536)
+		levelf = str(self.formatBase(level, maxlevel, 65536))
 		self.localVolume = levelf
 		subprocess.run([f'amixer cset numid={self.numid} {str(levelf)}'], capture_output=True, text=True, shell=True)
 		
 	def set_remote_volume(self, level, maxlevel=100):
-		level = int(level /  maxlevel)*127
+		level = self.formatBase(level, maxlevel, 127)
 		self.volumeIface.Set('org.bluez.MediaTransport1', 'Volume', level)
 
 	def get_local_volume(self):
@@ -122,5 +122,8 @@ class BT_Control_Panel:
 		try:
 			return self.adapterData[data]
 		except: return False
+
+	def formatBase(self, value, base1, base2):
+		 return int(value /  base1)*base2
 
 

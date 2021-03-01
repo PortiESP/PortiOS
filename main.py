@@ -86,7 +86,8 @@ class Main_GUI:
 			self.toggle_musicStatus(str(self.BTController.get_player_data('Status')))
 
 		elif key == 'Volume':
-			self.GUI_Central.slider_volume.setValue(int(values))
+			if self.BTController.formatBase(self.BTController.localVolume, 65536, 127) != self.GUI_Central.slider_volume.value():
+				self.GUI_Central.slider_volume.setValue(int(values))
 		
 		elif key == 'Track':
 			self.track = values

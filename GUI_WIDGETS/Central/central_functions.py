@@ -43,7 +43,9 @@ class Central_funcs:
 
 	def SyncVolume(self):
 		def volThread():
-			self.BTController.set_local_volume(self.GUI_Central.slider_volume.value(), maxlevel=127)
+			s = self.GUI_Central.slider_volume.value()
+			self.BTController.set_local_volume(s, maxlevel=127)
+			self.BTController.set_remote_volume(s, maxlevel=127)
 
 
 
