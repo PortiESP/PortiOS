@@ -42,11 +42,11 @@ class Central_funcs:
 		self.GUI_Central.appsWidget.setCurrentIndex(index)
 
 	def SyncVolume(self):
-		def volThread(t):
+		def volThread():
 			self.BTController.set_volume(self.GUI_Central.slider_volume.value(), maxlevel=127)
-			t.join()
 
-		t1 = threading.Thread(target=volThread, args=(t1,))
+
+		t1 = threading.Thread(target=volThread)
 		t1.start()
 
 
