@@ -25,7 +25,6 @@ class Main_GUI:
 		self.trackDuration = None # Duration of the actual track
 		self.currentMusicTime = None # Music position in microseconds
 		self.currentMusicTimeF = None # Formated music porsition time (M:SS)
-		self.syncRemote = True
 
 
 		# Getting widgets
