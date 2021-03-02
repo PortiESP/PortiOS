@@ -2,6 +2,10 @@ import subprocess, threading
 
 class Central_funcs:
 	def centralSetup(self):
+		# Getting interface
+		self.GUI_Central = Ui_Central()
+		self.GUI_Central.setupUi(self.win)
+
 		# Flags
 		self.GUI_Central.volumeVisivility = False
 		self.GUI_Central.powerVisivility = False

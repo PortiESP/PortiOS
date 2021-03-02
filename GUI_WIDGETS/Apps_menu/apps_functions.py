@@ -8,6 +8,7 @@ import threading
 class Apps_funcs:
 
 	def appsSetup(self):
+		# Getting interface
 		self.GUI_Apps = Ui_Apps_widget()
 		self.GUI_Apps.setupUi(self.GUI_Central.page_apps)
 		

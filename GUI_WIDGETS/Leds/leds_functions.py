@@ -5,8 +5,10 @@ from PySide2.QtWidgets import *
 
 class Leds_funcs:
 	def ledsSetup(self):
+		# Getting interface
 		self.GUI_Leds = Ui_Leds_widget()
 		self.GUI_Leds.setupUi(self.GUI_Central.page_leds)
+		
 		# Color 
 		self.GUI_Leds.ledColor = [0,0,0]
 		self.GUI_Leds.slidersList = (self.GUI_Leds.ledsSliderRed,

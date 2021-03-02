@@ -7,8 +7,11 @@ from PySide2.QtWidgets import *
 class Dashboard_funcs:
 
 	def dashboardSetup(self):
+		# Getting interface
 		self.GUI_Dashboard = Ui_Dashboard_widget()
 		self.GUI_Dashboard.setupUi(self.GUI_Central.page_dashboard)
+		
+		# Getting gauge funcs
 		Gauge_funcs.setDefaults(self)
 
 	def changeMusicInfo(self):
