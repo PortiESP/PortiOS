@@ -1,5 +1,5 @@
 from .ui_design_settings import Ui_Settings_widget
-import subprocess, threading, re
+import subprocess, threading, re, time
 
 
 class Settings_funcs:
