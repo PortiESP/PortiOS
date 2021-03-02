@@ -32,8 +32,8 @@ class Settings_funcs:
 
 		# FUNCTIONS
 		def refresh():
-			self.GUI_Settings.bearing_wifiSsidText.setText(getSSID()) # SSID
-			self.GUI_Settings.bearing_wifiIpText.setText(getIP())     # IP
+			self.GUI_Settings.bearing_wifiSsidText.setText(str(getSSID())) # SSID
+			self.GUI_Settings.bearing_wifiIpText.setText(str(getIP()))     # IP
 			
 
 		def togglePower():
@@ -54,10 +54,10 @@ class Settings_funcs:
 			try:
 				out = subprocess.run('iwgetid', capture_output=True, text=True, shell=True).stdout.split(':')[1].strip()[1:-1]
 			except IndexError:
-				return False
+				return None
 			print('SSID: ', out)
 			if out: return out
-			else: return False
+			else: return None
 
 		def getIP():
 			out = subprocess.run('ifconfig wlan0', capture_output=True, text=True, shell=True).stdout.split('\n')[1].strip().split(' ')
@@ -65,12 +65,13 @@ class Settings_funcs:
 				out = out[1]
 				print('IP: ', out)
 				return out
-			else: return False
+			else: return None
 			
 			
 
 		
 		# BEARING SETUP
+		refresh()
 		self.GUI_Settings.bearing_wifiPowerCheckbox.toggled.connect(togglePower)
 		self.GUI_Settings.bearing_refreshWifiButton.clicked.connect(refresh)
 		
