@@ -34,7 +34,7 @@ class Settings_funcs:
 		def togglePower():
 			if self.GUI_Settings.bearing_wifiPowerCheckbox.isChecked(): setStatus = 'down'
 			else: setStatus = 'up'
-			x = subprocess.run(['sudo', 'ifconfig', 'wlan0', setStatus] , shell=True)
+			x = subprocess.run(['sudo ifconfig wlan0', setStatus], shell=True)
 			print('Wifi power ', setStatus, ' - ', x.args)
 
 		def getSSID():
