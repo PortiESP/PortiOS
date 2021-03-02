@@ -1,9 +1,13 @@
+from .ui_design_player import Ui_Player_widget
 from PySide2.QtCore import *
 from PySide2.QtGui import *
 from PySide2.QtWidgets import *
 
+
 class Player_funcs:
 	def playerSetup(self):
+		self.GUI_Player = Ui_Player_widget()
+		self.GUI_Player.setupUi(self.GUI_Central.page_player)
 		# Control buttons
 		self. GUI_Player.backButton.clicked.connect(lambda:self.BTController.playback_control('previous'))
 		self. GUI_Player.rewindButton.clicked.connect(lambda:self.BTController.playback_control('rewind'))

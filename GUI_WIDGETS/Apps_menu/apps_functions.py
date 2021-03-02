@@ -1,3 +1,4 @@
+from .ui_apps_menu import Ui_Apps_widget
 from selenium.webdriver.chrome.options import Options
 from selenium import webdriver
 from GUI_PACKAGES.navigator_google_maps.navegador import Navegador
@@ -7,6 +8,9 @@ import threading
 class Apps_funcs:
 
 	def appsSetup(self):
+		self.GUI_Apps = Ui_Apps_widget()
+		self.GUI_Apps.setupUi(self.GUI_Central.page_apps)
+		
 		self.GUI_Apps.navigator = None
 		# Apps buttons
 		self.GUI_Apps.pushButton.clicked.connect(lambda: Apps_funcs.openBrowser(self))

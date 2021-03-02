@@ -1,4 +1,5 @@
-from GUI_WIDGETS.Dashboard.gauge_functions import *
+from .ui_dashboard import Ui_Dashboard_widget
+from .gauge_functions import *
 from PySide2.QtCore import *
 from PySide2.QtGui import *
 from PySide2.QtWidgets import *
@@ -6,6 +7,8 @@ from PySide2.QtWidgets import *
 class Dashboard_funcs:
 
 	def dashboardSetup(self):
+		self.GUI_Dashboard = Ui_Dashboard_widget()
+		self.GUI_Dashboard.setupUi(self.GUI_Central.page_dashboard)
 		Gauge_funcs.setDefaults(self)
 
 	def changeMusicInfo(self):

@@ -29,14 +29,14 @@ class Main_GUI:
 		self.sliderMoving = False
 
 		# Getting widgets
-		self.GUI_Dashboard = Ui_Dashboard_widget()
-		self.GUI_Dashboard.setupUi(self.GUI_Central.page_dashboard)
-		self.GUI_Apps = Ui_Apps_widget()
-		self.GUI_Apps.setupUi(self.GUI_Central.page_apps)
-		self.GUI_Leds = Ui_Leds_widget()
-		self.GUI_Leds.setupUi(self.GUI_Central.page_leds)
-		self.GUI_Player = Ui_Player_widget()
-		self.GUI_Player.setupUi(self.GUI_Central.page_player)
+		# self.GUI_Dashboard = Ui_Dashboard_widget()
+		# self.GUI_Dashboard.setupUi(self.GUI_Central.page_dashboard)
+		# self.GUI_Apps = Ui_Apps_widget()
+		# self.GUI_Apps.setupUi(self.GUI_Central.page_apps)
+		# self.GUI_Leds = Ui_Leds_widget()
+		# self.GUI_Leds.setupUi(self.GUI_Central.page_leds)
+		# self.GUI_Player = Ui_Player_widget()
+		# self.GUI_Player.setupUi(self.GUI_Central.page_player)
 		# self.GUI_Settings = Ui_Settings_widget()
 		# self.GUI_Settings.setupUi()
 
