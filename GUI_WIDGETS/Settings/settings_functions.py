@@ -51,13 +51,13 @@ class Settings_funcs:
 
 
 		def getSSID():
-			out = subprocess.run('iwgetid', capture_output=True, text=True, shell=True).stdout.split(':')[1].strip()
+			out = subprocess.run('iwgetid', capture_output=True, text=True, shell=True).stdout.split(':')[1].strip('"')
 			print('SSID: ', out)
 			if out: return out
 			else: return False
 
 		def getIP():
-			out = subprocess.run('ifconfig wlan0', capture_output=True, text=True, shell=True).stdout.split('\n')[1].split(' ')[1]
+			out = subprocess.run('ifconfig wlan0', capture_output=True, text=True, shell=True).stdout.split('\n')[1]
 			print('IP: ', out)
 			if out: return out
 			else: return False
