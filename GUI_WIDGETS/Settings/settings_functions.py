@@ -19,6 +19,8 @@ class Settings_funcs:
 		self.GUI_Settings.bearing_settingsTerminal.clicked.connect(lambda:Settings_funcs.setPage(self, 7))
 		self.GUI_Settings.bearing_settingsAdvanced.clicked.connect(lambda:Settings_funcs.setPage(self, 8))
 
+		# Setting up pages bearings
+		Settings_funcs.wifiSetup(self)
 
 	def setPage(self, index):
 		print('Changing to page ',index)
@@ -27,5 +29,8 @@ class Settings_funcs:
 
 	# MENUS SETUP
 	def wifiSetup(self):
-		self.GUI_Settings.bearing_wifi
-		pass
+		def togglePower():
+			print('Power wifi toggled')
+
+		self.GUI_Settings.bearing_wifiPowerCheckbox.toggled.connect(togglePower)
+		
