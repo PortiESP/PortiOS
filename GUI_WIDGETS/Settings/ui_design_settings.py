@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'design_settingsuUofnN.ui'
+## Form generated from reading UI file 'design_settingscPHSBL.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -1707,7 +1707,7 @@ class Ui_Settings_widget(object):
 
         self.retranslateUi(Settings_widget)
 
-        self.stackedWidget_settings.setCurrentIndex(0)
+        self.stackedWidget_settings.setCurrentIndex(1)
 
 
         QMetaObject.connectSlotsByName(Settings_widget)
@@ -1731,9 +1731,9 @@ class Ui_Settings_widget(object):
         self.label_6.setText(QCoreApplication.translate("Settings_widget", u"I", None))
         self.bearing_wifiPowerCheckbox.setText("")
         self.label_14.setText(QCoreApplication.translate("Settings_widget", u"IP:", None))
-        self.bearing_wifiIpText.setText(QCoreApplication.translate("Settings_widget", u"192.1068.1.51", None))
+        self.bearing_wifiIpText.setText(QCoreApplication.translate("Settings_widget", u"None", None))
         self.label_9.setText(QCoreApplication.translate("Settings_widget", u"SSID:", None))
-        self.bearing_wifiSsidText.setText(QCoreApplication.translate("Settings_widget", u"Iphone de Porti", None))
+        self.bearing_wifiSsidText.setText(QCoreApplication.translate("Settings_widget", u"None", None))
         self.label_7.setText(QCoreApplication.translate("Settings_widget", u"Scan network", None))
         self.bearing_wifiScanButton.setText(QCoreApplication.translate("Settings_widget", u"Scan", None))
         self.label_25.setText(QCoreApplication.translate("Settings_widget", u"WIFI", None))

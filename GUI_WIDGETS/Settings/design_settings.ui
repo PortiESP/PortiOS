@@ -485,7 +485,7 @@ QScrollBar:vertical {
      </rect>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>1</number>
     </property>
     <widget class="QWidget" name="page_brightness">
      <widget class="QFrame" name="p_brightnes_title">
@@ -821,7 +821,7 @@ QCheckBox::indicator:checked{
 }</string>
        </property>
        <property name="text">
-        <string>192.1068.1.51</string>
+        <string>None</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -882,7 +882,7 @@ QCheckBox::indicator:checked{
 }</string>
        </property>
        <property name="text">
-        <string>Iphone de Porti</string>
+        <string>None</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
