@@ -1,3 +1,4 @@
+from .ui_central import Ui_Central
 import subprocess, threading
 
 class Central_funcs:
