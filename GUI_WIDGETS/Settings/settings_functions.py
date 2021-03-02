@@ -1,5 +1,5 @@
 from .ui_design_settings import Ui_Settings_widget
-
+import subprocess
 
 
 class Settings_funcs:
@@ -29,8 +29,21 @@ class Settings_funcs:
 
 	# MENUS SETUP
 	def wifiSetup(self):
-		def togglePower():
-			print('Power wifi toggled')
 
+		# FUNCTIONS
+		def togglePower():
+			if self.GUI_Settings.bearing_wifiPowerCheckbox.isChecked(): setStatus = 'up'
+			else: setStatus = 'down'
+			print('Wifi power ', setStatus)
+			subprocess.run(['sudo ifconfig wlan0 ', setStatus] , shell=True)
+
+		def getSSID():
+			out = subprocess.run('iwgetid', text=True, shell=True).stdout
+			print('SSID: ',out)
+			if out:
+				return out.split(':').strip()
+			else:
+				return False
+		# SETUP
 		self.GUI_Settings.bearing_wifiPowerCheckbox.toggled.connect(togglePower)
 		
