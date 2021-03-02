@@ -32,8 +32,8 @@ class Settings_funcs:
 
 		# FUNCTIONS
 		def refresh():
-			self.GUI_Settings.bearing_wifiSsidText.text(getSSID()) # SSID
-			self.GUI_Settings.bearing_wifiIpText.text(getIP())     # IP
+			self.GUI_Settings.bearing_wifiSsidText.setText(getSSID()) # SSID
+			self.GUI_Settings.bearing_wifiIpText.setText(getIP())     # IP
 			
 
 		def togglePower():
@@ -46,8 +46,8 @@ class Settings_funcs:
 				while not getSSID():
 					time.sleep(0.5)
 				refresh()
-
-			threading.Thread(target=waitNetwork).start()
+			if setStatus == 'up':
+				threading.Thread(target=waitNetwork).start()
 
 
 		def getSSID():
