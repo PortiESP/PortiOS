@@ -51,16 +51,23 @@ class Settings_funcs:
 
 
 		def getSSID():
-			out = subprocess.run('iwgetid', capture_output=True, text=True, shell=True).stdout.split(':')[1].strip()[1:-1]
+			try:
+				out = subprocess.run('iwgetid', capture_output=True, text=True, shell=True).stdout.split(':')[1].strip()[1:-1]
+			except IndexError:
+				return False
 			print('SSID: ', out)
 			if out: return out
 			else: return False
 
 		def getIP():
-			out = subprocess.run('ifconfig wlan0', capture_output=True, text=True, shell=True).stdout.split('\n')[1].strip().split(' ')[1]
-			print('IP: ', out)
-			if out: return out
+			out = subprocess.run('ifconfig wlan0', capture_output=True, text=True, shell=True).stdout.split('\n')[1].strip().split(' ')
+			if out[0] == 'inet': 
+				out = out[1]
+				return True
 			else: return False
+			print('IP: ', out)
+			
+			
 
 		
 		# BEARING SETUP
