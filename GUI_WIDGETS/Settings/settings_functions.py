@@ -72,8 +72,18 @@ class Settings_funcs:
 			
 		def connectWifi():
 			print('Attempting to connect to "', self.GUI_Settings.bearing_wifiSSIDInput.text(), '" with key "', self.GUI_Settings.bearing_wifiPassInput.text(), '"')
-			out = subprocess.run(f'sudo iwconfig wlan0 essid {self.GUI_Settings.bearing_wifiSSIDInput.text()} key {self.GUI_Settings.bearing_wifiPassInput.text()}', capture_output=True, shell=True)
-			if out.returncode == 0:
+			command = 'echo ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev	\
+						update_config=1											\
+						country=US 												\
+						     													\
+						network={												\
+						    ssid="{}"											\
+						    psk="{}"											\
+						    scan_ssid=1											\
+						} > /etc/wpa_supplicant/wpa_supplicant.conf'
+			out = subprocess.run(command.format(self.GUI_Settings.bearing_wifiSSIDInput.text(), self.GUI_Settings.bearing_wifiPassInput.text()), capture_output=True, shell=True)
+			out2 = subprocess.run('sudo wpa_cli -i wlan0 reconfigure', capture_output=True, shell=True)
+			if out.returncode == 0 and out2.returncode == 0:
 				print('Connection success')
 				refresh()
 			else:
