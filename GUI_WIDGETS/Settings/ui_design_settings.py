@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'design_settingsHyUIeq.ui'
+## Form generated from reading UI file 'design_settingsuUofnN.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -447,7 +447,7 @@ class Ui_Settings_widget(object):
         self.bearing_refreshWifiButton.setStyleSheet(u"border:none;\n"
 "background:none;")
         icon = QIcon()
-        icon.addFile(u"../../../Recursos/png-defaults/fi-rr-refresh.png", QSize(), QIcon.Normal, QIcon.Off)
+        icon.addFile(u":/icons_red/Resources/Icons/png-red/fi-rr-refresh.png", QSize(), QIcon.Normal, QIcon.Off)
         self.bearing_refreshWifiButton.setIcon(icon)
         self.bearing_refreshWifiButton.setIconSize(QSize(24, 24))
         self.stackedWidget_settings.addWidget(self.page_wifi)
@@ -744,9 +744,7 @@ class Ui_Settings_widget(object):
         self.bearing_statusRefreshButton.setGeometry(QRect(350, 10, 40, 40))
         self.bearing_statusRefreshButton.setStyleSheet(u"border:none;\n"
 "background:none;")
-        icon1 = QIcon()
-        icon1.addFile(u"../../Recursos/png-defaults/fi-rr-refresh.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.bearing_statusRefreshButton.setIcon(icon1)
+        self.bearing_statusRefreshButton.setIcon(icon)
         self.bearing_statusRefreshButton.setIconSize(QSize(24, 24))
         self.p_status_scrollArea = QFrame(self.page_status)
         self.p_status_scrollArea.setObjectName(u"p_status_scrollArea")
@@ -1075,9 +1073,9 @@ class Ui_Settings_widget(object):
 "QPushButton:pressed{\n"
 "	background:red;\n"
 "}")
-        icon2 = QIcon()
-        icon2.addFile(u":/icons_white/Resources/Icons/png-white/fi-rr-arrow-small-right.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.bearing_gpioSetButton.setIcon(icon2)
+        icon1 = QIcon()
+        icon1.addFile(u":/icons_white/Resources/Icons/png-white/fi-rr-arrow-small-right.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.bearing_gpioSetButton.setIcon(icon1)
         self.bearing_gpioSetButton.setIconSize(QSize(18, 18))
         self.p_gpio_setPin_2 = QFrame(self.page_gpio)
         self.p_gpio_setPin_2.setObjectName(u"p_gpio_setPin_2")
@@ -1118,7 +1116,7 @@ class Ui_Settings_widget(object):
 "QPushButton:pressed{\n"
 "	background:red;\n"
 "}")
-        self.bearing_gpioGetButton.setIcon(icon2)
+        self.bearing_gpioGetButton.setIcon(icon1)
         self.bearing_gpioGetButton.setIconSize(QSize(18, 18))
         self.frame_8 = QFrame(self.page_gpio)
         self.frame_8.setObjectName(u"frame_8")
@@ -1417,7 +1415,7 @@ class Ui_Settings_widget(object):
         self.bearing_systemRefreshButton.setGeometry(QRect(350, 10, 40, 40))
         self.bearing_systemRefreshButton.setStyleSheet(u"border:none;\n"
 "background:none;")
-        self.bearing_systemRefreshButton.setIcon(icon1)
+        self.bearing_systemRefreshButton.setIcon(icon)
         self.bearing_systemRefreshButton.setIconSize(QSize(24, 24))
         self.stackedWidget_settings.addWidget(self.page_systemInfo)
         self.page_terminal = QWidget()
@@ -1709,7 +1707,7 @@ class Ui_Settings_widget(object):
 
         self.retranslateUi(Settings_widget)
 
-        self.stackedWidget_settings.setCurrentIndex(2)
+        self.stackedWidget_settings.setCurrentIndex(0)
 
 
         QMetaObject.connectSlotsByName(Settings_widget)

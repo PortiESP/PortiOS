@@ -485,7 +485,7 @@ QScrollBar:vertical {
      </rect>
     </property>
     <property name="currentIndex">
-     <number>2</number>
+     <number>0</number>
     </property>
     <widget class="QWidget" name="page_brightness">
      <widget class="QFrame" name="p_brightnes_title">
@@ -1094,8 +1094,8 @@ background:none;</string>
         <string/>
        </property>
        <property name="icon">
-        <iconset>
-         <normaloff>../../../Recursos/png-defaults/fi-rr-refresh.png</normaloff>../../../Recursos/png-defaults/fi-rr-refresh.png</iconset>
+        <iconset resource="../../resources.qrc">
+         <normaloff>:/icons_red/Resources/Icons/png-red/fi-rr-refresh.png</normaloff>:/icons_red/Resources/Icons/png-red/fi-rr-refresh.png</iconset>
        </property>
        <property name="iconSize">
         <size>
@@ -1735,8 +1735,8 @@ background:none;</string>
         <string/>
        </property>
        <property name="icon">
-        <iconset>
-         <normaloff>../../../Recursos/png-defaults/fi-rr-refresh.png</normaloff>../../../Recursos/png-defaults/fi-rr-refresh.png</iconset>
+        <iconset resource="../../resources.qrc">
+         <normaloff>:/icons_red/Resources/Icons/png-red/fi-rr-refresh.png</normaloff>:/icons_red/Resources/Icons/png-red/fi-rr-refresh.png</iconset>
        </property>
        <property name="iconSize">
         <size>
@@ -1950,8 +1950,8 @@ background:none;</string>
         <string/>
        </property>
        <property name="icon">
-        <iconset>
-         <normaloff>../../Recursos/png-defaults/fi-rr-refresh.png</normaloff>../../Recursos/png-defaults/fi-rr-refresh.png</iconset>
+        <iconset resource="../../resources.qrc">
+         <normaloff>:/icons_red/Resources/Icons/png-red/fi-rr-refresh.png</normaloff>:/icons_red/Resources/Icons/png-red/fi-rr-refresh.png</iconset>
        </property>
        <property name="iconSize">
         <size>
@@ -3938,8 +3938,8 @@ background:none;</string>
         <string/>
        </property>
        <property name="icon">
-        <iconset>
-         <normaloff>../../Recursos/png-defaults/fi-rr-refresh.png</normaloff>../../Recursos/png-defaults/fi-rr-refresh.png</iconset>
+        <iconset resource="../../resources.qrc">
+         <normaloff>:/icons_red/Resources/Icons/png-red/fi-rr-refresh.png</normaloff>:/icons_red/Resources/Icons/png-red/fi-rr-refresh.png</iconset>
        </property>
        <property name="iconSize">
         <size>
