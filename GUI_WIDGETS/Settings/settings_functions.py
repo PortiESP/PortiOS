@@ -51,7 +51,7 @@ class Settings_funcs:
 
 
 		def getSSID():
-			out = subprocess.run('iwgetid', capture_output=True, text=True, shell=True).stdout.split(':').strip()
+			out = subprocess.run('iwgetid', capture_output=True, text=True, shell=True).stdout.split(':')[1].strip()
 			print('SSID: ', out)
 			if out: return out
 			else: return False
