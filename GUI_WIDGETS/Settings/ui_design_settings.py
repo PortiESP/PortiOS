@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'design_settingscPHSBL.ui'
+## Form generated from reading UI file 'design_settingscIEWeQ.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -274,9 +274,54 @@ class Ui_Settings_widget(object):
         self.stackedWidget_settings.addWidget(self.page_brightness)
         self.page_wifi = QWidget()
         self.page_wifi.setObjectName(u"page_wifi")
-        self.p_wifi_power = QFrame(self.page_wifi)
+        self.scrollArea_wifi = QScrollArea(self.page_wifi)
+        self.scrollArea_wifi.setObjectName(u"scrollArea_wifi")
+        self.scrollArea_wifi.setGeometry(QRect(0, 60, 400, 240))
+        self.scrollArea_wifi.setStyleSheet(u"QScrollArea{\n"
+"	border:none;\n"
+"	background:transparent;\n"
+"\n"
+"}\n"
+"QScrollArea QWidget{\n"
+"	background-color:transparent;\n"
+"\n"
+"}\n"
+"\n"
+"\n"
+"/**/\n"
+"\n"
+"QScrollBar:vertical {\n"
+"       border:none;\n"
+"       background: rgb(20,20,20);\n"
+"		width:10px;\n"
+"   }\n"
+"   QScrollBar::handle:vertical {\n"
+"       background: rgb(255, 24, 24);\n"
+"		border-radius:5px;\n"
+"     \n"
+"   }\n"
+"  \n"
+"  QScrollBar::up-arrow:vertical, QScrollBar::down-arrow:vertical, QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical,QScrollBar::add-line:vertical,QScrollBar::sub-line:vertical  {\n"
+"       background: none;\n"
+"\n"
+"   }\n"
+"\n"
+"")
+        self.scrollArea_wifi.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.scrollArea_wifi.setWidgetResizable(True)
+        self.scrollArea_wifi.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignTop)
+        self.scrollAreaWidgetContents_8 = QWidget()
+        self.scrollAreaWidgetContents_8.setObjectName(u"scrollAreaWidgetContents_8")
+        self.scrollAreaWidgetContents_8.setGeometry(QRect(0, -40, 390, 280))
+        sizePolicy = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Preferred)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.scrollAreaWidgetContents_8.sizePolicy().hasHeightForWidth())
+        self.scrollAreaWidgetContents_8.setSizePolicy(sizePolicy)
+        self.scrollAreaWidgetContents_8.setMinimumSize(QSize(0, 280))
+        self.p_wifi_power = QFrame(self.scrollAreaWidgetContents_8)
         self.p_wifi_power.setObjectName(u"p_wifi_power")
-        self.p_wifi_power.setGeometry(QRect(0, 60, 370, 40))
+        self.p_wifi_power.setGeometry(QRect(0, 0, 370, 40))
         self.label_2 = QLabel(self.p_wifi_power)
         self.label_2.setObjectName(u"label_2")
         self.label_2.setGeometry(QRect(10, 5, 240, 30))
@@ -338,9 +383,29 @@ class Ui_Settings_widget(object):
 "	\n"
 "}")
         self.bearing_wifiPowerCheckbox.setChecked(False)
-        self.p_wifi_ip = QFrame(self.page_wifi)
+        self.p_wifi_separator_2 = QFrame(self.scrollAreaWidgetContents_8)
+        self.p_wifi_separator_2.setObjectName(u"p_wifi_separator_2")
+        self.p_wifi_separator_2.setGeometry(QRect(0, 140, 370, 20))
+        self.line_5 = QFrame(self.p_wifi_separator_2)
+        self.line_5.setObjectName(u"line_5")
+        self.line_5.setGeometry(QRect(10, 10, 360, 1))
+        self.line_5.setStyleSheet(u"border:none;\n"
+"background:gray;")
+        self.line_5.setFrameShadow(QFrame.Plain)
+        self.line_5.setFrameShape(QFrame.HLine)
+        self.p_wifi_separator = QFrame(self.scrollAreaWidgetContents_8)
+        self.p_wifi_separator.setObjectName(u"p_wifi_separator")
+        self.p_wifi_separator.setGeometry(QRect(0, 40, 370, 20))
+        self.line = QFrame(self.p_wifi_separator)
+        self.line.setObjectName(u"line")
+        self.line.setGeometry(QRect(10, 10, 360, 1))
+        self.line.setStyleSheet(u"border:none;\n"
+"background:gray;")
+        self.line.setFrameShadow(QFrame.Plain)
+        self.line.setFrameShape(QFrame.HLine)
+        self.p_wifi_ip = QFrame(self.scrollAreaWidgetContents_8)
         self.p_wifi_ip.setObjectName(u"p_wifi_ip")
-        self.p_wifi_ip.setGeometry(QRect(0, 160, 370, 40))
+        self.p_wifi_ip.setGeometry(QRect(0, 100, 370, 40))
         self.label_14 = QLabel(self.p_wifi_ip)
         self.label_14.setObjectName(u"label_14")
         self.label_14.setGeometry(QRect(10, 0, 190, 40))
@@ -356,9 +421,9 @@ class Ui_Settings_widget(object):
 "	color:gray;\n"
 "}")
         self.bearing_wifiIpText.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
-        self.p_wifi_ssid = QFrame(self.page_wifi)
+        self.p_wifi_ssid = QFrame(self.scrollAreaWidgetContents_8)
         self.p_wifi_ssid.setObjectName(u"p_wifi_ssid")
-        self.p_wifi_ssid.setGeometry(QRect(0, 120, 370, 40))
+        self.p_wifi_ssid.setGeometry(QRect(0, 60, 370, 40))
         self.label_9 = QLabel(self.p_wifi_ssid)
         self.label_9.setObjectName(u"label_9")
         self.label_9.setGeometry(QRect(10, 0, 190, 40))
@@ -374,57 +439,110 @@ class Ui_Settings_widget(object):
 "	color:gray;\n"
 "}")
         self.bearing_wifiSsidText.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
-        self.p_wifi_scan = QFrame(self.page_wifi)
-        self.p_wifi_scan.setObjectName(u"p_wifi_scan")
-        self.p_wifi_scan.setGeometry(QRect(0, 220, 370, 50))
-        self.label_7 = QLabel(self.p_wifi_scan)
+        self.p_wifi_connectTitle = QFrame(self.scrollAreaWidgetContents_8)
+        self.p_wifi_connectTitle.setObjectName(u"p_wifi_connectTitle")
+        self.p_wifi_connectTitle.setGeometry(QRect(0, 160, 370, 40))
+        self.label_7 = QLabel(self.p_wifi_connectTitle)
         self.label_7.setObjectName(u"label_7")
-        self.label_7.setGeometry(QRect(10, 0, 200, 50))
-        self.label_7.setMaximumSize(QSize(250, 16777215))
+        self.label_7.setGeometry(QRect(10, 5, 270, 30))
+        self.label_7.setMaximumSize(QSize(9999999, 16777215))
         self.label_7.setFont(font1)
-        self.label_7.setStyleSheet(u"color:white;")
-        self.bearing_wifiScanButton = QPushButton(self.p_wifi_scan)
-        self.bearing_wifiScanButton.setObjectName(u"bearing_wifiScanButton")
-        self.bearing_wifiScanButton.setGeometry(QRect(270, 10, 100, 30))
-        font3 = QFont()
-        font3.setFamily(u"Bahnschrift SemiLight")
-        font3.setPointSize(11)
-        font3.setBold(False)
-        font3.setWeight(50)
-        self.bearing_wifiScanButton.setFont(font3)
-        self.bearing_wifiScanButton.setStyleSheet(u"QPushButton{\n"
+        self.label_7.setStyleSheet(u"color:red;")
+        self.p_wifi_ssid_input = QFrame(self.scrollAreaWidgetContents_8)
+        self.p_wifi_ssid_input.setObjectName(u"p_wifi_ssid_input")
+        self.p_wifi_ssid_input.setGeometry(QRect(0, 200, 370, 40))
+        self.bearing_wifiSSIDInput = QLineEdit(self.p_wifi_ssid_input)
+        self.bearing_wifiSSIDInput.setObjectName(u"bearing_wifiSSIDInput")
+        self.bearing_wifiSSIDInput.setGeometry(QRect(220, 5, 110, 30))
+        self.bearing_wifiSSIDInput.setFont(font1)
+        self.bearing_wifiSSIDInput.setStyleSheet(u"QLineEdit{\n"
+"	border:none;\n"
+"	color:white;\n"
+"	background:rgba(57, 57, 57, 150);\n"
+"	border-radius:5px;\n"
+"}\n"
+"\n"
+"QLineEdit:focus{\n"
 "	\n"
-"	background-color: rgb(49, 49, 49);\n"
-"	border: 2px solid rgb(181, 0, 0);\n"
+"	\n"
+"	border:1px solid rgb(97, 97, 97);\n"
+"}")
+        self.bearing_wifiSSIDInput.setAlignment(Qt.AlignCenter)
+        self.label_11 = QLabel(self.p_wifi_ssid_input)
+        self.label_11.setObjectName(u"label_11")
+        self.label_11.setGeometry(QRect(10, 5, 200, 30))
+        self.label_11.setMaximumSize(QSize(250, 16777215))
+        self.label_11.setFont(font1)
+        self.label_11.setStyleSheet(u"color:white;")
+        self.bearing_wifiSSIDButton = QPushButton(self.p_wifi_ssid_input)
+        self.bearing_wifiSSIDButton.setObjectName(u"bearing_wifiSSIDButton")
+        self.bearing_wifiSSIDButton.setGeometry(QRect(340, 5, 30, 30))
+        self.bearing_wifiSSIDButton.setStyleSheet(u"QPushButton{\n"
+"\n"
+"	background:transparent;\n"
+"	border:2px solid red;\n"
 "	border-radius:15px;\n"
-"	color:gray;\n"
 "}\n"
 "QPushButton:pressed{\n"
-"	\n"
-"	\n"
-"	background-color: rgb(188, 0, 0);\n"
-"	color:white;\n"
+"	background:red;\n"
+"}\n"
+"QPushButton:disabled{\n"
+"	border:2px solid gray;\n"
 "}")
-        self.p_wifi_separator = QFrame(self.page_wifi)
-        self.p_wifi_separator.setObjectName(u"p_wifi_separator")
-        self.p_wifi_separator.setGeometry(QRect(0, 100, 370, 20))
-        self.line = QFrame(self.p_wifi_separator)
-        self.line.setObjectName(u"line")
-        self.line.setGeometry(QRect(10, 10, 360, 1))
-        self.line.setStyleSheet(u"border:none;\n"
-"background:gray;")
-        self.line.setFrameShadow(QFrame.Plain)
-        self.line.setFrameShape(QFrame.HLine)
-        self.p_wifi_separator_2 = QFrame(self.page_wifi)
-        self.p_wifi_separator_2.setObjectName(u"p_wifi_separator_2")
-        self.p_wifi_separator_2.setGeometry(QRect(0, 200, 370, 20))
-        self.line_5 = QFrame(self.p_wifi_separator_2)
-        self.line_5.setObjectName(u"line_5")
-        self.line_5.setGeometry(QRect(10, 10, 360, 1))
-        self.line_5.setStyleSheet(u"border:none;\n"
-"background:gray;")
-        self.line_5.setFrameShadow(QFrame.Plain)
-        self.line_5.setFrameShape(QFrame.HLine)
+        icon = QIcon()
+        icon.addFile(u":/icons_white/Resources/Icons/png-white/fi-rr-arrow-small-right.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.bearing_wifiSSIDButton.setIcon(icon)
+        self.bearing_wifiSSIDButton.setIconSize(QSize(18, 18))
+        self.p_wfi_pass_input = QFrame(self.scrollAreaWidgetContents_8)
+        self.p_wfi_pass_input.setObjectName(u"p_wfi_pass_input")
+        self.p_wfi_pass_input.setGeometry(QRect(0, 240, 370, 40))
+        self.bearing_wifiPassInput = QLineEdit(self.p_wfi_pass_input)
+        self.bearing_wifiPassInput.setObjectName(u"bearing_wifiPassInput")
+        self.bearing_wifiPassInput.setEnabled(False)
+        self.bearing_wifiPassInput.setGeometry(QRect(220, 5, 110, 30))
+        self.bearing_wifiPassInput.setFont(font1)
+        self.bearing_wifiPassInput.setStyleSheet(u"QLineEdit{\n"
+"	border:none;\n"
+"	color:white;\n"
+"	background:rgba(57, 57, 57, 150);\n"
+"	border-radius:5px;\n"
+"}\n"
+"\n"
+"QLineEdit:focus{\n"
+"	\n"
+"	\n"
+"	border:1px solid rgb(97, 97, 97);\n"
+"}\n"
+"QLineEdit:disabled{\n"
+"	background:rgba(57, 57, 57, 250);\n"
+"}")
+        self.bearing_wifiPassInput.setAlignment(Qt.AlignCenter)
+        self.label_17 = QLabel(self.p_wfi_pass_input)
+        self.label_17.setObjectName(u"label_17")
+        self.label_17.setGeometry(QRect(10, 5, 200, 30))
+        self.label_17.setMaximumSize(QSize(250, 16777215))
+        self.label_17.setFont(font1)
+        self.label_17.setStyleSheet(u"color:white;\n"
+"")
+        self.bearing_wifiPassButton = QPushButton(self.p_wfi_pass_input)
+        self.bearing_wifiPassButton.setObjectName(u"bearing_wifiPassButton")
+        self.bearing_wifiPassButton.setEnabled(False)
+        self.bearing_wifiPassButton.setGeometry(QRect(340, 5, 30, 30))
+        self.bearing_wifiPassButton.setStyleSheet(u"QPushButton{\n"
+"\n"
+"	background:transparent;\n"
+"	border:2px solid red;\n"
+"	border-radius:15px;\n"
+"}\n"
+"QPushButton:pressed{\n"
+"	background:red;\n"
+"}\n"
+"QPushButton:disabled{\n"
+"	border:2px solid gray;\n"
+"}")
+        self.bearing_wifiPassButton.setIcon(icon)
+        self.bearing_wifiPassButton.setIconSize(QSize(18, 18))
+        self.scrollArea_wifi.setWidget(self.scrollAreaWidgetContents_8)
         self.p_wifi_title = QFrame(self.page_wifi)
         self.p_wifi_title.setObjectName(u"p_wifi_title")
         self.p_wifi_title.setGeometry(QRect(0, 0, 400, 60))
@@ -446,9 +564,9 @@ class Ui_Settings_widget(object):
         self.bearing_refreshWifiButton.setGeometry(QRect(350, 10, 40, 40))
         self.bearing_refreshWifiButton.setStyleSheet(u"border:none;\n"
 "background:none;")
-        icon = QIcon()
-        icon.addFile(u":/icons_red/Resources/Icons/png-red/fi-rr-refresh.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.bearing_refreshWifiButton.setIcon(icon)
+        icon1 = QIcon()
+        icon1.addFile(u":/icons_red/Resources/Icons/png-red/fi-rr-refresh.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.bearing_refreshWifiButton.setIcon(icon1)
         self.bearing_refreshWifiButton.setIconSize(QSize(24, 24))
         self.stackedWidget_settings.addWidget(self.page_wifi)
         self.page_bluetooth = QWidget()
@@ -638,6 +756,11 @@ class Ui_Settings_widget(object):
         self.bearing_btManagerButton = QPushButton(self.p_bt_btManager)
         self.bearing_btManagerButton.setObjectName(u"bearing_btManagerButton")
         self.bearing_btManagerButton.setGeometry(QRect(270, 10, 100, 30))
+        font3 = QFont()
+        font3.setFamily(u"Bahnschrift SemiLight")
+        font3.setPointSize(11)
+        font3.setBold(False)
+        font3.setWeight(50)
         self.bearing_btManagerButton.setFont(font3)
         self.bearing_btManagerButton.setStyleSheet(u"QPushButton{\n"
 "	\n"
@@ -673,7 +796,7 @@ class Ui_Settings_widget(object):
         self.bearing_refreshBtButton.setGeometry(QRect(350, 10, 40, 40))
         self.bearing_refreshBtButton.setStyleSheet(u"border:none;\n"
 "background:none;")
-        self.bearing_refreshBtButton.setIcon(icon)
+        self.bearing_refreshBtButton.setIcon(icon1)
         self.bearing_refreshBtButton.setIconSize(QSize(24, 24))
         self.stackedWidget_settings.addWidget(self.page_bluetooth)
         self.page_sound = QWidget()
@@ -744,7 +867,7 @@ class Ui_Settings_widget(object):
         self.bearing_statusRefreshButton.setGeometry(QRect(350, 10, 40, 40))
         self.bearing_statusRefreshButton.setStyleSheet(u"border:none;\n"
 "background:none;")
-        self.bearing_statusRefreshButton.setIcon(icon)
+        self.bearing_statusRefreshButton.setIcon(icon1)
         self.bearing_statusRefreshButton.setIconSize(QSize(24, 24))
         self.p_status_scrollArea = QFrame(self.page_status)
         self.p_status_scrollArea.setObjectName(u"p_status_scrollArea")
@@ -789,9 +912,6 @@ class Ui_Settings_widget(object):
         self.scrollAreaWidgetContents_5 = QWidget()
         self.scrollAreaWidgetContents_5.setObjectName(u"scrollAreaWidgetContents_5")
         self.scrollAreaWidgetContents_5.setGeometry(QRect(0, 0, 390, 440))
-        sizePolicy = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Preferred)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.scrollAreaWidgetContents_5.sizePolicy().hasHeightForWidth())
         self.scrollAreaWidgetContents_5.setSizePolicy(sizePolicy)
         self.scrollAreaWidgetContents_5.setMinimumSize(QSize(0, 440))
@@ -1073,9 +1193,7 @@ class Ui_Settings_widget(object):
 "QPushButton:pressed{\n"
 "	background:red;\n"
 "}")
-        icon1 = QIcon()
-        icon1.addFile(u":/icons_white/Resources/Icons/png-white/fi-rr-arrow-small-right.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.bearing_gpioSetButton.setIcon(icon1)
+        self.bearing_gpioSetButton.setIcon(icon)
         self.bearing_gpioSetButton.setIconSize(QSize(18, 18))
         self.p_gpio_setPin_2 = QFrame(self.page_gpio)
         self.p_gpio_setPin_2.setObjectName(u"p_gpio_setPin_2")
@@ -1116,7 +1234,7 @@ class Ui_Settings_widget(object):
 "QPushButton:pressed{\n"
 "	background:red;\n"
 "}")
-        self.bearing_gpioGetButton.setIcon(icon1)
+        self.bearing_gpioGetButton.setIcon(icon)
         self.bearing_gpioGetButton.setIconSize(QSize(18, 18))
         self.frame_8 = QFrame(self.page_gpio)
         self.frame_8.setObjectName(u"frame_8")
@@ -1415,7 +1533,7 @@ class Ui_Settings_widget(object):
         self.bearing_systemRefreshButton.setGeometry(QRect(350, 10, 40, 40))
         self.bearing_systemRefreshButton.setStyleSheet(u"border:none;\n"
 "background:none;")
-        self.bearing_systemRefreshButton.setIcon(icon)
+        self.bearing_systemRefreshButton.setIcon(icon1)
         self.bearing_systemRefreshButton.setIconSize(QSize(24, 24))
         self.stackedWidget_settings.addWidget(self.page_systemInfo)
         self.page_terminal = QWidget()
@@ -1734,8 +1852,13 @@ class Ui_Settings_widget(object):
         self.bearing_wifiIpText.setText(QCoreApplication.translate("Settings_widget", u"None", None))
         self.label_9.setText(QCoreApplication.translate("Settings_widget", u"SSID:", None))
         self.bearing_wifiSsidText.setText(QCoreApplication.translate("Settings_widget", u"None", None))
-        self.label_7.setText(QCoreApplication.translate("Settings_widget", u"Scan network", None))
-        self.bearing_wifiScanButton.setText(QCoreApplication.translate("Settings_widget", u"Scan", None))
+        self.label_7.setText(QCoreApplication.translate("Settings_widget", u"Connect", None))
+        self.bearing_wifiSSIDInput.setPlaceholderText(QCoreApplication.translate("Settings_widget", u"Network", None))
+        self.label_11.setText(QCoreApplication.translate("Settings_widget", u"Name", None))
+        self.bearing_wifiSSIDButton.setText("")
+        self.bearing_wifiPassInput.setPlaceholderText(QCoreApplication.translate("Settings_widget", u"Password", None))
+        self.label_17.setText(QCoreApplication.translate("Settings_widget", u"Password", None))
+        self.bearing_wifiPassButton.setText("")
         self.label_25.setText(QCoreApplication.translate("Settings_widget", u"WIFI", None))
         self.bearing_refreshWifiButton.setText("")
         self.label_3.setText(QCoreApplication.translate("Settings_widget", u"Power", None))

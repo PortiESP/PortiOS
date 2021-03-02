@@ -70,11 +70,17 @@ class Settings_funcs:
 				return out
 			else: return None
 			
-			
+		def connectWifi():
+			if subprocess.run(f'iwconfig wlan0 essid {self.GUI_Settings.bearing_wifiSSIDInput.text} key {self.GUI_Settings.bearing_wifiPassInput.text}', capture_output=True, shell=True).returncode == 0:
+				refresh()
+			else:
+				self.GUI_Settings.bearing_wifiSsidText.setText('Error')
+				self.GUI_Settings.bearing_wifiIpText.setText('Error')
 
 		
 		# BEARING SETUP
 		refresh()
 		self.GUI_Settings.bearing_wifiPowerCheckbox.toggled.connect(togglePower)
 		self.GUI_Settings.bearing_refreshWifiButton.clicked.connect(refresh)
+		self.GUI_Settings.bearing_wifiPassButton.clicked.connect(connectWifi)
 		
