@@ -48,6 +48,8 @@ class Settings_funcs:
 				refresh()
 			if setStatus == 'up':
 				threading.Thread(target=waitNetwork).start()
+			else: 
+				refresh()
 
 
 		def getSSID():
