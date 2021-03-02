@@ -71,7 +71,7 @@ class Settings_funcs:
 			else: return None
 			
 		def connectWifi():
-			print('Attempting to connect to "', len(self.GUI_Settings.bearing_wifiSSIDInput.text()), '" with key "', self.GUI_Settings.bearing_wifiPassInput.text(), '"')
+			print('Attempting to connect to "', self.GUI_Settings.bearing_wifiSSIDInput.text(), '" with key "', self.GUI_Settings.bearing_wifiPassInput.text(), '"')
 			if subprocess.run(f'iwconfig wlan0 essid {self.GUI_Settings.bearing_wifiSSIDInput.text()} key {self.GUI_Settings.bearing_wifiPassInput.text()}', capture_output=True, shell=True).returncode == 0:
 				refresh()
 			else:
