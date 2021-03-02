@@ -1,5 +1,4 @@
-
-from ui_design_settings import Ui_Settings_widget
+from .ui_design_settings import Ui_Settings_widget
 
 
 
