@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'design_settingsGvsEIm.ui'
+## Form generated from reading UI file 'design_settingsHyUIeq.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -67,7 +67,7 @@ class Ui_Settings_widget(object):
         self.scrollArea.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignTop)
         self.scrollAreaWidgetContents = QWidget()
         self.scrollAreaWidgetContents.setObjectName(u"scrollAreaWidgetContents")
-        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 180, 400))
+        self.scrollAreaWidgetContents.setGeometry(QRect(0, -100, 180, 400))
         self.verticalLayout = QVBoxLayout(self.scrollAreaWidgetContents)
         self.verticalLayout.setSpacing(0)
         self.verticalLayout.setObjectName(u"verticalLayout")
@@ -274,21 +274,6 @@ class Ui_Settings_widget(object):
         self.stackedWidget_settings.addWidget(self.page_brightness)
         self.page_wifi = QWidget()
         self.page_wifi.setObjectName(u"page_wifi")
-        self.p_wifi_title = QFrame(self.page_wifi)
-        self.p_wifi_title.setObjectName(u"p_wifi_title")
-        self.p_wifi_title.setGeometry(QRect(0, 0, 400, 60))
-        self.label_11 = QLabel(self.p_wifi_title)
-        self.label_11.setObjectName(u"label_11")
-        self.label_11.setGeometry(QRect(10, 10, 380, 30))
-        self.label_11.setFont(font)
-        self.label_11.setStyleSheet(u"color:white;")
-        self.line_2 = QFrame(self.p_wifi_title)
-        self.line_2.setObjectName(u"line_2")
-        self.line_2.setGeometry(QRect(10, 50, 380, 2))
-        self.line_2.setStyleSheet(u"background:red;\n"
-"border:none;")
-        self.line_2.setFrameShadow(QFrame.Plain)
-        self.line_2.setFrameShape(QFrame.HLine)
         self.p_wifi_power = QFrame(self.page_wifi)
         self.p_wifi_power.setObjectName(u"p_wifi_power")
         self.p_wifi_power.setGeometry(QRect(0, 60, 370, 40))
@@ -352,6 +337,7 @@ class Ui_Settings_widget(object):
 "\n"
 "	\n"
 "}")
+        self.bearing_wifiPowerCheckbox.setChecked(False)
         self.p_wifi_ip = QFrame(self.page_wifi)
         self.p_wifi_ip.setObjectName(u"p_wifi_ip")
         self.p_wifi_ip.setGeometry(QRect(0, 160, 370, 40))
@@ -439,25 +425,34 @@ class Ui_Settings_widget(object):
 "background:gray;")
         self.line_5.setFrameShadow(QFrame.Plain)
         self.line_5.setFrameShape(QFrame.HLine)
+        self.p_wifi_title = QFrame(self.page_wifi)
+        self.p_wifi_title.setObjectName(u"p_wifi_title")
+        self.p_wifi_title.setGeometry(QRect(0, 0, 400, 60))
+        self.label_25 = QLabel(self.p_wifi_title)
+        self.label_25.setObjectName(u"label_25")
+        self.label_25.setGeometry(QRect(10, 10, 330, 40))
+        self.label_25.setFont(font)
+        self.label_25.setStyleSheet(u"color:white;")
+        self.label_25.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignTop)
+        self.line_14 = QFrame(self.p_wifi_title)
+        self.line_14.setObjectName(u"line_14")
+        self.line_14.setGeometry(QRect(10, 50, 380, 2))
+        self.line_14.setStyleSheet(u"background:red;\n"
+"border:none;")
+        self.line_14.setFrameShadow(QFrame.Plain)
+        self.line_14.setFrameShape(QFrame.HLine)
+        self.bearing_refreshWifiButton = QPushButton(self.p_wifi_title)
+        self.bearing_refreshWifiButton.setObjectName(u"bearing_refreshWifiButton")
+        self.bearing_refreshWifiButton.setGeometry(QRect(350, 10, 40, 40))
+        self.bearing_refreshWifiButton.setStyleSheet(u"border:none;\n"
+"background:none;")
+        icon = QIcon()
+        icon.addFile(u"../../../Recursos/png-defaults/fi-rr-refresh.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.bearing_refreshWifiButton.setIcon(icon)
+        self.bearing_refreshWifiButton.setIconSize(QSize(24, 24))
         self.stackedWidget_settings.addWidget(self.page_wifi)
         self.page_bluetooth = QWidget()
         self.page_bluetooth.setObjectName(u"page_bluetooth")
-        self.p_bt_title = QFrame(self.page_bluetooth)
-        self.p_bt_title.setObjectName(u"p_bt_title")
-        self.p_bt_title.setGeometry(QRect(0, 0, 400, 60))
-        self.label_17 = QLabel(self.p_bt_title)
-        self.label_17.setObjectName(u"label_17")
-        self.label_17.setGeometry(QRect(10, 10, 380, 40))
-        self.label_17.setFont(font)
-        self.label_17.setStyleSheet(u"color:white;")
-        self.label_17.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignTop)
-        self.line_7 = QFrame(self.p_bt_title)
-        self.line_7.setObjectName(u"line_7")
-        self.line_7.setGeometry(QRect(10, 50, 380, 2))
-        self.line_7.setStyleSheet(u"background:red;\n"
-"border:none;")
-        self.line_7.setFrameShadow(QFrame.Plain)
-        self.line_7.setFrameShape(QFrame.HLine)
         self.p_bt_power = QFrame(self.page_bluetooth)
         self.p_bt_power.setObjectName(u"p_bt_power")
         self.p_bt_power.setGeometry(QRect(0, 60, 370, 40))
@@ -657,6 +652,29 @@ class Ui_Settings_widget(object):
 "	background-color: rgb(188, 0, 0);\n"
 "	color:white;\n"
 "}")
+        self.p_bt_title = QFrame(self.page_bluetooth)
+        self.p_bt_title.setObjectName(u"p_bt_title")
+        self.p_bt_title.setGeometry(QRect(0, 0, 400, 60))
+        self.label_26 = QLabel(self.p_bt_title)
+        self.label_26.setObjectName(u"label_26")
+        self.label_26.setGeometry(QRect(10, 10, 330, 40))
+        self.label_26.setFont(font)
+        self.label_26.setStyleSheet(u"color:white;")
+        self.label_26.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignTop)
+        self.line_15 = QFrame(self.p_bt_title)
+        self.line_15.setObjectName(u"line_15")
+        self.line_15.setGeometry(QRect(10, 50, 380, 2))
+        self.line_15.setStyleSheet(u"background:red;\n"
+"border:none;")
+        self.line_15.setFrameShadow(QFrame.Plain)
+        self.line_15.setFrameShape(QFrame.HLine)
+        self.bearing_refreshBtButton = QPushButton(self.p_bt_title)
+        self.bearing_refreshBtButton.setObjectName(u"bearing_refreshBtButton")
+        self.bearing_refreshBtButton.setGeometry(QRect(350, 10, 40, 40))
+        self.bearing_refreshBtButton.setStyleSheet(u"border:none;\n"
+"background:none;")
+        self.bearing_refreshBtButton.setIcon(icon)
+        self.bearing_refreshBtButton.setIconSize(QSize(24, 24))
         self.stackedWidget_settings.addWidget(self.page_bluetooth)
         self.page_sound = QWidget()
         self.page_sound.setObjectName(u"page_sound")
@@ -726,9 +744,9 @@ class Ui_Settings_widget(object):
         self.bearing_statusRefreshButton.setGeometry(QRect(350, 10, 40, 40))
         self.bearing_statusRefreshButton.setStyleSheet(u"border:none;\n"
 "background:none;")
-        icon = QIcon()
-        icon.addFile(u"../../Recursos/png-defaults/fi-rr-refresh.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.bearing_statusRefreshButton.setIcon(icon)
+        icon1 = QIcon()
+        icon1.addFile(u"../../Recursos/png-defaults/fi-rr-refresh.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.bearing_statusRefreshButton.setIcon(icon1)
         self.bearing_statusRefreshButton.setIconSize(QSize(24, 24))
         self.p_status_scrollArea = QFrame(self.page_status)
         self.p_status_scrollArea.setObjectName(u"p_status_scrollArea")
@@ -772,7 +790,7 @@ class Ui_Settings_widget(object):
         self.scrollArea_2.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignTop)
         self.scrollAreaWidgetContents_5 = QWidget()
         self.scrollAreaWidgetContents_5.setObjectName(u"scrollAreaWidgetContents_5")
-        self.scrollAreaWidgetContents_5.setGeometry(QRect(0, 0, 398, 440))
+        self.scrollAreaWidgetContents_5.setGeometry(QRect(0, 0, 390, 440))
         sizePolicy = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Preferred)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -1057,9 +1075,9 @@ class Ui_Settings_widget(object):
 "QPushButton:pressed{\n"
 "	background:red;\n"
 "}")
-        icon1 = QIcon()
-        icon1.addFile(u":/icons_white/Resources/Icons/png-white/fi-rr-arrow-small-right.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.bearing_gpioSetButton.setIcon(icon1)
+        icon2 = QIcon()
+        icon2.addFile(u":/icons_white/Resources/Icons/png-white/fi-rr-arrow-small-right.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.bearing_gpioSetButton.setIcon(icon2)
         self.bearing_gpioSetButton.setIconSize(QSize(18, 18))
         self.p_gpio_setPin_2 = QFrame(self.page_gpio)
         self.p_gpio_setPin_2.setObjectName(u"p_gpio_setPin_2")
@@ -1100,7 +1118,7 @@ class Ui_Settings_widget(object):
 "QPushButton:pressed{\n"
 "	background:red;\n"
 "}")
-        self.bearing_gpioGetButton.setIcon(icon1)
+        self.bearing_gpioGetButton.setIcon(icon2)
         self.bearing_gpioGetButton.setIconSize(QSize(18, 18))
         self.frame_8 = QFrame(self.page_gpio)
         self.frame_8.setObjectName(u"frame_8")
@@ -1204,7 +1222,7 @@ class Ui_Settings_widget(object):
         self.scrollArea_4.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignTop)
         self.scrollAreaWidgetContents_7 = QWidget()
         self.scrollAreaWidgetContents_7.setObjectName(u"scrollAreaWidgetContents_7")
-        self.scrollAreaWidgetContents_7.setGeometry(QRect(0, 0, 398, 440))
+        self.scrollAreaWidgetContents_7.setGeometry(QRect(0, 0, 390, 440))
         self.scrollAreaWidgetContents_7.setMinimumSize(QSize(0, 440))
         self.frame_10 = QFrame(self.scrollAreaWidgetContents_7)
         self.frame_10.setObjectName(u"frame_10")
@@ -1399,7 +1417,7 @@ class Ui_Settings_widget(object):
         self.bearing_systemRefreshButton.setGeometry(QRect(350, 10, 40, 40))
         self.bearing_systemRefreshButton.setStyleSheet(u"border:none;\n"
 "background:none;")
-        self.bearing_systemRefreshButton.setIcon(icon)
+        self.bearing_systemRefreshButton.setIcon(icon1)
         self.bearing_systemRefreshButton.setIconSize(QSize(24, 24))
         self.stackedWidget_settings.addWidget(self.page_systemInfo)
         self.page_terminal = QWidget()
@@ -1691,6 +1709,9 @@ class Ui_Settings_widget(object):
 
         self.retranslateUi(Settings_widget)
 
+        self.stackedWidget_settings.setCurrentIndex(2)
+
+
         QMetaObject.connectSlotsByName(Settings_widget)
     # setupUi
 
@@ -1707,7 +1728,6 @@ class Ui_Settings_widget(object):
         self.bearing_settingsAdvanced.setText(QCoreApplication.translate("Settings_widget", u"ADVANCED", None))
         self.label_13.setText(QCoreApplication.translate("Settings_widget", u"Brightness", None))
         self.label_37.setText(QCoreApplication.translate("Settings_widget", u"Level", None))
-        self.label_11.setText(QCoreApplication.translate("Settings_widget", u"WIFI", None))
         self.label_2.setText(QCoreApplication.translate("Settings_widget", u"Power", None))
         self.label_5.setText(QCoreApplication.translate("Settings_widget", u"O", None))
         self.label_6.setText(QCoreApplication.translate("Settings_widget", u"I", None))
@@ -1718,7 +1738,8 @@ class Ui_Settings_widget(object):
         self.bearing_wifiSsidText.setText(QCoreApplication.translate("Settings_widget", u"Iphone de Porti", None))
         self.label_7.setText(QCoreApplication.translate("Settings_widget", u"Scan network", None))
         self.bearing_wifiScanButton.setText(QCoreApplication.translate("Settings_widget", u"Scan", None))
-        self.label_17.setText(QCoreApplication.translate("Settings_widget", u"Bluetooth", None))
+        self.label_25.setText(QCoreApplication.translate("Settings_widget", u"WIFI", None))
+        self.bearing_refreshWifiButton.setText("")
         self.label_3.setText(QCoreApplication.translate("Settings_widget", u"Power", None))
         self.label_8.setText(QCoreApplication.translate("Settings_widget", u"O", None))
         self.label_18.setText(QCoreApplication.translate("Settings_widget", u"I", None))
@@ -1733,6 +1754,8 @@ class Ui_Settings_widget(object):
         self.bearing_btConnectedText.setText(QCoreApplication.translate("Settings_widget", u"None", None))
         self.label_31.setText(QCoreApplication.translate("Settings_widget", u"Bluetooth manager", None))
         self.bearing_btManagerButton.setText(QCoreApplication.translate("Settings_widget", u"BTManager", None))
+        self.label_26.setText(QCoreApplication.translate("Settings_widget", u"Bluetooth", None))
+        self.bearing_refreshBtButton.setText("")
         self.label_32.setText(QCoreApplication.translate("Settings_widget", u"Sound", None))
         self.label_33.setText(QCoreApplication.translate("Settings_widget", u"Change claxon sounds", None))
         self.bearing_soundClaxonsButton.setText(QCoreApplication.translate("Settings_widget", u"Change", None))

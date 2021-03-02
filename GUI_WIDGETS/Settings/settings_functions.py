@@ -1,5 +1,5 @@
 from .ui_design_settings import Ui_Settings_widget
-import subprocess
+import subprocess, threading, re
 
 
 class Settings_funcs:
@@ -31,19 +31,39 @@ class Settings_funcs:
 	def wifiSetup(self):
 
 		# FUNCTIONS
+		def refresh():
+			self.GUI_Settings.bearing_wifiSsidText.text(getSSID()) # SSID
+			self.GUI_Settings.bearing_wifiIpText.text(getIP())     # IP
+			
+
 		def togglePower():
 			if self.GUI_Settings.bearing_wifiPowerCheckbox.isChecked(): setStatus = 'down'
 			else: setStatus = 'up'
 			x = subprocess.run([f'sudo ifconfig wlan0 {setStatus}'], shell=True)
 			print('Wifi power ', setStatus, ' - ', x.args)
 
+			def waitNetwork():
+				while not getSSID():
+					time.sleep(0.5)
+				refresh()
+
+			threading.Thread(target=waitNetwork).start()
+
+
 		def getSSID():
-			out = subprocess.run('iwgetid', text=True, shell=True).stdout
-			print('SSID: ',out)
-			if out:
-				return out.split(':').strip()
-			else:
-				return False
-		# SETUP
+			out = subprocess.run('iwgetid', text=True, shell=True).stdout.split(':').strip()
+			print('SSID: ', out)
+			if out: return out
+			else: return False
+
+		def getIP():
+			out = subprocess.run('ifconfig wlan0', text=True, shell=True).stdout.split('\n')[1].split(' ')[1]
+			print('IP: ', out)
+			if out: return out
+			else: return False
+
+		
+		# BEARING SETUP
 		self.GUI_Settings.bearing_wifiPowerCheckbox.toggled.connect(togglePower)
+		self.GUI_Settings.bearing_refreshWifiButton.clicked.connect(refresh)
 		
