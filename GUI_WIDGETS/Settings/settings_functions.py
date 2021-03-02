@@ -72,12 +72,14 @@ class Settings_funcs:
 			
 		def connectWifi():
 			print('Attempting to connect to "', self.GUI_Settings.bearing_wifiSSIDInput.text(), '" with key "', self.GUI_Settings.bearing_wifiPassInput.text(), '"')
-			out = subprocess.run(f'iwconfig wlan0 essid {self.GUI_Settings.bearing_wifiSSIDInput.text()} key {self.GUI_Settings.bearing_wifiPassInput.text()}', capture_output=True, shell=True):
+			out = subprocess.run(f'sudo iwconfig wlan0 essid {self.GUI_Settings.bearing_wifiSSIDInput.text()} key {self.GUI_Settings.bearing_wifiPassInput.text()}', capture_output=True, shell=True)
 			if out.returncode == 0:
+				print('Connection success')
 				refresh()
 			else:
 				self.GUI_Settings.bearing_wifiSsidText.setText('Error')
 				self.GUI_Settings.bearing_wifiIpText.setText('Error')
+				print('Connection error')
 				print(out.args)
 
 		
