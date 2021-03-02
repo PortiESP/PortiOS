@@ -37,16 +37,16 @@ class Main_GUI:
 		self.GUI_Leds.setupUi(self.GUI_Central.page_leds)
 		self.GUI_Player = Ui_Player_widget()
 		self.GUI_Player.setupUi(self.GUI_Central.page_player)
-		self.GUI_Settings = Ui_Settings_widget()
-		self.GUI_Settings.setupUi(self.GUI_Central.page_settings)
+		# self.GUI_Settings = Ui_Settings_widget()
+		# self.GUI_Settings.setupUi()
 
 		# Widget funcs setup
 		Central_funcs.centralSetup(self)
-		Apps_funcs.appsSetup(self)
-		Settings_funcs.settingsSetup(self)
 		Dashboard_funcs.dashboardSetup(self)
-		Player_funcs.playerSetup(self)
+		Apps_funcs.appsSetup(self)
 		Leds_funcs.ledsSetup(self)
+		Player_funcs.playerSetup(self)
+		Settings_funcs.settingsSetup(self)
 
 
 		# Page test func
@@ -189,8 +189,6 @@ class Main_GUI:
 
 				
 
-
-			
 
 
 

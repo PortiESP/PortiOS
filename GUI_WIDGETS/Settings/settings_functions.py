@@ -1,8 +1,12 @@
+if __name__ == '__main__':
+	from ui_design_settings import Ui_Settings_widget
+
 
 
 class Settings_funcs:
 	def settingsSetup(self):
-		
+		self.GUI_Settings = Ui_Settings_widget()
+		self.GUI_Settings.setupUi(self.GUI_Central.page_settings)
 
 		self.GUI_Settings.bearing_settingsBrightness.clicked.connect(lambda:Settings_funcs.setPage(self, 0))
 		self.GUI_Settings.bearing_settingsWifi.clicked.connect(lambda:Settings_funcs.setPage(self, 1))
@@ -14,6 +18,13 @@ class Settings_funcs:
 		self.GUI_Settings.bearing_settingsTerminal.clicked.connect(lambda:Settings_funcs.setPage(self, 7))
 		self.GUI_Settings.bearing_settingsAdvanced.clicked.connect(lambda:Settings_funcs.setPage(self, 8))
 
+
 	def setPage(self, index):
 		print('Changing to page ',index)
 		self.GUI_Settings.stackedWidget_settings.setCurrentIndex(index)
+
+
+	# MENUS SETUP
+	def wifiSetup(self):
+		self.GUI_Settings.bearing_wifi
+		pass
