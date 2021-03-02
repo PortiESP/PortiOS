@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'design_settingscIEWeQ.ui'
+## Form generated from reading UI file 'design_settingsvomQIR.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -453,7 +453,7 @@ class Ui_Settings_widget(object):
         self.p_wifi_ssid_input.setGeometry(QRect(0, 200, 370, 40))
         self.bearing_wifiSSIDInput = QLineEdit(self.p_wifi_ssid_input)
         self.bearing_wifiSSIDInput.setObjectName(u"bearing_wifiSSIDInput")
-        self.bearing_wifiSSIDInput.setGeometry(QRect(220, 5, 110, 30))
+        self.bearing_wifiSSIDInput.setGeometry(QRect(220, 5, 151, 30))
         self.bearing_wifiSSIDInput.setFont(font1)
         self.bearing_wifiSSIDInput.setStyleSheet(u"QLineEdit{\n"
 "	border:none;\n"
@@ -474,31 +474,12 @@ class Ui_Settings_widget(object):
         self.label_11.setMaximumSize(QSize(250, 16777215))
         self.label_11.setFont(font1)
         self.label_11.setStyleSheet(u"color:white;")
-        self.bearing_wifiSSIDButton = QPushButton(self.p_wifi_ssid_input)
-        self.bearing_wifiSSIDButton.setObjectName(u"bearing_wifiSSIDButton")
-        self.bearing_wifiSSIDButton.setGeometry(QRect(340, 5, 30, 30))
-        self.bearing_wifiSSIDButton.setStyleSheet(u"QPushButton{\n"
-"\n"
-"	background:transparent;\n"
-"	border:2px solid red;\n"
-"	border-radius:15px;\n"
-"}\n"
-"QPushButton:pressed{\n"
-"	background:red;\n"
-"}\n"
-"QPushButton:disabled{\n"
-"	border:2px solid gray;\n"
-"}")
-        icon = QIcon()
-        icon.addFile(u":/icons_white/Resources/Icons/png-white/fi-rr-arrow-small-right.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.bearing_wifiSSIDButton.setIcon(icon)
-        self.bearing_wifiSSIDButton.setIconSize(QSize(18, 18))
         self.p_wfi_pass_input = QFrame(self.scrollAreaWidgetContents_8)
         self.p_wfi_pass_input.setObjectName(u"p_wfi_pass_input")
         self.p_wfi_pass_input.setGeometry(QRect(0, 240, 370, 40))
         self.bearing_wifiPassInput = QLineEdit(self.p_wfi_pass_input)
         self.bearing_wifiPassInput.setObjectName(u"bearing_wifiPassInput")
-        self.bearing_wifiPassInput.setEnabled(False)
+        self.bearing_wifiPassInput.setEnabled(True)
         self.bearing_wifiPassInput.setGeometry(QRect(220, 5, 110, 30))
         self.bearing_wifiPassInput.setFont(font1)
         self.bearing_wifiPassInput.setStyleSheet(u"QLineEdit{\n"
@@ -517,16 +498,16 @@ class Ui_Settings_widget(object):
 "	background:rgba(57, 57, 57, 250);\n"
 "}")
         self.bearing_wifiPassInput.setAlignment(Qt.AlignCenter)
-        self.label_17 = QLabel(self.p_wfi_pass_input)
-        self.label_17.setObjectName(u"label_17")
-        self.label_17.setGeometry(QRect(10, 5, 200, 30))
-        self.label_17.setMaximumSize(QSize(250, 16777215))
-        self.label_17.setFont(font1)
-        self.label_17.setStyleSheet(u"color:white;\n"
+        self.bearing_wifiPassLabel = QLabel(self.p_wfi_pass_input)
+        self.bearing_wifiPassLabel.setObjectName(u"bearing_wifiPassLabel")
+        self.bearing_wifiPassLabel.setGeometry(QRect(10, 5, 200, 30))
+        self.bearing_wifiPassLabel.setMaximumSize(QSize(250, 16777215))
+        self.bearing_wifiPassLabel.setFont(font1)
+        self.bearing_wifiPassLabel.setStyleSheet(u"color:white;\n"
 "")
         self.bearing_wifiPassButton = QPushButton(self.p_wfi_pass_input)
         self.bearing_wifiPassButton.setObjectName(u"bearing_wifiPassButton")
-        self.bearing_wifiPassButton.setEnabled(False)
+        self.bearing_wifiPassButton.setEnabled(True)
         self.bearing_wifiPassButton.setGeometry(QRect(340, 5, 30, 30))
         self.bearing_wifiPassButton.setStyleSheet(u"QPushButton{\n"
 "\n"
@@ -540,6 +521,8 @@ class Ui_Settings_widget(object):
 "QPushButton:disabled{\n"
 "	border:2px solid gray;\n"
 "}")
+        icon = QIcon()
+        icon.addFile(u":/icons_white/Resources/Icons/png-white/fi-rr-arrow-small-right.png", QSize(), QIcon.Normal, QIcon.Off)
         self.bearing_wifiPassButton.setIcon(icon)
         self.bearing_wifiPassButton.setIconSize(QSize(18, 18))
         self.scrollArea_wifi.setWidget(self.scrollAreaWidgetContents_8)
@@ -1855,9 +1838,8 @@ class Ui_Settings_widget(object):
         self.label_7.setText(QCoreApplication.translate("Settings_widget", u"Connect", None))
         self.bearing_wifiSSIDInput.setPlaceholderText(QCoreApplication.translate("Settings_widget", u"Network", None))
         self.label_11.setText(QCoreApplication.translate("Settings_widget", u"Name", None))
-        self.bearing_wifiSSIDButton.setText("")
         self.bearing_wifiPassInput.setPlaceholderText(QCoreApplication.translate("Settings_widget", u"Password", None))
-        self.label_17.setText(QCoreApplication.translate("Settings_widget", u"Password", None))
+        self.bearing_wifiPassLabel.setText(QCoreApplication.translate("Settings_widget", u"Password", None))
         self.bearing_wifiPassButton.setText("")
         self.label_25.setText(QCoreApplication.translate("Settings_widget", u"WIFI", None))
         self.bearing_refreshWifiButton.setText("")
