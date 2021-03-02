@@ -49,7 +49,8 @@ class Settings_funcs:
 			if setStatus == 'up':
 				threading.Thread(target=waitNetwork).start()
 			else: 
-				refresh()
+				self.GUI_Settings.bearing_wifiSsidText.setText('None')
+				self.GUI_Settings.bearing_wifiIpText.setText('None')
 
 
 		def getSSID():
