@@ -95,7 +95,10 @@ class Main_GUI:
 				self.trackDuration = int(self.track['Duration'])
 			else:	
 				self.songTitle = str(self.track['Title'])
-				self.songArtist = str(self.track['Artist'])
+				try:
+					self.songArtist = str(self.track['Artist'])
+				except KeyError:
+					self.songArtist = self.track['Title'].split('·')[1].strip()
 			
 			# Updating labels on all pages
 			Dashboard_funcs.changeMusicInfo(self)		

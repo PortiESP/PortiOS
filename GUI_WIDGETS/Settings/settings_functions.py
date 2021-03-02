@@ -63,9 +63,9 @@ class Settings_funcs:
 			out = subprocess.run('ifconfig wlan0', capture_output=True, text=True, shell=True).stdout.split('\n')[1].strip().split(' ')
 			if out[0] == 'inet': 
 				out = out[1]
+				print('IP: ', out)
 				return out
 			else: return False
-			print('IP: ', out)
 			
 			
 
