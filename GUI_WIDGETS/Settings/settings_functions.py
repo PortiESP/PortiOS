@@ -50,7 +50,7 @@ class Settings_funcs:
 						break
 				refresh()
 			if setStatus == 'up':
-				threading.Thread(target=waitNetwork, args=tstart).start()
+				threading.Thread(target=waitNetwork, args=(tstart,)).start()
 			else: 
 				self.GUI_Settings.bearing_wifiSsidText.setText('None')
 				self.GUI_Settings.bearing_wifiIpText.setText('None')
