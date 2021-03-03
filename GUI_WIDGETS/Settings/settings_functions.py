@@ -8,6 +8,8 @@ class Settings_funcs:
 		self.GUI_Settings = Ui_Settings_widget()
 		self.GUI_Settings.setupUi(self.GUI_Central.page_settings)
 
+		self.GUI_Settings.TIMEOUT = 20
+
 		# Setting pages
 		self.GUI_Settings.bearing_settingsBrightness.clicked.connect(lambda:Settings_funcs.setPage(self, 0))
 		self.GUI_Settings.bearing_settingsWifi.clicked.connect(lambda:Settings_funcs.setPage(self, 1))
@@ -45,7 +47,7 @@ class Settings_funcs:
 			def waitNetwork(tstart):
 				while not getSSID():
 					time.sleep(0.5)
-					if (time.time() - tstart) > 15:
+					if (time.time() - tstart) > self.GUI_Settings.TIMEOUT:
 						print('Connection timeout')
 						break
 				refresh()
