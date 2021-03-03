@@ -89,6 +89,7 @@ class Settings_funcs:
 		
 		# BEARING SETUP
 		refresh()
+		subprocess.run('sudo chmod 777 /etc/wpa_supplicant/wpa_supplicant.conf', capture_output=True, shell=True)
 		self.GUI_Settings.bearing_wifiPowerCheckbox.toggled.connect(togglePower)
 		self.GUI_Settings.bearing_refreshWifiButton.clicked.connect(refresh)
 		self.GUI_Settings.bearing_wifiPassButton.clicked.connect(connectWifi)
