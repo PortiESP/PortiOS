@@ -128,6 +128,10 @@ class Settings_funcs:
 			if self.GUI_Settings.BTdataDict['Powered'] == 'yes':
 				self.GUI_Settings.bearing_btNameText.setText(self.GUI_Settings.BTdataDict['Name'])
 				self.GUI_Settings.bearing_btConnectedText.setText(self.GUI_Settings.BTdataDict['Connected'])
+				if self.GUI_Settings.BTdataDict['Discoverable'] == 'yes':
+					self.GUI_Settings.bearing_btDiscoverableCheckbox.setChecked(False)
+				else:
+					self.GUI_Settings.bearing_btDiscoverableCheckbox.setChecked(True)
 
 		def togglePower():
 			if self.GUI_Settings.bearing_btPowerCheckbox.isChecked():
