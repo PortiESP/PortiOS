@@ -9,6 +9,7 @@ class Settings_funcs:
 		self.GUI_Settings.setupUi(self.GUI_Central.page_settings)
 
 		self.GUI_Settings.TIMEOUT = 20
+		self.GUI_Settings.BTBTdataDict = {}
 
 		# Setting pages
 		self.GUI_Settings.bearing_settingsBrightness.clicked.connect(lambda:Settings_funcs.setPage(self, 0))
@@ -23,13 +24,16 @@ class Settings_funcs:
 
 		# Setting up pages bearings
 		Settings_funcs.wifiSetup(self)
+		Settings_funcs.btSetup(self)
 
 	def setPage(self, index):
 		print('Changing to page ',index)
 		self.GUI_Settings.stackedWidget_settings.setCurrentIndex(index)
 
 
-	# MENUS SETUP
+	# ----------------------------------------- MENUS SETUP -------------------------------------------------------------------
+
+	########## WIFI ##########
 	def wifiSetup(self):
 
 		# FUNCTIONS
@@ -92,3 +96,36 @@ class Settings_funcs:
 		self.GUI_Settings.bearing_refreshWifiButton.clicked.connect(refresh)
 		self.GUI_Settings.bearing_wifiPassButton.clicked.connect(connectWifi)
 		
+
+
+
+
+
+
+
+
+	# BT SETUP
+	def btSetup(self):
+		def getData():
+			out = subprocess.run('bluetoothctl show', text=True, shell=True)
+			dataLines = out.stdout.strip().split('\n')
+			for line in dataLines:
+				line = line.strip()
+				if re.match('Name', line): self.GUI_Settings.BTdataDict['Name'] = line.split(':')[1].strip()
+				if re.match('Powered', line): self.GUI_Settings.BTdataDict['Powered'] = line.split(':')[1].strip()
+				if re.match('Discoverable', line): self.GUI_Settings.BTdataDict['Discoverable'] = line.split(':')[1].strip()
+
+			print('BT data = ', self.GUI_Settings.BTdataDict)
+
+		def togglePower():
+			if self.GUI_Settings.bearing_btPowerCheckbox.isChecked():
+				print('Powering BT off')
+				subprocess.run('bluetoothctl power off', capture_output=True, shell=True)
+			else:
+				print('Powering BT on')
+				subprocess.run('bluetoothctl power on', capture_output=True, shell=True)
+
+
+
+
+		self.GUI_Settings.bearing_btPowerCheckbox.toggled.connect(togglePower)
