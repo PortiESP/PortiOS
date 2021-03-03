@@ -9,7 +9,7 @@ class Settings_funcs:
 		self.GUI_Settings.setupUi(self.GUI_Central.page_settings)
 
 		self.GUI_Settings.TIMEOUT = 20
-		self.GUI_Settings.BTBTdataDict = {}
+		self.GUI_Settings.BTdataDict = {}
 
 		# Setting pages
 		self.GUI_Settings.bearing_settingsBrightness.clicked.connect(lambda:Settings_funcs.setPage(self, 0))
