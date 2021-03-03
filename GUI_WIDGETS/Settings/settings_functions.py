@@ -78,7 +78,8 @@ class Settings_funcs:
 				f.write(command.format(self.GUI_Settings.bearing_wifiSSIDInput.text(), self.GUI_Settings.bearing_wifiPassInput.text()))
 			
 			out = subprocess.run('sudo wpa_cli -i wlan0 reconfigure', capture_output=True, text=True, shell=True)
-			if out.stderr == 'OK':
+			print(out.stdout)
+			if out.stdout == 'OK':
 				print('Connection success')
 				refresh()
 			else:
