@@ -42,15 +42,15 @@ class Settings_funcs:
 			subprocess.run([f'sudo ifconfig wlan0 {setStatus}'], shell=True)
 			print('Wifi power ', setStatus)
 			tstart = time.time()
-			def waitNetwork():
+			def waitNetwork(tstart):
 				while not getSSID():
 					time.sleep(0.5)
-					if time.time() - tstart > 15:
+					if (time.time() - tstart) > 15:
 						print('Connection timeout')
 						break
 				refresh()
 			if setStatus == 'up':
-				threading.Thread(target=waitNetwork).start()
+				threading.Thread(target=waitNetwork, args=tstart).start()
 			else: 
 				self.GUI_Settings.bearing_wifiSsidText.setText('None')
 				self.GUI_Settings.bearing_wifiIpText.setText('None')
