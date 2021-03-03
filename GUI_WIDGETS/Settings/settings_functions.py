@@ -83,7 +83,7 @@ class Settings_funcs:
 						}} > /etc/wpa_supplicant/wpa_supplicant.conf'
 			out = subprocess.run(command.format(self.GUI_Settings.bearing_wifiSSIDInput.text(), self.GUI_Settings.bearing_wifiPassInput.text()), capture_output=True, shell=True)
 			out2 = subprocess.run('sudo wpa_cli -i wlan0 reconfigure', capture_output=True, shell=True)
-			if out.returncode == 0 and out2.returncode == 0:
+			if out.returncode == 0 and out2.stdout == 'OK':
 				print('Connection success')
 				refresh()
 			else:
