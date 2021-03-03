@@ -124,8 +124,8 @@ class Settings_funcs:
 			self.GUI_Settings.BTdataDict['Connected'] = str(self.BTController.get_device_data('Name'))
 
 		def refresh():
-			getData()
-			if self.GUI_Settings.BTdataDict['Powered'] == 'on':
+			getData() #dict values [yes/no]
+			if self.GUI_Settings.BTdataDict['Powered'] == 'yes':
 				self.GUI_Settings.bearing_btNameText.setText(self.GUI_Settings.BTdataDict['Name'])
 				self.GUI_Settings.bearing_btConnectedText.setText(self.GUI_Settings.BTdataDict['Connected'])
 
