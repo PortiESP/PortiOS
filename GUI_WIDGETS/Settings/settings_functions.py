@@ -72,10 +72,12 @@ class Settings_funcs:
 			
 		def connectWifi():
 			print('Attempting to connect to "', self.GUI_Settings.bearing_wifiSSIDInput.text(), '" with key "', self.GUI_Settings.bearing_wifiPassInput.text(), '"')
-			command = 'echo "ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev\nupdate_config=1\ncountry=ES\n\nnetwork={{\nssid="{}"\npsk="{}"\nkey_mgmt=WPA-PSK\n}} "> /etc/wpa_supplicant/wpa_supplicant.conf'
-			out = subprocess.run(command.format(self.GUI_Settings.bearing_wifiSSIDInput.text(), self.GUI_Settings.bearing_wifiPassInput.text()), capture_output=True, shell=True)
-			out2 = subprocess.run('sudo wpa_cli -i wlan0 reconfigure', capture_output=True, shell=True)
-			if out.returncode == 0 and out2.stdout == 'OK':
+			command = 'ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev\nupdate_config=1\ncountry=ES\n\nnetwork={{\nssid="{}"\npsk="{}"\nkey_mgmt=WPA-PSK\n}}'
+			with open('/etc/wpa_supplicant/wpa_supplicant.conf', 'w') as f:
+				f.write(command.format(command.format(self.GUI_Settings.bearing_wifiSSIDInput.text(), self.GUI_Settings.bearing_wifiPassInput.text())
+			
+			out = subprocess.run('sudo wpa_cli -i wlan0 reconfigure', capture_output=True, shell=True)
+			if out.stdout == 'OK':
 				print('Connection success')
 				refresh()
 			else:
