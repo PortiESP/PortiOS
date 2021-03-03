@@ -148,14 +148,13 @@ class Settings_funcs:
 				refresh()
 
 		def toggleDiscoverable():
-			updateData()
-			if self.GUI_Settings.BTdataDict['Discoverable'] == 'yes':
+			if self.GUI_Settings.bearing_btDiscoverableCheckbox.isChecked():
 				setStatus = 'off'
 			else:
 				setStatus = 'on'
 			print('Setting discoverable to: ', setStatus)
 			subprocess.run(f'bluetoothctl discoverable {setStatus}', capture_output=True, shell=True)
-
+			updateData()
 
 
 		self.GUI_Settings.bearing_refreshBtButton.clicked.connect(refresh)
