@@ -140,3 +140,4 @@ class Settings_funcs:
 
 
 		self.GUI_Settings.bearing_btPowerCheckbox.toggled.connect(togglePower)
+		self.GUI_Settings.bearing_refreshBtButton.clicked.connect(refresh)
