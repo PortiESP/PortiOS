@@ -107,8 +107,9 @@ class Settings_funcs:
 	# BT SETUP
 	def btSetup(self):
 		def getData():
-			out = subprocess.run('bluetoothctl show', text=True, shell=True)
-			dataLines = out.stdout.split('\n')
+			out = subprocess.run('bluetoothctl show', capture_output=True, text=True, shell=True).stdout
+			print(out)
+			dataLines = out.split('\n')
 			for line in dataLines:
 				line = line.strip()
 				if re.match('Name', line): self.GUI_Settings.BTdataDict['Name'] = line.split(':')[1].strip()
