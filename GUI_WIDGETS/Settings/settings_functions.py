@@ -78,14 +78,7 @@ class Settings_funcs:
 				f.write(command.format(self.GUI_Settings.bearing_wifiSSIDInput.text(), self.GUI_Settings.bearing_wifiPassInput.text()))
 			
 			out = subprocess.run('sudo wpa_cli -i wlan0 reconfigure', capture_output=True, text=True, shell=True)
-			print(out.stdout)
-			if out.stdout == 'FAIL':
-				self.GUI_Settings.bearing_wifiSsidText.setText('Error')
-				self.GUI_Settings.bearing_wifiIpText.setText('Error')
-				print('Connection error')
-			else:
-				print('Conection success')
-				refresh()
+			togglePower()
 
 		
 		# BEARING SETUP
