@@ -73,6 +73,7 @@ class Settings_funcs:
 		def connectWifi():
 			print('Attempting to connect to "', self.GUI_Settings.bearing_wifiSSIDInput.text(), '" with key "', self.GUI_Settings.bearing_wifiPassInput.text(), '"')
 			command = 'ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev\nupdate_config=1\ncountry=ES\n\nnetwork={{\nssid="{}"\npsk="{}"\nkey_mgmt=WPA-PSK\n}}'
+			subprocess.run('sudo chmod 777 /etc/wpa_supplicant/wpa_supplicant.conf', capture_output=True, shell=True)
 			with open('/etc/wpa_supplicant/wpa_supplicant.conf', 'w') as f:
 				f.write(command.format(self.GUI_Settings.bearing_wifiSSIDInput.text(), self.GUI_Settings.bearing_wifiPassInput.text()))
 			
@@ -84,12 +85,10 @@ class Settings_funcs:
 				self.GUI_Settings.bearing_wifiSsidText.setText('Error')
 				self.GUI_Settings.bearing_wifiIpText.setText('Error')
 				print('Connection error')
-				print(out.args)
 
 		
 		# BEARING SETUP
 		refresh()
-		subprocess.run('sudo chmod 777 /etc/wpa_supplicant/wpa_supplicant.conf', capture_output=True, shell=True)
 		self.GUI_Settings.bearing_wifiPowerCheckbox.toggled.connect(togglePower)
 		self.GUI_Settings.bearing_refreshWifiButton.clicked.connect(refresh)
 		self.GUI_Settings.bearing_wifiPassButton.clicked.connect(connectWifi)
