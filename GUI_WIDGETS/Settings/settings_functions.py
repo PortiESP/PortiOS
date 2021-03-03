@@ -106,7 +106,7 @@ class Settings_funcs:
 
 	# BT SETUP
 	def btSetup(self):
-		def getData():
+		def updateData():
 			out = subprocess.run('bluetoothctl show', capture_output=True, text=True, shell=True).stdout
 			print(out)
 			dataLines = out.split('\n')
@@ -125,11 +125,11 @@ class Settings_funcs:
 				name = str(self.BTController.get_device_data('Name'))
 			else: 
 				name = 'None'
-				print('BT Connected device: ', name)
+			print('BT Connected device: ', name)
 			self.GUI_Settings.BTdataDict['Connected'] = name
 
 		def refresh():
-			getData() #dict values [yes/no]
+			updateData() #dict values [yes/no]
 			if self.GUI_Settings.BTdataDict['Powered'] == 'yes':
 				self.GUI_Settings.bearing_btNameText.setText(self.GUI_Settings.BTdataDict['Name'])
 				self.GUI_Settings.bearing_btConnectedText.setText(self.GUI_Settings.BTdataDict['Connected'])
@@ -145,9 +145,19 @@ class Settings_funcs:
 			else:
 				print('Powering BT on')
 				subprocess.run('bluetoothctl power on', capture_output=True, shell=True)
+				refresh()
+
+		def toggleDiscoverable():
+			updateData()
+			if self.GUI_Settings.BTdataDict['Discoverable'] == 'yes':
+				setStatus = 'off'
+			else:
+				setStatus = 'on'
+			print('Setting discoverable to: ', setStatus)
+			subprocess.run(f'bluetoothctl discoverable {setStatus}', capture_output=True, shell=True)
 
 
 
-
-		self.GUI_Settings.bearing_btPowerCheckbox.toggled.connect(togglePower)
 		self.GUI_Settings.bearing_refreshBtButton.clicked.connect(refresh)
+		self.GUI_Settings.bearing_btPowerCheckbox.toggled.connect(togglePower)
+		self.GUI_Settings.bearing_btDiscoverableCheckbox.toggled.connect(toggleDiscoverable)
