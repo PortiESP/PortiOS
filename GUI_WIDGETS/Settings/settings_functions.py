@@ -126,7 +126,7 @@ class Settings_funcs:
 			else: 
 				name = 'None'
 				print('BT Connected device: ', name)
-			self.GUI_Settings.BTdataDict['Connected'] = str(self.BTController.get_device_data('Name'))
+			self.GUI_Settings.BTdataDict['Connected'] = name
 
 		def refresh():
 			getData() #dict values [yes/no]
