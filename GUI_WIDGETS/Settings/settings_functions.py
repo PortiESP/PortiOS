@@ -114,8 +114,19 @@ class Settings_funcs:
 				if re.match('Name', line): self.GUI_Settings.BTdataDict['Name'] = line.split(':')[1].strip()
 				if re.match('Powered', line): self.GUI_Settings.BTdataDict['Powered'] = line.split(':')[1].strip()
 				if re.match('Discoverable', line): self.GUI_Settings.BTdataDict['Discoverable'] = line.split(':')[1].strip()
+			
+			getConnectedDevice()
 
 			print('BT data = ', self.GUI_Settings.BTdataDict)
+
+		def getConnectedDevice():
+			self.GUI_Settings.BTdataDict[Connected] = str(self.BTController.get_device_data('Name'))
+
+		def refresh():
+			getData()
+			if self.GUI_Settings.BTdataDict['Powered'] == 'on':
+				self.GUI_Settings.bearing_btNameText.setText(self.GUI_Settings.BTdataDict['Name'])
+				self.GUI_Settings.bearing_btConnectedText.setText(self.GUI_Settings.BTdataDict['Connected'])
 
 		def togglePower():
 			if self.GUI_Settings.bearing_btPowerCheckbox.isChecked():

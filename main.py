@@ -9,6 +9,8 @@ class Main_GUI:
 		# Setting fullscreen
 		# self.win.showFullScreen()		
 
+		self.mainLoopHz = 1
+
 		# Setting media player
 		self.isConnectedDevice = False
 		self.BTController = BT_Control_Panel()
@@ -21,8 +23,6 @@ class Main_GUI:
 		self.trackDuration = None # Duration of the actual track
 		self.currentMusicTime = None # Music position in microseconds
 		self.currentMusicTimeF = None # Formated music porsition time (M:SS)
-
-		self.sliderMoving = False
 
 		self.GUI_Central = None
 		self.GUI_Dashboard = None
@@ -125,7 +125,7 @@ class Main_GUI:
 	def mediaPlayerThreadFunc(self):
 
 		while 1:
-			time.sleep(1)
+			time.sleep((1/self.mainLoopHz))
 
 			##################### CONNECTIONS MANAGER ###################################
 			checkDevice = self.BTController.checkConnectedDevices()
