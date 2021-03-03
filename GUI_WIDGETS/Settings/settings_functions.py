@@ -157,7 +157,11 @@ class Settings_funcs:
 			subprocess.run(f'bluetoothctl discoverable {setStatus}', capture_output=True, shell=True)
 			updateData()
 
+		def openManager():
+			print('Opening bluetoothctl')
+			subprocess.run('x-terminal-emulator -e bluetoothctl', capture_output=True, shell=True)
 
 		self.GUI_Settings.bearing_refreshBtButton.clicked.connect(refresh)
 		self.GUI_Settings.bearing_btPowerCheckbox.toggled.connect(togglePower)
 		self.GUI_Settings.bearing_btDiscoverableCheckbox.toggled.connect(toggleDiscoverable)
+		self.GUI_Settings.bearing_btManagerButton.clicked.connect(openManager)
