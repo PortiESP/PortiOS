@@ -121,6 +121,10 @@ class Settings_funcs:
 			print('BT data = ', self.GUI_Settings.BTdataDict)
 
 		def getConnectedDevice():
+			if self.isConnectedDevice:
+				name = str(self.BTController.get_device_data('Name'))
+			else: 
+				name = 'None'
 			self.GUI_Settings.BTdataDict['Connected'] = str(self.BTController.get_device_data('Name'))
 
 		def refresh():
