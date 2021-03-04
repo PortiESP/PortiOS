@@ -25,6 +25,7 @@ class Settings_funcs:
 		# Setting up pages bearings
 		Settings_funcs.wifiSetup(self)
 		Settings_funcs.btSetup(self)
+		Settings_funcs.servicesStatusSetup(self)
 
 	def setPage(self, index):
 		print('Changing to page ',index)
@@ -168,7 +169,6 @@ class Settings_funcs:
 
 	def servicesStatusSetup(self):
 		def getServiceStatus(service):
-			print(service,' status:')
 			out = subprocess.run(f'systemctl status {service}', text=True, shell=True).stdout.split('\n')
 			for line in out:
 				if re.match('Active', line.strip()):
