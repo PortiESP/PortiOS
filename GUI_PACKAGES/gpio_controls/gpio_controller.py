@@ -17,11 +17,12 @@ class GPIO_Controller():
 		else:
 			return False
 	
-	def getPintSetup(self, pin):
-		subprocess.run(f'gpio export {pin}', capture_output=True, shell=True)
+	def getPinSetup(self, pin):
+		subprocess.run(f'echo {str(pin)} > /sys/class/gpio/export', capture_output=True, shell=True)
 		out = subprocess.run(f'cat /sys/class/gpio/gpio{str(pin)}/direction', capture_output=True, text=True, shell=True).stdout
 		print('Pin: ',pin, ' setup: ',out)
 		subprocess.run('gpio unexportall', capture_output=True,shell=True)
+		return out
 		
 	def setPinValue(self, pin, value):
 		self.setPinSetup(pin)
