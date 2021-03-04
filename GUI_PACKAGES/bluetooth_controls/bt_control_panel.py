@@ -90,7 +90,7 @@ class BT_Control_Panel:
 			elif cmd == 'fastforward': self.controlsIface.FastForward(); self.controlsIface.Play()
 			elif cmd == 'rewind': self.controlsIface.Rewind(); self.controlsIface.Play()
 			else: return False
-		except as e:
+		except Exception as e:
 			print('Playback_control error catched...!')
 			print(e)	
 					
