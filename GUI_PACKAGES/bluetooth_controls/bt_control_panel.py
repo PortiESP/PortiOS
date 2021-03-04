@@ -71,7 +71,7 @@ class BT_Control_Panel:
 			self.objects = self.mgrInterface.GetManagedObjects()
 		except dbus.exceptions.DBusException:
 			return False
-			
+
 		for objPath, interfaces in self.objects.items():
 			if re.match('/org/bluez/hci0/dev_[0-9A-Z]{2}_[0-9A-Z]{2}_[0-9A-Z]{2}_[0-9A-Z]{2}_[0-9A-Z]{2}_[0-9A-Z]{2}$', objPath):
 				if self.objects[objPath]['org.bluez.Device1']['Connected'] == 1:
@@ -90,8 +90,9 @@ class BT_Control_Panel:
 			elif cmd == 'fastforward': self.controlsIface.FastForward(); self.controlsIface.Play()
 			elif cmd == 'rewind': self.controlsIface.Rewind(); self.controlsIface.Play()
 			else: return False
-		except:
-			print('Playback_control error catched...!')	
+		except as e:
+			print('Playback_control error catched...!')
+			print(e)	
 					
 	#Set volume value for RPi
 	#The max value parameter indicates the max value you are using, default = 100
