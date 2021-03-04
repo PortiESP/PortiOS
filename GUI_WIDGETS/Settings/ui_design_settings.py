@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'design_settingsGfetQk.ui'
+## Form generated from reading UI file 'design_settingsiAkGff.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -897,6 +897,7 @@ class Ui_Settings_widget(object):
         self.scrollAreaWidgetContents_5.setGeometry(QRect(0, 0, 400, 240))
         sizePolicy.setHeightForWidth(self.scrollAreaWidgetContents_5.sizePolicy().hasHeightForWidth())
         self.scrollAreaWidgetContents_5.setSizePolicy(sizePolicy)
+        self.scrollAreaWidgetContents_5.setMinimumSize(QSize(0, 240))
         self.frame_7 = QFrame(self.scrollAreaWidgetContents_5)
         self.frame_7.setObjectName(u"frame_7")
         self.frame_7.setGeometry(QRect(0, 40, 370, 50))
