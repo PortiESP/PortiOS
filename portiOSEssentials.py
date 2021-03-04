@@ -20,6 +20,6 @@ from PySide2.QtGui import *
 from PySide2.QtCore import *
 import sys, threading, time
 from math import ceil
-from dbus.exceptions import *
+import dbus.exceptions
 
 
