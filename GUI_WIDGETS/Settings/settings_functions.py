@@ -187,15 +187,8 @@ class Settings_funcs:
 
 	def servicesStatusSetup(self):
 		def getServiceStatus(service):
-			out = subprocess.run(f'systemctl status {service}', text=True, shell=True).stdout
-			outsplit = out.split('\n')
-			for line in out:
-				line = line.strip()
-				print(line)
-				if re.match('Active', line):
-					out = line.strip().split(':')[1].split(' ')[:2]
-					print(out)
-					return out
+			out = subprocess.run(f'systemctl is-active {service}', text=True, shell=True).stdout
+
 
 		def refresh():
 			self.GUI_Settings.bearing_statusBtText.setText(getServiceStatus('bluetooth'))
