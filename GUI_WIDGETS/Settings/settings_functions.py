@@ -218,7 +218,6 @@ class Settings_funcs:
 
 		def getPin():
 			pin = int(self.GUI_Settings.bearing_gpioGetInput.text())
-			out = gp.input(pin, gp.IN)
 			value = gp.input(pin)
 			print('Pin ', pin , ' value: ', value)
 			self.GUI_Settings.bearing_gpioPinLabel.setText(self.GUI_Settings.bearing_gpioGetPinInput.text())
