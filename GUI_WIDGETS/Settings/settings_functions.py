@@ -32,9 +32,10 @@ class Settings_funcs:
 		self.GUI_Settings.stackedWidget_settings.setCurrentIndex(index)
 
 
-	# ----------------------------------------- MENUS SETUP -------------------------------------------------------------------
+# ----------------------------------------- MENUS SETUP -------------------------------------------------------------------
 
-	########## WIFI ##########
+# ------------------------------------------------------------------------------------------------------
+
 	def wifiSetup(self):
 
 		# FUNCTIONS
@@ -104,7 +105,7 @@ class Settings_funcs:
 
 
 
-
+# ------------------------------------------------------------------------------------------------------
 	# BT SETUP
 	def btSetup(self):
 		def updateData():
@@ -167,11 +168,30 @@ class Settings_funcs:
 		self.GUI_Settings.bearing_btDiscoverableCheckbox.toggled.connect(toggleDiscoverable)
 		self.GUI_Settings.bearing_btManagerButton.clicked.connect(openManager)
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# ------------------------------------------------------------------------------------------------------
+
 	def servicesStatusSetup(self):
 		def getServiceStatus(service):
 			out = subprocess.run(f'systemctl status {service}', text=True, shell=True).stdout.split('\n')
 			for line in out:
-				if re.match('Active', line.strip()):
+				line = line.strip()
+				print('line')
+				if re.match('Active', line):
 					out = line.strip().split(':')[1].split(' ')[:2]
 					print(out)
 					return out
