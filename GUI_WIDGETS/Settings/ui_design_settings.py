@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'design_settingsBXmcqj.ui'
+## Form generated from reading UI file 'design_settingsuTsSuD.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -312,7 +312,7 @@ class Ui_Settings_widget(object):
         self.scrollArea_wifi.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignTop)
         self.scrollAreaWidgetContents_8 = QWidget()
         self.scrollAreaWidgetContents_8.setObjectName(u"scrollAreaWidgetContents_8")
-        self.scrollAreaWidgetContents_8.setGeometry(QRect(0, 0, 390, 280))
+        self.scrollAreaWidgetContents_8.setGeometry(QRect(0, 0, 398, 280))
         sizePolicy = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Preferred)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -964,14 +964,14 @@ class Ui_Settings_widget(object):
         self.p_gpio_setPin = QFrame(self.page_gpio)
         self.p_gpio_setPin.setObjectName(u"p_gpio_setPin")
         self.p_gpio_setPin.setGeometry(QRect(0, 60, 370, 40))
-        self.bearing_gpioSetInput = QLineEdit(self.p_gpio_setPin)
-        self.bearing_gpioSetInput.setObjectName(u"bearing_gpioSetInput")
-        self.bearing_gpioSetInput.setGeometry(QRect(280, 5, 50, 30))
+        self.bearing_gpioSetValueInput = QLineEdit(self.p_gpio_setPin)
+        self.bearing_gpioSetValueInput.setObjectName(u"bearing_gpioSetValueInput")
+        self.bearing_gpioSetValueInput.setGeometry(QRect(280, 5, 50, 30))
         font4 = QFont()
         font4.setFamily(u"Bahnschrift SemiLight")
         font4.setPointSize(14)
-        self.bearing_gpioSetInput.setFont(font4)
-        self.bearing_gpioSetInput.setStyleSheet(u"QLineEdit{\n"
+        self.bearing_gpioSetValueInput.setFont(font4)
+        self.bearing_gpioSetValueInput.setStyleSheet(u"QLineEdit{\n"
 "	border:none;\n"
 "	color:white;\n"
 "	background:rgba(57, 57, 57, 150);\n"
@@ -983,17 +983,18 @@ class Ui_Settings_widget(object):
 "	\n"
 "	border:1px solid rgb(97, 97, 97);\n"
 "}")
-        self.bearing_gpioSetInput.setMaxLength(3)
-        self.bearing_gpioSetInput.setAlignment(Qt.AlignCenter)
+        self.bearing_gpioSetValueInput.setMaxLength(3)
+        self.bearing_gpioSetValueInput.setAlignment(Qt.AlignCenter)
         self.label_65 = QLabel(self.p_gpio_setPin)
         self.label_65.setObjectName(u"label_65")
-        self.label_65.setGeometry(QRect(10, 5, 240, 30))
+        self.label_65.setGeometry(QRect(10, 5, 180, 30))
         self.label_65.setMaximumSize(QSize(250, 16777215))
         self.label_65.setFont(font1)
         self.label_65.setStyleSheet(u"color:white;")
         self.bearing_gpioSetButton = QPushButton(self.p_gpio_setPin)
         self.bearing_gpioSetButton.setObjectName(u"bearing_gpioSetButton")
         self.bearing_gpioSetButton.setGeometry(QRect(340, 5, 30, 30))
+        self.bearing_gpioSetButton.setFocusPolicy(Qt.NoFocus)
         self.bearing_gpioSetButton.setStyleSheet(u"QPushButton{\n"
 "\n"
 "	background:transparent;\n"
@@ -1005,6 +1006,24 @@ class Ui_Settings_widget(object):
 "}")
         self.bearing_gpioSetButton.setIcon(icon)
         self.bearing_gpioSetButton.setIconSize(QSize(18, 18))
+        self.bearing_gpioSetPinInput = QLineEdit(self.p_gpio_setPin)
+        self.bearing_gpioSetPinInput.setObjectName(u"bearing_gpioSetPinInput")
+        self.bearing_gpioSetPinInput.setGeometry(QRect(220, 5, 50, 30))
+        self.bearing_gpioSetPinInput.setFont(font4)
+        self.bearing_gpioSetPinInput.setStyleSheet(u"QLineEdit{\n"
+"	border:none;\n"
+"	color:white;\n"
+"	background:rgba(57, 57, 57, 150);\n"
+"	border-radius:5px;\n"
+"}\n"
+"\n"
+"QLineEdit:focus{\n"
+"	\n"
+"	\n"
+"	border:1px solid rgb(97, 97, 97);\n"
+"}")
+        self.bearing_gpioSetPinInput.setMaxLength(3)
+        self.bearing_gpioSetPinInput.setAlignment(Qt.AlignCenter)
         self.p_gpio_setPin_2 = QFrame(self.page_gpio)
         self.p_gpio_setPin_2.setObjectName(u"p_gpio_setPin_2")
         self.p_gpio_setPin_2.setGeometry(QRect(0, 100, 370, 40))
@@ -1028,7 +1047,7 @@ class Ui_Settings_widget(object):
         self.bearing_gpioGetInput.setAlignment(Qt.AlignCenter)
         self.label_66 = QLabel(self.p_gpio_setPin_2)
         self.label_66.setObjectName(u"label_66")
-        self.label_66.setGeometry(QRect(10, 5, 240, 30))
+        self.label_66.setGeometry(QRect(10, 5, 180, 30))
         self.label_66.setMaximumSize(QSize(250, 16777215))
         self.label_66.setFont(font1)
         self.label_66.setStyleSheet(u"color:white;")
@@ -1056,28 +1075,9 @@ class Ui_Settings_widget(object):
 "background:gray;")
         self.line_3.setFrameShadow(QFrame.Plain)
         self.line_3.setFrameShape(QFrame.HLine)
-        self.frame_9 = QFrame(self.page_gpio)
-        self.frame_9.setObjectName(u"frame_9")
-        self.frame_9.setGeometry(QRect(0, 200, 370, 40))
-        self.frame_9.setFrameShadow(QFrame.Raised)
-        self.label_10 = QLabel(self.frame_9)
-        self.label_10.setObjectName(u"label_10")
-        self.label_10.setGeometry(QRect(10, 0, 190, 40))
-        self.label_10.setFont(font1)
-        self.label_10.setStyleSheet(u"QLabel{\n"
-"	color:white;\n"
-"}")
-        self.label_12 = QLabel(self.frame_9)
-        self.label_12.setObjectName(u"label_12")
-        self.label_12.setGeometry(QRect(190, 0, 180, 40))
-        self.label_12.setFont(font1)
-        self.label_12.setStyleSheet(u"QLabel{\n"
-"	color:gray;\n"
-"}")
-        self.label_12.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
         self.frame_22 = QFrame(self.page_gpio)
         self.frame_22.setObjectName(u"frame_22")
-        self.frame_22.setGeometry(QRect(0, 240, 370, 40))
+        self.frame_22.setGeometry(QRect(0, 200, 370, 40))
         self.label_15 = QLabel(self.frame_22)
         self.label_15.setObjectName(u"label_15")
         self.label_15.setGeometry(QRect(10, 0, 190, 40))
@@ -1085,23 +1085,23 @@ class Ui_Settings_widget(object):
         self.label_15.setStyleSheet(u"QLabel{\n"
 "	color:white;\n"
 "}")
-        self.label_16 = QLabel(self.frame_22)
-        self.label_16.setObjectName(u"label_16")
-        self.label_16.setGeometry(QRect(190, 0, 180, 40))
-        self.label_16.setFont(font1)
-        self.label_16.setStyleSheet(u"QLabel{\n"
+        self.bearing_gpioPinValueLabel = QLabel(self.frame_22)
+        self.bearing_gpioPinValueLabel.setObjectName(u"bearing_gpioPinValueLabel")
+        self.bearing_gpioPinValueLabel.setGeometry(QRect(190, 0, 180, 40))
+        self.bearing_gpioPinValueLabel.setFont(font1)
+        self.bearing_gpioPinValueLabel.setStyleSheet(u"QLabel{\n"
 "	color:gray;\n"
 "}")
-        self.label_16.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
+        self.bearing_gpioPinValueLabel.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
         self.frame_28 = QFrame(self.page_gpio)
         self.frame_28.setObjectName(u"frame_28")
         self.frame_28.setGeometry(QRect(0, 160, 370, 40))
-        self.label_4 = QLabel(self.frame_28)
-        self.label_4.setObjectName(u"label_4")
-        self.label_4.setGeometry(QRect(10, 5, 270, 30))
-        self.label_4.setMaximumSize(QSize(9999999, 16777215))
-        self.label_4.setFont(font1)
-        self.label_4.setStyleSheet(u"color:red;")
+        self.bearing_gpioPinLabel = QLabel(self.frame_28)
+        self.bearing_gpioPinLabel.setObjectName(u"bearing_gpioPinLabel")
+        self.bearing_gpioPinLabel.setGeometry(QRect(10, 5, 270, 30))
+        self.bearing_gpioPinLabel.setMaximumSize(QSize(9999999, 16777215))
+        self.bearing_gpioPinLabel.setFont(font1)
+        self.bearing_gpioPinLabel.setStyleSheet(u"color:red;")
         self.stackedWidget_settings.addWidget(self.page_gpio)
         self.page_systemInfo = QWidget()
         self.page_systemInfo.setObjectName(u"page_systemInfo")
@@ -1696,17 +1696,16 @@ class Ui_Settings_widget(object):
         self.label_56.setText(QCoreApplication.translate("Settings_widget", u"Bluetooth", None))
         self.bearing_statusBtText.setText(QCoreApplication.translate("Settings_widget", u"None", None))
         self.label_64.setText(QCoreApplication.translate("Settings_widget", u"GPIO", None))
-        self.bearing_gpioSetInput.setPlaceholderText(QCoreApplication.translate("Settings_widget", u"--", None))
+        self.bearing_gpioSetValueInput.setPlaceholderText(QCoreApplication.translate("Settings_widget", u"--", None))
         self.label_65.setText(QCoreApplication.translate("Settings_widget", u"Set pin", None))
         self.bearing_gpioSetButton.setText("")
+        self.bearing_gpioSetPinInput.setPlaceholderText(QCoreApplication.translate("Settings_widget", u"--", None))
         self.bearing_gpioGetInput.setPlaceholderText(QCoreApplication.translate("Settings_widget", u"--", None))
         self.label_66.setText(QCoreApplication.translate("Settings_widget", u"Get pin", None))
         self.bearing_gpioGetButton.setText("")
-        self.label_10.setText(QCoreApplication.translate("Settings_widget", u"Pin setup", None))
-        self.label_12.setText(QCoreApplication.translate("Settings_widget", u"No data", None))
-        self.label_15.setText(QCoreApplication.translate("Settings_widget", u"Pin state", None))
-        self.label_16.setText(QCoreApplication.translate("Settings_widget", u"No data", None))
-        self.label_4.setText(QCoreApplication.translate("Settings_widget", u"Pin: None", None))
+        self.label_15.setText(QCoreApplication.translate("Settings_widget", u"Pin value", None))
+        self.bearing_gpioPinValueLabel.setText(QCoreApplication.translate("Settings_widget", u"No data", None))
+        self.bearing_gpioPinLabel.setText(QCoreApplication.translate("Settings_widget", u"Pin: None", None))
         self.label_78.setText(QCoreApplication.translate("Settings_widget", u"RAM", None))
         self.label_79.setText(QCoreApplication.translate("Settings_widget", u"Used", None))
         self.bearing_systemRamUsedText.setText(QCoreApplication.translate("Settings_widget", u"0GB", None))

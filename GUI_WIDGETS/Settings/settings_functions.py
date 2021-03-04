@@ -1,5 +1,6 @@
 from .ui_design_settings import Ui_Settings_widget
 import subprocess, threading, re, time
+import RPi.GPIO as gp
 
 
 class Settings_funcs:
@@ -26,6 +27,7 @@ class Settings_funcs:
 		Settings_funcs.wifiSetup(self)
 		Settings_funcs.btSetup(self)
 		Settings_funcs.servicesStatusSetup(self)
+		Settings_funcs.gpioSetup(self)
 
 	def setPage(self, index):
 		print('Changing to page ',index)
@@ -201,3 +203,28 @@ class Settings_funcs:
 
 		self.GUI_Settings.bearing_statusRefreshButton.clicked.connect(refresh)
 		self.GUI_Settings.bearing_statusBtButton.clicked.connect(lambda: restartService('bluetooth'))
+
+
+	def gpioSetup(self):
+
+		def setPin():
+			pin = int(self.GUI_Settings.bearing_gpioSetPinInput.text())
+			value = int(self.GUI_Settings.bearing_gpioSetValueInput.text())
+			gp.setup(pin, gp.OUT)
+			gp.output(pin, value)
+			self.GUI_Settings.bearing_gpioPinLabel.setText(str(pin))
+			self.GUI_Settings.bearing_gpioPinValueLabel.setText(str(value))
+			print('Pin ', pin , ' set to ', value)
+
+		def getPin():
+			pin = int(self.GUI_Settings.bearing_gpioGetInput.text())
+			out = gp.input(pin, gp.IN)
+			value = gp.input(pin)
+			self.GUI_Settings.bearing_gpioPinLabel.setText(self.GUI_Settings.bearing_gpioGetPinInput.text())
+			self.GUI_Settings.bearing_gpioPinValueLabel.setText(str(value))
+
+
+
+
+		self.GUI_Settings.bearing_gpioGetButton.clicked.connect(getPin)
+		self.GUI_Settings.bearing_gpioSetButton.clicked.connect(setPin)
