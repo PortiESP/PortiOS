@@ -165,3 +165,22 @@ class Settings_funcs:
 		self.GUI_Settings.bearing_btPowerCheckbox.toggled.connect(togglePower)
 		self.GUI_Settings.bearing_btDiscoverableCheckbox.toggled.connect(toggleDiscoverable)
 		self.GUI_Settings.bearing_btManagerButton.clicked.connect(openManager)
+
+	def servicesStatusSetup(self):
+		def getServiceStatus(service):
+			out = subprocess.run(f'systemctl status {service}', text=True, shell=True).stdout.split('\n')
+			for line in out:
+				if re.match('Active', line.strip()):
+					out = line.strip().split(':')[1].split(' ')[:2]
+					print(out)
+					return out
+
+		def refresh():
+			self.GUI_Settings.bearing_statusBtText.setText(getServiceStatus('bluetooth'))
+
+		def restartService(service):
+			print('Restarting ', service)
+			subprocess.run(f'systemctl restart {service}', shell=True)
+
+		self.GUI_Settings.bearing_statusRefreshButton.clicked.connect(refresh)
+		self.GUI_Settings.bearing_statusBtButton.clicked.connect(lambda: restartService('bluetooth'))

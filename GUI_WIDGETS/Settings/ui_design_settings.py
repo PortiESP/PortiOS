@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'design_settingsvomQIR.ui'
+## Form generated from reading UI file 'design_settingsGfetQk.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -67,7 +67,7 @@ class Ui_Settings_widget(object):
         self.scrollArea.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignTop)
         self.scrollAreaWidgetContents = QWidget()
         self.scrollAreaWidgetContents.setObjectName(u"scrollAreaWidgetContents")
-        self.scrollAreaWidgetContents.setGeometry(QRect(0, -100, 180, 400))
+        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 180, 400))
         self.verticalLayout = QVBoxLayout(self.scrollAreaWidgetContents)
         self.verticalLayout.setSpacing(0)
         self.verticalLayout.setObjectName(u"verticalLayout")
@@ -312,7 +312,7 @@ class Ui_Settings_widget(object):
         self.scrollArea_wifi.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignTop)
         self.scrollAreaWidgetContents_8 = QWidget()
         self.scrollAreaWidgetContents_8.setObjectName(u"scrollAreaWidgetContents_8")
-        self.scrollAreaWidgetContents_8.setGeometry(QRect(0, -40, 390, 280))
+        self.scrollAreaWidgetContents_8.setGeometry(QRect(0, 0, 390, 280))
         sizePolicy = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Preferred)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -894,77 +894,12 @@ class Ui_Settings_widget(object):
         self.scrollArea_2.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignTop)
         self.scrollAreaWidgetContents_5 = QWidget()
         self.scrollAreaWidgetContents_5.setObjectName(u"scrollAreaWidgetContents_5")
-        self.scrollAreaWidgetContents_5.setGeometry(QRect(0, 0, 390, 440))
+        self.scrollAreaWidgetContents_5.setGeometry(QRect(0, 0, 400, 240))
         sizePolicy.setHeightForWidth(self.scrollAreaWidgetContents_5.sizePolicy().hasHeightForWidth())
         self.scrollAreaWidgetContents_5.setSizePolicy(sizePolicy)
-        self.scrollAreaWidgetContents_5.setMinimumSize(QSize(0, 440))
-        self.frame_2 = QFrame(self.scrollAreaWidgetContents_5)
-        self.frame_2.setObjectName(u"frame_2")
-        self.frame_2.setGeometry(QRect(0, 90, 370, 20))
-        self.line_17 = QFrame(self.frame_2)
-        self.line_17.setObjectName(u"line_17")
-        self.line_17.setGeometry(QRect(10, 10, 360, 1))
-        self.line_17.setStyleSheet(u"border:none;\n"
-"background:gray;")
-        self.line_17.setFrameShadow(QFrame.Plain)
-        self.line_17.setFrameShape(QFrame.HLine)
-        self.frame_4 = QFrame(self.scrollAreaWidgetContents_5)
-        self.frame_4.setObjectName(u"frame_4")
-        self.frame_4.setGeometry(QRect(0, 0, 370, 40))
-        self.label_52 = QLabel(self.frame_4)
-        self.label_52.setObjectName(u"label_52")
-        self.label_52.setGeometry(QRect(10, 0, 190, 40))
-        self.label_52.setFont(font1)
-        self.label_52.setStyleSheet(u"QLabel{\n"
-"	color:white;\n"
-"}")
-        self.bearing_statusDaemonText = QLabel(self.frame_4)
-        self.bearing_statusDaemonText.setObjectName(u"bearing_statusDaemonText")
-        self.bearing_statusDaemonText.setGeometry(QRect(190, 0, 180, 40))
-        self.bearing_statusDaemonText.setFont(font1)
-        self.bearing_statusDaemonText.setStyleSheet(u"QLabel{\n"
-"	color:gray;\n"
-"}")
-        self.bearing_statusDaemonText.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
-        self.frame = QFrame(self.scrollAreaWidgetContents_5)
-        self.frame.setObjectName(u"frame")
-        self.frame.setGeometry(QRect(0, 40, 370, 50))
-        self.label_54 = QLabel(self.frame)
-        self.label_54.setObjectName(u"label_54")
-        self.label_54.setGeometry(QRect(10, 0, 200, 50))
-        self.label_54.setMaximumSize(QSize(250, 16777215))
-        self.label_54.setFont(font1)
-        self.label_54.setStyleSheet(u"color:white;")
-        self.bearing_statusDaemonButton = QPushButton(self.frame)
-        self.bearing_statusDaemonButton.setObjectName(u"bearing_statusDaemonButton")
-        self.bearing_statusDaemonButton.setGeometry(QRect(270, 10, 100, 30))
-        self.bearing_statusDaemonButton.setFont(font3)
-        self.bearing_statusDaemonButton.setStyleSheet(u"QPushButton{\n"
-"	\n"
-"	background-color: rgb(49, 49, 49);\n"
-"	border: 2px solid rgb(181, 0, 0);\n"
-"	border-radius:15px;\n"
-"	color:gray;\n"
-"}\n"
-"QPushButton:pressed{\n"
-"	\n"
-"	\n"
-"	background-color: rgb(188, 0, 0);\n"
-"	color:white;\n"
-"}")
-        self.frame_3 = QFrame(self.scrollAreaWidgetContents_5)
-        self.frame_3.setObjectName(u"frame_3")
-        self.frame_3.setGeometry(QRect(0, 200, 370, 20))
-        self.line_18 = QFrame(self.frame_3)
-        self.line_18.setObjectName(u"line_18")
-        self.line_18.setGeometry(QRect(10, 10, 360, 1))
-        self.line_18.setStyleSheet(u"border:none;\n"
-"background:gray;")
-        self.line_18.setFrameShadow(QFrame.Plain)
-        self.line_18.setFrameShape(QFrame.HLine)
         self.frame_7 = QFrame(self.scrollAreaWidgetContents_5)
         self.frame_7.setObjectName(u"frame_7")
-        self.frame_7.setGeometry(QRect(0, 150, 370, 50))
+        self.frame_7.setGeometry(QRect(0, 40, 370, 50))
         self.label_55 = QLabel(self.frame_7)
         self.label_55.setObjectName(u"label_55")
         self.label_55.setGeometry(QRect(10, 0, 200, 50))
@@ -990,7 +925,7 @@ class Ui_Settings_widget(object):
 "}")
         self.frame_6 = QFrame(self.scrollAreaWidgetContents_5)
         self.frame_6.setObjectName(u"frame_6")
-        self.frame_6.setGeometry(QRect(0, 110, 370, 40))
+        self.frame_6.setGeometry(QRect(0, 0, 370, 40))
         self.label_56 = QLabel(self.frame_6)
         self.label_56.setObjectName(u"label_56")
         self.label_56.setGeometry(QRect(10, 0, 190, 40))
@@ -1006,114 +941,6 @@ class Ui_Settings_widget(object):
 "	color:gray;\n"
 "}")
         self.bearing_statusBtText.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
-        self.frame_11 = QFrame(self.scrollAreaWidgetContents_5)
-        self.frame_11.setObjectName(u"frame_11")
-        self.frame_11.setGeometry(QRect(0, 310, 370, 20))
-        self.line_19 = QFrame(self.frame_11)
-        self.line_19.setObjectName(u"line_19")
-        self.line_19.setGeometry(QRect(10, 10, 360, 1))
-        self.line_19.setStyleSheet(u"border:none;\n"
-"background:gray;")
-        self.line_19.setFrameShadow(QFrame.Plain)
-        self.line_19.setFrameShape(QFrame.HLine)
-        self.frame_12 = QFrame(self.scrollAreaWidgetContents_5)
-        self.frame_12.setObjectName(u"frame_12")
-        self.frame_12.setGeometry(QRect(0, 260, 370, 50))
-        self.label_58 = QLabel(self.frame_12)
-        self.label_58.setObjectName(u"label_58")
-        self.label_58.setGeometry(QRect(10, 0, 200, 50))
-        self.label_58.setMaximumSize(QSize(250, 16777215))
-        self.label_58.setFont(font1)
-        self.label_58.setStyleSheet(u"color:white;")
-        self.bearing_statusAlsaButton = QPushButton(self.frame_12)
-        self.bearing_statusAlsaButton.setObjectName(u"bearing_statusAlsaButton")
-        self.bearing_statusAlsaButton.setGeometry(QRect(270, 10, 100, 30))
-        self.bearing_statusAlsaButton.setFont(font3)
-        self.bearing_statusAlsaButton.setStyleSheet(u"QPushButton{\n"
-"	\n"
-"	background-color: rgb(49, 49, 49);\n"
-"	border: 2px solid rgb(181, 0, 0);\n"
-"	border-radius:15px;\n"
-"	color:gray;\n"
-"}\n"
-"QPushButton:pressed{\n"
-"	\n"
-"	\n"
-"	background-color: rgb(188, 0, 0);\n"
-"	color:white;\n"
-"}")
-        self.frame_13 = QFrame(self.scrollAreaWidgetContents_5)
-        self.frame_13.setObjectName(u"frame_13")
-        self.frame_13.setGeometry(QRect(0, 220, 370, 40))
-        self.label_59 = QLabel(self.frame_13)
-        self.label_59.setObjectName(u"label_59")
-        self.label_59.setGeometry(QRect(10, 0, 190, 40))
-        self.label_59.setFont(font1)
-        self.label_59.setStyleSheet(u"QLabel{\n"
-"	color:white;\n"
-"}")
-        self.bearing_statusAlsaText = QLabel(self.frame_13)
-        self.bearing_statusAlsaText.setObjectName(u"bearing_statusAlsaText")
-        self.bearing_statusAlsaText.setGeometry(QRect(190, 0, 180, 40))
-        self.bearing_statusAlsaText.setFont(font1)
-        self.bearing_statusAlsaText.setStyleSheet(u"QLabel{\n"
-"	color:gray;\n"
-"}")
-        self.bearing_statusAlsaText.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
-        self.frame_14 = QFrame(self.scrollAreaWidgetContents_5)
-        self.frame_14.setObjectName(u"frame_14")
-        self.frame_14.setGeometry(QRect(0, 330, 370, 40))
-        self.label_61 = QLabel(self.frame_14)
-        self.label_61.setObjectName(u"label_61")
-        self.label_61.setGeometry(QRect(10, 0, 190, 40))
-        self.label_61.setFont(font1)
-        self.label_61.setStyleSheet(u"QLabel{\n"
-"	color:white;\n"
-"}")
-        self.bearing_statusDbusText = QLabel(self.frame_14)
-        self.bearing_statusDbusText.setObjectName(u"bearing_statusDbusText")
-        self.bearing_statusDbusText.setGeometry(QRect(190, 0, 180, 40))
-        self.bearing_statusDbusText.setFont(font1)
-        self.bearing_statusDbusText.setStyleSheet(u"QLabel{\n"
-"	color:gray;\n"
-"}")
-        self.bearing_statusDbusText.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
-        self.frame_15 = QFrame(self.scrollAreaWidgetContents_5)
-        self.frame_15.setObjectName(u"frame_15")
-        self.frame_15.setGeometry(QRect(0, 420, 370, 20))
-        self.line_20 = QFrame(self.frame_15)
-        self.line_20.setObjectName(u"line_20")
-        self.line_20.setGeometry(QRect(10, 10, 360, 1))
-        self.line_20.setStyleSheet(u"border:none;\n"
-"background:gray;")
-        self.line_20.setFrameShadow(QFrame.Plain)
-        self.line_20.setFrameShape(QFrame.HLine)
-        self.frame_16 = QFrame(self.scrollAreaWidgetContents_5)
-        self.frame_16.setObjectName(u"frame_16")
-        self.frame_16.setGeometry(QRect(0, 370, 370, 50))
-        self.label_63 = QLabel(self.frame_16)
-        self.label_63.setObjectName(u"label_63")
-        self.label_63.setGeometry(QRect(10, 0, 200, 50))
-        self.label_63.setMaximumSize(QSize(250, 16777215))
-        self.label_63.setFont(font1)
-        self.label_63.setStyleSheet(u"color:white;")
-        self.bearing_statusDbusButton = QPushButton(self.frame_16)
-        self.bearing_statusDbusButton.setObjectName(u"bearing_statusDbusButton")
-        self.bearing_statusDbusButton.setGeometry(QRect(270, 10, 100, 30))
-        self.bearing_statusDbusButton.setFont(font3)
-        self.bearing_statusDbusButton.setStyleSheet(u"QPushButton{\n"
-"	\n"
-"	background-color: rgb(49, 49, 49);\n"
-"	border: 2px solid rgb(181, 0, 0);\n"
-"	border-radius:15px;\n"
-"	color:gray;\n"
-"}\n"
-"QPushButton:pressed{\n"
-"	\n"
-"	\n"
-"	background-color: rgb(188, 0, 0);\n"
-"	color:white;\n"
-"}")
         self.scrollArea_2.setWidget(self.scrollAreaWidgetContents_5)
         self.stackedWidget_settings.addWidget(self.page_status)
         self.page_gpio = QWidget()
@@ -1321,7 +1148,7 @@ class Ui_Settings_widget(object):
         self.scrollArea_4.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignTop)
         self.scrollAreaWidgetContents_7 = QWidget()
         self.scrollAreaWidgetContents_7.setObjectName(u"scrollAreaWidgetContents_7")
-        self.scrollAreaWidgetContents_7.setGeometry(QRect(0, 0, 390, 440))
+        self.scrollAreaWidgetContents_7.setGeometry(QRect(0, 0, 398, 440))
         self.scrollAreaWidgetContents_7.setMinimumSize(QSize(0, 440))
         self.frame_10 = QFrame(self.scrollAreaWidgetContents_7)
         self.frame_10.setObjectName(u"frame_10")
@@ -1808,7 +1635,7 @@ class Ui_Settings_widget(object):
 
         self.retranslateUi(Settings_widget)
 
-        self.stackedWidget_settings.setCurrentIndex(1)
+        self.stackedWidget_settings.setCurrentIndex(4)
 
 
         QMetaObject.connectSlotsByName(Settings_widget)
@@ -1864,22 +1691,10 @@ class Ui_Settings_widget(object):
         self.bearing_soundClaxonsButton.setText(QCoreApplication.translate("Settings_widget", u"Change", None))
         self.label_38.setText(QCoreApplication.translate("Settings_widget", u"Services status", None))
         self.bearing_statusRefreshButton.setText("")
-        self.label_52.setText(QCoreApplication.translate("Settings_widget", u"Daemon", None))
-        self.bearing_statusDaemonText.setText(QCoreApplication.translate("Settings_widget", u"None", None))
-        self.label_54.setText(QCoreApplication.translate("Settings_widget", u"Restart daemon", None))
-        self.bearing_statusDaemonButton.setText(QCoreApplication.translate("Settings_widget", u"Restart", None))
         self.label_55.setText(QCoreApplication.translate("Settings_widget", u"Restart bluetooth", None))
         self.bearing_statusBtButton.setText(QCoreApplication.translate("Settings_widget", u"Restart", None))
         self.label_56.setText(QCoreApplication.translate("Settings_widget", u"Bluetooth", None))
         self.bearing_statusBtText.setText(QCoreApplication.translate("Settings_widget", u"None", None))
-        self.label_58.setText(QCoreApplication.translate("Settings_widget", u"Restart alsa", None))
-        self.bearing_statusAlsaButton.setText(QCoreApplication.translate("Settings_widget", u"Restart", None))
-        self.label_59.setText(QCoreApplication.translate("Settings_widget", u"Alsa", None))
-        self.bearing_statusAlsaText.setText(QCoreApplication.translate("Settings_widget", u"None", None))
-        self.label_61.setText(QCoreApplication.translate("Settings_widget", u"Dbus", None))
-        self.bearing_statusDbusText.setText(QCoreApplication.translate("Settings_widget", u"None", None))
-        self.label_63.setText(QCoreApplication.translate("Settings_widget", u"Restart dbus", None))
-        self.bearing_statusDbusButton.setText(QCoreApplication.translate("Settings_widget", u"Restart", None))
         self.label_64.setText(QCoreApplication.translate("Settings_widget", u"GPIO", None))
         self.bearing_gpioSetInput.setPlaceholderText(QCoreApplication.translate("Settings_widget", u"--", None))
         self.label_65.setText(QCoreApplication.translate("Settings_widget", u"Set pin", None))
