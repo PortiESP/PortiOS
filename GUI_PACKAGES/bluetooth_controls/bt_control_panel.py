@@ -67,7 +67,11 @@ class BT_Control_Panel:
 					self.volumeData = self.volumeIface.Get('org.bluez.MediaTransport1', 'Volume')
 			
 	def checkConnectedDevices(self):
-		self.objects = self.mgrInterface.GetManagedObjects()
+		try:
+			self.objects = self.mgrInterface.GetManagedObjects()
+		except dbus.exceptions.DBusException:
+			return False
+			
 		for objPath, interfaces in self.objects.items():
 			if re.match('/org/bluez/hci0/dev_[0-9A-Z]{2}_[0-9A-Z]{2}_[0-9A-Z]{2}_[0-9A-Z]{2}_[0-9A-Z]{2}_[0-9A-Z]{2}$', objPath):
 				if self.objects[objPath]['org.bluez.Device1']['Connected'] == 1:
