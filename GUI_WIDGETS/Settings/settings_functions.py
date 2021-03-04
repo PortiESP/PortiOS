@@ -188,6 +188,7 @@ class Settings_funcs:
 	def servicesStatusSetup(self):
 		def getServiceStatus(service):
 			out = subprocess.run(f'systemctl is-active {service}', text=True, shell=True).stdout
+			print(out)
 			return out
 
 
