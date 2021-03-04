@@ -1,5 +1,5 @@
 import RPi.GPIO as gp
-import threading, time, subprocess
+import threading, time
 
 class GPIO_Controller():
 	def __init__(self, mode=gp.BOARD):
@@ -9,26 +9,20 @@ class GPIO_Controller():
 		self.threadsHz = 5
 		self.i2cHz = 40
 	
-	def setPinSetup(self, pin, setup='out', initial=False):
+	def pinSetup(self, pin, setup='out', initial=False):
 		if setup == 'out':
 			gp.setup(pin, gp.OUT, initial=initial)
 		elif setup == 'in':
 			gp.setup(pin, gp.IN)
 		else:
 			return False
-	
-	def getPinSetup(self, pin):
-		subprocess.run(f'echo {str(pin)} > /sys/class/gpio/export', capture_output=True, shell=True)
-		out = subprocess.run(f'cat /sys/class/gpio/gpio{str(pin)}/direction', capture_output=True, text=True, shell=True).stdout
-		print('Pin: ',pin, ' setup: ',out)
-		subprocess.run('gpio unexportall', capture_output=True,shell=True)
-		return out
 		
-	def setPinValue(self, pin, value):
-		self.setPinSetup(pin)
+		
+	def setPin(self, pin, value):
+		self.pinSetup(pin)
 		gp.output(pin, value)
 		
-	def getPinVale(self, pin):
+	def getPin(self, pin):
 		return gp.input(pin)
 		
 	def pinEventListener(self, pin, callback):
@@ -42,7 +36,7 @@ class GPIO_Controller():
 					callback(pin, status)
 				time.sleep(1/self.threadsHz)
 			
-		self.setPinSetup(pin, 'in')
+		self.pinSetup(pin, 'in')
 		# ~ Thread create
 		listenerThread = threading.Thread(target=listener, args=(pin, callback))
 		self.listenersList.append(listenerThread)
@@ -55,13 +49,13 @@ class GPIO_Controller():
 
 		
 	def inputTest(self, pin, Hz=5):
-		self.setPinSetup(pin, 'in')
+		self.pinSetup(pin, 'in')
 		while 1:
 			print(gp.input(pin))
 			time.sleep(1/Hz)
 			
 	def createPWM(self, pin, Hz):
-		self.setPinSetup(pin, 'out')
+		self.pinSetup(pin, 'out')
 		pwm = gp.PWM(pin, Hz)
 		pwm.start(0)
 		
@@ -74,8 +68,8 @@ class GPIO_Controller():
 		obj.ChangeDutyCycle(value)
 		
 	def i2cEvent(self, pinSDA, pinCLK, callback, bits=4):
-		self.setPinSetup(pinSDA, 'in')
-		self.setPinSetup(pinCLK, 'in')
+		self.pinSetup(pinSDA, 'in')
+		self.pinSetup(pinCLK, 'in')
 		self.i2cData = []
 		def i2cEventBit(p, status):
 			if status == 1:
@@ -97,7 +91,7 @@ class GPIO_Controller():
 					i2cEventBit(pin, status)
 				time.sleep(1/self.i2cHz)
 			
-		self.setPinSetup(pinCLK, 'in')
+		self.pinSetup(pinCLK, 'in')
 		# ~ Thread create
 		listenerThread = threading.Thread(target=listener, args=(pinCLK,))
 		self.listenersList.append(listenerThread)
@@ -114,7 +108,7 @@ class GPIO_Controller():
 if __name__ == '__main__':
 	c = GPIO_Controller()
 	
-	# ~ c.setPinValue(40, 0)
+	# ~ c.setPin(40, 0)
 	
 	# ~ c.inputTest(40, 100)	
 	
