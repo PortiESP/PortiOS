@@ -196,7 +196,7 @@ class Settings_funcs:
 
 		def restartService(service):
 			print('Restarting ', service)
-			subprocess.run(f'systemctl restart {service}', shell=True)
+			subprocess.run(f'sudo systemctl restart {service}', shell=True)
 
 		self.GUI_Settings.bearing_statusRefreshButton.clicked.connect(refresh)
 		self.GUI_Settings.bearing_statusBtButton.clicked.connect(lambda: restartService('bluetooth'))
