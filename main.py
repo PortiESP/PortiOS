@@ -128,7 +128,14 @@ class Main_GUI:
 			time.sleep((1/self.mainLoopHz))
 
 			##################### CONNECTIONS MANAGER ###################################
-			checkDevice = self.BTController.checkConnectedDevices()
+			try:
+				checkDevice = self.BTController.checkConnectedDevices()
+			except dbus.exceptions.DBusException:
+				try:
+					self.BTController = BT_Control_Panel()
+				except:
+					print('No BT object available')
+
 			print(checkDevice, ' - ',self.isConnectedDevice)
 			# Check for connected devices
 			# Setting BT status disconnected
