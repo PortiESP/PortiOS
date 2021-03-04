@@ -1,6 +1,6 @@
 from .ui_design_settings import Ui_Settings_widget
 import subprocess, threading, re, time
-
+import RPi.GPIO as gp
 
 
 class Settings_funcs:
