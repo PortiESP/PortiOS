@@ -1,5 +1,6 @@
 import RPi.GPIO as gp
 import threading, time
+import RPi.GPIO as gp
 
 class GPIO_Controller():
 	def __init__(self, mode=gp.BOARD):
