@@ -485,7 +485,7 @@ QScrollBar:vertical {
      </rect>
     </property>
     <property name="currentIndex">
-     <number>4</number>
+     <number>5</number>
     </property>
     <widget class="QWidget" name="page_brightness">
      <widget class="QFrame" name="p_brightnes_title">
@@ -2777,7 +2777,7 @@ background:gray;</string>
 }</string>
        </property>
        <property name="text">
-        <string>Out</string>
+        <string>No data</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -2838,7 +2838,7 @@ background:gray;</string>
 }</string>
        </property>
        <property name="text">
-        <string>High</string>
+        <string>No data</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -2879,7 +2879,7 @@ background:gray;</string>
         <string notr="true">color:red;</string>
        </property>
        <property name="text">
-        <string>Pin: 15</string>
+        <string>Pin: None</string>
        </property>
       </widget>
      </widget>

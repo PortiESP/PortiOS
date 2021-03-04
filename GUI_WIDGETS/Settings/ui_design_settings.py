@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'design_settingsiXYOrV.ui'
+## Form generated from reading UI file 'design_settingsBXmcqj.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -1635,7 +1635,7 @@ class Ui_Settings_widget(object):
 
         self.retranslateUi(Settings_widget)
 
-        self.stackedWidget_settings.setCurrentIndex(4)
+        self.stackedWidget_settings.setCurrentIndex(5)
 
 
         QMetaObject.connectSlotsByName(Settings_widget)
@@ -1703,10 +1703,10 @@ class Ui_Settings_widget(object):
         self.label_66.setText(QCoreApplication.translate("Settings_widget", u"Get pin", None))
         self.bearing_gpioGetButton.setText("")
         self.label_10.setText(QCoreApplication.translate("Settings_widget", u"Pin setup", None))
-        self.label_12.setText(QCoreApplication.translate("Settings_widget", u"Out", None))
+        self.label_12.setText(QCoreApplication.translate("Settings_widget", u"No data", None))
         self.label_15.setText(QCoreApplication.translate("Settings_widget", u"Pin state", None))
-        self.label_16.setText(QCoreApplication.translate("Settings_widget", u"High", None))
-        self.label_4.setText(QCoreApplication.translate("Settings_widget", u"Pin: 15", None))
+        self.label_16.setText(QCoreApplication.translate("Settings_widget", u"No data", None))
+        self.label_4.setText(QCoreApplication.translate("Settings_widget", u"Pin: None", None))
         self.label_78.setText(QCoreApplication.translate("Settings_widget", u"RAM", None))
         self.label_79.setText(QCoreApplication.translate("Settings_widget", u"Used", None))
         self.bearing_systemRamUsedText.setText(QCoreApplication.translate("Settings_widget", u"0GB", None))
