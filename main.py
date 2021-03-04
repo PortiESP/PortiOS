@@ -16,6 +16,9 @@ class Main_GUI:
 		self.BTController = BT_Control_Panel()
 		self.startMediaPlayer()
 
+		gp.setmode(gp.BOARD)
+		gp.setwarnings(False)
+
 		# Media info
 		self.track = None # Track info dictionary
 		self.songTitle = None

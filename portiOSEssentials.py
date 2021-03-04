@@ -21,5 +21,5 @@ from PySide2.QtCore import *
 import sys, threading, time
 from math import ceil
 import dbus.exceptions
-
+import RPi.GPIO as gp
 

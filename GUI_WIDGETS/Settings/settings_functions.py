@@ -1,6 +1,6 @@
 from .ui_design_settings import Ui_Settings_widget
 import subprocess, threading, re, time
-import RPi.GPIO as gp
+
 
 
 class Settings_funcs:
@@ -220,6 +220,7 @@ class Settings_funcs:
 			pin = int(self.GUI_Settings.bearing_gpioGetInput.text())
 			out = gp.input(pin, gp.IN)
 			value = gp.input(pin)
+			print('Pin ', pin , ' value: ', value)
 			self.GUI_Settings.bearing_gpioPinLabel.setText(self.GUI_Settings.bearing_gpioGetPinInput.text())
 			self.GUI_Settings.bearing_gpioPinValueLabel.setText(str(value))
 
