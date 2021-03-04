@@ -125,6 +125,7 @@ class Settings_funcs:
 		def getConnectedDevice():
 			if self.isConnectedDevice:
 				name = str(self.BTController.get_device_data('Name'))
+				if name == 'False': name = 'None'
 			else: 
 				name = 'None'
 			print('BT Connected device: ', name)

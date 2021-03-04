@@ -132,10 +132,10 @@ class Main_GUI:
 			# Check for connected devices
 			# Setting BT status disconnected
 			if self.isConnectedDevice == True and checkDevice == False:
+				self.isConnectedDevice = False
 				icon = QIcon()
 				icon.addFile(u":/bt_icons/Resources/Icons/bt_states/bluetooth_gray.png", QSize(), QIcon.Normal, QIcon.Off)
 				self.GUI_Central.bluetoothStatusButton.setIcon(icon)
-				self.isConnectedDevice = False
 				continue
 
 			# Setup on new connection
