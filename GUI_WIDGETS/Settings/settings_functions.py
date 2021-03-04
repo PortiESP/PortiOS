@@ -218,7 +218,7 @@ class Settings_funcs:
 
 		def getPin():
 			pin = int(self.GUI_Settings.bearing_gpioGetInput.text())
-			value = subprocess.run('gpio -1 read {pin}', capture_output=True, text=True, shell=True).stdout
+			value = subprocess.run('gpio -1 read {pin}',  text=True, shell=True).stdout
 			print('Pin ', pin , ' value: ', value)
 			self.GUI_Settings.bearing_gpioPinLabel.setText('Pin: ' + self.GUI_Settings.bearing_gpioGetInput.text())
 			self.GUI_Settings.bearing_gpioPinValueLabel.setText(str(value))
