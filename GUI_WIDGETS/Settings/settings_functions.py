@@ -30,6 +30,7 @@ class Settings_funcs:
 		Settings_funcs.gpioSetup(self)
 		Settings_funcs.systemInfoSetup(self)
 		Settings_funcs.terminalSetup(self)
+		Settings_funcs.advancedSetup(self)
 
 	def setPage(self, index):
 		print('Changing to page ',index)
@@ -263,3 +264,11 @@ class Settings_funcs:
 	def terminalSetup(self):
 
 		self.GUI_Settings.bearing_terminalOpenButton.clicked.connect(lambda: os.system('x-terminal-emulator'))
+
+
+# ------------------------------------------------------------------------------------------------------
+
+	def advancedSetup(self):
+
+
+		self.GUI_Settings.bearing_advancedRebootButton.clicked.connect(lambda: os.system('sudo reboot'))
