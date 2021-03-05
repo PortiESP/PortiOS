@@ -237,7 +237,7 @@ class Settings_funcs:
 		def refresh():
 			# CPU
 			self.GUI_Settings.bearing_systemCpuUseText.setText(str(self.systemInfo.getCPUuse()) + '%')
-			self.GUI_Settings.bearing_systemCpuTempText.setText(str(self.systemInfo.getCPUtemperature()) + 'Cº')
+			self.GUI_Settings.bearing_systemCpuTempText.setText(str(self.systemInfo.getCPUtemperature()) + 'ºC')
 
 			# RAM
 			ram = self.systemInfo.getRAMinfo()
