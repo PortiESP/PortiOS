@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'design_settingsuTsSuD.ui'
+## Form generated from reading UI file 'design_settingsqeVjTE.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -67,7 +67,7 @@ class Ui_Settings_widget(object):
         self.scrollArea.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignTop)
         self.scrollAreaWidgetContents = QWidget()
         self.scrollAreaWidgetContents.setObjectName(u"scrollAreaWidgetContents")
-        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 180, 400))
+        self.scrollAreaWidgetContents.setGeometry(QRect(0, -100, 180, 400))
         self.verticalLayout = QVBoxLayout(self.scrollAreaWidgetContents)
         self.verticalLayout.setSpacing(0)
         self.verticalLayout.setObjectName(u"verticalLayout")
@@ -312,7 +312,7 @@ class Ui_Settings_widget(object):
         self.scrollArea_wifi.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignTop)
         self.scrollAreaWidgetContents_8 = QWidget()
         self.scrollAreaWidgetContents_8.setObjectName(u"scrollAreaWidgetContents_8")
-        self.scrollAreaWidgetContents_8.setGeometry(QRect(0, 0, 398, 280))
+        self.scrollAreaWidgetContents_8.setGeometry(QRect(0, 0, 390, 280))
         sizePolicy = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Preferred)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -1148,7 +1148,7 @@ class Ui_Settings_widget(object):
         self.scrollArea_4.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignTop)
         self.scrollAreaWidgetContents_7 = QWidget()
         self.scrollAreaWidgetContents_7.setObjectName(u"scrollAreaWidgetContents_7")
-        self.scrollAreaWidgetContents_7.setGeometry(QRect(0, 0, 398, 440))
+        self.scrollAreaWidgetContents_7.setGeometry(QRect(0, -200, 390, 440))
         self.scrollAreaWidgetContents_7.setMinimumSize(QSize(0, 440))
         self.frame_10 = QFrame(self.scrollAreaWidgetContents_7)
         self.frame_10.setObjectName(u"frame_10")
@@ -1396,67 +1396,6 @@ class Ui_Settings_widget(object):
         self.frame_page_advanced = QFrame(self.page_advanced)
         self.frame_page_advanced.setObjectName(u"frame_page_advanced")
         self.frame_page_advanced.setGeometry(QRect(0, 0, 400, 300))
-        self.p_advanced_fastBoot = QFrame(self.frame_page_advanced)
-        self.p_advanced_fastBoot.setObjectName(u"p_advanced_fastBoot")
-        self.p_advanced_fastBoot.setGeometry(QRect(0, 60, 370, 40))
-        self.label_110 = QLabel(self.p_advanced_fastBoot)
-        self.label_110.setObjectName(u"label_110")
-        self.label_110.setGeometry(QRect(10, 5, 240, 30))
-        self.label_110.setMaximumSize(QSize(250, 16777215))
-        self.label_110.setFont(font1)
-        self.label_110.setStyleSheet(u"color:white;")
-        self.frame_cb_7 = QFrame(self.p_advanced_fastBoot)
-        self.frame_cb_7.setObjectName(u"frame_cb_7")
-        self.frame_cb_7.setGeometry(QRect(310, 0, 60, 40))
-        self.a_border = QFrame(self.frame_cb_7)
-        self.a_border.setObjectName(u"a_border")
-        self.a_border.setGeometry(QRect(0, 5, 60, 30))
-        self.a_border.setStyleSheet(u"QFrame{\n"
-"	border-radius:15px;\n"
-"	border:2px solid gray; \n"
-"	border-color: rgb(211, 211, 211);\n"
-"}\n"
-"QLabel{\n"
-"	border:none; \n"
-"	color:white;\n"
-"	margin-bottom:1px;\n"
-"}")
-        self.a_border.setFrameShape(QFrame.StyledPanel)
-        self.a_border.setFrameShadow(QFrame.Raised)
-        self.label_111 = QLabel(self.a_border)
-        self.label_111.setObjectName(u"label_111")
-        self.label_111.setGeometry(QRect(0, 0, 30, 30))
-        self.label_111.setFont(font2)
-        self.label_111.setAlignment(Qt.AlignCenter)
-        self.label_112 = QLabel(self.a_border)
-        self.label_112.setObjectName(u"label_112")
-        self.label_112.setGeometry(QRect(30, 0, 30, 30))
-        self.label_112.setFont(font2)
-        self.label_112.setAlignment(Qt.AlignCenter)
-        self.bearing_advanceFastbootCheckbox = QCheckBox(self.frame_cb_7)
-        self.bearing_advanceFastbootCheckbox.setObjectName(u"bearing_advanceFastbootCheckbox")
-        self.bearing_advanceFastbootCheckbox.setGeometry(QRect(0, 0, 120, 40))
-        self.bearing_advanceFastbootCheckbox.setStyleSheet(u"QCheckBox{\n"
-"	background:none;\n"
-"}\n"
-"QCheckBox::indicator{\n"
-"	height:20px;\n"
-"	width:20px;\n"
-"	border-radius:10px;\n"
-"\n"
-"}\n"
-"QCheckBox::indicator:unchecked{\n"
-"	margin-left:6px;\n"
-"	background-color: rgb(255, 0, 0);\n"
-"\n"
-"}\n"
-"QCheckBox::indicator:checked{\n"
-"	margin-left:30px;\n"
-"	background:rgb(54, 0, 0);\n"
-"\n"
-"	\n"
-"}")
-        self.bearing_advanceFastbootCheckbox.setChecked(True)
         self.p_advanced_title = QFrame(self.frame_page_advanced)
         self.p_advanced_title.setObjectName(u"p_advanced_title")
         self.p_advanced_title.setGeometry(QRect(0, 0, 400, 60))
@@ -1475,7 +1414,7 @@ class Ui_Settings_widget(object):
         self.line_24.setFrameShape(QFrame.HLine)
         self.p_advanced_separator = QFrame(self.frame_page_advanced)
         self.p_advanced_separator.setObjectName(u"p_advanced_separator")
-        self.p_advanced_separator.setGeometry(QRect(0, 190, 370, 20))
+        self.p_advanced_separator.setGeometry(QRect(0, 150, 370, 20))
         self.line_25 = QFrame(self.p_advanced_separator)
         self.line_25.setObjectName(u"line_25")
         self.line_25.setGeometry(QRect(10, 10, 360, 1))
@@ -1485,7 +1424,7 @@ class Ui_Settings_widget(object):
         self.line_25.setFrameShape(QFrame.HLine)
         self.p_advanced_reboot = QFrame(self.frame_page_advanced)
         self.p_advanced_reboot.setObjectName(u"p_advanced_reboot")
-        self.p_advanced_reboot.setGeometry(QRect(0, 210, 370, 50))
+        self.p_advanced_reboot.setGeometry(QRect(0, 170, 370, 50))
         self.label_116 = QLabel(self.p_advanced_reboot)
         self.label_116.setObjectName(u"label_116")
         self.label_116.setGeometry(QRect(10, 0, 200, 50))
@@ -1511,7 +1450,7 @@ class Ui_Settings_widget(object):
 "}")
         self.p_advanced_autoPower = QFrame(self.frame_page_advanced)
         self.p_advanced_autoPower.setObjectName(u"p_advanced_autoPower")
-        self.p_advanced_autoPower.setGeometry(QRect(0, 100, 370, 40))
+        self.p_advanced_autoPower.setGeometry(QRect(0, 60, 370, 40))
         self.label_113 = QLabel(self.p_advanced_autoPower)
         self.label_113.setObjectName(u"label_113")
         self.label_113.setGeometry(QRect(10, 5, 240, 30))
@@ -1572,7 +1511,7 @@ class Ui_Settings_widget(object):
         self.bearing_advancedAutopowerCheckbox.setChecked(True)
         self.p_advanced_autoDiscoverable = QFrame(self.frame_page_advanced)
         self.p_advanced_autoDiscoverable.setObjectName(u"p_advanced_autoDiscoverable")
-        self.p_advanced_autoDiscoverable.setGeometry(QRect(0, 140, 370, 40))
+        self.p_advanced_autoDiscoverable.setGeometry(QRect(0, 100, 370, 40))
         self.label_122 = QLabel(self.p_advanced_autoDiscoverable)
         self.label_122.setObjectName(u"label_122")
         self.label_122.setGeometry(QRect(10, 5, 240, 30))
@@ -1635,7 +1574,7 @@ class Ui_Settings_widget(object):
 
         self.retranslateUi(Settings_widget)
 
-        self.stackedWidget_settings.setCurrentIndex(5)
+        self.stackedWidget_settings.setCurrentIndex(8)
 
 
         QMetaObject.connectSlotsByName(Settings_widget)
@@ -1730,10 +1669,6 @@ class Ui_Settings_widget(object):
         self.label_107.setText(QCoreApplication.translate("Settings_widget", u"TERMINAL", None))
         self.label_108.setText(QCoreApplication.translate("Settings_widget", u"Open terminal", None))
         self.bearing_terminalOpenButton.setText(QCoreApplication.translate("Settings_widget", u"Open", None))
-        self.label_110.setText(QCoreApplication.translate("Settings_widget", u"Fast boot", None))
-        self.label_111.setText(QCoreApplication.translate("Settings_widget", u"O", None))
-        self.label_112.setText(QCoreApplication.translate("Settings_widget", u"I", None))
-        self.bearing_advanceFastbootCheckbox.setText("")
         self.label_109.setText(QCoreApplication.translate("Settings_widget", u"ADVANCED", None))
         self.label_116.setText(QCoreApplication.translate("Settings_widget", u" Reboot now", None))
         self.bearing_advancedRebootButton.setText(QCoreApplication.translate("Settings_widget", u"Reboot", None))
