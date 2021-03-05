@@ -29,6 +29,7 @@ class Settings_funcs:
 		Settings_funcs.servicesStatusSetup(self)
 		Settings_funcs.gpioSetup(self)
 		Settings_funcs.systemInfoSetup(self)
+		Settings_funcs.terminalSetup(self)
 
 	def setPage(self, index):
 		print('Changing to page ',index)
