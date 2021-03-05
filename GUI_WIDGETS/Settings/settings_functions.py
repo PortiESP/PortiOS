@@ -1,5 +1,5 @@
 from .ui_design_settings import Ui_Settings_widget
-import subprocess, threading, re, time
+import subprocess, threading, re, time, os
 import RPi.GPIO as gp
 
 
@@ -255,3 +255,10 @@ class Settings_funcs:
 
 
 		self.GUI_Settings.bearing_systemRefreshButton.clicked.connect(refresh)
+
+
+# ------------------------------------------------------------------------------------------------------
+
+	def terminalSetup(self):
+
+		self.GUI_Settings.bearing_terminalOpenButton.clicked.connect(lambda: os.system('x-terminal-emulator'))
