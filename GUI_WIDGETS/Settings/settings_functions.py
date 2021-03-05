@@ -241,7 +241,7 @@ class Settings_funcs:
 
 			# RAM
 			ram = self.systemInfo.getRAMinfo()
-			ram = tuple(map(lambda i: str(round((int(i)*(10**6)), 1)) + 'G', ram))
+			ram = tuple(map(lambda i: str(round((int(i)*(10**(-6))), 1)) + 'G', ram))
 			self.GUI_Settings.bearing_systemRamUsedText.setText(ram[1])
 			self.GUI_Settings.bearing_systemRamFreeText.setText(ram[2])
 			self.GUI_Settings.bearing_systemRamTotalText.setText(ram[0])
