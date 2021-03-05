@@ -1,6 +1,6 @@
 import os 
 
-class system_info:
+class System_info:
 	def __init__(self):
 		self.cpu_temp = self.getCPUtemperature()
 		self.ram_info = self.getRAMinfo()

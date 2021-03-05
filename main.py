@@ -16,8 +16,12 @@ class Main_GUI:
 		self.BTController = BT_Control_Panel()
 		self.startMediaPlayer()
 
+		# GPIO setup
 		gp.setmode(gp.BOARD)
 		gp.setwarnings(False)
+
+		# System info manager
+		self.systemInfo = System_info()
 
 		# Media info
 		self.track = None # Track info dictionary

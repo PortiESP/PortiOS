@@ -28,6 +28,7 @@ class Settings_funcs:
 		Settings_funcs.btSetup(self)
 		Settings_funcs.servicesStatusSetup(self)
 		Settings_funcs.gpioSetup(self)
+		Settings_funcs.systemInfoSetup(self)
 
 	def setPage(self, index):
 		print('Changing to page ',index)
@@ -228,3 +229,26 @@ class Settings_funcs:
 
 		self.GUI_Settings.bearing_gpioGetButton.clicked.connect(getPin)
 		self.GUI_Settings.bearing_gpioSetButton.clicked.connect(setPin)
+
+
+# ------------------------------------------------------------------------------------------------------
+
+	def systemInfoSetup(self):
+		def refresh():
+			# CPU
+			self.GUI_Settings.bearing_systemCpuUseText.setText(str(self.systemInfo.getCPUuse()) + '%')
+			self.GUI_Settings.bearing_systemCpuTempText.setText(str(self.systemInfo.getCPUtemperature()) + 'Cº')
+
+			# RAM
+			self.GUI_Settings.bearing_systemRamUsedText.setText(str(round((self.systemInfo.getRAMinfo()[1]*(10**6)), 1)) + 'G')
+			self.GUI_Settings.bearing_systemRamFreeText.setText(str(round((self.systemInfo.getRAMinfo()[2]*(10**6)), 1)) + 'G')
+			self.GUI_Settings.bearing_systemRamTotalText.setText(str(round((self.systemInfo.getRAMinfo()[0]*(10**6)), 1)) + 'G')
+
+			# DISK
+			self.GUI_Settings.bearing_systemDiskUsedText.setText(self.systemInfo.getDiskSpace()[1])
+			self.GUI_Settings.bearing_systemDiskFreeText.setText(self.systemInfo.getDiskSpace()[2])
+			self.GUI_Settings.bearing_systemDiskTotalText.setText(self.systemInfo.getDiskSpace()[0])
+
+
+
+		self.GUI_Settings.bearing_systemRefreshButton.clicked.connect(refresh)
