@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'design_settingsqeVjTE.ui'
+## Form generated from reading UI file 'design_settingsXjFdmL.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -1414,7 +1414,7 @@ class Ui_Settings_widget(object):
         self.line_24.setFrameShape(QFrame.HLine)
         self.p_advanced_separator = QFrame(self.frame_page_advanced)
         self.p_advanced_separator.setObjectName(u"p_advanced_separator")
-        self.p_advanced_separator.setGeometry(QRect(0, 150, 370, 20))
+        self.p_advanced_separator.setGeometry(QRect(0, 100, 370, 20))
         self.line_25 = QFrame(self.p_advanced_separator)
         self.line_25.setObjectName(u"line_25")
         self.line_25.setGeometry(QRect(10, 10, 360, 1))
@@ -1424,7 +1424,7 @@ class Ui_Settings_widget(object):
         self.line_25.setFrameShape(QFrame.HLine)
         self.p_advanced_reboot = QFrame(self.frame_page_advanced)
         self.p_advanced_reboot.setObjectName(u"p_advanced_reboot")
-        self.p_advanced_reboot.setGeometry(QRect(0, 170, 370, 50))
+        self.p_advanced_reboot.setGeometry(QRect(0, 120, 370, 50))
         self.label_116 = QLabel(self.p_advanced_reboot)
         self.label_116.setObjectName(u"label_116")
         self.label_116.setGeometry(QRect(10, 0, 200, 50))
@@ -1509,67 +1509,6 @@ class Ui_Settings_widget(object):
 "	\n"
 "}")
         self.bearing_advancedAutopowerCheckbox.setChecked(True)
-        self.p_advanced_autoDiscoverable = QFrame(self.frame_page_advanced)
-        self.p_advanced_autoDiscoverable.setObjectName(u"p_advanced_autoDiscoverable")
-        self.p_advanced_autoDiscoverable.setGeometry(QRect(0, 100, 370, 40))
-        self.label_122 = QLabel(self.p_advanced_autoDiscoverable)
-        self.label_122.setObjectName(u"label_122")
-        self.label_122.setGeometry(QRect(10, 5, 240, 30))
-        self.label_122.setMaximumSize(QSize(250, 16777215))
-        self.label_122.setFont(font1)
-        self.label_122.setStyleSheet(u"color:white;")
-        self.frame_cb_10 = QFrame(self.p_advanced_autoDiscoverable)
-        self.frame_cb_10.setObjectName(u"frame_cb_10")
-        self.frame_cb_10.setGeometry(QRect(310, 0, 60, 40))
-        self.a_border_9 = QFrame(self.frame_cb_10)
-        self.a_border_9.setObjectName(u"a_border_9")
-        self.a_border_9.setGeometry(QRect(0, 5, 60, 30))
-        self.a_border_9.setStyleSheet(u"QFrame{\n"
-"	border-radius:15px;\n"
-"	border:2px solid gray; \n"
-"	border-color: rgb(211, 211, 211);\n"
-"}\n"
-"QLabel{\n"
-"	border:none; \n"
-"	color:white;\n"
-"	margin-bottom:1px;\n"
-"}")
-        self.a_border_9.setFrameShape(QFrame.StyledPanel)
-        self.a_border_9.setFrameShadow(QFrame.Raised)
-        self.label_123 = QLabel(self.a_border_9)
-        self.label_123.setObjectName(u"label_123")
-        self.label_123.setGeometry(QRect(0, 0, 30, 30))
-        self.label_123.setFont(font2)
-        self.label_123.setAlignment(Qt.AlignCenter)
-        self.label_124 = QLabel(self.a_border_9)
-        self.label_124.setObjectName(u"label_124")
-        self.label_124.setGeometry(QRect(30, 0, 30, 30))
-        self.label_124.setFont(font2)
-        self.label_124.setAlignment(Qt.AlignCenter)
-        self.bearing_advancedAutodiscoverableCheckbox = QCheckBox(self.frame_cb_10)
-        self.bearing_advancedAutodiscoverableCheckbox.setObjectName(u"bearing_advancedAutodiscoverableCheckbox")
-        self.bearing_advancedAutodiscoverableCheckbox.setGeometry(QRect(0, 0, 120, 40))
-        self.bearing_advancedAutodiscoverableCheckbox.setStyleSheet(u"QCheckBox{\n"
-"	background:none;\n"
-"}\n"
-"QCheckBox::indicator{\n"
-"	height:20px;\n"
-"	width:20px;\n"
-"	border-radius:10px;\n"
-"\n"
-"}\n"
-"QCheckBox::indicator:unchecked{\n"
-"	margin-left:6px;\n"
-"	background-color: rgb(255, 0, 0);\n"
-"\n"
-"}\n"
-"QCheckBox::indicator:checked{\n"
-"	margin-left:30px;\n"
-"	background:rgb(54, 0, 0);\n"
-"\n"
-"	\n"
-"}")
-        self.bearing_advancedAutodiscoverableCheckbox.setChecked(True)
         self.stackedWidget_settings.addWidget(self.page_advanced)
 
         self.retranslateUi(Settings_widget)
@@ -1676,9 +1615,5 @@ class Ui_Settings_widget(object):
         self.label_114.setText(QCoreApplication.translate("Settings_widget", u"O", None))
         self.label_115.setText(QCoreApplication.translate("Settings_widget", u"I", None))
         self.bearing_advancedAutopowerCheckbox.setText("")
-        self.label_122.setText(QCoreApplication.translate("Settings_widget", u"Auto-discoverable", None))
-        self.label_123.setText(QCoreApplication.translate("Settings_widget", u"O", None))
-        self.label_124.setText(QCoreApplication.translate("Settings_widget", u"I", None))
-        self.bearing_advancedAutodiscoverableCheckbox.setText("")
     # retranslateUi
 
