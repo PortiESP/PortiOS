@@ -240,14 +240,17 @@ class Settings_funcs:
 			self.GUI_Settings.bearing_systemCpuTempText.setText(str(self.systemInfo.getCPUtemperature()) + 'Cº')
 
 			# RAM
-			self.GUI_Settings.bearing_systemRamUsedText.setText(str(round((self.systemInfo.getRAMinfo()[1]*(10**6)), 1)) + 'G')
-			self.GUI_Settings.bearing_systemRamFreeText.setText(str(round((self.systemInfo.getRAMinfo()[2]*(10**6)), 1)) + 'G')
-			self.GUI_Settings.bearing_systemRamTotalText.setText(str(round((self.systemInfo.getRAMinfo()[0]*(10**6)), 1)) + 'G')
+			ram = self.systemInfo.getRAMinfo()
+			ram = tuple(map(lambda i: str(round((i*(10**6)), 1)) + 'G'))
+			self.GUI_Settings.bearing_systemRamUsedText.setText(ram[1])
+			self.GUI_Settings.bearing_systemRamFreeText.setText(ram[2])
+			self.GUI_Settings.bearing_systemRamTotalText.setText(ram[0])
 
 			# DISK
-			self.GUI_Settings.bearing_systemDiskUsedText.setText(self.systemInfo.getDiskSpace()[1])
-			self.GUI_Settings.bearing_systemDiskFreeText.setText(self.systemInfo.getDiskSpace()[2])
-			self.GUI_Settings.bearing_systemDiskTotalText.setText(self.systemInfo.getDiskSpace()[0])
+			diskSpace = self.systemInfo.getDiskSpace()
+			self.GUI_Settings.bearing_systemDiskUsedText.setText(diskSpace[1])
+			self.GUI_Settings.bearing_systemDiskFreeText.setText(diskSpace[2])
+			self.GUI_Settings.bearing_systemDiskTotalText.setText(diskSpace[0])
 
 
 
