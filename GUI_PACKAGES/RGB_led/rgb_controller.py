@@ -14,7 +14,7 @@ class RGB_Controller:
 		gp.setup(self.green_pin, gp.OUT)
 		gp.setup(self.blue_pin, gp.OUT)
 		
-		freq = 50
+		freq = 80
 		
 		self.RED = gp.PWM(self.red_pin, freq)
 		self.GREEN = gp.PWM(self.green_pin, freq)
