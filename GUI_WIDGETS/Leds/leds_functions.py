@@ -92,7 +92,7 @@ class Leds_funcs:
 		if speed == 0.0: speed = 0.01 # Default
 
 		if option == self.GUI_Leds.actualProgram: option += '+'
-		print('Setting program: ', option)
+		print('Setting program: ', option, ' - with speed: ', speed)
 
 		self.GUI_Leds.actualProgram = option
 
@@ -105,7 +105,7 @@ class Leds_funcs:
 		elif option == 'random+':
 			self.ledsController.set_program(hz=speed, mode='random-jump')
 		elif option == 'flash':
-			self.ledsController.set_program(program=self.ledsController.RAINBOW, hz=speed, mode='flash')
+			self.ledsController.set_program(program=(self.GUI_Leds.ledColor, (0,0,0)), hz=speed, mode='jump')
 		elif option == 'police':
 			self.ledsController.set_program(program=self.ledsController.POLICE, hz=speed, mode='jump')
 
