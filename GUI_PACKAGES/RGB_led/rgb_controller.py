@@ -140,7 +140,7 @@ class RGB_Controller:
 			self.loop_thread = self.new_thread(self.__color_jump, (program, hz))
 		elif mode == 'fade':
 			if method:
-				self.loop_thread = self.new_thread(self.__color_fade, (program, hz, (method,)))
+				self.loop_thread = self.new_thread(self.__color_fade, (program, hz, method))
 			else:
 				self.loop_thread = self.new_thread(self.__color_fade, (program, hz))
 		elif mode == 'random-jump':
