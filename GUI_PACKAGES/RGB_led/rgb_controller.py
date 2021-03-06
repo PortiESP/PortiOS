@@ -46,13 +46,11 @@ class RGB_Controller:
 		self.GREEN.ChangeDutyCycle(rgb[1]/255*100)
 		self.BLUE.ChangeDutyCycle(rgb[2]/255*100)
 	
-	def set_white(self):
-		gp.output(sel.red_pin, 1)
-		gp.output(sel.green_pin, 1)
-		gp.output(sel.blue_pin, 1)
 		
 	def set_off(self):
-		self.set_color((0,0,0))
+		self.RED.stop()
+		self.GREEN.stop()
+		self.BLUE.stop()
 		
 	def __color_jump(self, colors, hz):
 		period = 1/hz
