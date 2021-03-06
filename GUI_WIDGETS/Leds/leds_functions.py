@@ -113,13 +113,16 @@ class Leds_funcs:
 	def colorSliderRedMoved(self):
 		Leds_funcs.colorValueSetup(self, 0)
 		if self.GUI_Leds.ledPower:
+			self.ledsController.program_stop()
 			self.ledsController.set_color(self.GUI_Leds.ledColor)
 	def colorSliderGreenMoved(self):
 		Leds_funcs.colorValueSetup(self, 1)
 		if self.GUI_Leds.ledPower:
+			self.ledsController.program_stop()
 			self.ledsController.set_color(self.GUI_Leds.ledColor)
 	def colorSliderBlueMoved(self):
 		Leds_funcs.colorValueSetup(self, 2)
 		if self.GUI_Leds.ledPower:
+			self.ledsController.program_stop()
 			self.ledsController.set_color(self.GUI_Leds.ledColor)
 	
