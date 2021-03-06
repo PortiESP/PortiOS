@@ -51,7 +51,7 @@ class Gauge_funcs:
 	# Set speed in label and update progressbar
 	def setSpeed(self, speed):
 
-		self.GUI_Dashboard.gauge_widget.label_vel.setText(str(int(float(speed))))
+		self.GUI_Dashboard.label_vel.setText(str(int(float(speed))))
 
 		self.GUI_Dashboard.needleForward = Gauge_funcs.__mapValue(self, speed)
 
@@ -60,7 +60,7 @@ class Gauge_funcs:
 		else: 
 			self.GUI_Dashboard.needleBackward = self.GUI_Dashboard.needleForward - 0.001
 
-		self.GUI_Dashboard.gauge_widget.needle.setStyleSheet(self.GUI_Dashboard.needleStylesheet.format(needleForward = self.GUI_Dashboard.needleForward,
+		self.GUI_Dashboard.needle.setStyleSheet(self.GUI_Dashboard.needleStylesheet.format(needleForward = self.GUI_Dashboard.needleForward,
 																	needleColor = 'rgba(255,170,0,255)',
 																	needleBackward = self.GUI_Dashboard.needleBackward))		
 
