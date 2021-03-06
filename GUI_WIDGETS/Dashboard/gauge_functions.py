@@ -61,7 +61,7 @@ class Gauge_funcs:
 			self.GUI_Dashboard.needleBackward = self.GUI_Dashboard.needleForward - 0.001
 
 		self.GUI_Dashboard.needle.setStyleSheet(self.GUI_Dashboard.needleStylesheet.format(needleForward = self.GUI_Dashboard.needleForward,
-																	needleColor = 'rgb(230,0,0)',
+																	needleColor = 'rgb(200,0,0)',
 																	needleBackward = self.GUI_Dashboard.needleBackward))		
 
 	# Gets the baseNEEDLE_CONSTANT value for speed in Kmh
