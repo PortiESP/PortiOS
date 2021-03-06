@@ -19,9 +19,8 @@ class RGB_Controller:
 		self.RED = gp.PWM(self.red_pin, freq)
 		self.GREEN = gp.PWM(self.green_pin, freq)
 		self.BLUE = gp.PWM(self.blue_pin, freq)
-		self.RED.start(0)
-		self.GREEN.start(0)
-		self.BLUE.start(0)
+			
+		self.toggleOnOff = False
 		
 		self.loop_thread = None
 		self.thread_flag = False
@@ -42,12 +41,19 @@ class RGB_Controller:
 		
 		
 	def set_color(self, rgb):
+		if not self.toggleOnOff: self.set_on()
 		self.RED.ChangeDutyCycle(rgb[0]/255*100)
 		self.GREEN.ChangeDutyCycle(rgb[1]/255*100)
 		self.BLUE.ChangeDutyCycle(rgb[2]/255*100)
 	
-		
+	def set_on(self):
+		self.toggleOnOff = True
+		self.RED.start(0)
+		self.GREEN.start(0)
+		self.BLUE.start(0)	
+
 	def set_off(self):
+		self.toggleOnOff = False
 		self.RED.stop()
 		self.GREEN.stop()
 		self.BLUE.stop()
