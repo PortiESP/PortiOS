@@ -51,9 +51,13 @@ class Gauge_funcs:
 	# Set speed in label and update progressbar
 	def setSpeed(self, speed):
 
-		self.GUI_Dashboard.label_vel.setText(str(int(float(speed))))
+		self.GUI_Dashboard.label_vel.setText(str(int(speed)))
 
-		self.GUI_Dashboard.needleForward = Gauge_funcs.__mapValue(self, speed)
+		if speed <= 200:
+			self.GUI_Dashboard.needleForward = Gauge_funcs.__mapValue(self, speed)
+		else:
+			self.GUI_Dashboard.needleForward = Gauge_funcs.__mapValue(self, 200)
+
 
 		if speed == 0: 
 			self.GUI_Dashboard.needleBackward = self.GUI_Dashboard.needleForward
