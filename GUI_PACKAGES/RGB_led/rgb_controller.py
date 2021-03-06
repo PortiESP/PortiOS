@@ -35,6 +35,7 @@ class RGB_Controller:
 	def new_thread(self, thread_target, thread_args):
 		self.loop_thread = threading.Thread(target=thread_target, args=thread_args)
 		self.loop_thread.start()
+		self.loop_thread.daemon = True
 		return self.loop_thread
 		
 		
