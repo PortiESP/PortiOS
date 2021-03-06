@@ -108,7 +108,7 @@ class Leds_funcs:
 		elif option == 'flash':
 			self.ledsController.set_program(program=(self.GUI_Leds.ledColor, (0,0,0)), hz=speed, mode='jump')
 		elif option == 'police':
-			self.ledsController.set_program(program=self.ledsController.POLICE, hz=0.5, mode='jump')
+			self.ledsController.set_program(program=self.ledsController.POLICE, hz=speed, mode='jump')
 
 
 
