@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'ledsafuKsP.ui'
+## Form generated from reading UI file 'ledsJDbXnR.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -207,7 +207,7 @@ class Ui_Leds_widget(object):
 
         self.frameLedControls = QFrame(self.frame_leds)
         self.frameLedControls.setObjectName(u"frameLedControls")
-        self.frameLedControls.setGeometry(QRect(400, 79, 350, 200))
+        self.frameLedControls.setGeometry(QRect(400, 110, 350, 200))
         self.horizontalLayout_4 = QHBoxLayout(self.frameLedControls)
         self.horizontalLayout_4.setSpacing(0)
         self.horizontalLayout_4.setObjectName(u"horizontalLayout_4")
@@ -348,7 +348,7 @@ class Ui_Leds_widget(object):
 
         self.frameLedColorPicker = QFrame(self.frame_leds)
         self.frameLedColorPicker.setObjectName(u"frameLedColorPicker")
-        self.frameLedColorPicker.setGeometry(QRect(545, 47, 200, 41))
+        self.frameLedColorPicker.setGeometry(QRect(545, 90, 200, 41))
         self.horizontalLayout_5 = QHBoxLayout(self.frameLedColorPicker)
         self.horizontalLayout_5.setSpacing(0)
         self.horizontalLayout_5.setObjectName(u"horizontalLayout_5")
@@ -548,39 +548,6 @@ class Ui_Leds_widget(object):
         self.footer_background.raise_()
         self.footer_i.raise_()
         self.footer_d.raise_()
-        self.frame_speed = QFrame(self.frame_leds)
-        self.frame_speed.setObjectName(u"frame_speed")
-        self.frame_speed.setGeometry(QRect(400, 280, 350, 50))
-        self.label_9 = QLabel(self.frame_speed)
-        self.label_9.setObjectName(u"label_9")
-        self.label_9.setGeometry(QRect(0, 0, 60, 50))
-        font9 = QFont()
-        font9.setFamily(u"Bahnschrift SemiLight")
-        font9.setPointSize(13)
-        self.label_9.setFont(font9)
-        self.label_9.setStyleSheet(u"color:white;")
-        self.label_9.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
-        self.ledSpeedSlider = QSlider(self.frame_speed)
-        self.ledSpeedSlider.setObjectName(u"ledSpeedSlider")
-        self.ledSpeedSlider.setGeometry(QRect(70, 10, 280, 30))
-        self.ledSpeedSlider.setStyleSheet(u"QSlider::groove:horizontal{\n"
-"	height:1px;	\n"
-"	width:260px;\n"
-"	background:gray;\n"
-"\n"
-"}\n"
-"\n"
-"QSlider::handle:horizontal{\n"
-"	background:red;\n"
-"	width:10px;\n"
-"	margin:-5px;\n"
-"	border-radius:5px;	\n"
-"\n"
-"}")
-        self.ledSpeedSlider.setMinimum(1)
-        self.ledSpeedSlider.setMaximum(10)
-        self.ledSpeedSlider.setValue(1)
-        self.ledSpeedSlider.setOrientation(Qt.Horizontal)
 
         self.retranslateUi(Leds_widget)
 
@@ -605,6 +572,5 @@ class Ui_Leds_widget(object):
         self.label_clock.setText(QCoreApplication.translate("Leds_widget", u"23:23", None))
         self.bluetoothStatusButton.setText("")
         self.footer_background.setText("")
-        self.label_9.setText(QCoreApplication.translate("Leds_widget", u"Speed:", None))
     # retranslateUi
 

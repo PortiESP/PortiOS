@@ -87,12 +87,10 @@ class Leds_funcs:
 
 	def setProgram(self, option):
 		if not self.GUI_Leds.ledPower: return
-
-		speed = self.GUI_Leds.ledSpeedSlider.value()
 		
 
 		if option == self.GUI_Leds.actualProgram and option == 'random': option += '-jump'
-		print('Setting program: ', option, ' - with speed: ', speed)
+		print('Setting program: ', option)
 
 		self.GUI_Leds.actualProgram = option
 
@@ -105,9 +103,9 @@ class Leds_funcs:
 		elif option == 'random-jump':
 			self.ledsController.set_program(hz=0.2, mode='random-jump')
 		elif option == 'flash':
-			self.ledsController.set_program(program=(self.GUI_Leds.ledColor, (0,0,0)), hz=speed, mode='jump')
+			self.ledsController.set_program(program=(self.GUI_Leds.ledColor, (0,0,0)), hz=12, mode='jump')
 		elif option == 'police':
-			self.ledsController.set_program(program=self.ledsController.POLICE, hz=speed, mode='jump')
+			self.ledsController.set_program(program=self.ledsController.POLICE, hz=1, mode='jump')
 
 
 	def colorSliderRedMoved(self):
