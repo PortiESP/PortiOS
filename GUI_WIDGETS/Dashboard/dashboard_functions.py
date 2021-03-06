@@ -14,6 +14,8 @@ class Dashboard_funcs:
 		# Getting gauge funcs
 		Gauge_funcs.setDefaults(self)
 
+		Gauge_funcs.setSpeed(self, 100)
+
 	def changeMusicInfo(self):
 		# Setting labels and slider
 		try:
@@ -28,3 +30,8 @@ class Dashboard_funcs:
 			
 		except KeyError:
 			pass
+
+
+	def mapDigitalSpeed(self, value, maxValue=200):
+		value = (value / maxValue) * self.GUI_Dashboard.TOP_SPEED
+		return value

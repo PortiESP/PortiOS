@@ -53,7 +53,7 @@ class Gauge_funcs:
 
 		self.GUI_Dashboard.gauge_widget.label_vel.setText(str(int(float(speed))))
 
-		self.GUI_Dashboard.needleForward = Gauge_funcs.mapValue(self, speed)
+		self.GUI_Dashboard.needleForward = Gauge_funcs.__mapValue(self, speed)
 
 		if speed == 0: 
 			self.GUI_Dashboard.needleBackward = self.GUI_Dashboard.needleForward
@@ -65,7 +65,7 @@ class Gauge_funcs:
 																	needleBackward = self.GUI_Dashboard.needleBackward))		
 
 	# Gets the baseNEEDLE_CONSTANT value for speed in Kmh
-	def mapValue(self, value):
+	def __mapValue(self, value):
 		self.GUI_Dashboard.needleValue = 1.0 - (float(value) * self.GUI_Dashboard.NEEDLE_CONSTANT)
 		return self.GUI_Dashboard.needleValue
 
