@@ -20,8 +20,7 @@ import resources_rc
 from PySide2.QtWidgets import *
 from PySide2.QtGui import *
 from PySide2.QtCore import *
-import sys, threading, time
+import sys, threading, time, Adafruit_ADS1x15, dbus.exceptions
 from math import ceil
-import dbus.exceptions
 import RPi.GPIO as gp
 
