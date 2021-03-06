@@ -1,5 +1,5 @@
 import RPi.GPIO as gp
-import time, multiprocessing
+import time, threading
 
 
 class RGB_Controller:
@@ -33,7 +33,8 @@ class RGB_Controller:
 		self.FIRE = ((255,50,0),(229,70,0), (247,20,0))
 		
 	def new_thread(self, thread_target, thread_args):
-		self.loop_thread = multiprocessing.Process(target=thread_target, args=thread_args)
+		self.loop_thread = threading.Thread(target=thread_target, args=thread_args)
+		self.loop_thread.daemon = True
 		self.loop_thread.start()
 		return self.loop_thread
 		
@@ -59,6 +60,7 @@ class RGB_Controller:
 			for color in colors:
 				# ~ print(f'Color: {color}')
 				self.set_color(color)
+				if not self.loop_thread: return
 				time.sleep(color_time)
 				
 	def __color_fade(self, colors, hz, method='normal'):
@@ -89,6 +91,7 @@ class RGB_Controller:
 							# ~ print(f'Color: {color}, Next: {nextcolor}')
 							if color[c] < nextcolor[c]: color[c] += 1
 							elif color[c] > nextcolor[c]: color[c] -= 1
+						if not self.loop_thread: return
 						time.sleep(color_time/iter_max)
 					elif method == 'chromatic':
 						#Algoritmo que ordena de mayor a menor los numeros y pasa su indice
@@ -114,6 +117,7 @@ class RGB_Controller:
 								self.set_color(color)
 								# print(f'Color: {color}, Next: {nextcolor}, Algoritmo: {color_ord}')
 								time.sleep(color_time/iter_max/3)
+						if not self.loop_thread: return
 						time.sleep(0.5)
 					elif method == 'floor-red':
 						self.set_color(color)
@@ -122,6 +126,7 @@ class RGB_Controller:
 							if c != 0 and color[0] != nextcolor[0] and nextcolor[0] != 0: continue
 							if color[c] > nextcolor[c]: color[c] -= 1
 							elif color[c] < nextcolor[c]: color[c] += 1
+						if not self.loop_thread: return
 						time.sleep(color_time/iter_max)
 						if color == nextcolor and color != [0,0,0]: time.sleep(1)
 						
@@ -151,8 +156,8 @@ class RGB_Controller:
 			
 	def program_stop(self, program='self'):
 		if program == 'self': program = self.loop_thread
-		program.terminate()
 		self.loop_thread = None
+		program.join()
 		self.set_off()
 
 

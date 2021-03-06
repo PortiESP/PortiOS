@@ -89,8 +89,8 @@ class Leds_funcs:
 	def setProgram(self, option):
 		if not self.GUI_Leds.ledPower: return
 
-		speed = (self.GUI_Leds.ledSpeedSlider.value() / 100)
-		if speed == 0.0: speed = 0.01 # Default
+		speed = (self.GUI_Leds.ledSpeedSlider.value() / 10)
+		if speed == 0.0: speed = 0.1 # Default
 
 		if option == self.GUI_Leds.actualProgram: option += '+'
 		print('Setting program: ', option, ' - with speed: ', speed)
@@ -98,9 +98,9 @@ class Leds_funcs:
 		self.GUI_Leds.actualProgram = option
 
 		if option == 'jump':
-			self.ledsController.set_program(program=self.ledsController.RAINBOW, hz=speed, mode='jump')
+			self.ledsController.set_program(program=self.ledsController.RAINBOW, hz=0.1, mode='jump')
 		elif option == 'fade':
-			self.ledsController.set_program(program=self.ledsController.RAINBOW, hz=speed, mode='fade', method='chromatic')
+			self.ledsController.set_program(program=self.ledsController.RAINBOW, hz=0.1, mode='fade', method='chromatic')
 		elif option == 'random':
 			self.ledsController.set_program(hz=speed, mode='random-fade')
 		elif option == 'random+':
@@ -108,7 +108,7 @@ class Leds_funcs:
 		elif option == 'flash':
 			self.ledsController.set_program(program=(self.GUI_Leds.ledColor, (0,0,0)), hz=speed, mode='jump')
 		elif option == 'police':
-			self.ledsController.set_program(program=self.ledsController.POLICE, hz=speed, mode='jump')
+			self.ledsController.set_program(program=self.ledsController.POLICE, hz=0.5, mode='jump')
 
 
 
