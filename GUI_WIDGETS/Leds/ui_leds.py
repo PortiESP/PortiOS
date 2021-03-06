@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'ledsnvksAd.ui'
+## Form generated from reading UI file 'ledsHIdQVi.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -577,9 +577,9 @@ class Ui_Leds_widget(object):
 "	border-radius:5px;	\n"
 "\n"
 "}")
-        self.ledSpeedSlider.setMinimum(0)
-        self.ledSpeedSlider.setMaximum(2400)
-        self.ledSpeedSlider.setValue(200)
+        self.ledSpeedSlider.setMinimum(1)
+        self.ledSpeedSlider.setMaximum(10)
+        self.ledSpeedSlider.setValue(10)
         self.ledSpeedSlider.setOrientation(Qt.Horizontal)
 
         self.retranslateUi(Leds_widget)

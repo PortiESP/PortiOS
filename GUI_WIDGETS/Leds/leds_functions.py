@@ -89,8 +89,8 @@ class Leds_funcs:
 	def setProgram(self, option):
 		if not self.GUI_Leds.ledPower: return
 
-		speed = (self.GUI_Leds.ledSpeedSlider.value() / 10)
-		if speed == 0.0: speed = 0.1 # Default
+		speed = self.GUI_Leds.ledSpeedSlider.value()
+		
 
 		if option == self.GUI_Leds.actualProgram: option += '+'
 		print('Setting program: ', option, ' - with speed: ', speed)
