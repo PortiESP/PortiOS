@@ -118,5 +118,5 @@ class Leds_funcs:
 			if self.GUI_Leds.ledColor != lastColor:
 				self.ledsController.setColor(self.GUI_Leds.ledColor)
 				lastColor = self.GUI_Leds.ledColor
-			time.sleep(1/self.colorUpdateHz)
+			time.sleep(1/self.GUI_Leds.colorUpdateHz)
 		print('Ending color thread')
