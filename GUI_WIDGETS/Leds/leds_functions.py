@@ -21,11 +21,11 @@ class Leds_funcs:
 		self.GUI_Leds.actualProgram = None
 
 		# Programs buttons
-		self.GUI_Leds.ledsProgramJumpButton.clicked.connect(lambda: Leds_funcs.setProgram('jump'))
-		self.GUI_Leds.ledsProgramFadeButton.clicked.connect(lambda: Leds_funcs.setProgram('fade'))
-		self.GUI_Leds.ledsProgramRandomButton.clicked.connect(lambda: Leds_funcs.setProgram('random'))
-		self.GUI_Leds.ledsProgramFlashButton.clicked.connect(lambda: Leds_funcs.setProgram('flash'))
-		self.GUI_Leds.ledsProgramPoliceButton.clicked.connect(lambda: Leds_funcs.setProgram('police'))
+		self.GUI_Leds.ledsProgramJumpButton.clicked.connect(lambda: Leds_funcs.setProgram(self, 'jump'))
+		self.GUI_Leds.ledsProgramFadeButton.clicked.connect(lambda: Leds_funcs.setProgram(self, 'fade'))
+		self.GUI_Leds.ledsProgramRandomButton.clicked.connect(lambda: Leds_funcs.setProgram(self, 'random'))
+		self.GUI_Leds.ledsProgramFlashButton.clicked.connect(lambda: Leds_funcs.setProgram(self, 'flash'))
+		self.GUI_Leds.ledsProgramPoliceButton.clicked.connect(lambda: Leds_funcs.setProgram(self, 'police'))
 
 		# Color picker
 		self.GUI_Leds.ledsColorPickerButton.clicked.connect(lambda: Leds_funcs.pickColor(self))
@@ -116,7 +116,7 @@ class Leds_funcs:
 		lastColor = self.GUI_Leds.ledColor
 		while self.GUI_Leds.ledPower and self.GUI_Leds.actualProgram == None:
 			if self.GUI_Leds.ledColor != lastColor:
-				print('Updating color to ',self.GUI_Leds.ledColor)
+				print('Updating color to ',self.GUI_Leds.ledColorself, )
 				self.ledsController.setColor(self.GUI_Leds.ledColor)
 				lastColor = self.GUI_Leds.ledColor
 			time.sleep(1/self.GUI_Leds.colorUpdateHz)
