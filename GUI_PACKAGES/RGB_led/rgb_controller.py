@@ -135,7 +135,7 @@ class RGB_Controller:
 		
 	#Method parameter only for fade mode
 	def set_program(self, program=None, hz=1, mode='jump', method=None):
-		self.loop_thread = False
+		self.program_stop()
 		if mode == 'jump':
 			self.loop_thread = self.new_thread(self.__color_jump, (program, hz))
 		elif mode == 'fade':
