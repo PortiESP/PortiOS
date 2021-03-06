@@ -14,7 +14,6 @@ class Dashboard_funcs:
 		# Getting gauge funcs
 		Gauge_funcs.setDefaults(self)
 
-		Gauge_funcs.setSpeed(self, 100)
 
 	def changeMusicInfo(self):
 		# Setting labels and slider
