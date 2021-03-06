@@ -26,7 +26,7 @@ class Main_GUI:
 		# ADC converter controller
 		self.adcController = Adafruit_ADS1x15.ADS1115()
 		self.GAUGE_ADS_CHANNEL = 0
-		self.MAX_ADS_VALUE = 25200
+		self.MAX_ADS_VALUE = 32752
 
 		# System info manager
 		self.systemInfo = System_info()

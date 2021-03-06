@@ -59,7 +59,7 @@ class Gauge_funcs:
 			self.GUI_Dashboard.needleForward = Gauge_funcs.__mapValue(self, 200)
 
 
-		if speed == 0: 
+		if int(speed) == 0: 
 			self.GUI_Dashboard.needleBackward = self.GUI_Dashboard.needleForward
 		else: 
 			self.GUI_Dashboard.needleBackward = self.GUI_Dashboard.needleForward - 0.001
