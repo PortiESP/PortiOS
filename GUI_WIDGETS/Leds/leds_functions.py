@@ -2,6 +2,7 @@ from .ui_leds import Ui_Leds_widget
 from PySide2.QtCore import *
 from PySide2.QtGui import *
 from PySide2.QtWidgets import *
+import threading, time
 
 class Leds_funcs:
 	def ledsSetup(self):
@@ -16,12 +17,15 @@ class Leds_funcs:
 									 self.GUI_Leds.ledsSliderBlue)
 		self.GUI_Leds.ledPower = False
 
+		self.GUI_Leds.colorUpdateHz = 10
+		self.GUI_Leds.actualProgram = None
+
 		# Programs buttons
-		# self.GUI_Leds.ledsProgramJumpButton.clicked.connect()
-		# self.GUI_Leds.ledsProgramFadeButton.clicked.connect()
-		# self.GUI_Leds.ledsProgramRandomButton.clicked.connect()
-		# self.GUI_Leds.ledsProgramFlashButton.clicked.connect()
-		# self.GUI_Leds.ledsProgramPoliceButton.clicked.connect()
+		self.GUI_Leds.ledsProgramJumpButton.clicked.connect(lambda: Leds_funcs.setProgram('jump'))
+		self.GUI_Leds.ledsProgramFadeButton.clicked.connect(lambda: Leds_funcs.setProgram('fade'))
+		self.GUI_Leds.ledsProgramRandomButton.clicked.connect(lambda: Leds_funcs.setProgram('random'))
+		self.GUI_Leds.ledsProgramFlashButton.clicked.connect(lambda: Leds_funcs.setProgram('flash'))
+		self.GUI_Leds.ledsProgramPoliceButton.clicked.connect(lambda: Leds_funcs.setProgram('police'))
 
 		# Color picker
 		self.GUI_Leds.ledsColorPickerButton.clicked.connect(lambda: Leds_funcs.pickColor(self))
@@ -68,6 +72,51 @@ class Leds_funcs:
 
 		self.GUI_Leds.ledPower = not self.GUI_Leds.ledPower
 
+		if self.GUI_Leds.ledPower:
+			t = thread.Thread(target=lambda: Leds_funcs.colorListenerThread(self))
+			t.start()
+
+		if self.GUI_Leds.ledPower == False:
+			self.GUI_Leds.actualProgram = None
+			print('Led program: None')
+
+
+
 
 		print('Led power is: ', self.GUI_Leds.ledPower)
 
+	def setProgram(self, option):
+		if not self.GUI_Leds.ledPower: return
+
+		speed = (self.GUI_Leds.ledSpeedSlider.value() / 100)
+		if speed == 0.0: speed = 0.01 # Default
+
+		if option == self.GUI_Leds.actualProgram: option += '+'
+		print('Setting program: ', option)
+
+		self.GUI_Leds.actualProgram = option
+
+		if option == 'jump':
+			self.ledsController.setProgram(program=self.ledsController.RAINBOW, hz=speed, mode='jump')
+		elif option == 'fade':
+			self.ledsController.setProgram(program=self.ledsController.RAINBOW, hz=speed, mode='fade', method='chromatic')
+		elif option == 'random':
+			self.ledsController.setProgram(hz=speed, mode='random-fade')
+		elif option == 'random+':
+			self.ledsController.setProgram(hz=speed, mode='random-jump')
+		elif option == 'flash':
+			self.ledsController.setProgram(program=self.ledsController.RAINBOW, hz=speed, mode='flash')
+		elif option == 'police':
+			self.ledsController.setProgram(program=self.ledsController.POLICE, hz=speed, mode='jump')
+
+
+
+	def colorListenerThread(self):
+		print('starting led thread')
+		lastColor = self.GUI_Leds.ledColor
+		while self.GUI_Leds.ledPower and self.GUI_Leds.actualProgram == False:
+			if self.GUI_Leds.ledColor != lastColor:
+				self.ledsController.setColor(self.GUI_Leds.ledColor)
+				lastColor = self.GUI_Leds.ledColor
+			time.sleep(1/self.colorUpdateHz)
+		print('Ending color thread')

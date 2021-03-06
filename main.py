@@ -20,6 +20,10 @@ class Main_GUI:
 		gp.setmode(gp.BOARD)
 		gp.setwarnings(False)
 
+		# Leds controller
+		self.ledsController = RGB_Controller((40, 38, 36)) # Pins
+
+
 		# System info manager
 		self.systemInfo = System_info()
 

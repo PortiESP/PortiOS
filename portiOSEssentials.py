@@ -11,6 +11,7 @@ from GUI_WIDGETS.Leds.leds_functions import Leds_funcs
 from GUI_PACKAGES.bluetooth_controls.bt_control_panel import BT_Control_Panel
 from GUI_PACKAGES.navigator_google_maps.navegador import Navegador
 from GUI_PACKAGES.system_info.system_info import System_info
+from GUI_PACKAGES.RGB_led.rgb_controller import  RGB_Controller
 
 # Resources import
 import resources_rc

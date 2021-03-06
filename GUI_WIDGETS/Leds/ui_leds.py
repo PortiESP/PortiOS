@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'ledsPkiAGi.ui'
+## Form generated from reading UI file 'ledsaMthmT.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -207,7 +207,7 @@ class Ui_Leds_widget(object):
 
         self.frameLedControls = QFrame(self.frame_leds)
         self.frameLedControls.setObjectName(u"frameLedControls")
-        self.frameLedControls.setGeometry(QRect(400, 100, 350, 200))
+        self.frameLedControls.setGeometry(QRect(400, 79, 350, 200))
         self.horizontalLayout_4 = QHBoxLayout(self.frameLedControls)
         self.horizontalLayout_4.setSpacing(0)
         self.horizontalLayout_4.setObjectName(u"horizontalLayout_4")
@@ -348,7 +348,7 @@ class Ui_Leds_widget(object):
 
         self.frameLedColorPicker = QFrame(self.frame_leds)
         self.frameLedColorPicker.setObjectName(u"frameLedColorPicker")
-        self.frameLedColorPicker.setGeometry(QRect(545, 70, 200, 41))
+        self.frameLedColorPicker.setGeometry(QRect(545, 47, 200, 41))
         self.horizontalLayout_5 = QHBoxLayout(self.frameLedColorPicker)
         self.horizontalLayout_5.setSpacing(0)
         self.horizontalLayout_5.setObjectName(u"horizontalLayout_5")
@@ -378,6 +378,211 @@ class Ui_Leds_widget(object):
 
         self.horizontalLayout_5.addWidget(self.ledsColorPickerButton)
 
+        self.frame_header = QFrame(self.frame_leds)
+        self.frame_header.setObjectName(u"frame_header")
+        self.frame_header.setGeometry(QRect(0, 0, 800, 70))
+        self.frame_header.setMinimumSize(QSize(800, 70))
+        self.frame_header.setMaximumSize(QSize(800, 70))
+        self.frame_header.setFrameShape(QFrame.NoFrame)
+        self.frame_header.setFrameShadow(QFrame.Raised)
+        self.header_background = QLabel(self.frame_header)
+        self.header_background.setObjectName(u"header_background")
+        self.header_background.setGeometry(QRect(0, 0, 800, 70))
+        self.header_background.setMinimumSize(QSize(800, 70))
+        self.header_background.setMaximumSize(QSize(800, 70))
+        self.header_background.setPixmap(QPixmap(u":/styles/Resources/header_red.png"))
+        self.header_background.setScaledContents(True)
+        self.label_clock = QLabel(self.frame_header)
+        self.label_clock.setObjectName(u"label_clock")
+        self.label_clock.setGeometry(QRect(325, 0, 150, 50))
+        font7 = QFont()
+        font7.setFamily(u"Bahnschrift Light Condensed")
+        font7.setPointSize(25)
+        font7.setBold(False)
+        font7.setItalic(False)
+        font7.setWeight(50)
+        self.label_clock.setFont(font7)
+        self.label_clock.setStyleSheet(u"color:rgb(255,0,0);")
+        self.label_clock.setAlignment(Qt.AlignCenter)
+        self.bluetoothStatusButton = QPushButton(self.frame_header)
+        self.bluetoothStatusButton.setObjectName(u"bluetoothStatusButton")
+        self.bluetoothStatusButton.setGeometry(QRect(459, 10, 24, 24))
+        self.bluetoothStatusButton.setStyleSheet(u"border:none;")
+        icon1 = QIcon()
+        icon1.addFile(u":/bt_icons/Resources/Icons/bt_states/bluetooth_gray.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.bluetoothStatusButton.setIcon(icon1)
+        self.bluetoothStatusButton.setIconSize(QSize(22, 22))
+        self.frame_logo = QFrame(self.frame_leds)
+        self.frame_logo.setObjectName(u"frame_logo")
+        self.frame_logo.setGeometry(QRect(315, 400, 170, 30))
+        self.frame_logo.setFrameShape(QFrame.NoFrame)
+        self.frame_logo.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_7 = QVBoxLayout(self.frame_logo)
+        self.verticalLayout_7.setSpacing(0)
+        self.verticalLayout_7.setObjectName(u"verticalLayout_7")
+        self.verticalLayout_7.setSizeConstraint(QLayout.SetDefaultConstraint)
+        self.verticalLayout_7.setContentsMargins(0, 0, 0, 0)
+        self.label_logo = QLabel(self.frame_logo)
+        self.label_logo.setObjectName(u"label_logo")
+        self.label_logo.setPixmap(QPixmap(u":/styles/Resources/porti_os.png"))
+        self.label_logo.setScaledContents(True)
+        self.label_logo.setAlignment(Qt.AlignCenter)
+
+        self.verticalLayout_7.addWidget(self.label_logo)
+
+        self.frame_footer = QFrame(self.frame_leds)
+        self.frame_footer.setObjectName(u"frame_footer")
+        self.frame_footer.setGeometry(QRect(0, 410, 800, 430))
+        palette = QPalette()
+        self.frame_footer.setPalette(palette)
+        self.frame_footer.setStyleSheet(u"QPushButton{\n"
+"	background:none;\n"
+"	border:none;\n"
+"	\n"
+"}\n"
+"QPushButton:hover{\n"
+"\n"
+"}")
+        self.frame_footer.setFrameShape(QFrame.NoFrame)
+        self.frame_footer.setFrameShadow(QFrame.Raised)
+        self.footer_i = QFrame(self.frame_footer)
+        self.footer_i.setObjectName(u"footer_i")
+        self.footer_i.setGeometry(QRect(0, 20, 260, 50))
+        self.footer_i.setMinimumSize(QSize(260, 50))
+        self.footer_i.setMaximumSize(QSize(260, 30))
+        self.footer_i.setFrameShape(QFrame.NoFrame)
+        self.footer_i.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_3 = QHBoxLayout(self.footer_i)
+        self.horizontalLayout_3.setSpacing(0)
+        self.horizontalLayout_3.setObjectName(u"horizontalLayout_3")
+        self.horizontalLayout_3.setContentsMargins(0, 0, 0, 0)
+        self.footerButton_1 = QPushButton(self.footer_i)
+        self.footerButton_1.setObjectName(u"footerButton_1")
+        self.footerButton_1.setMinimumSize(QSize(0, 50))
+        font8 = QFont()
+        font8.setFamily(u"Bahnschrift Light Condensed")
+        font8.setPointSize(8)
+        self.footerButton_1.setFont(font8)
+        self.footerButton_1.setCursor(QCursor(Qt.PointingHandCursor))
+        self.footerButton_1.setMouseTracking(False)
+        icon2 = QIcon()
+        icon2.addFile(u":/icons_red/Resources/Icons/png-red/fi-rr-angle-double-small-left.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.footerButton_1.setIcon(icon2)
+        self.footerButton_1.setIconSize(QSize(24, 24))
+
+        self.horizontalLayout_3.addWidget(self.footerButton_1)
+
+        self.footerButton_2 = QPushButton(self.footer_i)
+        self.footerButton_2.setObjectName(u"footerButton_2")
+        self.footerButton_2.setMinimumSize(QSize(0, 50))
+        self.footerButton_2.setCursor(QCursor(Qt.PointingHandCursor))
+        icon3 = QIcon()
+        icon3.addFile(u":/icons_red/Resources/Icons/png-red/play-fill.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.footerButton_2.setIcon(icon3)
+        self.footerButton_2.setIconSize(QSize(24, 24))
+
+        self.horizontalLayout_3.addWidget(self.footerButton_2)
+
+        self.footerButton_3 = QPushButton(self.footer_i)
+        self.footerButton_3.setObjectName(u"footerButton_3")
+        self.footerButton_3.setMinimumSize(QSize(0, 50))
+        self.footerButton_3.setCursor(QCursor(Qt.PointingHandCursor))
+        icon4 = QIcon()
+        icon4.addFile(u":/icons_red/Resources/Icons/png-red/fi-rr-angle-double-small-right.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.footerButton_3.setIcon(icon4)
+        self.footerButton_3.setIconSize(QSize(24, 24))
+
+        self.horizontalLayout_3.addWidget(self.footerButton_3)
+
+        self.footer_d = QFrame(self.frame_footer)
+        self.footer_d.setObjectName(u"footer_d")
+        self.footer_d.setGeometry(QRect(540, 20, 260, 50))
+        self.footer_d.setMinimumSize(QSize(260, 50))
+        self.footer_d.setMaximumSize(QSize(260, 50))
+        self.footer_d.setFrameShadow(QFrame.Sunken)
+        self.horizontalLayout_8 = QHBoxLayout(self.footer_d)
+        self.horizontalLayout_8.setSpacing(0)
+        self.horizontalLayout_8.setObjectName(u"horizontalLayout_8")
+        self.horizontalLayout_8.setContentsMargins(0, 0, 0, 0)
+        self.footerButton_4 = QPushButton(self.footer_d)
+        self.footerButton_4.setObjectName(u"footerButton_4")
+        self.footerButton_4.setMinimumSize(QSize(0, 50))
+        self.footerButton_4.setCursor(QCursor(Qt.PointingHandCursor))
+        icon5 = QIcon()
+        icon5.addFile(u":/icons_red/Resources/Icons/png-red/icons-menu.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.footerButton_4.setIcon(icon5)
+        self.footerButton_4.setIconSize(QSize(30, 30))
+
+        self.horizontalLayout_8.addWidget(self.footerButton_4)
+
+        self.footerButton_5 = QPushButton(self.footer_d)
+        self.footerButton_5.setObjectName(u"footerButton_5")
+        self.footerButton_5.setMinimumSize(QSize(0, 50))
+        self.footerButton_5.setCursor(QCursor(Qt.PointingHandCursor))
+        icon6 = QIcon()
+        icon6.addFile(u":/icons_red/Resources/Icons/png-red/levels.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.footerButton_5.setIcon(icon6)
+        self.footerButton_5.setIconSize(QSize(30, 30))
+
+        self.horizontalLayout_8.addWidget(self.footerButton_5)
+
+        self.footerButton_6 = QPushButton(self.footer_d)
+        self.footerButton_6.setObjectName(u"footerButton_6")
+        self.footerButton_6.setMinimumSize(QSize(0, 50))
+        self.footerButton_6.setCursor(QCursor(Qt.PointingHandCursor))
+        icon7 = QIcon()
+        icon7.addFile(u":/icons_red/Resources/Icons/png-red/fi-rr-power.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.footerButton_6.setIcon(icon7)
+        self.footerButton_6.setIconSize(QSize(24, 24))
+
+        self.horizontalLayout_8.addWidget(self.footerButton_6)
+
+        self.footerButton_6.raise_()
+        self.footerButton_5.raise_()
+        self.footerButton_4.raise_()
+        self.footer_background = QLabel(self.frame_footer)
+        self.footer_background.setObjectName(u"footer_background")
+        self.footer_background.setGeometry(QRect(0, 0, 800, 70))
+        self.footer_background.setPixmap(QPixmap(u":/styles/Resources/footer_red.png"))
+        self.footer_background.setScaledContents(True)
+        self.footer_background.raise_()
+        self.footer_i.raise_()
+        self.footer_d.raise_()
+        self.frame_speed = QFrame(self.frame_leds)
+        self.frame_speed.setObjectName(u"frame_speed")
+        self.frame_speed.setGeometry(QRect(400, 280, 350, 50))
+        self.frame_speed.setFrameShape(QFrame.StyledPanel)
+        self.frame_speed.setFrameShadow(QFrame.Raised)
+        self.label_9 = QLabel(self.frame_speed)
+        self.label_9.setObjectName(u"label_9")
+        self.label_9.setGeometry(QRect(0, 0, 60, 50))
+        font9 = QFont()
+        font9.setFamily(u"Bahnschrift SemiLight")
+        font9.setPointSize(13)
+        self.label_9.setFont(font9)
+        self.label_9.setStyleSheet(u"color:white;")
+        self.label_9.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
+        self.ledSpeedSlider = QSlider(self.frame_speed)
+        self.ledSpeedSlider.setObjectName(u"ledSpeedSlider")
+        self.ledSpeedSlider.setGeometry(QRect(70, 10, 280, 30))
+        self.ledSpeedSlider.setStyleSheet(u"QSlider::groove:horizontal{\n"
+"	height:1px;	\n"
+"	width:260px;\n"
+"	background:gray;\n"
+"\n"
+"}\n"
+"\n"
+"QSlider::handle:horizontal{\n"
+"	background:red;\n"
+"	width:10px;\n"
+"	margin:-5px;\n"
+"	border-radius:5px;	\n"
+"\n"
+"}")
+        self.ledSpeedSlider.setMinimum(0)
+        self.ledSpeedSlider.setMaximum(2400)
+        self.ledSpeedSlider.setValue(200)
+        self.ledSpeedSlider.setOrientation(Qt.Horizontal)
 
         self.retranslateUi(Leds_widget)
 
@@ -399,5 +604,9 @@ class Ui_Leds_widget(object):
         self.ledsValueGreen.setText(QCoreApplication.translate("Leds_widget", u"0", None))
         self.ledsValueBlue.setText(QCoreApplication.translate("Leds_widget", u"0", None))
         self.label_4.setText(QCoreApplication.translate("Leds_widget", u"Color Picker", None))
+        self.label_clock.setText(QCoreApplication.translate("Leds_widget", u"23:23", None))
+        self.bluetoothStatusButton.setText("")
+        self.footer_background.setText("")
+        self.label_9.setText(QCoreApplication.translate("Leds_widget", u"Speed:", None))
     # retranslateUi
 
