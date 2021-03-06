@@ -34,7 +34,6 @@ class RGB_Controller:
 		
 	def new_thread(self, thread_target, thread_args):
 		self.loop_thread = threading.Thread(target=thread_target, args=thread_args)
-		self.loop_thread.daemon = True
 		self.loop_thread.start()
 		return self.loop_thread
 		
@@ -60,13 +59,16 @@ class RGB_Controller:
 			for color in colors:
 				# ~ print(f'Color: {color}')
 				self.set_color(color)
+				if not self.loop_thread: return
 				time.sleep(color_time)
+
 				
 	def __color_fade(self, colors, hz, method='normal'):
 		if method == 'floor-red':
 			colors = list(colors)
 			for i in range(len(colors)):
 				colors.insert(1+i*2, (0,0,0))
+
 		
 		period = 1/hz
 		color_time = period / len(colors)
@@ -90,6 +92,7 @@ class RGB_Controller:
 							# ~ print(f'Color: {color}, Next: {nextcolor}')
 							if color[c] < nextcolor[c]: color[c] += 1
 							elif color[c] > nextcolor[c]: color[c] -= 1
+						if not self.loop_thread: return
 						time.sleep(color_time/iter_max)
 					elif method == 'chromatic':
 						#Algoritmo que ordena de mayor a menor los numeros y pasa su indice
@@ -115,6 +118,7 @@ class RGB_Controller:
 								self.set_color(color)
 								# print(f'Color: {color}, Next: {nextcolor}, Algoritmo: {color_ord}')
 								time.sleep(color_time/iter_max/3)
+						if not self.loop_thread: return
 						time.sleep(0.5)
 					elif method == 'floor-red':
 						self.set_color(color)
@@ -124,7 +128,9 @@ class RGB_Controller:
 							if color[c] > nextcolor[c]: color[c] -= 1
 							elif color[c] < nextcolor[c]: color[c] += 1
 						time.sleep(color_time/iter_max)
-						if color == nextcolor and color != [0,0,0]: time.sleep(1)
+						if color == nextcolor and color != [0,0,0]: 
+							if not self.loop_thread: return
+							time.sleep(1)
 						
 					
 				
