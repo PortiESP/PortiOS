@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'ledsaMthmT.ui'
+## Form generated from reading UI file 'ledsnvksAd.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -551,8 +551,6 @@ class Ui_Leds_widget(object):
         self.frame_speed = QFrame(self.frame_leds)
         self.frame_speed.setObjectName(u"frame_speed")
         self.frame_speed.setGeometry(QRect(400, 280, 350, 50))
-        self.frame_speed.setFrameShape(QFrame.StyledPanel)
-        self.frame_speed.setFrameShadow(QFrame.Raised)
         self.label_9 = QLabel(self.frame_speed)
         self.label_9.setObjectName(u"label_9")
         self.label_9.setGeometry(QRect(0, 0, 60, 50))

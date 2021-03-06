@@ -73,7 +73,7 @@ class Leds_funcs:
 		self.GUI_Leds.ledPower = not self.GUI_Leds.ledPower
 
 		if self.GUI_Leds.ledPower:
-			t = thread.Thread(target=lambda: Leds_funcs.colorListenerThread(self))
+			t = threading.Thread(target=lambda: Leds_funcs.colorListenerThread(self))
 			t.start()
 
 		if self.GUI_Leds.ledPower == False:

@@ -1189,12 +1189,6 @@ QPushButton:hover{
       <height>50</height>
      </rect>
     </property>
-    <property name="frameShape">
-     <enum>QFrame::StyledPanel</enum>
-    </property>
-    <property name="frameShadow">
-     <enum>QFrame::Raised</enum>
-    </property>
     <widget class="QLabel" name="label_9">
      <property name="geometry">
       <rect>
