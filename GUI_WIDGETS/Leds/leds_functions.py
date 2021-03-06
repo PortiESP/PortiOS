@@ -78,6 +78,7 @@ class Leds_funcs:
 
 		if self.GUI_Leds.ledPower == False:
 			self.GUI_Leds.actualProgram = None
+			self.ledsController.program_stop()
 			print('Led program: None')
 
 
