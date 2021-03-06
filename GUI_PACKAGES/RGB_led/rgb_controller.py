@@ -112,13 +112,13 @@ class RGB_Controller:
 								if color[c] < nextcolor[c]: color[c] += 1
 								elif color[c] > nextcolor[c]: color[c] -= 1
 								self.set_color(color)
-								print(f'Color: {color}, Next: {nextcolor}, Algoritmo: {color_ord}')
+								# print(f'Color: {color}, Next: {nextcolor}, Algoritmo: {color_ord}')
 								time.sleep(color_time/iter_max/3)
 						time.sleep(0.5)
 					elif method == 'floor-red':
 						self.set_color(color)
 						for c in range(3):
-							print(f'Color: {color}, Next: {nextcolor}')
+							# print(f'Color: {color}, Next: {nextcolor}')
 							if c != 0 and color[0] != nextcolor[0] and nextcolor[0] != 0: continue
 							if color[c] > nextcolor[c]: color[c] -= 1
 							elif color[c] < nextcolor[c]: color[c] += 1
@@ -152,7 +152,6 @@ class RGB_Controller:
 	def program_stop(self, program='self'):
 		if program == 'self': program = self.loop_thread
 		self.loop_thread = None
-		program.join()
 		self.set_off()
 
 
