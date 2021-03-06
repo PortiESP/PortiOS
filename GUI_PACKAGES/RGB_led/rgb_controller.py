@@ -157,8 +157,7 @@ class RGB_Controller:
 			
 	def program_stop(self):
 		self.thread_flag = False
-		if self.loop_thread.is_alive(): 
-			self.loop_thread.join()
+		self.loop_thread.join()
 		self.loop_thread = None
 		self.set_off()
 
