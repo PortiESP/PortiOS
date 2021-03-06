@@ -43,10 +43,11 @@ class Dashboard_funcs:
 	def startGauge(self):
 		def gaugeThreadFunc():
 			while self.GUI_Dashboard.gaugePower:
-				value = self.adcController.read_adc(self.GAUGE_ADS_CHANNEL, gain=2, data_rate=16)
-				speed = Dashboard_funcs.mapDigitalSpeed(self, value, maxValue=self.MAX_ADS_VALUE)
-				Gauge_funcs.setSpeed(self, speed)
-				print('Value: ', value, ' - Speed: ', speed)
+				if self.GUI_Central.appsWidget.currentWidget() == 0:
+					value = self.adcController.read_adc(self.GAUGE_ADS_CHANNEL, gain=2, data_rate=16)
+					speed = Dashboard_funcs.mapDigitalSpeed(self, value, maxValue=self.MAX_ADS_VALUE)
+					Gauge_funcs.setSpeed(self, speed)
+					print('Value: ', value, ' - Speed: ', speed)
 
 		self.GUI_Dashboard.gaugePower = True
 		self.GUI_Dashboard.gaugeThread = threading.Thread(target=gaugeThreadFunc)

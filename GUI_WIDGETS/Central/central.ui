@@ -484,9 +484,6 @@ QPushButton:hover{
       <height>480</height>
      </size>
     </property>
-    <property name="currentIndex">
-     <number>0</number>
-    </property>
     <widget class="QWidget" name="page_dashboard"/>
     <widget class="QWidget" name="page_player"/>
     <widget class="QWidget" name="page_settings"/>
