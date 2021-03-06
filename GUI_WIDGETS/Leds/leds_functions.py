@@ -97,17 +97,17 @@ class Leds_funcs:
 		self.GUI_Leds.actualProgram = option
 
 		if option == 'jump':
-			self.ledsController.setProgram(program=self.ledsController.RAINBOW, hz=speed, mode='jump')
+			self.ledsController.set_program(program=self.ledsController.RAINBOW, hz=speed, mode='jump')
 		elif option == 'fade':
-			self.ledsController.setProgram(program=self.ledsController.RAINBOW, hz=speed, mode='fade', method='chromatic')
+			self.ledsController.set_program(program=self.ledsController.RAINBOW, hz=speed, mode='fade', method='chromatic')
 		elif option == 'random':
-			self.ledsController.setProgram(hz=speed, mode='random-fade')
+			self.ledsController.set_program(hz=speed, mode='random-fade')
 		elif option == 'random+':
-			self.ledsController.setProgram(hz=speed, mode='random-jump')
+			self.ledsController.set_program(hz=speed, mode='random-jump')
 		elif option == 'flash':
-			self.ledsController.setProgram(program=self.ledsController.RAINBOW, hz=speed, mode='flash')
+			self.ledsController.set_program(program=self.ledsController.RAINBOW, hz=speed, mode='flash')
 		elif option == 'police':
-			self.ledsController.setProgram(program=self.ledsController.POLICE, hz=speed, mode='jump')
+			self.ledsController.set_program(program=self.ledsController.POLICE, hz=speed, mode='jump')
 
 
 
