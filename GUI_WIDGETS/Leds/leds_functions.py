@@ -34,9 +34,9 @@ class Leds_funcs:
 		self.GUI_Leds.ledsOnOffButton.clicked.connect(lambda: Leds_funcs.toggleLedPower(self))
 
 
-		self.GUI_Leds.ledsSliderRed.valueChanged.connect(lambda: Leds_funcs.colorValueSetup(self, 0))
-		self.GUI_Leds.ledsSliderGreen.valueChanged.connect(lambda: Leds_funcs.colorValueSetup(self, 1))
-		self.GUI_Leds.ledsSliderBlue.valueChanged.connect(lambda: Leds_funcs.colorValueSetup(self, 2))
+		self.GUI_Leds.ledsSliderRed.valueChanged.connect(lambda: Leds_funcs.colorSliderRedMoved(self))
+		self.GUI_Leds.ledsSliderGreen.valueChanged.connect(lambda: Leds_funcs.colorSliderGreenMoved(self))
+		self.GUI_Leds.ledsSliderBlue.valueChanged.connect(lambda: Leds_funcs.colorSliderBlueMoved(self))
 
 		
 
@@ -71,10 +71,6 @@ class Leds_funcs:
 	def toggleLedPower(self):
 
 		self.GUI_Leds.ledPower = not self.GUI_Leds.ledPower
-
-		if self.GUI_Leds.ledPower:
-			t = threading.Thread(target=lambda: Leds_funcs.colorListenerThread(self))
-			t.start()
 
 		if self.GUI_Leds.ledPower == False:
 			self.GUI_Leds.actualProgram = None
@@ -111,14 +107,16 @@ class Leds_funcs:
 			self.ledsController.set_program(program=self.ledsController.POLICE, hz=speed, mode='jump')
 
 
-
-	def colorListenerThread(self):
-		print('starting led thread')
-		lastColor = self.GUI_Leds.ledColor
-		while self.GUI_Leds.ledPower and self.GUI_Leds.actualProgram == None:
-			if self.GUI_Leds.ledColor != lastColor:
-				print('Updating color to ',self.GUI_Leds.ledColorself, )
-				self.ledsController.setColor(self.GUI_Leds.ledColor)
-				lastColor = self.GUI_Leds.ledColor
-			time.sleep(1/self.GUI_Leds.colorUpdateHz)
-		print('Ending color thread')
+	def colorSliderRedMoved(self):
+		Leds_funcs.colorValueSetup(self, 0)
+		if self.GUI_Leds.ledPower:
+			self.ledsController.set_color(self.GUI_Leds.ledColor)
+	def colorSliderGreenMoved(self):
+		Leds_funcs.colorValueSetup(self, 1)
+		if self.GUI_Leds.ledPower:
+			self.ledsController.set_color(self.GUI_Leds.ledColor)
+	def colorSliderBlueMoved(self):
+		Leds_funcs.colorValueSetup(self, 2)
+		if self.GUI_Leds.ledPower:
+			self.ledsController.set_color(self.GUI_Leds.ledColor)
+	
