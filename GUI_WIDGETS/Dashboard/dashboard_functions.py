@@ -11,11 +11,6 @@ class Dashboard_funcs:
 		# Getting interface
 		self.GUI_Dashboard = Ui_Dashboard_widget()
 		self.GUI_Dashboard.setupUi(self.GUI_Central.page_dashboard)
-
-		# ADC converter
-		adc = Adafruit_ADS1x15.ADS1115()
-		self.GUI_Dashboard.GAUGE_ADS_CHANNEL = 0
-		self.GUI_Dashboard.MAX_ADS_VALUE = 25200
 		
 		# Getting gauge funcs
 		Gauge_funcs.setDefaults(self)
@@ -48,8 +43,8 @@ class Dashboard_funcs:
 	def startGauge(self):
 		def gaugeThreadFunc():
 			while self.GUI_Dashboard.gaugePower:
-				value = adc.read_adc(self.GUI_Dashboard.GAUGE_ADS_CHANNEL, gain=2, data_rate=16)
-				value = Dashboard_funcs.mapDigitalSpeed(self, value, maxValue=self.GUI_Dashboard.MAX_ADS_VALUE)
+				value = self.adcController.read_adc(self.GAUGE_ADS_CHANNEL, gain=2, data_rate=16)
+				value = Dashboard_funcs.mapDigitalSpeed(self, value, maxValue=self.MAX_ADS_VALUE)
 				Gauge_funcs.setSpeed(self, value)
 
 		self.GUI_Dashboard.gaugePower = True
