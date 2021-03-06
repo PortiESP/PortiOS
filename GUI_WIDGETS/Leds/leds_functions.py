@@ -116,6 +116,7 @@ class Leds_funcs:
 		lastColor = self.GUI_Leds.ledColor
 		while self.GUI_Leds.ledPower and self.GUI_Leds.actualProgram == None:
 			if self.GUI_Leds.ledColor != lastColor:
+				print('Updating color to ',self.GUI_Leds.ledColor)
 				self.ledsController.setColor(self.GUI_Leds.ledColor)
 				lastColor = self.GUI_Leds.ledColor
 			time.sleep(1/self.GUI_Leds.colorUpdateHz)
