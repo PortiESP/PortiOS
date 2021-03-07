@@ -64,4 +64,5 @@ class Dashboard_funcs:
 		self.GUI_Dashboard.gaugeThread.start()
 
 	def stopGauge(self):
+		print('Stoping gauge')
 		self.GUI_Dashboard.gaugePower = False
