@@ -54,13 +54,12 @@ class IRReceiver:
 
 
 
-	def __formatData(self, dataList):
-		print(dataList)
+	def __timeToBin(self, durationsList):
 		def formatDuration(duration):
 			if duration > 0.001: return 1
 			else: return 0
 
-		finalData = tuple(map(formatDuration, dataList))
+		finalData = tuple(map(formatDuration, durationsList))
 		self.IRReceiverCallback(finalData)
 
 
