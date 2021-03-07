@@ -174,6 +174,9 @@ class Settings_funcs:
 			print('Opening bluetoothctl')
 			subprocess.run('x-terminal-emulator -e bluetoothctl', capture_output=True, shell=True)
 
+		# SETUP
+		refresh()
+
 		# EVENTS
 		self.GUI_Settings.bearing_refreshBtButton.clicked.connect(refresh)
 		self.GUI_Settings.bearing_btPowerCheckbox.toggled.connect(togglePower)
