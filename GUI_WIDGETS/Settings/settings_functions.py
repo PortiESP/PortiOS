@@ -98,8 +98,10 @@ class Settings_funcs:
 			togglePower()
 
 		
-		# BEARING SETUP
+		# SETUP
 		refresh()
+
+		# EVENTS
 		self.GUI_Settings.bearing_wifiPowerCheckbox.toggled.connect(togglePower)
 		self.GUI_Settings.bearing_refreshWifiButton.clicked.connect(refresh)
 		self.GUI_Settings.bearing_wifiPassButton.clicked.connect(connectWifi)
@@ -170,6 +172,7 @@ class Settings_funcs:
 			print('Opening bluetoothctl')
 			subprocess.run('x-terminal-emulator -e bluetoothctl', capture_output=True, shell=True)
 
+		# EVENTS
 		self.GUI_Settings.bearing_refreshBtButton.clicked.connect(refresh)
 		self.GUI_Settings.bearing_btPowerCheckbox.toggled.connect(togglePower)
 		self.GUI_Settings.bearing_btDiscoverableCheckbox.toggled.connect(toggleDiscoverable)
@@ -205,6 +208,7 @@ class Settings_funcs:
 			print('Restarting ', service)
 			subprocess.run(f'sudo systemctl restart {service}', shell=True)
 
+		# EVENTS
 		self.GUI_Settings.bearing_statusRefreshButton.clicked.connect(refresh)
 		self.GUI_Settings.bearing_statusBtButton.clicked.connect(lambda: restartService('bluetooth'))
 
@@ -229,7 +233,7 @@ class Settings_funcs:
 
 
 
-
+		# EVENTS
 		self.GUI_Settings.bearing_gpioGetButton.clicked.connect(getPin)
 		self.GUI_Settings.bearing_gpioSetButton.clicked.connect(setPin)
 
@@ -256,25 +260,27 @@ class Settings_funcs:
 			self.GUI_Settings.bearing_systemDiskTotalText.setText(diskSpace[0])
 
 
-
+		# EVENTS
 		self.GUI_Settings.bearing_systemRefreshButton.clicked.connect(refresh)
 
 
 # ------------------------------------------------------------------------------------------------------
 
 	def terminalSetup(self):
-
+		# EVENTS
 		self.GUI_Settings.bearing_terminalOpenButton.clicked.connect(lambda: os.system('x-terminal-emulator'))
 
 
 # ------------------------------------------------------------------------------------------------------
 
 	def advancedSetup(self):
-		def setupAutoPower():
+		def setup():	
 			gp.setup(self.pinsPower, gp.IN, pull_up_down=gp.PUD_DOWN)
+			if self.getConfig('auto-power'): self.GUI_Settings.bearing_advancedAutopowerCheckbox.setChecked(False)
+			if self.getConfig('gauge_power'): self.GUI_Settings.bearing_advancedGaugePowerCheckbox.setChecked(False)
 
 		def autoPowerCallback(self):
-			print('power event!!')
+			os.system('shutdown -P now')
 
 		def toggleAutoPower():
 			if self.GUI_Settings.bearing_advancedAutopowerCheckbox.isChecked():
@@ -296,8 +302,10 @@ class Settings_funcs:
 				Dashboard_funcs.startGauge(self)
 				self.setConfig('gauge_power', 'true')
 
-		setupAutoPower()
+		# SETUP
+		setup()
 
+		# EVENTS
 		self.GUI_Settings.bearing_advancedAutopowerCheckbox.toggled.connect(toggleAutoPower)
 		self.GUI_Settings.bearing_advancedGaugePowerCheckbox.toggled.connect(toggleGaugePower)
 		self.GUI_Settings.bearing_advancedRebootButton.clicked.connect(lambda: os.system('sudo reboot'))
