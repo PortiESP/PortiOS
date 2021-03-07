@@ -17,7 +17,8 @@ class Dashboard_funcs:
 
 		self.GUI_Dashboard.gaugeThread = None
 		self.GUI_Dashboard.gaugePower = False
-		Dashboard_funcs.startGauge(self)
+		if self.getConfig('gauge_power'):
+			Dashboard_funcs.startGauge(self)
 
 
 	def changeMusicInfo(self):
@@ -45,9 +46,17 @@ class Dashboard_funcs:
 			print('Starting gauge')
 			while self.GUI_Dashboard.gaugePower:
 				if self.GUI_Central.appsWidget.currentIndex() == 0:
-					value = self.adcController.read_adc(self.GAUGE_ADS_CHANNEL, gain=2, data_rate=16)
+					try:
+						value = self.adcController.read_adc(self.GAUGE_ADS_CHANNEL, gain=2, data_rate=16)
+					except OSError:
+						print('ADS1x15 Not found')
+						time.sleep(1)
+						continue
 					speed = Dashboard_funcs.mapDigitalSpeed(self, value, maxValue=self.MAX_ADS_VALUE)
-					Gauge_funcs.setSpeed(self, speed)
+					try:
+						Gauge_funcs.setSpeed(self, speed)
+					except:
+						print('Gauge exception')
 					print('Value: ', value, ' - Speed: ', speed)
 
 		self.GUI_Dashboard.gaugePower = True

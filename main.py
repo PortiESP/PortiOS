@@ -9,6 +9,13 @@ class Main_GUI:
 		# Setting fullscreen
 		# self.win.showFullScreen()		
 
+		if not os.path.exists('config.txt'):
+			with open('config.txt', 'w'):
+				print('"config.txt" created')
+
+		self.config = {}
+		self.setupConfig()
+
 		self.mainLoopHz = 1
 
 		# Setting media player
@@ -129,6 +136,64 @@ class Main_GUI:
 		mins = int(duration / 60)
 		segs = int(((duration / 60) - mins) * 60)
 		return str(mins) + ':' + f'{segs:02}'
+
+	def setupConfig(self):
+		with open('config.txt', 'r') as file:
+			lines = file.readlines()
+
+			if not lines: return None
+			
+			header = None
+			for line in lines:
+				line = line.strip() # Removing endliners
+				
+				if not line: continue # Continue for empty lines
+
+				if re.match('\[\w+\]', line): # Looking for headers
+					continue
+				
+				if line[0] == '#': continue # Looking for comments
+
+				line = line.split('=') 
+				try:
+					self.config[line[0]] = line[1]
+				except IndexError:
+					raise IOError('"config.txt" file has wrong format, ex: key=value')
+
+		return self.config
+
+	def getConfig(self, x):
+		try:
+			out = self.config[x]
+		except KeyError:
+			return None
+
+		if out == 'true': return True
+		elif out == 'false': return False
+		elif re.match('.', out): 
+			try:
+				return float(out)
+			except ValueError:
+				pass
+		try:
+			return int(out)
+		except ValueError:
+			pass
+
+		return out
+
+	def setConfig(self, key, value):
+		self.config[key] = value
+		with open('config.txt', 'w') as file:
+			lines = []
+			for line in self.config.items():
+				lines.append(f'{line[0]}={line[1]}\n')
+
+			file.writelines(lines)
+
+
+				
+
 
 
 

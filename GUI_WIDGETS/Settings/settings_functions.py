@@ -1,4 +1,5 @@
 from .ui_design_settings import Ui_Settings_widget
+from ..Dashboard.dashboard_functions import Dashboard_funcs
 import subprocess, threading, re, time, os
 import RPi.GPIO as gp
 
@@ -270,5 +271,14 @@ class Settings_funcs:
 
 	def advancedSetup(self):
 
+		def toggleGaugePower():
+			if self.GUI_Settings.bearing_advancedGaugePowerCheckbox.isChecked():
+				Dashboard_funcs.stopGauge(self)
+				self.setConfig('gauge_power', 'false')
+			else:
+				Dashboard_funcs.startGauge(self)
+				self.setConfig('gauge_power', 'true')
 
+
+		self.GUI_Settings.bearing_advancedGaugePowerCheckbox.toggled.connect(toggleGaugePower)
 		self.GUI_Settings.bearing_advancedRebootButton.clicked.connect(lambda: os.system('sudo reboot'))

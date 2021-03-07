@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'design_settingsXjFdmL.ui'
+## Form generated from reading UI file 'design_settingsGFkdOG.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -67,7 +67,7 @@ class Ui_Settings_widget(object):
         self.scrollArea.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignTop)
         self.scrollAreaWidgetContents = QWidget()
         self.scrollAreaWidgetContents.setObjectName(u"scrollAreaWidgetContents")
-        self.scrollAreaWidgetContents.setGeometry(QRect(0, -100, 180, 400))
+        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 180, 400))
         self.verticalLayout = QVBoxLayout(self.scrollAreaWidgetContents)
         self.verticalLayout.setSpacing(0)
         self.verticalLayout.setObjectName(u"verticalLayout")
@@ -361,7 +361,7 @@ class Ui_Settings_widget(object):
         self.label_6.setAlignment(Qt.AlignCenter)
         self.bearing_wifiPowerCheckbox = QCheckBox(self.frame_cb)
         self.bearing_wifiPowerCheckbox.setObjectName(u"bearing_wifiPowerCheckbox")
-        self.bearing_wifiPowerCheckbox.setGeometry(QRect(0, 0, 120, 40))
+        self.bearing_wifiPowerCheckbox.setGeometry(QRect(0, 0, 60, 40))
         self.bearing_wifiPowerCheckbox.setStyleSheet(u"QCheckBox{\n"
 "	background:none;\n"
 "}\n"
@@ -591,7 +591,7 @@ class Ui_Settings_widget(object):
         self.label_18.setAlignment(Qt.AlignCenter)
         self.bearing_btPowerCheckbox = QCheckBox(self.frame_cb_2)
         self.bearing_btPowerCheckbox.setObjectName(u"bearing_btPowerCheckbox")
-        self.bearing_btPowerCheckbox.setGeometry(QRect(0, 0, 120, 40))
+        self.bearing_btPowerCheckbox.setGeometry(QRect(0, 0, 60, 40))
         self.bearing_btPowerCheckbox.setStyleSheet(u"QCheckBox{\n"
 "	background:none;\n"
 "}\n"
@@ -669,7 +669,7 @@ class Ui_Settings_widget(object):
         self.label_23.setAlignment(Qt.AlignCenter)
         self.bearing_btDiscoverableCheckbox = QCheckBox(self.frame_cb_4)
         self.bearing_btDiscoverableCheckbox.setObjectName(u"bearing_btDiscoverableCheckbox")
-        self.bearing_btDiscoverableCheckbox.setGeometry(QRect(0, 0, 120, 40))
+        self.bearing_btDiscoverableCheckbox.setGeometry(QRect(0, 0, 60, 40))
         self.bearing_btDiscoverableCheckbox.setStyleSheet(u"QCheckBox{\n"
 "	background:none;\n"
 "}\n"
@@ -1148,7 +1148,7 @@ class Ui_Settings_widget(object):
         self.scrollArea_4.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignTop)
         self.scrollAreaWidgetContents_7 = QWidget()
         self.scrollAreaWidgetContents_7.setObjectName(u"scrollAreaWidgetContents_7")
-        self.scrollAreaWidgetContents_7.setGeometry(QRect(0, -200, 390, 440))
+        self.scrollAreaWidgetContents_7.setGeometry(QRect(0, 0, 390, 440))
         self.scrollAreaWidgetContents_7.setMinimumSize(QSize(0, 440))
         self.frame_10 = QFrame(self.scrollAreaWidgetContents_7)
         self.frame_10.setObjectName(u"frame_10")
@@ -1414,7 +1414,7 @@ class Ui_Settings_widget(object):
         self.line_24.setFrameShape(QFrame.HLine)
         self.p_advanced_separator = QFrame(self.frame_page_advanced)
         self.p_advanced_separator.setObjectName(u"p_advanced_separator")
-        self.p_advanced_separator.setGeometry(QRect(0, 100, 370, 20))
+        self.p_advanced_separator.setGeometry(QRect(0, 140, 370, 20))
         self.line_25 = QFrame(self.p_advanced_separator)
         self.line_25.setObjectName(u"line_25")
         self.line_25.setGeometry(QRect(10, 10, 360, 1))
@@ -1424,7 +1424,7 @@ class Ui_Settings_widget(object):
         self.line_25.setFrameShape(QFrame.HLine)
         self.p_advanced_reboot = QFrame(self.frame_page_advanced)
         self.p_advanced_reboot.setObjectName(u"p_advanced_reboot")
-        self.p_advanced_reboot.setGeometry(QRect(0, 120, 370, 50))
+        self.p_advanced_reboot.setGeometry(QRect(0, 160, 370, 50))
         self.label_116 = QLabel(self.p_advanced_reboot)
         self.label_116.setObjectName(u"label_116")
         self.label_116.setGeometry(QRect(10, 0, 200, 50))
@@ -1487,7 +1487,7 @@ class Ui_Settings_widget(object):
         self.label_115.setAlignment(Qt.AlignCenter)
         self.bearing_advancedAutopowerCheckbox = QCheckBox(self.frame_cb_8)
         self.bearing_advancedAutopowerCheckbox.setObjectName(u"bearing_advancedAutopowerCheckbox")
-        self.bearing_advancedAutopowerCheckbox.setGeometry(QRect(0, 0, 120, 40))
+        self.bearing_advancedAutopowerCheckbox.setGeometry(QRect(0, 0, 60, 40))
         self.bearing_advancedAutopowerCheckbox.setStyleSheet(u"QCheckBox{\n"
 "	background:none;\n"
 "}\n"
@@ -1509,6 +1509,67 @@ class Ui_Settings_widget(object):
 "	\n"
 "}")
         self.bearing_advancedAutopowerCheckbox.setChecked(True)
+        self.p_advanced_autoPower_2 = QFrame(self.frame_page_advanced)
+        self.p_advanced_autoPower_2.setObjectName(u"p_advanced_autoPower_2")
+        self.p_advanced_autoPower_2.setGeometry(QRect(0, 100, 370, 40))
+        self.label_117 = QLabel(self.p_advanced_autoPower_2)
+        self.label_117.setObjectName(u"label_117")
+        self.label_117.setGeometry(QRect(10, 5, 240, 30))
+        self.label_117.setMaximumSize(QSize(250, 16777215))
+        self.label_117.setFont(font1)
+        self.label_117.setStyleSheet(u"color:white;")
+        self.frame_cb_9 = QFrame(self.p_advanced_autoPower_2)
+        self.frame_cb_9.setObjectName(u"frame_cb_9")
+        self.frame_cb_9.setGeometry(QRect(310, 0, 60, 40))
+        self.a_border_8 = QFrame(self.frame_cb_9)
+        self.a_border_8.setObjectName(u"a_border_8")
+        self.a_border_8.setGeometry(QRect(0, 5, 60, 30))
+        self.a_border_8.setStyleSheet(u"QFrame{\n"
+"	border-radius:15px;\n"
+"	border:2px solid gray; \n"
+"	border-color: rgb(211, 211, 211);\n"
+"}\n"
+"QLabel{\n"
+"	border:none; \n"
+"	color:white;\n"
+"	margin-bottom:1px;\n"
+"}")
+        self.a_border_8.setFrameShape(QFrame.StyledPanel)
+        self.a_border_8.setFrameShadow(QFrame.Raised)
+        self.label_118 = QLabel(self.a_border_8)
+        self.label_118.setObjectName(u"label_118")
+        self.label_118.setGeometry(QRect(0, 0, 30, 30))
+        self.label_118.setFont(font2)
+        self.label_118.setAlignment(Qt.AlignCenter)
+        self.label_119 = QLabel(self.a_border_8)
+        self.label_119.setObjectName(u"label_119")
+        self.label_119.setGeometry(QRect(30, 0, 30, 30))
+        self.label_119.setFont(font2)
+        self.label_119.setAlignment(Qt.AlignCenter)
+        self.bearing_advancedGaugePowerCheckbox = QCheckBox(self.frame_cb_9)
+        self.bearing_advancedGaugePowerCheckbox.setObjectName(u"bearing_advancedGaugePowerCheckbox")
+        self.bearing_advancedGaugePowerCheckbox.setGeometry(QRect(0, 0, 60, 40))
+        self.bearing_advancedGaugePowerCheckbox.setStyleSheet(u"QCheckBox{\n"
+"	background:none;\n"
+"}\n"
+"QCheckBox::indicator{\n"
+"	height:20px;\n"
+"	width:20px;\n"
+"	border-radius:10px;\n"
+"\n"
+"}\n"
+"QCheckBox::indicator:unchecked{\n"
+"	margin-left:6px;\n"
+"	background-color: rgb(255, 0, 0);\n"
+"\n"
+"}\n"
+"QCheckBox::indicator:checked{\n"
+"	margin-left:30px;\n"
+"	background:rgb(54, 0, 0);\n"
+"\n"
+"	\n"
+"}")
+        self.bearing_advancedGaugePowerCheckbox.setChecked(False)
         self.stackedWidget_settings.addWidget(self.page_advanced)
 
         self.retranslateUi(Settings_widget)
@@ -1615,5 +1676,9 @@ class Ui_Settings_widget(object):
         self.label_114.setText(QCoreApplication.translate("Settings_widget", u"O", None))
         self.label_115.setText(QCoreApplication.translate("Settings_widget", u"I", None))
         self.bearing_advancedAutopowerCheckbox.setText("")
+        self.label_117.setText(QCoreApplication.translate("Settings_widget", u"Gauge power", None))
+        self.label_118.setText(QCoreApplication.translate("Settings_widget", u"O", None))
+        self.label_119.setText(QCoreApplication.translate("Settings_widget", u"I", None))
+        self.bearing_advancedGaugePowerCheckbox.setText("")
     # retranslateUi
 
