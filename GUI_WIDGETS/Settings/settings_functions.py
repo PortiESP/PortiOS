@@ -17,7 +17,7 @@ class Settings_funcs:
 		self.GUI_Settings.bearing_settingsBrightness.clicked.connect(lambda:Settings_funcs.setPage(self, 0))
 		self.GUI_Settings.bearing_settingsWifi.clicked.connect(lambda:Settings_funcs.setPage(self, 1))
 		self.GUI_Settings.bearing_settingsBluetooth.clicked.connect(lambda:Settings_funcs.setPage(self, 2))
-		self.GUI_Settings.bearing_settingsSound.clicked.connect(lambda:Settings_funcs.setPage(self, 3))
+		self.GUI_Settings.bearing_settingsRemote.clicked.connect(lambda:Settings_funcs.setPage(self, 3))
 		self.GUI_Settings.bearing_settingsStatus.clicked.connect(lambda:Settings_funcs.setPage(self, 4))
 		self.GUI_Settings.bearing_settingsGpio.clicked.connect(lambda:Settings_funcs.setPage(self, 5))
 		self.GUI_Settings.bearing_settingsSystemInfo.clicked.connect(lambda:Settings_funcs.setPage(self, 6))
@@ -27,6 +27,7 @@ class Settings_funcs:
 		# Setting up pages bearings
 		Settings_funcs.wifiSetup(self)
 		Settings_funcs.btSetup(self)
+		Settings_funcs.remoteSetup(self)
 		Settings_funcs.servicesStatusSetup(self)
 		Settings_funcs.gpioSetup(self)
 		Settings_funcs.systemInfoSetup(self)
@@ -187,6 +188,24 @@ class Settings_funcs:
 		self.GUI_Settings.bearing_btPowerCheckbox.toggled.connect(togglePower)
 		self.GUI_Settings.bearing_btDiscoverableCheckbox.toggled.connect(toggleDiscoverable)
 		self.GUI_Settings.bearing_btManagerButton.clicked.connect(openManager)
+
+
+
+
+# ------------------------------------------------------------------------------------------------------
+
+	def remoteSetup(self):
+		def setup():
+			pass
+
+		def toggleMultimedia():
+			if self.GUI_Settings.bearing_remoteMultimediaCheckbox.isChecked():
+				print('Remote multimedia on')
+			else:
+				print('Remote multimedia off')
+
+
+		self.GUI_Settings.bearing_remoteMultimediaCheckbox.toggled.connect(toggleMultimedia)
 
 
 

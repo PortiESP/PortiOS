@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'design_settingsOuwnPi.ui'
+## Form generated from reading UI file 'design_settingsHAXLNl.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -67,7 +67,7 @@ class Ui_Settings_widget(object):
         self.scrollArea.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignTop)
         self.scrollAreaWidgetContents = QWidget()
         self.scrollAreaWidgetContents.setObjectName(u"scrollAreaWidgetContents")
-        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 180, 400))
+        self.scrollAreaWidgetContents.setGeometry(QRect(0, -100, 180, 400))
         self.verticalLayout = QVBoxLayout(self.scrollAreaWidgetContents)
         self.verticalLayout.setSpacing(0)
         self.verticalLayout.setObjectName(u"verticalLayout")
@@ -120,21 +120,21 @@ class Ui_Settings_widget(object):
 
         self.verticalLayout.addWidget(self.frame_setting_bluetooth)
 
-        self.frame_setting_sound = QFrame(self.scrollAreaWidgetContents)
-        self.frame_setting_sound.setObjectName(u"frame_setting_sound")
-        self.frame_setting_sound.setMaximumSize(QSize(180, 40))
-        self.horizontalLayout_8 = QHBoxLayout(self.frame_setting_sound)
+        self.frame_setting_remote = QFrame(self.scrollAreaWidgetContents)
+        self.frame_setting_remote.setObjectName(u"frame_setting_remote")
+        self.frame_setting_remote.setMaximumSize(QSize(180, 40))
+        self.horizontalLayout_8 = QHBoxLayout(self.frame_setting_remote)
         self.horizontalLayout_8.setSpacing(0)
         self.horizontalLayout_8.setObjectName(u"horizontalLayout_8")
         self.horizontalLayout_8.setContentsMargins(0, 0, 0, 0)
-        self.bearing_settingsSound = QPushButton(self.frame_setting_sound)
-        self.bearing_settingsSound.setObjectName(u"bearing_settingsSound")
-        self.bearing_settingsSound.setMinimumSize(QSize(0, 40))
+        self.bearing_settingsRemote = QPushButton(self.frame_setting_remote)
+        self.bearing_settingsRemote.setObjectName(u"bearing_settingsRemote")
+        self.bearing_settingsRemote.setMinimumSize(QSize(0, 40))
 
-        self.horizontalLayout_8.addWidget(self.bearing_settingsSound)
+        self.horizontalLayout_8.addWidget(self.bearing_settingsRemote)
 
 
-        self.verticalLayout.addWidget(self.frame_setting_sound)
+        self.verticalLayout.addWidget(self.frame_setting_remote)
 
         self.frame_setting_status = QFrame(self.scrollAreaWidgetContents)
         self.frame_setting_status.setObjectName(u"frame_setting_status")
@@ -780,9 +780,9 @@ class Ui_Settings_widget(object):
         self.bearing_refreshBtButton.setIcon(icon1)
         self.bearing_refreshBtButton.setIconSize(QSize(24, 24))
         self.stackedWidget_settings.addWidget(self.page_bluetooth)
-        self.page_sound = QWidget()
-        self.page_sound.setObjectName(u"page_sound")
-        self.frame_5 = QFrame(self.page_sound)
+        self.page_remote = QWidget()
+        self.page_remote.setObjectName(u"page_remote")
+        self.frame_5 = QFrame(self.page_remote)
         self.frame_5.setObjectName(u"frame_5")
         self.frame_5.setGeometry(QRect(0, 0, 400, 60))
         self.label_32 = QLabel(self.frame_5)
@@ -798,33 +798,65 @@ class Ui_Settings_widget(object):
 "border:none;")
         self.line_10.setFrameShadow(QFrame.Plain)
         self.line_10.setFrameShape(QFrame.HLine)
-        self.p_sound_claxon = QFrame(self.page_sound)
-        self.p_sound_claxon.setObjectName(u"p_sound_claxon")
-        self.p_sound_claxon.setGeometry(QRect(0, 60, 370, 50))
-        self.label_33 = QLabel(self.p_sound_claxon)
-        self.label_33.setObjectName(u"label_33")
-        self.label_33.setGeometry(QRect(10, 0, 200, 50))
-        self.label_33.setMaximumSize(QSize(250, 16777215))
-        self.label_33.setFont(font1)
-        self.label_33.setStyleSheet(u"color:white;")
-        self.bearing_soundClaxonsButton = QPushButton(self.p_sound_claxon)
-        self.bearing_soundClaxonsButton.setObjectName(u"bearing_soundClaxonsButton")
-        self.bearing_soundClaxonsButton.setGeometry(QRect(270, 10, 100, 30))
-        self.bearing_soundClaxonsButton.setFont(font3)
-        self.bearing_soundClaxonsButton.setStyleSheet(u"QPushButton{\n"
-"	\n"
-"	background-color: rgb(49, 49, 49);\n"
-"	border: 2px solid rgb(181, 0, 0);\n"
+        self.frame_3 = QFrame(self.page_remote)
+        self.frame_3.setObjectName(u"frame_3")
+        self.frame_3.setGeometry(QRect(0, 60, 370, 40))
+        self.label_4 = QLabel(self.frame_3)
+        self.label_4.setObjectName(u"label_4")
+        self.label_4.setGeometry(QRect(10, 5, 240, 30))
+        self.label_4.setMaximumSize(QSize(250, 16777215))
+        self.label_4.setFont(font1)
+        self.label_4.setStyleSheet(u"color:white;")
+        self.frame_cb_3 = QFrame(self.frame_3)
+        self.frame_cb_3.setObjectName(u"frame_cb_3")
+        self.frame_cb_3.setGeometry(QRect(310, 0, 60, 40))
+        self.a_border = QFrame(self.frame_cb_3)
+        self.a_border.setObjectName(u"a_border")
+        self.a_border.setGeometry(QRect(0, 5, 60, 30))
+        self.a_border.setStyleSheet(u"QFrame{\n"
 "	border-radius:15px;\n"
-"	color:gray;\n"
+"	border:2px solid gray; \n"
+"	border-color: rgb(211, 211, 211);\n"
 "}\n"
-"QPushButton:pressed{\n"
-"	\n"
-"	\n"
-"	background-color: rgb(188, 0, 0);\n"
+"QLabel{\n"
+"	border:none; \n"
 "	color:white;\n"
+"	margin-bottom:1px;\n"
 "}")
-        self.stackedWidget_settings.addWidget(self.page_sound)
+        self.label_10 = QLabel(self.a_border)
+        self.label_10.setObjectName(u"label_10")
+        self.label_10.setGeometry(QRect(0, 0, 30, 30))
+        self.label_10.setFont(font2)
+        self.label_10.setAlignment(Qt.AlignCenter)
+        self.label_12 = QLabel(self.a_border)
+        self.label_12.setObjectName(u"label_12")
+        self.label_12.setGeometry(QRect(30, 0, 30, 30))
+        self.label_12.setFont(font2)
+        self.label_12.setAlignment(Qt.AlignCenter)
+        self.bearing_remoteMultimediaCheckbox = QCheckBox(self.frame_cb_3)
+        self.bearing_remoteMultimediaCheckbox.setObjectName(u"bearing_remoteMultimediaCheckbox")
+        self.bearing_remoteMultimediaCheckbox.setGeometry(QRect(0, 0, 60, 40))
+        self.bearing_remoteMultimediaCheckbox.setStyleSheet(u"QCheckBox{\n"
+"	background:none;\n"
+"}\n"
+"QCheckBox::indicator{\n"
+"	height:20px;\n"
+"	width:20px;\n"
+"	border-radius:10px;\n"
+"\n"
+"}\n"
+"QCheckBox::indicator:checked{\n"
+"	margin-left:6px;\n"
+"	background-color: rgb(255, 0, 0);\n"
+"\n"
+"}\n"
+"QCheckBox::indicator:unchecked{\n"
+"	margin-left:30px;\n"
+"	background:rgb(54, 0, 0);\n"
+"\n"
+"	\n"
+"}")
+        self.stackedWidget_settings.addWidget(self.page_remote)
         self.page_status = QWidget()
         self.page_status.setObjectName(u"page_status")
         self.p_status_title = QFrame(self.page_status)
@@ -1362,32 +1394,6 @@ class Ui_Settings_widget(object):
 "border:none;")
         self.line_23.setFrameShadow(QFrame.Plain)
         self.line_23.setFrameShape(QFrame.HLine)
-        self.p_terminal_button = QFrame(self.page_terminal)
-        self.p_terminal_button.setObjectName(u"p_terminal_button")
-        self.p_terminal_button.setGeometry(QRect(0, 60, 370, 50))
-        self.label_108 = QLabel(self.p_terminal_button)
-        self.label_108.setObjectName(u"label_108")
-        self.label_108.setGeometry(QRect(10, 0, 200, 50))
-        self.label_108.setMaximumSize(QSize(250, 16777215))
-        self.label_108.setFont(font1)
-        self.label_108.setStyleSheet(u"color:white;")
-        self.bearing_terminalOpenButton = QPushButton(self.p_terminal_button)
-        self.bearing_terminalOpenButton.setObjectName(u"bearing_terminalOpenButton")
-        self.bearing_terminalOpenButton.setGeometry(QRect(270, 10, 100, 30))
-        self.bearing_terminalOpenButton.setFont(font3)
-        self.bearing_terminalOpenButton.setStyleSheet(u"QPushButton{\n"
-"	\n"
-"	background-color: rgb(49, 49, 49);\n"
-"	border: 2px solid rgb(181, 0, 0);\n"
-"	border-radius:15px;\n"
-"	color:gray;\n"
-"}\n"
-"QPushButton:pressed{\n"
-"	\n"
-"	\n"
-"	background-color: rgb(188, 0, 0);\n"
-"	color:white;\n"
-"}")
         self.stackedWidget_settings.addWidget(self.page_terminal)
         self.page_advanced = QWidget()
         self.page_advanced.setObjectName(u"page_advanced")
@@ -1570,7 +1576,7 @@ class Ui_Settings_widget(object):
 
         self.retranslateUi(Settings_widget)
 
-        self.stackedWidget_settings.setCurrentIndex(2)
+        self.stackedWidget_settings.setCurrentIndex(3)
 
 
         QMetaObject.connectSlotsByName(Settings_widget)
@@ -1581,7 +1587,7 @@ class Ui_Settings_widget(object):
         self.bearing_settingsBrightness.setText(QCoreApplication.translate("Settings_widget", u"BRIGHTNESS", None))
         self.bearing_settingsWifi.setText(QCoreApplication.translate("Settings_widget", u"WIFI", None))
         self.bearing_settingsBluetooth.setText(QCoreApplication.translate("Settings_widget", u"BLUETOOTH", None))
-        self.bearing_settingsSound.setText(QCoreApplication.translate("Settings_widget", u"SOUND", None))
+        self.bearing_settingsRemote.setText(QCoreApplication.translate("Settings_widget", u"REMOTE", None))
         self.bearing_settingsStatus.setText(QCoreApplication.translate("Settings_widget", u"STATUS", None))
         self.bearing_settingsGpio.setText(QCoreApplication.translate("Settings_widget", u"GPIO", None))
         self.bearing_settingsSystemInfo.setText(QCoreApplication.translate("Settings_widget", u"SYSTEM INFO", None))
@@ -1621,9 +1627,11 @@ class Ui_Settings_widget(object):
         self.bearing_btManagerButton.setText(QCoreApplication.translate("Settings_widget", u"BTManager", None))
         self.label_26.setText(QCoreApplication.translate("Settings_widget", u"Bluetooth", None))
         self.bearing_refreshBtButton.setText("")
-        self.label_32.setText(QCoreApplication.translate("Settings_widget", u"Sound", None))
-        self.label_33.setText(QCoreApplication.translate("Settings_widget", u"Change claxon sounds", None))
-        self.bearing_soundClaxonsButton.setText(QCoreApplication.translate("Settings_widget", u"Change", None))
+        self.label_32.setText(QCoreApplication.translate("Settings_widget", u"Remote", None))
+        self.label_4.setText(QCoreApplication.translate("Settings_widget", u"Multimedia remote", None))
+        self.label_10.setText(QCoreApplication.translate("Settings_widget", u"O", None))
+        self.label_12.setText(QCoreApplication.translate("Settings_widget", u"I", None))
+        self.bearing_remoteMultimediaCheckbox.setText("")
         self.label_38.setText(QCoreApplication.translate("Settings_widget", u"Services status", None))
         self.bearing_statusRefreshButton.setText("")
         self.label_55.setText(QCoreApplication.translate("Settings_widget", u"Restart bluetooth", None))
@@ -1662,9 +1670,7 @@ class Ui_Settings_widget(object):
         self.bearing_systemCpuTempText.setText(QCoreApplication.translate("Settings_widget", u"0\u00baC", None))
         self.label_67.setText(QCoreApplication.translate("Settings_widget", u"SYSTEM INFO", None))
         self.bearing_systemRefreshButton.setText("")
-        self.label_107.setText(QCoreApplication.translate("Settings_widget", u"TERMINAL", None))
-        self.label_108.setText(QCoreApplication.translate("Settings_widget", u"Open terminal", None))
-        self.bearing_terminalOpenButton.setText(QCoreApplication.translate("Settings_widget", u"Open", None))
+        self.label_107.setText(QCoreApplication.translate("Settings_widget", u"REMOTE", None))
         self.label_109.setText(QCoreApplication.translate("Settings_widget", u"ADVANCED", None))
         self.label_116.setText(QCoreApplication.translate("Settings_widget", u" Reboot now", None))
         self.bearing_advancedRebootButton.setText(QCoreApplication.translate("Settings_widget", u"Reboot", None))
