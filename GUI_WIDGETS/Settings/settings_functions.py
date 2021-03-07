@@ -280,9 +280,11 @@ class Settings_funcs:
 			if self.GUI_Settings.bearing_advancedAutopowerCheckbox.isChecked():
 				print('Auto-power off')
 				gp.remove_event_detect(self.pinsPower)
+				self.setConfig('auto-power', 'false')
 			else:
 				print('Auto-power on')
-				gp.add_event_detect(self.pinsPower, gp.RISING, callback=self.autoPowerCallback)
+				gp.add_event_detect(self.pinsPower, gp.RISING, callback=autoPowerCallback)
+				self.setConfig('auto-power', 'true')
 
 
 
