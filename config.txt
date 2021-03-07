@@ -1,2 +1,2 @@
-gauge_power=true
-auto-power=true
+gauge_power=false
+auto-power=false
