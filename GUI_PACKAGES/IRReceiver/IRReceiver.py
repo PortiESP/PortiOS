@@ -10,7 +10,6 @@ class IRReceiver:
 		gp.setmode(gp.BOARD)
 		gp.setup(pin, gp.IN, pull_up_down=gp.PUD_UP)
 
-		self.reading = False
 		self.bit_start = 0
 
 		self.bits_durations_list = []
@@ -28,15 +27,18 @@ class IRReceiver:
 		data = gp.input(self.pin)
 
 		if data == 1:
-			self.reading = True
 			self.bit_start = time.time()
 
 		if data == 0:
 			duration = time.time() - self.bit_start
 			if duration < 0.005:
 				self.bits_durations_list.append(duration)
+			else:
+				print('start')
 			if len(self.bits_durations_list) == 32:
 				self.IRReceiverCallback(self.bits_durations_list)
+				print('end')
+				self.bits_durations_list = []
 
 
 
