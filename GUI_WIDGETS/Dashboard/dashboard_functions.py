@@ -66,3 +66,4 @@ class Dashboard_funcs:
 	def stopGauge(self):
 		print('Stoping gauge')
 		self.GUI_Dashboard.gaugePower = False
+		Gauge_funcs.setSpeed(self, 0)
