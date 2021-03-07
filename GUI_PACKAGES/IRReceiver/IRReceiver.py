@@ -46,7 +46,7 @@ class IRReceiver:
 				self.bits_durations_list.append(duration)
 		
 			if len(self.bits_durations_list) == 32:
-				data = self.__timeToBin(self.bits_durations_list)
+				data = self.__timeToBin(self.bits_durations_list[16:])
 				self.IRReceiverCallback(data)
 				self.reading = False
 				self.bits_durations_list = []
@@ -61,7 +61,7 @@ class IRReceiver:
 			if duration > 0.001: return 1
 			else: return 0
 
-		return tuple(map(formatDuration, durationsList[16:]))
+		return tuple(map(formatDuration, durationsList))
 		
 
 
