@@ -10,8 +10,10 @@ class IRReceiver:
 		gp.setmode(gp.BOARD)
 		gp.setup(pin, gp.IN, pull_up_down=gp.PUD_UP)
 
+		self.reading = False
+		self.header = True
+		self.header_count = 0
 		self.bit_start = 0
-
 		self.bits_durations_list = []
 
 		self.IRReceiverCallback = callback
@@ -27,19 +29,37 @@ class IRReceiver:
 		data = gp.input(self.pin)
 
 		if data == 1:
-			self.bit_start = time.time()
+			if self.reading:
+				if len(self.bits_durations_list) == 0: 
+					self.reading = False
+
+				if self.header:
+					self.bit_start = time.time()
+			else:
+				pass
 
 		if data == 0:
-			duration = time.time() - self.bit_start
-			if duration < 0.005:
+			if not self.reading: 
+				self.reading = True
+
+			if self.header:
+				self.header_count += 1
+
+			if self.header_count == self.headerBits:
+				self.header = False
+
+			if not self.header:
+				duration = time.time() - self.bit_start
 				self.bits_durations_list.append(duration)
 				print(len(self.bits_durations_list), ' - ',duration)
-			else:
-				print('start')
-			if len(self.bits_durations_list) == 32:
+			
+			if len(self.bits_durations_list) == self.remoteBits:
 				# self.IRReceiverCallback(self.bits_durations_list)
-				print('end')
+				self.header = True
+				self.header_count = 0
 				self.bits_durations_list = []
+				self.reading = False
+				print()
 
 
 
