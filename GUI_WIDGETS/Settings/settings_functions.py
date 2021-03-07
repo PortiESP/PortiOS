@@ -270,6 +270,21 @@ class Settings_funcs:
 # ------------------------------------------------------------------------------------------------------
 
 	def advancedSetup(self):
+		def setupAutoPower():
+			gp.setup(self.pinsPower, gp.IN, pull_up_down=gp.PUD_DOWN)
+
+		def autoPowerCallback(self):
+			print('power event!!')
+
+		def toggleAutoPower():
+			if self.GUI_Settings.bearing_advancedAutopowerCheckbox.isChecked():
+				print('Auto-power off')
+				gp.remove_event_detect(self.pinsPower)
+			else:
+				print('Auto-power on')
+				gp.add_event_detect(self.pinsPower, gp.RISING, callback=self.autoPowerCallback)
+
+
 
 		def toggleGaugePower():
 			if self.GUI_Settings.bearing_advancedGaugePowerCheckbox.isChecked():
@@ -279,6 +294,8 @@ class Settings_funcs:
 				Dashboard_funcs.startGauge(self)
 				self.setConfig('gauge_power', 'true')
 
+		setupAutoPower()
 
+		self.GUI_Settings.bearing_advancedAutopowerCheckbox.toggled.connect(toggleAutoPower)
 		self.GUI_Settings.bearing_advancedGaugePowerCheckbox.toggled.connect(toggleGaugePower)
 		self.GUI_Settings.bearing_advancedRebootButton.clicked.connect(lambda: os.system('sudo reboot'))

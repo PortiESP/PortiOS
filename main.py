@@ -9,14 +9,17 @@ class Main_GUI:
 		# Setting fullscreen
 		# self.win.showFullScreen()		
 
+		# Check if config file exists
 		if not os.path.exists('config.txt'):
 			with open('config.txt', 'w'):
 				print('"config.txt" created')
 
+		# Getting config data
 		self.config = {}
 		self.setupConfig()
 		print(self.config)
 
+		# Main loog Hz
 		self.mainLoopHz = 1
 
 		# Setting media player
@@ -28,13 +31,19 @@ class Main_GUI:
 		gp.setmode(gp.BOARD)
 		gp.setwarnings(False)
 
+		# Pins
+		self.pinsLeds = (40, 38, 36)
+		self.pinsPower = 32
+
+
 		# Leds controller
-		self.ledsController = RGB_Controller((40, 38, 36)) # Pins
+		self.ledsController = RGB_Controller(self.pinsLeds) # Pins
 
 		# ADC converter controller
 		self.adcController = Adafruit_ADS1x15.ADS1115()
 		self.GAUGE_ADS_CHANNEL = 0
 		self.MAX_ADS_VALUE = 32752
+
 
 		# System info manager
 		self.systemInfo = System_info()
@@ -47,6 +56,7 @@ class Main_GUI:
 		self.currentMusicTime = None # Music position in microseconds
 		self.currentMusicTimeF = None # Formated music porsition time (M:SS)
 
+		# Widgets objects
 		self.GUI_Central = None
 		self.GUI_Dashboard = None
 		self.GUI_Apps = None
@@ -63,7 +73,8 @@ class Main_GUI:
 		Settings_funcs.settingsSetup(self)
 
 
-		# Page test func
+
+		
 
 	def toggle_musicStatus(self, setStatus=None):
 		
@@ -272,8 +283,7 @@ class Main_GUI:
 					print('Time elapsed --> ' + self.currentMusicTimeF)
 
 				
-
-
+	
 
 
 
