@@ -10,8 +10,12 @@ class IRReceiver:
 		gp.setmode(gp.BOARD)
 		gp.setup(pin, gp.IN, pull_up_down=gp.PUD_UP)
 
+		self.bounce = 0.01
+		self.lastRead = 0
+
+
 		self.reading = False
-		self.bit_start = 0
+		self.raise_time = 0
 		self.bits_durations_list = []
 
 		self.IRReceiverCallback = callback
@@ -23,30 +27,29 @@ class IRReceiver:
 		gp.remove_event_detect(self.pin)
 
 	def __IREvent(self, pin):
-
 		data = gp.input(self.pin)
 
 		if data == 1:
 			if self.reading: 
-				self.bit_start = time.time()
+				self.raise_time = time.time()
 
 	
 		if data == 0:
-			if not self.reading: 
-				self.reading = True
-				return
 
-		
-			duration = time.time() - self.bit_start
+			fall_time = time.time()
+			if not self.reading: 
+				if fall_time - self.lastRead > self.bounce:
+					self.reading = True
+				return
+			duration = fall_time - self.raise_time
 			if duration < 0.0019:
 				self.bits_durations_list.append(duration)
-			print(len(self.bits_durations_list), ' - ',duration)
 		
 			if len(self.bits_durations_list) == 32:
 				self.IRReceiverCallback(self.bits_durations_list)
 				self.reading = False
 				self.bits_durations_list = []
-				print()
+				self.lastRead = fall_time
 
 
 
