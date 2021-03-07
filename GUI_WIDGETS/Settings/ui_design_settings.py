@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'design_settingsGFkdOG.ui'
+## Form generated from reading UI file 'design_settingssVeHaG.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -1508,7 +1508,6 @@ class Ui_Settings_widget(object):
 "\n"
 "	\n"
 "}")
-        self.bearing_advancedAutopowerCheckbox.setChecked(True)
         self.p_advanced_autoPower_2 = QFrame(self.frame_page_advanced)
         self.p_advanced_autoPower_2.setObjectName(u"p_advanced_autoPower_2")
         self.p_advanced_autoPower_2.setGeometry(QRect(0, 100, 370, 40))
@@ -1569,7 +1568,6 @@ class Ui_Settings_widget(object):
 "\n"
 "	\n"
 "}")
-        self.bearing_advancedGaugePowerCheckbox.setChecked(False)
         self.stackedWidget_settings.addWidget(self.page_advanced)
 
         self.retranslateUi(Settings_widget)

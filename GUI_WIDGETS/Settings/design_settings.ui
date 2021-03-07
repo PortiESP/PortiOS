@@ -4081,9 +4081,6 @@ QCheckBox::indicator:checked{
          <property name="text">
           <string/>
          </property>
-         <property name="checked">
-          <bool>true</bool>
-         </property>
         </widget>
        </widget>
       </widget>
@@ -4238,9 +4235,6 @@ QCheckBox::indicator:checked{
          </property>
          <property name="text">
           <string/>
-         </property>
-         <property name="checked">
-          <bool>false</bool>
          </property>
         </widget>
        </widget>

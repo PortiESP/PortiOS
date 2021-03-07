@@ -276,8 +276,8 @@ class Settings_funcs:
 	def advancedSetup(self):
 		def setup():	
 			gp.setup(self.pinsPower, gp.IN, pull_up_down=gp.PUD_DOWN)
-			if self.getConfig('auto-power'): self.GUI_Settings.bearing_advancedAutopowerCheckbox.setChecked(False)
-			if self.getConfig('gauge_power'): self.GUI_Settings.bearing_advancedGaugePowerCheckbox.setChecked(False)
+			if self.getConfig('auto-power'): self.GUI_Settings.bearing_advancedAutopowerCheckbox.setChecked(self.getConfig('auto-power'))
+			if self.getConfig('gauge_power'): self.GUI_Settings.bearing_advancedGaugePowerCheckbox.setChecked(self.getConfig('gauge_power'))
 
 		def autoPowerCallback(self):
 			os.system('shutdown -P now')
