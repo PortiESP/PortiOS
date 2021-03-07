@@ -8,7 +8,7 @@ class IRReceiver:
 		self.headerBits = self.remoteBits
 
 		gp.setmode(gp.BOARD)
-		gp.setup(pin, gp.OUT, pull_up_down=gp.PUD_UP)
+		gp.setup(pin, gp.IN, pull_up_down=gp.PUD_UP)
 
 		self.readingData = False
 		self.header_count = 0
@@ -55,6 +55,7 @@ class IRReceiver:
 
 
 	def __formatData(self, dataList):
+		print(dataList)
 		def formatDuration(duration):
 			if duration > 0.001: return 1
 			else: return 0
