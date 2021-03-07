@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'design_settingsHAXLNl.ui'
+## Form generated from reading UI file 'design_settingsFiwhqI.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -1394,6 +1394,32 @@ class Ui_Settings_widget(object):
 "border:none;")
         self.line_23.setFrameShadow(QFrame.Plain)
         self.line_23.setFrameShape(QFrame.HLine)
+        self.frame = QFrame(self.page_terminal)
+        self.frame.setObjectName(u"frame")
+        self.frame.setGeometry(QRect(0, 60, 370, 50))
+        self.label_16 = QLabel(self.frame)
+        self.label_16.setObjectName(u"label_16")
+        self.label_16.setGeometry(QRect(10, 0, 200, 50))
+        self.label_16.setMaximumSize(QSize(250, 16777215))
+        self.label_16.setFont(font1)
+        self.label_16.setStyleSheet(u"color:white;")
+        self.bearing_terminalOpenButton = QPushButton(self.frame)
+        self.bearing_terminalOpenButton.setObjectName(u"bearing_terminalOpenButton")
+        self.bearing_terminalOpenButton.setGeometry(QRect(270, 10, 100, 30))
+        self.bearing_terminalOpenButton.setFont(font3)
+        self.bearing_terminalOpenButton.setStyleSheet(u"QPushButton{\n"
+"	\n"
+"	background-color: rgb(49, 49, 49);\n"
+"	border: 2px solid rgb(181, 0, 0);\n"
+"	border-radius:15px;\n"
+"	color:gray;\n"
+"}\n"
+"QPushButton:pressed{\n"
+"	\n"
+"	\n"
+"	background-color: rgb(188, 0, 0);\n"
+"	color:white;\n"
+"}")
         self.stackedWidget_settings.addWidget(self.page_terminal)
         self.page_advanced = QWidget()
         self.page_advanced.setObjectName(u"page_advanced")
@@ -1576,7 +1602,7 @@ class Ui_Settings_widget(object):
 
         self.retranslateUi(Settings_widget)
 
-        self.stackedWidget_settings.setCurrentIndex(3)
+        self.stackedWidget_settings.setCurrentIndex(2)
 
 
         QMetaObject.connectSlotsByName(Settings_widget)
@@ -1670,7 +1696,9 @@ class Ui_Settings_widget(object):
         self.bearing_systemCpuTempText.setText(QCoreApplication.translate("Settings_widget", u"0\u00baC", None))
         self.label_67.setText(QCoreApplication.translate("Settings_widget", u"SYSTEM INFO", None))
         self.bearing_systemRefreshButton.setText("")
-        self.label_107.setText(QCoreApplication.translate("Settings_widget", u"REMOTE", None))
+        self.label_107.setText(QCoreApplication.translate("Settings_widget", u"Terminal", None))
+        self.label_16.setText(QCoreApplication.translate("Settings_widget", u"Open terminal", None))
+        self.bearing_terminalOpenButton.setText(QCoreApplication.translate("Settings_widget", u"Open", None))
         self.label_109.setText(QCoreApplication.translate("Settings_widget", u"ADVANCED", None))
         self.label_116.setText(QCoreApplication.translate("Settings_widget", u" Reboot now", None))
         self.bearing_advancedRebootButton.setText(QCoreApplication.translate("Settings_widget", u"Reboot", None))

@@ -485,7 +485,7 @@ QScrollBar:vertical {
      </rect>
     </property>
     <property name="currentIndex">
-     <number>3</number>
+     <number>2</number>
     </property>
     <widget class="QWidget" name="page_brightness">
      <widget class="QFrame" name="p_brightnes_title">
@@ -3727,7 +3727,7 @@ background:none;</string>
         <string notr="true">color:white;</string>
        </property>
        <property name="text">
-        <string>REMOTE</string>
+        <string>Terminal</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
@@ -3751,6 +3751,80 @@ border:none;</string>
        </property>
        <property name="orientation">
         <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QFrame" name="frame">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>60</y>
+        <width>370</width>
+        <height>50</height>
+       </rect>
+      </property>
+      <widget class="QLabel" name="label_16">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>0</y>
+         <width>200</width>
+         <height>50</height>
+        </rect>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>250</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <family>Bahnschrift SemiLight</family>
+         <pointsize>13</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color:white;</string>
+       </property>
+       <property name="text">
+        <string>Open terminal</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="bearing_terminalOpenButton">
+       <property name="geometry">
+        <rect>
+         <x>270</x>
+         <y>10</y>
+         <width>100</width>
+         <height>30</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Bahnschrift SemiLight</family>
+         <pointsize>11</pointsize>
+         <weight>50</weight>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton{
+	
+	background-color: rgb(49, 49, 49);
+	border: 2px solid rgb(181, 0, 0);
+	border-radius:15px;
+	color:gray;
+}
+QPushButton:pressed{
+	
+	
+	background-color: rgb(188, 0, 0);
+	color:white;
+}</string>
+       </property>
+       <property name="text">
+        <string>Open</string>
        </property>
       </widget>
      </widget>
