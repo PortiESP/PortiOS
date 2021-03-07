@@ -153,6 +153,7 @@ class Settings_funcs:
 					self.GUI_Settings.bearing_btDiscoverableCheckbox.setChecked(False)
 			else:
 				self.GUI_Settings.bearing_btPowerCheckbox.setChecked(False)
+				self.GUI_Settings.bearing_btDiscoverableCheckbox.setChecked(False)
 
 
 
@@ -277,6 +278,10 @@ class Settings_funcs:
 			self.GUI_Settings.bearing_advancedAutopowerCheckbox.setChecked(self.getConfig('auto-power'))
 			self.GUI_Settings.bearing_advancedGaugePowerCheckbox.setChecked(self.getConfig('gauge_power'))
 
+			if self.getConfig('auto-power'):
+				gp.add_event_detect(self.pinsPower, gp.RISING, callback=autoPowerCallback)
+			if self.getConfig('gauge_power'):
+				Dashboard_funcs.startGauge(self)
 			
 		def autoPowerCallback(self):
 			print('Shuting down')

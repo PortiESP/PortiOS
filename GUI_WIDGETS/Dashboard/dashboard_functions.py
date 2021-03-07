@@ -17,9 +17,6 @@ class Dashboard_funcs:
 
 		self.GUI_Dashboard.gaugeThread = None
 		self.GUI_Dashboard.gaugePower = False
-		
-		if self.getConfig('gauge_power'):
-			Dashboard_funcs.startGauge(self)
 
 
 	def changeMusicInfo(self):
