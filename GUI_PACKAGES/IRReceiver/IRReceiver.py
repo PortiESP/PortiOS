@@ -32,7 +32,7 @@ class IRReceiver:
 		if data == 1:
 			if self.reading: 
 				self.raise_time = time.time()
-
+	
 	
 		if data == 0:
 
@@ -40,6 +40,7 @@ class IRReceiver:
 			if not self.reading: 
 				if fall_time - self.lastRead > self.bounce:
 					self.reading = True
+					self.bits_durations_list = []
 				return
 			duration = fall_time - self.raise_time
 			if duration < 0.0019:
