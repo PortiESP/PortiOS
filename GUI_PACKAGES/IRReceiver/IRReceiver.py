@@ -56,11 +56,12 @@ class IRReceiver:
 
 
 	def __timeToBin(self, durationsList):
+		print(durationsList)
 		def formatDuration(duration):
 			if duration > 0.001: return 1
 			else: return 0
 
-		return tuple(map(formatDuration, durationsList))
+		return tuple(map(formatDuration, durationsList[16:]))
 		
 
 
