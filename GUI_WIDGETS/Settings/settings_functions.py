@@ -183,18 +183,6 @@ class Settings_funcs:
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 # ------------------------------------------------------------------------------------------------------
 
 	def servicesStatusSetup(self):
@@ -214,6 +202,7 @@ class Settings_funcs:
 		self.GUI_Settings.bearing_statusRefreshButton.clicked.connect(refresh)
 		self.GUI_Settings.bearing_statusBtButton.clicked.connect(lambda: restartService('bluetooth'))
 
+# ------------------------------------------------------------------------------------------------------
 
 	def gpioSetup(self):
 
