@@ -278,6 +278,7 @@ class Settings_funcs:
 			self.GUI_Settings.bearing_advancedAutopowerCheckbox.setChecked(self.getConfig('auto-power'))
 			self.GUI_Settings.bearing_advancedGaugePowerCheckbox.setChecked(self.getConfig('gauge_power'))
 
+			# config
 			if self.getConfig('auto-power'):
 				gp.add_event_detect(self.pinsPower, gp.RISING, callback=autoPowerCallback)
 			if self.getConfig('gauge_power'):
@@ -285,7 +286,7 @@ class Settings_funcs:
 			
 		def autoPowerCallback(self):
 			print('Shuting down')
-			# os.system('shutdown -P now')
+			os.system('shutdown -P now')
 
 		def toggleAutoPower():
 			if self.GUI_Settings.bearing_advancedAutopowerCheckbox.isChecked():
