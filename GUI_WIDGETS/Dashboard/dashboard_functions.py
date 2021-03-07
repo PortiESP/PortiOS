@@ -3,7 +3,7 @@ from .gauge_functions import *
 from PySide2.QtCore import *
 from PySide2.QtGui import *
 from PySide2.QtWidgets import *
-import threading
+import threading, time
 
 class Dashboard_funcs:
 
