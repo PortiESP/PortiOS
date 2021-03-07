@@ -46,7 +46,7 @@ class IRReceiver:
 			print(len(self.bits_durations_list), ' - ',duration)
 		
 			if len(self.bits_durations_list) == 32:
-				# self.IRReceiverCallback(self.bits_durations_list)
+				self.IRReceiverCallback(self.bits_durations_list)
 				self.header = True
 				self.header_count = 0
 				self.bits_durations_list = []
