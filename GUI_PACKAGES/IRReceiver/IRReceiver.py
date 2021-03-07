@@ -25,7 +25,7 @@ class IRReceiver:
 	def stopIRR(self):
 		gp.remove_event_detect(self.pin)
 
-	def __IREvent(self):
+	def __IREvent(self, pin):
 
 
 		data = gp.input(self.pin)
