@@ -485,7 +485,7 @@ QScrollBar:vertical {
      </rect>
     </property>
     <property name="currentIndex">
-     <number>8</number>
+     <number>2</number>
     </property>
     <widget class="QWidget" name="page_brightness">
      <widget class="QFrame" name="p_brightnes_title">
@@ -817,12 +817,12 @@ QCheckBox::indicator{
 	border-radius:10px;
 
 }
-QCheckBox::indicator:unchecked{
+QCheckBox::indicator:checked{
 	margin-left:6px;
 	background-color: rgb(255, 0, 0);
 
 }
-QCheckBox::indicator:checked{
+QCheckBox::indicator:unchecked{
 	margin-left:30px;
 	background:rgb(54, 0, 0);
 
@@ -831,9 +831,6 @@ QCheckBox::indicator:checked{
           </property>
           <property name="text">
            <string/>
-          </property>
-          <property name="checked">
-           <bool>false</bool>
           </property>
          </widget>
         </widget>
@@ -1470,12 +1467,12 @@ QCheckBox::indicator{
 	border-radius:10px;
 
 }
-QCheckBox::indicator:unchecked{
+QCheckBox::indicator:checked{
 	margin-left:6px;
 	background-color: rgb(255, 0, 0);
 
 }
-QCheckBox::indicator:checked{
+QCheckBox::indicator:unchecked{
 	margin-left:30px;
 	background:rgb(54, 0, 0);
 
@@ -1679,12 +1676,12 @@ QCheckBox::indicator{
 	border-radius:10px;
 
 }
-QCheckBox::indicator:unchecked{
+QCheckBox::indicator:checked{
 	margin-left:6px;
 	background-color: rgb(255, 0, 0);
 
 }
-QCheckBox::indicator:checked{
+QCheckBox::indicator:unchecked{
 	margin-left:30px;
 	background:rgb(54, 0, 0);
 
@@ -1693,9 +1690,6 @@ QCheckBox::indicator:checked{
         </property>
         <property name="text">
          <string/>
-        </property>
-        <property name="checked">
-         <bool>true</bool>
         </property>
        </widget>
       </widget>
@@ -4066,12 +4060,12 @@ QCheckBox::indicator{
 	border-radius:10px;
 
 }
-QCheckBox::indicator:unchecked{
+QCheckBox::indicator:checked{
 	margin-left:6px;
 	background-color: rgb(255, 0, 0);
 
 }
-QCheckBox::indicator:checked{
+QCheckBox::indicator:unchecked{
 	margin-left:30px;
 	background:rgb(54, 0, 0);
 
@@ -4221,12 +4215,12 @@ QCheckBox::indicator{
 	border-radius:10px;
 
 }
-QCheckBox::indicator:unchecked{
+QCheckBox::indicator:checked{
 	margin-left:6px;
 	background-color: rgb(255, 0, 0);
 
 }
-QCheckBox::indicator:checked{
+QCheckBox::indicator:unchecked{
 	margin-left:30px;
 	background:rgb(54, 0, 0);
 

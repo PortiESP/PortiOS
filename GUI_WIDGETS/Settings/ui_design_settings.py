@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'design_settingssVeHaG.ui'
+## Form generated from reading UI file 'design_settingsrAYMOB.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -371,18 +371,17 @@ class Ui_Settings_widget(object):
 "	border-radius:10px;\n"
 "\n"
 "}\n"
-"QCheckBox::indicator:unchecked{\n"
+"QCheckBox::indicator:checked{\n"
 "	margin-left:6px;\n"
 "	background-color: rgb(255, 0, 0);\n"
 "\n"
 "}\n"
-"QCheckBox::indicator:checked{\n"
+"QCheckBox::indicator:unchecked{\n"
 "	margin-left:30px;\n"
 "	background:rgb(54, 0, 0);\n"
 "\n"
 "	\n"
 "}")
-        self.bearing_wifiPowerCheckbox.setChecked(False)
         self.p_wifi_separator_2 = QFrame(self.scrollAreaWidgetContents_8)
         self.p_wifi_separator_2.setObjectName(u"p_wifi_separator_2")
         self.p_wifi_separator_2.setGeometry(QRect(0, 140, 370, 20))
@@ -601,12 +600,12 @@ class Ui_Settings_widget(object):
 "	border-radius:10px;\n"
 "\n"
 "}\n"
-"QCheckBox::indicator:unchecked{\n"
+"QCheckBox::indicator:checked{\n"
 "	margin-left:6px;\n"
 "	background-color: rgb(255, 0, 0);\n"
 "\n"
 "}\n"
-"QCheckBox::indicator:checked{\n"
+"QCheckBox::indicator:unchecked{\n"
 "	margin-left:30px;\n"
 "	background:rgb(54, 0, 0);\n"
 "\n"
@@ -679,18 +678,17 @@ class Ui_Settings_widget(object):
 "	border-radius:10px;\n"
 "\n"
 "}\n"
-"QCheckBox::indicator:unchecked{\n"
+"QCheckBox::indicator:checked{\n"
 "	margin-left:6px;\n"
 "	background-color: rgb(255, 0, 0);\n"
 "\n"
 "}\n"
-"QCheckBox::indicator:checked{\n"
+"QCheckBox::indicator:unchecked{\n"
 "	margin-left:30px;\n"
 "	background:rgb(54, 0, 0);\n"
 "\n"
 "	\n"
 "}")
-        self.bearing_btDiscoverableCheckbox.setChecked(True)
         self.p_bt_btName = QFrame(self.page_bluetooth)
         self.p_bt_btName.setObjectName(u"p_bt_btName")
         self.p_bt_btName.setGeometry(QRect(0, 120, 370, 40))
@@ -1497,12 +1495,12 @@ class Ui_Settings_widget(object):
 "	border-radius:10px;\n"
 "\n"
 "}\n"
-"QCheckBox::indicator:unchecked{\n"
+"QCheckBox::indicator:checked{\n"
 "	margin-left:6px;\n"
 "	background-color: rgb(255, 0, 0);\n"
 "\n"
 "}\n"
-"QCheckBox::indicator:checked{\n"
+"QCheckBox::indicator:unchecked{\n"
 "	margin-left:30px;\n"
 "	background:rgb(54, 0, 0);\n"
 "\n"
@@ -1557,12 +1555,12 @@ class Ui_Settings_widget(object):
 "	border-radius:10px;\n"
 "\n"
 "}\n"
-"QCheckBox::indicator:unchecked{\n"
+"QCheckBox::indicator:checked{\n"
 "	margin-left:6px;\n"
 "	background-color: rgb(255, 0, 0);\n"
 "\n"
 "}\n"
-"QCheckBox::indicator:checked{\n"
+"QCheckBox::indicator:unchecked{\n"
 "	margin-left:30px;\n"
 "	background:rgb(54, 0, 0);\n"
 "\n"
@@ -1572,7 +1570,7 @@ class Ui_Settings_widget(object):
 
         self.retranslateUi(Settings_widget)
 
-        self.stackedWidget_settings.setCurrentIndex(8)
+        self.stackedWidget_settings.setCurrentIndex(2)
 
 
         QMetaObject.connectSlotsByName(Settings_widget)

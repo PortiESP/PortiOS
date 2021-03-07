@@ -51,8 +51,10 @@ class Settings_funcs:
 			
 
 		def togglePower():
-			if self.GUI_Settings.bearing_wifiPowerCheckbox.isChecked(): setStatus = 'down'
-			else: setStatus = 'up'
+			if self.GUI_Settings.bearing_wifiPowerCheckbox.isChecked(): 
+				setStatus = 'up'
+			else: 
+				setStatus = 'down'
 			subprocess.run([f'sudo ifconfig wlan0 {setStatus}'], shell=True)
 			print('Wifi power ', setStatus)
 			tstart = time.time()
@@ -152,18 +154,18 @@ class Settings_funcs:
 
 		def togglePower():
 			if self.GUI_Settings.bearing_btPowerCheckbox.isChecked():
-				print('Powering BT off')
-				subprocess.run('bluetoothctl power off', capture_output=True, shell=True)
-			else:
 				print('Powering BT on')
 				subprocess.run('bluetoothctl power on', capture_output=True, shell=True)
 				refresh()
+			else:
+				print('Powering BT off')
+				subprocess.run('bluetoothctl power off', capture_output=True, shell=True)
 
 		def toggleDiscoverable():
 			if self.GUI_Settings.bearing_btDiscoverableCheckbox.isChecked():
-				setStatus = 'off'
-			else:
 				setStatus = 'on'
+			else:
+				setStatus = 'off'
 			print('Setting discoverable to: ', setStatus)
 			subprocess.run(f'bluetoothctl discoverable {setStatus}', capture_output=True, shell=True)
 			updateData()
@@ -276,32 +278,34 @@ class Settings_funcs:
 	def advancedSetup(self):
 		def setup():	
 			gp.setup(self.pinsPower, gp.IN, pull_up_down=gp.PUD_DOWN)
-			if self.getConfig('auto-power'): self.GUI_Settings.bearing_advancedAutopowerCheckbox.setChecked(self.getConfig('auto-power'))
-			if self.getConfig('gauge_power'): self.GUI_Settings.bearing_advancedGaugePowerCheckbox.setChecked(self.getConfig('gauge_power'))
+			self.GUI_Settings.bearing_advancedAutopowerCheckbox.setChecked(self.getConfig('auto-power'))
+			self.GUI_Settings.bearing_advancedGaugePowerCheckbox.setChecked(self.getConfig('gauge_power'))
 
+			toggleAutoPower()
+			toggleGaugePower()
 		def autoPowerCallback(self):
 			print('Shuting down')
 			# os.system('shutdown -P now')
 
 		def toggleAutoPower():
 			if self.GUI_Settings.bearing_advancedAutopowerCheckbox.isChecked():
-				print('Auto-power off')
-				gp.remove_event_detect(self.pinsPower)
-				self.setConfig('auto-power', 'false')
-			else:
 				print('Auto-power on')
 				gp.add_event_detect(self.pinsPower, gp.RISING, callback=autoPowerCallback)
 				self.setConfig('auto-power', 'true')
+			else:
+				print('Auto-power off')
+				gp.remove_event_detect(self.pinsPower)
+				self.setConfig('auto-power', 'false')
 
 
 
 		def toggleGaugePower():
 			if self.GUI_Settings.bearing_advancedGaugePowerCheckbox.isChecked():
-				Dashboard_funcs.stopGauge(self)
-				self.setConfig('gauge_power', 'false')
-			else:
 				Dashboard_funcs.startGauge(self)
 				self.setConfig('gauge_power', 'true')
+			else:
+				Dashboard_funcs.stopGauge(self)
+				self.setConfig('gauge_power', 'false')
 
 		# SETUP
 		setup()
