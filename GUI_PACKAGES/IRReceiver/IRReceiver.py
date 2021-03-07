@@ -46,7 +46,8 @@ class IRReceiver:
 				self.bits_durations_list.append(duration)
 		
 			if len(self.bits_durations_list) == 32:
-				self.IRReceiverCallback(self.bits_durations_list)
+				data = self.__timeToBin(self.bits_durations_list)
+				self.IRReceiverCallback(data)
 				self.reading = False
 				self.bits_durations_list = []
 				self.lastRead = fall_time
@@ -59,8 +60,8 @@ class IRReceiver:
 			if duration > 0.001: return 1
 			else: return 0
 
-		finalData = tuple(map(formatDuration, durationsList))
-		self.IRReceiverCallback(finalData)
+		return tuple(map(formatDuration, durationsList))
+		
 
 
 
