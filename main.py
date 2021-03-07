@@ -15,6 +15,7 @@ class Main_GUI:
 
 		self.config = {}
 		self.setupConfig()
+		print(self.config)
 
 		self.mainLoopHz = 1
 
