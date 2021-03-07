@@ -2,15 +2,12 @@ import RPi.GPIO as gp
 import threading, time
 
 class IRReceiver:
-	def __init__(self, pin, callback, remoteBits=16):
+	def __init__(self, pin, callback):
 		self.pin = pin
-		self.remoteBits = remoteBits
-		self.headerBits = self.remoteBits
 
 		gp.setmode(gp.BOARD)
 		gp.setup(pin, gp.IN, pull_up_down=gp.PUD_UP)
 
-		self.bounce = 0.01
 		self.lastRead = 0
 
 
@@ -38,7 +35,7 @@ class IRReceiver:
 
 			fall_time = time.time()
 			if not self.reading: 
-				if fall_time - self.lastRead > self.bounce:
+				if fall_time - self.lastRead > 0.01:
 					self.reading = True
 				self.bits_durations_list = []
 				return
@@ -57,7 +54,6 @@ class IRReceiver:
 
 
 	def __timeToBin(self, durationsList):
-		print(durationsList)
 		def formatDuration(duration):
 			if duration > 0.001: return 1
 			else: return 0
@@ -69,8 +65,7 @@ class IRReceiver:
 
 if __name__ == '__main__':
 	def cb(data):
-		print('Data received')
-		print(data)
+		print(hex(''.join(data)))
 	c = IRReceiver(22, cb)
 	c.startIRR()
 	input()
