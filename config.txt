@@ -1,2 +1,2 @@
 gauge_power=true
-auto-power=false
+auto-power=true
