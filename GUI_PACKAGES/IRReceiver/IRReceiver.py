@@ -32,8 +32,8 @@ class IRReceiver:
 		if data == 0:
 			duration = time.time() - self.bit_start
 			if duration < 0.005:
+				self.bits_durations_list.append(duration)
 				print(len(self.bits_durations_list), ' - ',duration)
-				# self.bits_durations_list.append(duration)
 			else:
 				print('start')
 			if len(self.bits_durations_list) == 32:
