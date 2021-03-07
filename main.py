@@ -216,7 +216,6 @@ class Main_GUI:
 				except:
 					print('No BT object available')
 
-			print(checkDevice, ' - ',self.isConnectedDevice)
 			# Check for connected devices
 			# Setting BT status disconnected
 			if self.isConnectedDevice == True and checkDevice == False:
