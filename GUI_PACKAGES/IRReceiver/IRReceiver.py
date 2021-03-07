@@ -44,7 +44,7 @@ class IRReceiver:
 			if not self.readingData: self.readingData = True
 
 			if self.readingBit:
-				self.bit_durations.append(time.time() - self.start_time)
+				self.bits_durations.append(time.time() - self.start_time)
 				self.readingBit = False
 				if len(self.bits_durations) == self.remoteBits:				# Data completed
 					self.__formatData(self.bits_durations)
