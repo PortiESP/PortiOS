@@ -10,8 +10,34 @@ class Settings_funcs:
 		self.GUI_Settings = Ui_Settings_widget()
 		self.GUI_Settings.setupUi(self.GUI_Central.page_settings)
 
+		# BT
 		self.GUI_Settings.TIMEOUT = 20
 		self.GUI_Settings.BTdataDict = {}
+
+		# Remote
+		self.GUI_Settings.remoteButtons = {
+			'1010001001011101' : 'power',
+			'0010001011011101' : 'prev',
+			'0000001011111101' : 'play',
+			'1100001000111101' : 'next',
+			'0110001010011101' : 'vol+',
+			'1010100001010111' : 'vol-',
+			'1001000001101111' : 'up',
+			'1110000000011111' : 'down',
+			'1110001000011101' : 'func/stop',
+			'1001100001100111' : 'eq',
+			'1011000001001111' : 'st/rep',
+			'0110100010010111' : '0',
+			'0011000011001111' : '1',
+			'0001100011100111' : '2',
+			'0111101010000101' : '3',
+			'0001000011101111' : '4',
+			'0011100011000111' : '5',
+			'0101101010100101' : '6',
+			'0100001010111101' : '7',
+			'0100101010110101' : '8',
+			'0101001010101101' : '9'
+		}
 
 		# Setting pages
 		self.GUI_Settings.bearing_settingsBrightness.clicked.connect(lambda:Settings_funcs.setPage(self, 0))
@@ -196,15 +222,20 @@ class Settings_funcs:
 
 	def remoteSetup(self):
 		def setup():
-			pass
+			self.GUI_Settings.bearing_remoteMultimediaCheckbox.setChecked(self.getConfig('irr_power'))
+
+			if self.getConfig('irr_power'):
+				self.IRR.startIRR()
 
 		def toggleMultimedia():
 			if self.GUI_Settings.bearing_remoteMultimediaCheckbox.isChecked():
 				print('Remote multimedia on')
+				self.IRR.startIRR()
 			else:
 				print('Remote multimedia off')
+				self.IRR.stopIRR()
 
-
+		setup()
 		self.GUI_Settings.bearing_remoteMultimediaCheckbox.toggled.connect(toggleMultimedia)
 
 

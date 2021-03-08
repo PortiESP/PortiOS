@@ -34,6 +34,7 @@ class Main_GUI:
 		# Pins
 		self.pinsLeds = (40, 38, 36)
 		self.pinsPower = 32
+		self.pinsIRR = 22
 
 
 		# Leds controller
@@ -43,6 +44,9 @@ class Main_GUI:
 		self.adcController = Adafruit_ADS1x15.ADS1115()
 		self.GAUGE_ADS_CHANNEL = 0
 		self.MAX_ADS_VALUE = 32752
+
+		# IRReceive controller
+		self.IRR = IRReceiver(self.pinsIRR, self.IRRCallback)
 
 
 		# System info manager
@@ -140,6 +144,8 @@ class Main_GUI:
 			Dashboard_funcs.changeMusicInfo(self)		
 			Player_funcs.changeMusicInfo(self)
 
+	def IRRCallback(self, data):
+		print(f'{data} = {self.GUI_Settings.remoteButtons[data]}')
 
 
 	def formatDuration(self, duration):
