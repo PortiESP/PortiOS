@@ -10,11 +10,13 @@ class IRReceiver:
 		gp.setup(pin, gp.IN, pull_up_down=gp.PUD_UP)
 
 
-		# Parameters
-		self.total_bits = 32 	# Remote controll format
-		self.bool_limit = 0.001 # Limit between 0 & 1
-		self.header_len = 16	# Nº of bit in header
-		self.bit_max_duration = 0.0019
+		# --- Parameters ----------------------------------------+
+		self.total_bits = 32 			# Remote controll format |
+		self.bool_limit = 0.001 		# Limit between 0 & 1    |
+		self.header_len = 16			# Nº of bit in header    |
+		self.bit_max_duration = 0.0019  # Maximum value for bit  |
+		self.bounce = 0.01				# Anti-bounce time 		 |
+		# -------------------------------------------------------+
 
 		# Program vars
 		self.lastRead = 0        
@@ -41,7 +43,7 @@ class IRReceiver:
 
 			fall_time = time.time()
 			if not self.reading: 
-				if fall_time - self.lastRead > 0.01:
+				if fall_time - self.lastRead > self.bounce:
 					self.reading = True
 				self.bits_durations_list = []
 				return
