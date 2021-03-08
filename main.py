@@ -156,7 +156,11 @@ class Main_GUI:
 
 		def navControls(control):
 			print('Map nav: ', control)
-			if not self.GUI_Apps.navigator.started_trip: return
+			try:
+				if not self.GUI_Apps.navigator.started_trip: return
+			except AttributeError:
+				print('Not started trip')
+				return
 			if control == 'prev':
 				self.GUI_Apps.navigator.anterior_instruccion()
 			elif control == 'next':
