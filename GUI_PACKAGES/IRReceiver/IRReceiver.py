@@ -4,20 +4,23 @@ import threading, time
 class IRReceiver:
 	def __init__(self, pin, callback):
 		self.pin = pin
+		self.IRReceiverCallback = callback
 
 		gp.setmode(gp.BOARD)
 		gp.setup(pin, gp.IN, pull_up_down=gp.PUD_UP)
 
-		self.lastRead = 0
-		self.total_bits = 32
-		self.bool_limit = 0.001
-		self.header_len = 16
 
+		# Parameters
+		self.total_bits = 32 	# Remote controll format
+		self.bool_limit = 0.001 # Limit between 0 & 1
+		self.header_len = 16	# Nº of bit in header
+
+		# Program vars
+		self.lastRead = 0        
 		self.reading = False
 		self.raise_time = 0
 		self.bits_durations_list = []
 
-		self.IRReceiverCallback = callback
 
 	def startIRR(self):
 		gp.add_event_detect(self.pin, gp.BOTH, callback=self.__IREvent)
@@ -54,22 +57,33 @@ class IRReceiver:
 
 
 
-	def timeToBin(self, durationsList):
+	def timeToBinList(self, durationsList):
 		def formatDuration(duration):
 			if duration > self.bool_limit: return 1
 			else: return 0
 
 		return tuple(map(formatDuration, durationsList[self.header_len:]))
-		
+
+	def binListToBinStr(self, binList):
+		result = ''
+		for i in binList: result += str(i)
+		return result
+
+	def timeToBinStr(self, timeList):
+		result = ''
+		def formatDuration(duration):
+			if duration > self.bool_limit: result += 1
+			else: result += 0
+
+		map(formatDuration, durationsList[self.header_len:])
+		return result
 
 
 
 if __name__ == '__main__':
 	def cb(data):
-		data = c.timeToBin(data)
-		result = ''
-		for i in data: result += str(i)
-		print(result)
+		data = c.timeToBinStr(data)
+		print(data)
 		
 	c = IRReceiver(22, cb)
 	c.startIRR()
