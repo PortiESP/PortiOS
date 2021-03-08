@@ -42,7 +42,8 @@ class Leds_funcs:
 
 	def setColor(self, color='pick'):
 		# Getting color without alpha
-		color = QColorDialog.getColor().getRgb()
+		if color == 'pick':
+			color = QColorDialog.getColor().getRgb()
 
 		# Setting slider value and set valuesoption
 		for i in range(3): 
