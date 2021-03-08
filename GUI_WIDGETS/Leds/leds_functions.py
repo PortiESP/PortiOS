@@ -11,7 +11,7 @@ class Leds_funcs:
 		self.GUI_Leds.setupUi(self.GUI_Central.page_leds)
 		
 		# Color 
-		self.GUI_Leds.ledColor = self.getConfig('led_color').split(',')
+		self.GUI_Leds.ledColor = [int(c) for c in self.getConfig('led_color').split(',')]
 		self.GUI_Leds.slidersList = (self.GUI_Leds.ledsSliderRed,
 									 self.GUI_Leds.ledsSliderGreen,
 									 self.GUI_Leds.ledsSliderBlue)
