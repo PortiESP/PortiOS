@@ -72,8 +72,8 @@ class IRReceiver:
 	def timeToBinStr(self, durationsList):
 		result = ''
 		def formatDuration(duration):
-			if duration > self.bool_limit: result += 1
-			else: result += 0
+			if duration > self.bool_limit: result += '1'
+			else: result += '0'
 
 		map(formatDuration, durationsList[self.header_len:])
 		return result
