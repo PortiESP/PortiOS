@@ -65,7 +65,10 @@ class IRReceiver:
 
 if __name__ == '__main__':
 	def cb(data):
-		print(hex(''.join(data)))
+		result = ''
+		for i in data: result += i
+		print(hex(int(result)))
+		
 	c = IRReceiver(22, cb)
 	c.startIRR()
 	input()
