@@ -38,6 +38,7 @@ class Leds_funcs:
 		self.GUI_Leds.ledsSliderGreen.valueChanged.connect(lambda: Leds_funcs.colorSliderChanged(self, 'green'))
 		self.GUI_Leds.ledsSliderBlue.valueChanged.connect(lambda: Leds_funcs.colorSliderChanged(self, 'blue'))
 
+		Leds_funcs.setColor(self.GUI_Leds.ledColor)
 
 	def setColor(self, color='pick'):
 		# Getting color without alpha
