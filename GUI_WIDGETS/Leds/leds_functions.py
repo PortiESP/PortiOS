@@ -116,5 +116,5 @@ class Leds_funcs:
 				self.ledsController.set_color(self.GUI_Leds.ledColor)
 
 		self.GUI_Leds.ledsBulb.setStyleSheet(u"background:rgb({},{},{});".format(*self.GUI_Leds.ledColor))
-		self.setConfig(','.join([str(i) for i in self.GUI_Leds.ledColor]))
+		self.setConfig('led_color', ','.join([str(i) for i in self.GUI_Leds.ledColor]))
 	
