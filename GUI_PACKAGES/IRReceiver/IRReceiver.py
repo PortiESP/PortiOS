@@ -3,21 +3,33 @@ import threading, time
 
 class IRReceiver:
 	def __init__(self, pin, callback):
-		self.pin = pin
+		# Parameters
+		self.pin = pin # IRR pin
+		self.IRReceiverCallback = callback # User callback
 
+		# GPIO setup
 		gp.setmode(gp.BOARD)
 		gp.setup(pin, gp.IN, pull_up_down=gp.PUD_UP)
 
-		self.lastRead = 0
+		# Remote parameters (format of the data)
+		self.headers_len = 16
+		self.data_len = 16
+		self.data_diference = 0.001
+		self.bounce_time = 0.01
+		self.bit_max_duration = 0.0019
 
+		# Automatic parameters
+		self.total_data_len = None
 
-		self.reading = False
-		self.raise_time = 0
-		self.bits_durations_list = []
+		# Program vars
+		self.lastRead = 0 # Anti-bounce clock
+		self.reading = False # Reading data
+		self.raise_time = 0 # Bit start time
+		self.bits_durations_list = [] # Bits readed 
 
-		self.IRReceiverCallback = callback
 
 	def startIRR(self):
+		self.total_data_len = self.headers_len + self.data_len
 		gp.add_event_detect(self.pin, gp.BOTH, callback=self.__IREvent)
 
 	def stopIRR(self):
@@ -35,17 +47,17 @@ class IRReceiver:
 
 			fall_time = time.time()
 			if not self.reading: 
-				if fall_time - self.lastRead > 0.01:
+				if fall_time - self.lastRead > self.bounce_time:
 					self.reading = True
-				self.bits_durations_list = []
 				return
+
 			duration = fall_time - self.raise_time
-			if duration < 0.0019:
+			
+			if duration < self.bit_max_duration:
 				self.bits_durations_list.append(duration)
 		
-			if len(self.bits_durations_list) == 32:
-				data = self.__timeToBin(self.bits_durations_list[16:])
-				self.IRReceiverCallback(data)
+			if len(self.bits_durations_list) == self.total_data_len:
+				self.IRReceiverCallback(self.bits_durations_list)
 				self.reading = False
 				self.bits_durations_list = []
 				self.lastRead = fall_time
@@ -53,18 +65,19 @@ class IRReceiver:
 
 
 
-	def __timeToBin(self, durationsList):
+	def timeToBin(self, durationsList):
 		def formatDuration(duration):
-			if duration > 0.001: return 1
+			if duration > self.data_diference: return 1
 			else: return 0
 
-		return tuple(map(formatDuration, durationsList))
+		return tuple(map(formatDuration, durationsList[self.headers_len:self.total_data_len]))
 		
 
 
 
 if __name__ == '__main__':
 	def cb(data):
+		data = c.timeToBin(data)
 		result = ''
 		for i in data: result += str(i)
 		print(result)
