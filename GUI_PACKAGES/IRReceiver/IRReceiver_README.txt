@@ -48,6 +48,7 @@ myVar.startIRR()
 # This keeps alive the program if there is no mainloop
 input()
 
+# Stops the event reader
 myVar.stopIRR()
 
 
