@@ -16,7 +16,6 @@ class IRReceiver:
 		self.data_len = 16
 		self.total_data_len = None
 		self.data_diference = 0.001
-		self.bounce_time = 0.01
 
 		# Program vars
 		self.lastRead = 0 # Anti-bounce clock
@@ -44,7 +43,7 @@ class IRReceiver:
 
 			fall_time = time.time()
 			if not self.reading: 
-				if fall_time - self.lastRead > self.bounce_time:
+				if fall_time - self.lastRead > 0.01:
 					self.reading = True
 				return
 
