@@ -155,6 +155,7 @@ class Main_GUI:
 			self.GUI_Central.slider_volume.setValue(vol)
 
 		def navControls(control):
+			print('Map nav: ', control)
 			if not self.GUI_Apps.navigator.started_trip(): return
 			if control == 'prev':
 				self.GUI_Apps.navigator.siguiente_instruccion()
