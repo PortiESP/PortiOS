@@ -71,6 +71,7 @@ class Leds_funcs:
 
 	def toggleLedPower(self):
 		self.GUI_Leds.ledPower = not self.GUI_Leds.ledPower
+		print('Leds status ', self.GUI_Leds.ledPower)
 
 		if self.GUI_Leds.ledsOnOffCheckbox.isChecked() != self.GUI_Leds.ledPower:
 			self.GUI_Leds.ledsOnOffCheckbox.setChecked(self.GUI_Leds.ledPower)
