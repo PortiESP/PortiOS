@@ -46,8 +46,6 @@ class IRReceiver:
 			if not self.reading: 
 				if fall_time - self.lastRead > self.bounce:
 					self.reading = True
-				else:
-					self.lastRead = fall_time
 				return
 			duration = fall_time - self.raise_time
 			if duration < self.bit_max_duration:
