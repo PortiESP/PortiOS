@@ -11,7 +11,7 @@ class Leds_funcs:
 		self.GUI_Leds.setupUi(self.GUI_Central.page_leds)
 		
 		# Color 
-		self.GUI_Leds.ledColor = [0,0,0]
+		self.GUI_Leds.ledColor = self.getConfig('led_color').split(',')
 		self.GUI_Leds.slidersList = (self.GUI_Leds.ledsSliderRed,
 									 self.GUI_Leds.ledsSliderGreen,
 									 self.GUI_Leds.ledsSliderBlue)
@@ -28,15 +28,15 @@ class Leds_funcs:
 		self.GUI_Leds.ledsProgramPoliceButton.clicked.connect(lambda: Leds_funcs.setProgram(self, 'police'))
 
 		# Color picker
-		self.GUI_Leds.ledsColorPickerCheckbox.clicked.connect(lambda: Leds_funcs.pickColor(self))
+		self.GUI_Leds.ledsColorPickerButton.clicked.connect(lambda: Leds_funcs.setColor(self))
 
 		# On/off Button
-		self.GUI_Leds.ledsOnOffButton.clicked.connect(lambda: Leds_funcs.toggleLedPower(self))
+		self.GUI_Leds.ledsOnOffCheckbox.clicked.connect(lambda: Leds_funcs.toggleLedPower(self))
 
 
-		self.GUI_Leds.ledsSliderRed.valueChanged.connect(lambda: Leds_funcs.colorSliderRedMoved(self))
-		self.GUI_Leds.ledsSliderGreen.valueChanged.connect(lambda: Leds_funcs.colorSliderGreenMoved(self))
-		self.GUI_Leds.ledsSliderBlue.valueChanged.connect(lambda: Leds_funcs.colorSliderBlueMoved(self))
+		self.GUI_Leds.ledsSliderRed.valueChanged.connect(lambda: Leds_funcs.colorSliderRedChanged(self))
+		self.GUI_Leds.ledsSliderGreen.valueChanged.connect(lambda: Leds_funcs.colorSliderGreenChanged(self))
+		self.GUI_Leds.ledsSliderBlue.valueChanged.connect(lambda: Leds_funcs.colorSliderBlueChanged(self))
 
 		
 
@@ -55,14 +55,15 @@ class Leds_funcs:
 
 
 
-	def pickColor(self):
+
+	def setColor(self, color='pick'):
 		# Getting color without alpha
 		color = QColorDialog.getColor().getRgb()
 
 		# Setting slider value and set valuesoption
 		for i in range(3): 
 			self.GUI_Leds.slidersList[i].setValue(color[i])
-			Leds_funcs.colorValueSetup(self, i)
+			
 
 		print('Setted color: ', color)
 
@@ -77,7 +78,7 @@ class Leds_funcs:
 		if self.GUI_Leds.ledPower:
 			self.ledsController.set_color(self.GUI_Leds.ledColor)
 
-		if self.GUI_Leds.ledPower == False:
+		if not self.GUI_Leds.ledPower:
 			self.GUI_Leds.actualProgram = None
 			self.ledsController.program_stop()
 			print('Led program: None')
@@ -110,17 +111,17 @@ class Leds_funcs:
 			self.ledsController.set_program(program=self.ledsController.POLICE, hz=1, mode='jump')
 
 
-	def colorSliderRedMoved(self):
+	def colorSliderRedChanged(self):
 		Leds_funcs.colorValueSetup(self, 0)
 		if self.GUI_Leds.ledPower:
 			self.ledsController.program_stop()
 			self.ledsController.set_color(self.GUI_Leds.ledColor)
-	def colorSliderGreenMoved(self):
+	def colorSliderGreenChanged(self):
 		Leds_funcs.colorValueSetup(self, 1)
 		if self.GUI_Leds.ledPower:
 			self.ledsController.program_stop()
 			self.ledsController.set_color(self.GUI_Leds.ledColor)
-	def colorSliderBlueMoved(self):
+	def colorSliderBlueChanged(self):
 		Leds_funcs.colorValueSetup(self, 2)
 		if self.GUI_Leds.ledPower:
 			self.ledsController.program_stop()

@@ -1,3 +1,4 @@
 gauge_power=false
 auto-power=false
 irr_power=true
+led_color=0,0,0
