@@ -154,6 +154,14 @@ class Main_GUI:
 			elif vol >127: vol = 127
 			self.GUI_Central.slider_volume.setValue(vol)
 
+		def navControls(control):
+			if not self.GUI_Apps.navigator.started_trip(): return
+			if control == 'prev':
+				self.GUI_Apps.navigator.siguiente_instruccion()
+			elif control == 'next':
+				self.GUI_Apps.navigator.anterior_instruccion()
+
+
 		# Remote data
 		try: dataStr = self.GUI_Settings.remoteButtons[data]
 		except KeyError:
@@ -167,8 +175,8 @@ class Main_GUI:
 		elif dataStr == 'prev': self.BTController.playback_control('previous')
 		elif dataStr == 'next': self.BTController.playback_control('next')
 		elif dataStr == 'func/stop': Apps_funcs.endNavigation(self)
-		elif dataStr == 'up': pass
-		elif dataStr == 'down': pass
+		elif dataStr == 'up': navControls('prev')
+		elif dataStr == 'down': navControls('next')
 		elif dataStr == 'eq': Central_funcs.setPage(self, 1)
 		elif dataStr == 'st/rept': Central_funcs.setPage(self, 4)
 		elif dataStr == '0': pass

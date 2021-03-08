@@ -16,10 +16,11 @@ class Navegador:
 		self.chrome_options.add_experimental_option("excludeSwitches",["enable-automation"])
 		self.driver = webdriver.Chrome(options=self.chrome_options)
 		# Declarating variables
+		self.cookie_accepted = False
 		self.instruccion_index = 0
 		self.instrucciones_viaje = []
 		self.instrucciones_titles = []
-		self.cookie_accepted = False
+		self.started_trip = False
 
 		# Declarating and incializating variables
 		self.groups_class_name = 'directions-mode-group'
@@ -51,7 +52,7 @@ class Navegador:
 		self.driver.switch_to.window(wh)
 
 	def __obtener_instrucciones(self):
-		WebDriverWait(self.driver, 120).until(lambda x: self.driver.find_elements_by_class_name('directions-mode-group'))
+		WebDriverWait(self.driver, 300).until(lambda x: self.driver.find_elements_by_class_name('directions-mode-group'))
 		time.sleep(1)
 		self.bloques_direcciones = self.driver.find_elements_by_class_name(self.groups_class_name)
 		self.instrucciones_viaje = self.driver.find_elements_by_class_name(self.instructions_class_name)
@@ -80,6 +81,7 @@ class Navegador:
 		time.sleep(0.1)
 		self.select_instruccion(0)
 		self.scroll(-500)
+		self.started_trip = True
 
 
 		
@@ -151,6 +153,7 @@ class Navegador:
 
 	# EXIT
 	def exit(self):
+		self.started_trip = False
 		self.driver.quit()
 
 
