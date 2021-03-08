@@ -15,8 +15,6 @@ class Settings_funcs:
 		self.GUI_Settings.BTdataDict = {}
 
 		# Remote
-		self.GUI_Settings.remoteThread = None
-		self.GUI_Settings.remoteThreadFlag = False
 		self.GUI_Settings.remoteButtons = {
 			'1010001001011101' : 'power',
 			'0010001011011101' : 'prev',
@@ -231,18 +229,11 @@ class Settings_funcs:
 
 		def toggleMultimedia():
 			if self.GUI_Settings.bearing_remoteMultimediaCheckbox.isChecked():
-				def start():
-					self.IRR.startIRR()
 				print('Remote multimedia on')
-				self.remoteThread = threading.Thread(target=start)
-				self.remoteThread.daemon = True
-				self.remoteThreadFlag = True
-				self.remoteThread.start()
-				
+				self.IRR.startIRR()
 			else:
 				print('Remote multimedia off')
 				self.IRR.stopIRR()
-				self.remoteThreadFlag = False
 
 		setup()
 		self.GUI_Settings.bearing_remoteMultimediaCheckbox.toggled.connect(toggleMultimedia)
