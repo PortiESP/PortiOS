@@ -145,7 +145,11 @@ class Main_GUI:
 			Player_funcs.changeMusicInfo(self)
 
 	def IRRCallback(self, data):
-		print(f'{data} = {self.GUI_Settings.remoteButtons[data]}')
+		try:
+			dataStr = self.GUI_Settings.remoteButtons[data]
+		except KeyError:
+			print('Remote button error!')
+		print(f'{data} = {dataStr}')
 
 
 	def formatDuration(self, duration):
