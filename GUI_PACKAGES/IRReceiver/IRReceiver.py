@@ -67,7 +67,7 @@ if __name__ == '__main__':
 	def cb(data):
 		result = ''
 		for i in data: result += str(i)
-		print(hex(int(result)))
+		print(result)
 		
 	c = IRReceiver(22, cb)
 	c.startIRR()
