@@ -145,12 +145,41 @@ class Main_GUI:
 			Player_funcs.changeMusicInfo(self)
 
 	def IRRCallback(self, data):
-		try:
-			dataStr = self.GUI_Settings.remoteButtons[data]
+		# Functions
+		def setVol(value):
+			vol = self.GUI_Central.slider_volume.value()
+			vol += value
+			if vol < 0: vol = 0
+			elif vol >127: vol = 127
+			self.GUI_Central.slider_volume.setValue(vol)
+
+		# Remote data
+		try: dataStr = self.GUI_Settings.remoteButtons[data]
 		except KeyError:
 			print('Remote button error!')
 			return
-		print(f'{data} = {dataStr}')
+		
+		if dataStr == 'power': pass
+		elif dataStr == 'play': self.toggle_musicStatus()
+		elif dataStr == 'vol+': setVol(20)
+		elif dataStr == 'vol-': setVol(-20)
+		elif dataStr == 'prev': self.BTController.playback_control('previous')
+		elif dataStr == 'next': self.BTController.playback_control('next')
+		elif dataStr == 'func/stop': pass
+		elif dataStr == 'up': pass
+		elif dataStr == 'down': pass
+		elif dataStr == 'eq': pass
+		elif dataStr == 'st/rept': pass
+		elif dataStr == '0': pass
+		elif dataStr == '1': pass
+		elif dataStr == '2': pass
+		elif dataStr == '3': pass
+		elif dataStr == '4': pass
+		elif dataStr == '5': pass
+		elif dataStr == '6': pass
+		elif dataStr == '7': pass
+		elif dataStr == '8': pass
+		elif dataStr == '9': pass
 
 
 	def formatDuration(self, duration):
