@@ -69,7 +69,7 @@ class IRReceiver:
 		for i in binList: result += str(i)
 		return result
 
-	def timeToBinStr(self, timeList):
+	def timeToBinStr(self, durationsList):
 		result = ''
 		def formatDuration(duration):
 			if duration > self.bool_limit: result += 1
