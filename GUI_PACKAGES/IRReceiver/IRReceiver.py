@@ -52,7 +52,7 @@ class IRReceiver:
 				self.bits_durations_list.append(duration)
 		
 			if len(self.bits_durations_list) == self.total_bits:
-				self.IRReceiverCallback(self.timeToBin(self.bits_durations_list))
+				self.IRReceiverCallback(self.__timeToBin(self.bits_durations_list))
 				self.reading = False
 				self.bits_durations_list = []
 				self.lastRead = fall_time
@@ -60,7 +60,7 @@ class IRReceiver:
 
 
 
-	def timeToBin(self, durationsList):
+	def __timeToBin(self, durationsList):
 		def formatDuration(duration):
 			if duration > self.bool_limit: return 1
 			else: return 0
@@ -70,24 +70,7 @@ class IRReceiver:
 		return result
 
 
-# When the device captures new data it will be sended to the callback function
-# Receiving data in the callback
-def myCallback(data):
-	print(data)
 
-# Instance the module 
-myVar = IRReceiver(myPin, myCallback)
-
-# Setting some parameters
-myVar.total_bits = 12
-myVar.header_len = 0
-myVar.read_on = 0
-myVar.bounce = 0.2
-myVar.bool_limit = 0.0012
-myVar.bit_max_duration = 0.0018
-
-# Start event reader
-myVar.startIRR()
 
 
 

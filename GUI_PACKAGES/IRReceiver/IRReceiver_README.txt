@@ -35,15 +35,21 @@ def myCallback(data):
 myVar = IRReceiver(myPin, myCallback)
 
 # Setting some parameters
-myVar.total_bits = 12
+myVar.total_bits = 12 
 myVar.header_len = 0
 myVar.read_on = 0
-myVar.bounce = 0.2
-myVar.bool_limit = 0.0012
-myVar.bit_max_duration = 0.0018
+myVar.bounce = 0.2 
+myVar.bool_limit = 0.0012 # *Recomended default 
+myVar.bit_max_duration = 0.0018 # *Recomended default
 
 # Start event reader
 myVar.startIRR()
+
+# This keeps alive the program if there is no mainloop
+input()
+
+myVar.stopIRR()
+
 
 
 
