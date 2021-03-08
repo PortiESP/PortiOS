@@ -166,7 +166,7 @@ class Main_GUI:
 		elif dataStr == 'vol-': setVol(-20)
 		elif dataStr == 'prev': self.BTController.playback_control('previous')
 		elif dataStr == 'next': self.BTController.playback_control('next')
-		elif dataStr == 'func/stop': pass
+		elif dataStr == 'func/stop': Apps_funcs.endNavigation(self)
 		elif dataStr == 'up': pass
 		elif dataStr == 'down': pass
 		elif dataStr == 'eq': Central_funcs.setPage(self, 1)

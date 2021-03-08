@@ -34,7 +34,7 @@ class IRReceiver:
 	def __IREvent(self, pin):
 		data = gp.input(self.pin)
 
-		if data:
+		if not data:
 			if self.reading: 
 				self.raise_time = time.time()
 	

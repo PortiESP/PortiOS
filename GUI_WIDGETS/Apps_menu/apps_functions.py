@@ -40,6 +40,7 @@ class Apps_funcs:
 		self.GUI_Apps.navThread.start()
 
 	def endNavigation(self):
+		if not self.GUI_Apps.navigator: return
 		print('Ending maps')
 		self.GUI_Apps.navigator.exit()
 		self.GUI_Apps.navigator = None
