@@ -16,6 +16,7 @@ class IRReceiver:
 		self.header_len = 16			# Nº of bit in header    |
 		self.bit_max_duration = 0.0019  # Maximum value for bit  |
 		self.bounce = 0.01				# Anti-bounce time 		 |
+		self.read_on = 1				# Inverse logic
 		# -------------------------------------------------------+
 
 		# Program vars
@@ -34,12 +35,12 @@ class IRReceiver:
 	def __IREvent(self, pin):
 		data = gp.input(self.pin)
 
-		if data == 1:
+		if data == self.read_on:
 			if self.reading: 
 				self.raise_time = time.time()
 	
 	
-		if data == 0:
+		if data != self.read_on:
 
 			fall_time = time.time()
 			if not self.reading: 
