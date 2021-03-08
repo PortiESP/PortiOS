@@ -15,7 +15,7 @@ class IRReceiver:
 		self.bool_limit = 0.001 		# Limit between 0 & 1    |
 		self.header_len = 16			# Nº of bit in header    |
 		self.bit_max_duration = 0.0019  # Maximum value for bit  |
-		self.bounce = 0.01				# Anti-bounce time 		 |
+		self.bounce = 0.1				# Anti-bounce time 		 |
 		self.read_on = 1				# Inverse logic
 		# -------------------------------------------------------+
 
