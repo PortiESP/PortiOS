@@ -17,6 +17,34 @@ after (myVar = IRReciver(myPin, myCallback))
 	- bounce 			--> (default = 0.01)	# Time needed from last data to start to read
 	- read_on			--> (default = 1)		# Read bits on reverse logic [1/0]
 
+	*bounce*
+	Recomended to add an extra filter for some buttons you want more bounce
 
-*read_on* 
-Some remote has inverse logic so bits need to be readed when data goes low
+	*read_on* 
+	Some remote has inverse logic so bits need to be readed when data goes low
+
+
+======================== HOW TO START ========================
+
+# When the device captures new data it will be sended to the callback function
+# Receiving data in the callback
+def myCallback(data):
+	print(data)
+
+# Instance the module 
+myVar = IRReceiver(myPin, myCallback)
+
+# Setting some parameters
+myVar.total_bits = 12
+myVar.header_len = 0
+myVar.read_on = 0
+myVar.bounce = 0.2
+myVar.bool_limit = 0.0012
+myVar.bit_max_duration = 0.0018
+
+# Start event reader
+myVar.startIRR()
+
+
+
+
