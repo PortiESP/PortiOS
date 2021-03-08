@@ -59,7 +59,7 @@
 </string>
      </property>
     </widget>
-    <widget class="QCheckBox" name="ledsOnOffButton">
+    <widget class="QCheckBox" name="ledsOnOffCheckbox">
      <property name="geometry">
       <rect>
        <x>95</x>
@@ -127,7 +127,7 @@ background-color: rgba(0, 0, 0, 100);</string>
     </widget>
     <zorder>ledsBulb</zorder>
     <zorder>labelOnOffBackground</zorder>
-    <zorder>ledsOnOffButton</zorder>
+    <zorder>ledsOnOffCheckbox</zorder>
    </widget>
    <widget class="QFrame" name="frameLedButtons">
     <property name="geometry">

@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'ledsJDbXnR.ui'
+## Form generated from reading UI file 'ledswaJEzp.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -36,15 +36,15 @@ class Ui_Leds_widget(object):
         self.ledsBulb.setGeometry(QRect(0, 0, 250, 250))
         self.ledsBulb.setStyleSheet(u"background:black;\n"
 "")
-        self.ledsOnOffButton = QCheckBox(self.frameLedsBulb)
-        self.ledsOnOffButton.setObjectName(u"ledsOnOffButton")
-        self.ledsOnOffButton.setGeometry(QRect(95, 95, 60, 60))
+        self.ledsOnOffCheckbox = QCheckBox(self.frameLedsBulb)
+        self.ledsOnOffCheckbox.setObjectName(u"ledsOnOffCheckbox")
+        self.ledsOnOffCheckbox.setGeometry(QRect(95, 95, 60, 60))
         font = QFont()
         font.setFamily(u"Bahnschrift SemiBold Condensed")
         font.setPointSize(25)
-        self.ledsOnOffButton.setFont(font)
-        self.ledsOnOffButton.setFocusPolicy(Qt.NoFocus)
-        self.ledsOnOffButton.setStyleSheet(u"QCheckBox{\n"
+        self.ledsOnOffCheckbox.setFont(font)
+        self.ledsOnOffCheckbox.setFocusPolicy(Qt.NoFocus)
+        self.ledsOnOffCheckbox.setStyleSheet(u"QCheckBox{\n"
 "	border-radius:30px;\n"
 "	\n"
 "\n"
@@ -75,7 +75,7 @@ class Ui_Leds_widget(object):
         self.labelOnOffBackground.setAlignment(Qt.AlignCenter)
         self.ledsBulb.raise_()
         self.labelOnOffBackground.raise_()
-        self.ledsOnOffButton.raise_()
+        self.ledsOnOffCheckbox.raise_()
         self.frameLedButtons = QFrame(self.frame_leds)
         self.frameLedButtons.setObjectName(u"frameLedButtons")
         self.frameLedButtons.setGeometry(QRect(50, 340, 700, 40))

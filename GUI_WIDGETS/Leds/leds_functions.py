@@ -28,7 +28,7 @@ class Leds_funcs:
 		self.GUI_Leds.ledsProgramPoliceButton.clicked.connect(lambda: Leds_funcs.setProgram(self, 'police'))
 
 		# Color picker
-		self.GUI_Leds.ledsColorPickerButton.clicked.connect(lambda: Leds_funcs.pickColor(self))
+		self.GUI_Leds.ledsColorPickerCheckbox.clicked.connect(lambda: Leds_funcs.pickColor(self))
 
 		# On/off Button
 		self.GUI_Leds.ledsOnOffButton.clicked.connect(lambda: Leds_funcs.toggleLedPower(self))
@@ -69,8 +69,10 @@ class Leds_funcs:
 
 
 	def toggleLedPower(self):
-
 		self.GUI_Leds.ledPower = not self.GUI_Leds.ledPower
+
+		if self.GUI_Leds.ledsOnOffCheckbox.isChecked() != self.GUI_Leds.ledPower:
+			self.GUI_Leds.ledsOnOffCheckbox.setChecked(self.GUI_Leds.ledPower)
 
 		if self.GUI_Leds.ledPower:
 			self.ledsController.set_color(self.GUI_Leds.ledColor)
