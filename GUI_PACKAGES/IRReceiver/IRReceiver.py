@@ -14,6 +14,7 @@ class IRReceiver:
 		self.total_bits = 32 	# Remote controll format
 		self.bool_limit = 0.001 # Limit between 0 & 1
 		self.header_len = 16	# Nº of bit in header
+		self.bit_max_duration = 0.0019
 
 		# Program vars
 		self.lastRead = 0        
@@ -45,7 +46,7 @@ class IRReceiver:
 				self.bits_durations_list = []
 				return
 			duration = fall_time - self.raise_time
-			if duration < 0.0019:
+			if duration < self.bit_max_duration:
 				self.bits_durations_list.append(duration)
 		
 			if len(self.bits_durations_list) == self.total_bits:
