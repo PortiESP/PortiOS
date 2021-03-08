@@ -9,15 +9,6 @@ class IRReceiver:
 		gp.setmode(gp.BOARD)
 		gp.setup(pin, gp.IN, pull_up_down=gp.PUD_UP)
 
-
-		# --- Parameters ----------------------------------------+
-		self.total_bits = 32 			# Remote controll format |
-		self.bool_limit = 0.001 		# Limit between 0 & 1    |
-		self.header_len = 16			# Nº of bit in header    |
-		self.bit_max_duration = 0.0019  # Maximum value for bit  |
-		self.bounce = 0.1				# Anti-bounce time 		 |
-		# -------------------------------------------------------+
-
 		# Program vars
 		self.lastRead = 0        
 		self.reading = False
@@ -43,14 +34,14 @@ class IRReceiver:
 
 			fall_time = time.time()
 			if not self.reading: 
-				if fall_time - self.lastRead > self.bounce:
+				if fall_time - self.lastRead > 0.1:
 					self.reading = True
 				return
 			duration = fall_time - self.raise_time
-			if duration < self.bit_max_duration:
+			if duration < 0.0019:
 				self.bits_durations_list.append(duration)
 		
-			if len(self.bits_durations_list) == self.total_bits:
+			if len(self.bits_durations_list) == 32:
 				self.IRReceiverCallback(self.__timeToBin(self.bits_durations_list))
 				self.reading = False
 				self.bits_durations_list = []
@@ -61,11 +52,11 @@ class IRReceiver:
 
 	def __timeToBin(self, durationsList):
 		def formatDuration(duration):
-			if duration > self.bool_limit: return 1
+			if duration > 0.001: return 1
 			else: return 0
 
 		result = ''
-		for i in tuple(map(formatDuration, durationsList[self.header_len:])): result += str(i)
+		for i in tuple(map(formatDuration, durationsList[16:])): result += str(i)
 		return result
 
 
