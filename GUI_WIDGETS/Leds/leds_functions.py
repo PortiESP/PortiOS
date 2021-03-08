@@ -34,26 +34,9 @@ class Leds_funcs:
 		self.GUI_Leds.ledsOnOffCheckbox.clicked.connect(lambda: Leds_funcs.toggleLedPower(self))
 
 
-		self.GUI_Leds.ledsSliderRed.valueChanged.connect(lambda: Leds_funcs.colorSliderRedChanged(self))
-		self.GUI_Leds.ledsSliderGreen.valueChanged.connect(lambda: Leds_funcs.colorSliderGreenChanged(self))
-		self.GUI_Leds.ledsSliderBlue.valueChanged.connect(lambda: Leds_funcs.colorSliderBlueChanged(self))
-
-		
-
-	def colorValueSetup(self, index):
-		if index == 0:
-			self.GUI_Leds.ledColor[0] = self.GUI_Leds.ledsSliderRed.value()
-			self.GUI_Leds.ledsValueRed.setText(str(self.GUI_Leds.ledColor[0]))
-		elif index == 1:
-			self.GUI_Leds.ledColor[1] = self.GUI_Leds.ledsSliderGreen.value()
-			self.GUI_Leds.ledsValueGreen.setText(str(self.GUI_Leds.ledColor[1]))
-		elif index == 2:
-			self.GUI_Leds.ledColor[2] = self.GUI_Leds.ledsSliderBlue.value()
-			self.GUI_Leds.ledsValueBlue.setText(str(self.GUI_Leds.ledColor[2]))
-		
-		self.GUI_Leds.ledsBulb.setStyleSheet(u"background:rgb({},{},{});".format(*self.GUI_Leds.ledColor))
-
-
+		self.GUI_Leds.ledsSliderRed.valueChanged.connect(lambda: Leds_funcs.colorSliderChanged(self, 'red'))
+		self.GUI_Leds.ledsSliderGreen.valueChanged.connect(lambda: Leds_funcs.colorSliderChanged(self, 'green'))
+		self.GUI_Leds.ledsSliderBlue.valueChanged.connect(lambda: Leds_funcs.colorSliderChanged(self, 'blue'))
 
 
 	def setColor(self, color='pick'):
@@ -112,19 +95,26 @@ class Leds_funcs:
 			self.ledsController.set_program(program=self.ledsController.POLICE, hz=1, mode='jump')
 
 
-	def colorSliderRedChanged(self):
-		Leds_funcs.colorValueSetup(self, 0)
-		if self.GUI_Leds.ledPower:
-			self.ledsController.program_stop()
-			self.ledsController.set_color(self.GUI_Leds.ledColor)
-	def colorSliderGreenChanged(self):
-		Leds_funcs.colorValueSetup(self, 1)
-		if self.GUI_Leds.ledPower:
-			self.ledsController.program_stop()
-			self.ledsController.set_color(self.GUI_Leds.ledColor)
-	def colorSliderBlueChanged(self):
-		Leds_funcs.colorValueSetup(self, 2)
-		if self.GUI_Leds.ledPower:
-			self.ledsController.program_stop()
-			self.ledsController.set_color(self.GUI_Leds.ledColor)
+	def colorSliderChanged(self, color):
+		if color == 'red':
+			self.GUI_Leds.ledColor[0] = self.GUI_Leds.ledsSliderRed.value()
+			self.GUI_Leds.ledsValueRed.setText(str(self.GUI_Leds.ledColor[0]))
+			if self.GUI_Leds.ledPower:
+				self.ledsController.program_stop()
+				self.ledsController.set_color(self.GUI_Leds.ledColor)
+		elif color == 'green':
+			self.GUI_Leds.ledColor[1] = self.GUI_Leds.ledsSliderGreen.value()
+			self.GUI_Leds.ledsValueGreen.setText(str(self.GUI_Leds.ledColor[1]))
+			if self.GUI_Leds.ledPower:
+				self.ledsController.program_stop()
+				self.ledsController.set_color(self.GUI_Leds.ledColor)
+		elif color == 'blue':
+			self.GUI_Leds.ledColor[2] = self.GUI_Leds.ledsSliderBlue.value()
+			self.GUI_Leds.ledsValueBlue.setText(str(self.GUI_Leds.ledColor[2]))
+			if self.GUI_Leds.ledPower:
+				self.ledsController.program_stop()
+				self.ledsController.set_color(self.GUI_Leds.ledColor)
+
+		self.GUI_Leds.ledsBulb.setStyleSheet(u"background:rgb({},{},{});".format(*self.GUI_Leds.ledColor))
+		self.setConfig(','.join([str(i) for i in self.GUI_Leds.ledColor]))
 	
