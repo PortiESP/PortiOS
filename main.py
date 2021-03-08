@@ -89,6 +89,7 @@ class Main_GUI:
 				if setStatus == 'playing': status = 'paused'
 				elif setStatus == 'paused': status = 'playing'
 
+			name = None
 			icon1 = QIcon()
 			if status == 'playing':
 				name = 'play-fill'
@@ -159,7 +160,7 @@ class Main_GUI:
 			print('Remote button error!')
 			return
 		
-		if dataStr == 'power': pass
+		if dataStr == 'power': Leds_funcs.toggleLedPower(self)
 		elif dataStr == 'play': self.toggle_musicStatus()
 		elif dataStr == 'vol+': setVol(20)
 		elif dataStr == 'vol-': setVol(-20)
@@ -168,8 +169,8 @@ class Main_GUI:
 		elif dataStr == 'func/stop': pass
 		elif dataStr == 'up': pass
 		elif dataStr == 'down': pass
-		elif dataStr == 'eq': pass
-		elif dataStr == 'st/rept': pass
+		elif dataStr == 'eq': Central_funcs.setPage(self, 1)
+		elif dataStr == 'st/rept': Central_funcs.setPage(self, 4)
 		elif dataStr == '0': pass
 		elif dataStr == '1': pass
 		elif dataStr == '2': pass
