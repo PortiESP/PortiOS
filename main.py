@@ -148,6 +148,7 @@ class Main_GUI:
 		try:
 			dataStr = self.GUI_Settings.remoteButtons[data]
 		except KeyError:
+			dataStr = None
 			print('Remote button error!')
 		print(f'{data} = {dataStr}')
 
