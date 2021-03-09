@@ -101,6 +101,11 @@ class Settings_funcs:
 			else: 
 				self.GUI_Settings.bearing_wifiSsidText.setText('None')
 				self.GUI_Settings.bearing_wifiIpText.setText('None')
+		def checkController():
+			out = subprocess.run('ifconfig', capture_output=True, text=True, shell=True).stdout.split('\n')
+			for line in out:
+				if re.match('wlan0', line.strip()): return True
+			return False
 
 
 		def getSSID():
