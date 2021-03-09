@@ -1,5 +1,5 @@
 from .ui_central import Ui_Central
-import subprocess, threading, sys
+import subprocess, threading
 
 class Central_funcs:
 	def centralSetup(self):
@@ -23,7 +23,7 @@ class Central_funcs:
 		self.GUI_Central.powerCloseButton.clicked.connect(lambda:Central_funcs.toggle_power(self))
 		self.GUI_Central.centralShutdownButton.clicked.connect(lambda:subprocess.run('shutdown -P now', shell=True))
 		self.GUI_Central.centralRebootButton.clicked.connect(lambda:subprocess.run('reboot', shell=True))
-		self.GUI_Central.centralExitButton.clicked.connect(sys.exit)
+		self.GUI_Central.centralExitButton.clicked.connect(self.app.exit)
 
 		self.GUI_Central.slider_volume.valueChanged.connect(self.sliderSyncVolume)
 		

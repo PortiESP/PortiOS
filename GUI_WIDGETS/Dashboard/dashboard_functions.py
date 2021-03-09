@@ -48,7 +48,6 @@ class Dashboard_funcs:
 						value = self.adcController.read_adc(self.GAUGE_ADS_CHANNEL, gain=2, data_rate=16)
 					except OSError:
 						print('ADS1x15 Not found')
-						time.sleep(1)
 						continue
 					speed = Dashboard_funcs.mapDigitalSpeed(self, value, maxValue=self.MAX_ADS_VALUE)
 					try:

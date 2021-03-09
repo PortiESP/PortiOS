@@ -512,7 +512,7 @@ QScrollBar:vertical {
      </rect>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>1</number>
     </property>
     <widget class="QWidget" name="page_brightness">
      <widget class="QFrame" name="p_brightnes_title">
@@ -693,7 +693,7 @@ QScrollBar:vertical {
        <property name="geometry">
         <rect>
          <x>0</x>
-         <y>0</y>
+         <y>-40</y>
          <width>390</width>
          <height>280</height>
         </rect>
@@ -836,6 +836,9 @@ QLabel{
             <width>60</width>
             <height>40</height>
            </rect>
+          </property>
+          <property name="focusPolicy">
+           <enum>Qt::NoFocus</enum>
           </property>
           <property name="styleSheet">
            <string notr="true">QCheckBox{
@@ -1251,6 +1254,9 @@ QLineEdit:disabled{
            <height>30</height>
           </rect>
          </property>
+         <property name="focusPolicy">
+          <enum>Qt::NoFocus</enum>
+         </property>
          <property name="styleSheet">
           <string notr="true">QPushButton{
 
@@ -1487,6 +1493,9 @@ QLabel{
           <height>40</height>
          </rect>
         </property>
+        <property name="focusPolicy">
+         <enum>Qt::NoFocus</enum>
+        </property>
         <property name="styleSheet">
          <string notr="true">QCheckBox{
 	background:none;
@@ -1696,6 +1705,9 @@ QLabel{
           <height>40</height>
          </rect>
         </property>
+        <property name="focusPolicy">
+         <enum>Qt::NoFocus</enum>
+        </property>
         <property name="styleSheet">
          <string notr="true">QCheckBox{
 	background:none;
@@ -1899,6 +1911,9 @@ QCheckBox::indicator:unchecked{
          <weight>50</weight>
          <bold>false</bold>
         </font>
+       </property>
+       <property name="focusPolicy">
+        <enum>Qt::NoFocus</enum>
        </property>
        <property name="styleSheet">
         <string notr="true">QPushButton{
@@ -2180,6 +2195,9 @@ QLabel{
           <height>40</height>
          </rect>
         </property>
+        <property name="focusPolicy">
+         <enum>Qt::NoFocus</enum>
+        </property>
         <property name="styleSheet">
          <string notr="true">QCheckBox{
 	background:none;
@@ -2272,6 +2290,9 @@ border:none;</string>
          <width>40</width>
          <height>40</height>
         </rect>
+       </property>
+       <property name="focusPolicy">
+        <enum>Qt::NoFocus</enum>
        </property>
        <property name="styleSheet">
         <string notr="true">border:none;
@@ -2425,6 +2446,9 @@ QScrollBar:vertical {
             <weight>50</weight>
             <bold>false</bold>
            </font>
+          </property>
+          <property name="focusPolicy">
+           <enum>Qt::NoFocus</enum>
           </property>
           <property name="styleSheet">
            <string notr="true">QPushButton{
@@ -2805,6 +2829,9 @@ QLineEdit:focus{
          <height>30</height>
         </rect>
        </property>
+       <property name="focusPolicy">
+        <enum>Qt::NoFocus</enum>
+       </property>
        <property name="styleSheet">
         <string notr="true">QPushButton{
 
@@ -3030,7 +3057,7 @@ QScrollBar:vertical {
          <rect>
           <x>0</x>
           <y>0</y>
-          <width>398</width>
+          <width>390</width>
           <height>440</height>
          </rect>
         </property>
@@ -3708,6 +3735,9 @@ border:none;</string>
          <height>40</height>
         </rect>
        </property>
+       <property name="focusPolicy">
+        <enum>Qt::NoFocus</enum>
+       </property>
        <property name="styleSheet">
         <string notr="true">border:none;
 background:none;</string>
@@ -3837,6 +3867,9 @@ border:none;</string>
          <weight>50</weight>
          <bold>false</bold>
         </font>
+       </property>
+       <property name="focusPolicy">
+        <enum>Qt::NoFocus</enum>
        </property>
        <property name="styleSheet">
         <string notr="true">QPushButton{
@@ -4008,6 +4041,9 @@ background:gray;</string>
           <bold>false</bold>
          </font>
         </property>
+        <property name="focusPolicy">
+         <enum>Qt::NoFocus</enum>
+        </property>
         <property name="styleSheet">
          <string notr="true">QPushButton{
 	
@@ -4154,6 +4190,9 @@ QLabel{
            <width>60</width>
            <height>40</height>
           </rect>
+         </property>
+         <property name="focusPolicy">
+          <enum>Qt::NoFocus</enum>
          </property>
          <property name="styleSheet">
           <string notr="true">QCheckBox{
@@ -4309,6 +4348,9 @@ QLabel{
            <width>60</width>
            <height>40</height>
           </rect>
+         </property>
+         <property name="focusPolicy">
+          <enum>Qt::NoFocus</enum>
          </property>
          <property name="styleSheet">
           <string notr="true">QCheckBox{

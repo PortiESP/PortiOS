@@ -2,9 +2,10 @@ from portiOSEssentials import *
 
 #######################################################
 class Main_GUI:
-	def __init__(self, main_win):
+	def __init__(self, main_win, app):
 		# Setting window
 		self.win = main_win
+		self.app = app
 
 		# Setting fullscreen
 		self.win.showFullScreen()		
@@ -346,7 +347,7 @@ class Main_GUI:
 if __name__ == '__main__':
 	app = QApplication(sys.argv)
 	win = QMainWindow()
-	main_gui = Main_GUI(win)
+	main_gui = Main_GUI(win, app)
 	win.show()
 	sys.exit(app.exec_())
 

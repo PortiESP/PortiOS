@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'design_settingszDtNjL.ui'
+## Form generated from reading UI file 'design_settingsSkEZlZ.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -372,6 +372,7 @@ class Ui_Settings_widget(object):
         self.bearing_wifiPowerCheckbox = QCheckBox(self.frame_cb)
         self.bearing_wifiPowerCheckbox.setObjectName(u"bearing_wifiPowerCheckbox")
         self.bearing_wifiPowerCheckbox.setGeometry(QRect(0, 0, 60, 40))
+        self.bearing_wifiPowerCheckbox.setFocusPolicy(Qt.NoFocus)
         self.bearing_wifiPowerCheckbox.setStyleSheet(u"QCheckBox{\n"
 "	background:none;\n"
 "}\n"
@@ -518,6 +519,7 @@ class Ui_Settings_widget(object):
         self.bearing_wifiPassButton.setObjectName(u"bearing_wifiPassButton")
         self.bearing_wifiPassButton.setEnabled(True)
         self.bearing_wifiPassButton.setGeometry(QRect(340, 5, 30, 30))
+        self.bearing_wifiPassButton.setFocusPolicy(Qt.NoFocus)
         self.bearing_wifiPassButton.setStyleSheet(u"QPushButton{\n"
 "\n"
 "	background:transparent;\n"
@@ -601,6 +603,7 @@ class Ui_Settings_widget(object):
         self.bearing_btPowerCheckbox = QCheckBox(self.frame_cb_2)
         self.bearing_btPowerCheckbox.setObjectName(u"bearing_btPowerCheckbox")
         self.bearing_btPowerCheckbox.setGeometry(QRect(0, 0, 60, 40))
+        self.bearing_btPowerCheckbox.setFocusPolicy(Qt.NoFocus)
         self.bearing_btPowerCheckbox.setStyleSheet(u"QCheckBox{\n"
 "	background:none;\n"
 "}\n"
@@ -679,6 +682,7 @@ class Ui_Settings_widget(object):
         self.bearing_btDiscoverableCheckbox = QCheckBox(self.frame_cb_4)
         self.bearing_btDiscoverableCheckbox.setObjectName(u"bearing_btDiscoverableCheckbox")
         self.bearing_btDiscoverableCheckbox.setGeometry(QRect(0, 0, 60, 40))
+        self.bearing_btDiscoverableCheckbox.setFocusPolicy(Qt.NoFocus)
         self.bearing_btDiscoverableCheckbox.setStyleSheet(u"QCheckBox{\n"
 "	background:none;\n"
 "}\n"
@@ -753,6 +757,7 @@ class Ui_Settings_widget(object):
         font3.setBold(False)
         font3.setWeight(50)
         self.bearing_btManagerButton.setFont(font3)
+        self.bearing_btManagerButton.setFocusPolicy(Qt.NoFocus)
         self.bearing_btManagerButton.setStyleSheet(u"QPushButton{\n"
 "	\n"
 "	background-color: rgb(49, 49, 49);\n"
@@ -846,6 +851,7 @@ class Ui_Settings_widget(object):
         self.bearing_remoteMultimediaCheckbox = QCheckBox(self.frame_cb_3)
         self.bearing_remoteMultimediaCheckbox.setObjectName(u"bearing_remoteMultimediaCheckbox")
         self.bearing_remoteMultimediaCheckbox.setGeometry(QRect(0, 0, 60, 40))
+        self.bearing_remoteMultimediaCheckbox.setFocusPolicy(Qt.NoFocus)
         self.bearing_remoteMultimediaCheckbox.setStyleSheet(u"QCheckBox{\n"
 "	background:none;\n"
 "}\n"
@@ -888,6 +894,7 @@ class Ui_Settings_widget(object):
         self.bearing_statusRefreshButton = QPushButton(self.p_status_title)
         self.bearing_statusRefreshButton.setObjectName(u"bearing_statusRefreshButton")
         self.bearing_statusRefreshButton.setGeometry(QRect(350, 10, 40, 40))
+        self.bearing_statusRefreshButton.setFocusPolicy(Qt.NoFocus)
         self.bearing_statusRefreshButton.setStyleSheet(u"border:none;\n"
 "background:none;")
         self.bearing_statusRefreshButton.setIcon(icon1)
@@ -950,6 +957,7 @@ class Ui_Settings_widget(object):
         self.bearing_statusBtButton.setObjectName(u"bearing_statusBtButton")
         self.bearing_statusBtButton.setGeometry(QRect(270, 10, 100, 30))
         self.bearing_statusBtButton.setFont(font3)
+        self.bearing_statusBtButton.setFocusPolicy(Qt.NoFocus)
         self.bearing_statusBtButton.setStyleSheet(u"QPushButton{\n"
 "	\n"
 "	background-color: rgb(49, 49, 49);\n"
@@ -1094,6 +1102,7 @@ class Ui_Settings_widget(object):
         self.bearing_gpioGetButton = QPushButton(self.p_gpio_setPin_2)
         self.bearing_gpioGetButton.setObjectName(u"bearing_gpioGetButton")
         self.bearing_gpioGetButton.setGeometry(QRect(340, 5, 30, 30))
+        self.bearing_gpioGetButton.setFocusPolicy(Qt.NoFocus)
         self.bearing_gpioGetButton.setStyleSheet(u"QPushButton{\n"
 "\n"
 "	background:transparent;\n"
@@ -1188,7 +1197,7 @@ class Ui_Settings_widget(object):
         self.scrollArea_4.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignTop)
         self.scrollAreaWidgetContents_7 = QWidget()
         self.scrollAreaWidgetContents_7.setObjectName(u"scrollAreaWidgetContents_7")
-        self.scrollAreaWidgetContents_7.setGeometry(QRect(0, 0, 398, 440))
+        self.scrollAreaWidgetContents_7.setGeometry(QRect(0, 0, 390, 440))
         self.scrollAreaWidgetContents_7.setMinimumSize(QSize(0, 440))
         self.frame_10 = QFrame(self.scrollAreaWidgetContents_7)
         self.frame_10.setObjectName(u"frame_10")
@@ -1381,6 +1390,7 @@ class Ui_Settings_widget(object):
         self.bearing_systemRefreshButton = QPushButton(self.p_systemInfo_title)
         self.bearing_systemRefreshButton.setObjectName(u"bearing_systemRefreshButton")
         self.bearing_systemRefreshButton.setGeometry(QRect(350, 10, 40, 40))
+        self.bearing_systemRefreshButton.setFocusPolicy(Qt.NoFocus)
         self.bearing_systemRefreshButton.setStyleSheet(u"border:none;\n"
 "background:none;")
         self.bearing_systemRefreshButton.setIcon(icon1)
@@ -1417,6 +1427,7 @@ class Ui_Settings_widget(object):
         self.bearing_terminalOpenButton.setObjectName(u"bearing_terminalOpenButton")
         self.bearing_terminalOpenButton.setGeometry(QRect(270, 10, 100, 30))
         self.bearing_terminalOpenButton.setFont(font3)
+        self.bearing_terminalOpenButton.setFocusPolicy(Qt.NoFocus)
         self.bearing_terminalOpenButton.setStyleSheet(u"QPushButton{\n"
 "	\n"
 "	background-color: rgb(49, 49, 49);\n"
@@ -1475,6 +1486,7 @@ class Ui_Settings_widget(object):
         self.bearing_advancedRebootButton.setObjectName(u"bearing_advancedRebootButton")
         self.bearing_advancedRebootButton.setGeometry(QRect(270, 10, 100, 30))
         self.bearing_advancedRebootButton.setFont(font3)
+        self.bearing_advancedRebootButton.setFocusPolicy(Qt.NoFocus)
         self.bearing_advancedRebootButton.setStyleSheet(u"QPushButton{\n"
 "	\n"
 "	background-color: rgb(49, 49, 49);\n"
@@ -1528,6 +1540,7 @@ class Ui_Settings_widget(object):
         self.bearing_advancedAutopowerCheckbox = QCheckBox(self.frame_cb_8)
         self.bearing_advancedAutopowerCheckbox.setObjectName(u"bearing_advancedAutopowerCheckbox")
         self.bearing_advancedAutopowerCheckbox.setGeometry(QRect(0, 0, 60, 40))
+        self.bearing_advancedAutopowerCheckbox.setFocusPolicy(Qt.NoFocus)
         self.bearing_advancedAutopowerCheckbox.setStyleSheet(u"QCheckBox{\n"
 "	background:none;\n"
 "}\n"
@@ -1588,6 +1601,7 @@ class Ui_Settings_widget(object):
         self.bearing_advancedGaugePowerCheckbox = QCheckBox(self.frame_cb_9)
         self.bearing_advancedGaugePowerCheckbox.setObjectName(u"bearing_advancedGaugePowerCheckbox")
         self.bearing_advancedGaugePowerCheckbox.setGeometry(QRect(0, 0, 60, 40))
+        self.bearing_advancedGaugePowerCheckbox.setFocusPolicy(Qt.NoFocus)
         self.bearing_advancedGaugePowerCheckbox.setStyleSheet(u"QCheckBox{\n"
 "	background:none;\n"
 "}\n"
@@ -1612,7 +1626,7 @@ class Ui_Settings_widget(object):
 
         self.retranslateUi(Settings_widget)
 
-        self.stackedWidget_settings.setCurrentIndex(0)
+        self.stackedWidget_settings.setCurrentIndex(1)
 
 
         QMetaObject.connectSlotsByName(Settings_widget)
