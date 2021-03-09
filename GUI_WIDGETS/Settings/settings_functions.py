@@ -76,7 +76,7 @@ class Settings_funcs:
 			self.GUI_Settings.bearing_wifiSsidText.setText(str(getSSID())) # SSID
 			self.GUI_Settings.bearing_wifiIpText.setText(str(getIP()))     # IP
 			
-			if getSSID():
+			if checkController():
 				self.GUI_Settings.bearing_wifiPowerCheckbox.setChecked(True)
 			else:
 				self.GUI_Settings.bearing_wifiPowerCheckbox.setChecked(False)
