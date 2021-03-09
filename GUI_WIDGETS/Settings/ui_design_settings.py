@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'design_settingsYxTMbN.ui'
+## Form generated from reading UI file 'design_settingszDtNjL.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -270,7 +270,8 @@ class Ui_Settings_widget(object):
 "	border-radius:5px;	\n"
 "\n"
 "}")
-        self.bearing_brightnessLevelSlide.setMaximum(100)
+        self.bearing_brightnessLevelSlide.setMinimum(20)
+        self.bearing_brightnessLevelSlide.setMaximum(255)
         self.bearing_brightnessLevelSlide.setOrientation(Qt.Horizontal)
         self.label_37 = QLabel(self.p_brightness_level)
         self.label_37.setObjectName(u"label_37")
@@ -321,7 +322,7 @@ class Ui_Settings_widget(object):
         self.scrollArea_wifi.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignTop)
         self.scrollAreaWidgetContents_8 = QWidget()
         self.scrollAreaWidgetContents_8.setObjectName(u"scrollAreaWidgetContents_8")
-        self.scrollAreaWidgetContents_8.setGeometry(QRect(0, 0, 398, 280))
+        self.scrollAreaWidgetContents_8.setGeometry(QRect(0, 0, 390, 280))
         sizePolicy = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Preferred)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -1611,7 +1612,7 @@ class Ui_Settings_widget(object):
 
         self.retranslateUi(Settings_widget)
 
-        self.stackedWidget_settings.setCurrentIndex(2)
+        self.stackedWidget_settings.setCurrentIndex(0)
 
 
         QMetaObject.connectSlotsByName(Settings_widget)

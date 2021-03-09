@@ -74,8 +74,7 @@ class Settings_funcs:
 			subprocess.run(f'sudo echo {value} > /sys/class/backlight/rpi_backlight/brightness', capture_output=True, shell=True)
 
 
-
-
+		self.GUI_Settings.bearing_brightnessLevelSlide.valueChanged.connect(lambda: setBrightness(self.GUI_Settings.bearing_brightnessLevelSlide.value()))
 
 # ------------------------------------------------------------------------------------------------------
 

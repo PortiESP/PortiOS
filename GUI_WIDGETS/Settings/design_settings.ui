@@ -512,7 +512,7 @@ QScrollBar:vertical {
      </rect>
     </property>
     <property name="currentIndex">
-     <number>2</number>
+     <number>0</number>
     </property>
     <widget class="QWidget" name="page_brightness">
      <widget class="QFrame" name="p_brightnes_title">
@@ -604,8 +604,11 @@ QSlider::handle:horizontal{
 
 }</string>
        </property>
+       <property name="minimum">
+        <number>20</number>
+       </property>
        <property name="maximum">
-        <number>100</number>
+        <number>255</number>
        </property>
        <property name="orientation">
         <enum>Qt::Horizontal</enum>
@@ -691,7 +694,7 @@ QScrollBar:vertical {
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>398</width>
+         <width>390</width>
          <height>280</height>
         </rect>
        </property>
