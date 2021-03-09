@@ -34,6 +34,7 @@ class Apps_funcs:
 		if self.GUI_Apps.navigator: return
 		
 		print('Starting maps')
+		self.win.showMinimized()
 		self.GUI_Apps.navigator = Navegador(fullScreen=False)
 
 		self.GUI_Apps.navThread = threading.Thread(target=lambda: Apps_funcs.navInstructions(self))
@@ -44,6 +45,7 @@ class Apps_funcs:
 		print('Ending maps')
 		self.GUI_Apps.navigator.exit()
 		self.GUI_Apps.navigator = None
+		self.win.showFullScreen()		
 
 	def navInstructions(self):
 		try:		

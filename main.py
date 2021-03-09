@@ -6,6 +6,7 @@ class Main_GUI:
 		# Setting window
 		self.win = main_win
 		self.app = app
+		
 
 		# Setting fullscreen
 		self.win.showFullScreen()		
