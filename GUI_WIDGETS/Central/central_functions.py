@@ -1,6 +1,5 @@
 from .ui_central import Ui_Central
-import subprocess, threading
-from sys import exit
+import subprocess, threading, sys
 
 class Central_funcs:
 	def centralSetup(self):
