@@ -24,6 +24,7 @@ class Apps_funcs:
 	def openBrowser(self):
 		print('Starting browser ')
 		self.GUI_Apps.chrome_options = Options()
+		self.GUI_Apps.chrome_options.add_argument("--kiosk")
 		self.GUI_Apps.chrome_options.add_experimental_option("useAutomationExtension", False)
 		self.GUI_Apps.chrome_options.add_experimental_option("excludeSwitches",["enable-automation"])
 		self.GUI_Apps.chrome_options.add_argument("--start-maximized")
