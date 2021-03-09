@@ -7,7 +7,7 @@ class Main_GUI:
 		self.win = main_win
 
 		# Setting fullscreen
-		# self.win.showFullScreen()		
+		self.win.showFullScreen()		
 
 		# Check if config file exists
 		if not os.path.exists('config.txt'):
