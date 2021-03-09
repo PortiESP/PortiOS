@@ -654,6 +654,9 @@ QPushButton:pressed{
         <pointsize>11</pointsize>
        </font>
       </property>
+      <property name="focusPolicy">
+       <enum>Qt::NoFocus</enum>
+      </property>
       <property name="text">
        <string>REBOOT</string>
       </property>
@@ -672,6 +675,9 @@ QPushButton:pressed{
         <family>Bahnschrift Light Condensed</family>
         <pointsize>11</pointsize>
        </font>
+      </property>
+      <property name="focusPolicy">
+       <enum>Qt::NoFocus</enum>
       </property>
       <property name="text">
        <string>SHUTDOWN</string>
@@ -770,6 +776,9 @@ background:none;</string>
         <family>Bahnschrift Light Condensed</family>
         <pointsize>11</pointsize>
        </font>
+      </property>
+      <property name="focusPolicy">
+       <enum>Qt::NoFocus</enum>
       </property>
       <property name="text">
        <string>EXIT</string>

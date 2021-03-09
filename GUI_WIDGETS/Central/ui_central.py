@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'centralWRbjMa.ui'
+## Form generated from reading UI file 'centralncVhGQ.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -292,10 +292,12 @@ class Ui_Central(object):
         font2.setFamily(u"Bahnschrift Light Condensed")
         font2.setPointSize(11)
         self.centralRebootButton.setFont(font2)
+        self.centralRebootButton.setFocusPolicy(Qt.NoFocus)
         self.centralShutdownButton = QPushButton(self.frame_powerMenu)
         self.centralShutdownButton.setObjectName(u"centralShutdownButton")
         self.centralShutdownButton.setGeometry(QRect(10, 70, 280, 50))
         self.centralShutdownButton.setFont(font2)
+        self.centralShutdownButton.setFocusPolicy(Qt.NoFocus)
         self.frame_8 = QFrame(self.frame_powerMenu)
         self.frame_8.setObjectName(u"frame_8")
         self.frame_8.setGeometry(QRect(0, 0, 300, 60))
@@ -328,6 +330,7 @@ class Ui_Central(object):
         self.centralExitButton.setObjectName(u"centralExitButton")
         self.centralExitButton.setGeometry(QRect(10, 190, 280, 50))
         self.centralExitButton.setFont(font2)
+        self.centralExitButton.setFocusPolicy(Qt.NoFocus)
         Central.setCentralWidget(self.centralwidget)
         self.frame_power.raise_()
         self.frame_volume.raise_()
