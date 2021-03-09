@@ -266,6 +266,9 @@ QPushButton:hover{
         <property name="mouseTracking">
          <bool>false</bool>
         </property>
+        <property name="focusPolicy">
+         <enum>Qt::NoFocus</enum>
+        </property>
         <property name="icon">
          <iconset resource="../../resources.qrc">
           <normaloff>:/icons_red/Resources/Icons/png-red/fi-rr-angle-double-small-left.png</normaloff>:/icons_red/Resources/Icons/png-red/fi-rr-angle-double-small-left.png</iconset>
@@ -289,6 +292,9 @@ QPushButton:hover{
         <property name="cursor">
          <cursorShape>PointingHandCursor</cursorShape>
         </property>
+        <property name="focusPolicy">
+         <enum>Qt::NoFocus</enum>
+        </property>
         <property name="icon">
          <iconset resource="../../resources.qrc">
           <normaloff>:/icons_red/Resources/Icons/png-red/play-fill.png</normaloff>:/icons_red/Resources/Icons/png-red/play-fill.png</iconset>
@@ -311,6 +317,9 @@ QPushButton:hover{
         </property>
         <property name="cursor">
          <cursorShape>PointingHandCursor</cursorShape>
+        </property>
+        <property name="focusPolicy">
+         <enum>Qt::NoFocus</enum>
         </property>
         <property name="icon">
          <iconset resource="../../resources.qrc">
@@ -377,6 +386,9 @@ QPushButton:hover{
         <property name="cursor">
          <cursorShape>PointingHandCursor</cursorShape>
         </property>
+        <property name="focusPolicy">
+         <enum>Qt::NoFocus</enum>
+        </property>
         <property name="icon">
          <iconset resource="../../resources.qrc">
           <normaloff>:/icons_red/Resources/Icons/png-red/icons-menu.png</normaloff>:/icons_red/Resources/Icons/png-red/icons-menu.png</iconset>
@@ -400,6 +412,9 @@ QPushButton:hover{
         <property name="cursor">
          <cursorShape>PointingHandCursor</cursorShape>
         </property>
+        <property name="focusPolicy">
+         <enum>Qt::NoFocus</enum>
+        </property>
         <property name="icon">
          <iconset resource="../../resources.qrc">
           <normaloff>:/icons_red/Resources/Icons/png-red/levels.png</normaloff>:/icons_red/Resources/Icons/png-red/levels.png</iconset>
@@ -422,6 +437,9 @@ QPushButton:hover{
         </property>
         <property name="cursor">
          <cursorShape>PointingHandCursor</cursorShape>
+        </property>
+        <property name="focusPolicy">
+         <enum>Qt::NoFocus</enum>
         </property>
         <property name="icon">
          <iconset resource="../../resources.qrc">

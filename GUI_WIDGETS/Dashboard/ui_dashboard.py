@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'dashboardUgnugl.ui'
+## Form generated from reading UI file 'dashboardnhZwyi.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -178,6 +178,7 @@ class Ui_Dashboard_widget(object):
         self.slider_duration.setMaximumSize(QSize(16777215, 30))
         self.slider_duration.setCursor(QCursor(Qt.SizeHorCursor))
         self.slider_duration.setTabletTracking(True)
+        self.slider_duration.setFocusPolicy(Qt.NoFocus)
         self.slider_duration.setStyleSheet(u"\n"
 "QSlider::groove:horizontal{\n"
 "	height:1px;	\n"

@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'centralInrdJh.ui'
+## Form generated from reading UI file 'centraloctNuU.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -108,6 +108,7 @@ class Ui_Central(object):
         self.footerButton_1.setFont(font1)
         self.footerButton_1.setCursor(QCursor(Qt.PointingHandCursor))
         self.footerButton_1.setMouseTracking(False)
+        self.footerButton_1.setFocusPolicy(Qt.NoFocus)
         icon1 = QIcon()
         icon1.addFile(u":/icons_red/Resources/Icons/png-red/fi-rr-angle-double-small-left.png", QSize(), QIcon.Normal, QIcon.Off)
         self.footerButton_1.setIcon(icon1)
@@ -119,6 +120,7 @@ class Ui_Central(object):
         self.footerButton_2.setObjectName(u"footerButton_2")
         self.footerButton_2.setMinimumSize(QSize(0, 50))
         self.footerButton_2.setCursor(QCursor(Qt.PointingHandCursor))
+        self.footerButton_2.setFocusPolicy(Qt.NoFocus)
         icon2 = QIcon()
         icon2.addFile(u":/icons_red/Resources/Icons/png-red/play-fill.png", QSize(), QIcon.Normal, QIcon.Off)
         self.footerButton_2.setIcon(icon2)
@@ -130,6 +132,7 @@ class Ui_Central(object):
         self.footerButton_3.setObjectName(u"footerButton_3")
         self.footerButton_3.setMinimumSize(QSize(0, 50))
         self.footerButton_3.setCursor(QCursor(Qt.PointingHandCursor))
+        self.footerButton_3.setFocusPolicy(Qt.NoFocus)
         icon3 = QIcon()
         icon3.addFile(u":/icons_red/Resources/Icons/png-red/fi-rr-angle-double-small-right.png", QSize(), QIcon.Normal, QIcon.Off)
         self.footerButton_3.setIcon(icon3)
@@ -151,6 +154,7 @@ class Ui_Central(object):
         self.footerButton_4.setObjectName(u"footerButton_4")
         self.footerButton_4.setMinimumSize(QSize(0, 50))
         self.footerButton_4.setCursor(QCursor(Qt.PointingHandCursor))
+        self.footerButton_4.setFocusPolicy(Qt.NoFocus)
         icon4 = QIcon()
         icon4.addFile(u":/icons_red/Resources/Icons/png-red/icons-menu.png", QSize(), QIcon.Normal, QIcon.Off)
         self.footerButton_4.setIcon(icon4)
@@ -162,6 +166,7 @@ class Ui_Central(object):
         self.footerButton_5.setObjectName(u"footerButton_5")
         self.footerButton_5.setMinimumSize(QSize(0, 50))
         self.footerButton_5.setCursor(QCursor(Qt.PointingHandCursor))
+        self.footerButton_5.setFocusPolicy(Qt.NoFocus)
         icon5 = QIcon()
         icon5.addFile(u":/icons_red/Resources/Icons/png-red/levels.png", QSize(), QIcon.Normal, QIcon.Off)
         self.footerButton_5.setIcon(icon5)
@@ -173,6 +178,7 @@ class Ui_Central(object):
         self.footerButton_6.setObjectName(u"footerButton_6")
         self.footerButton_6.setMinimumSize(QSize(0, 50))
         self.footerButton_6.setCursor(QCursor(Qt.PointingHandCursor))
+        self.footerButton_6.setFocusPolicy(Qt.NoFocus)
         icon6 = QIcon()
         icon6.addFile(u":/icons_red/Resources/Icons/png-red/fi-rr-power.png", QSize(), QIcon.Normal, QIcon.Off)
         self.footerButton_6.setIcon(icon6)
@@ -327,9 +333,6 @@ class Ui_Central(object):
         self.frame_footer.raise_()
 
         self.retranslateUi(Central)
-
-        self.appsWidget.setCurrentIndex(0)
-
 
         QMetaObject.connectSlotsByName(Central)
     # setupUi
