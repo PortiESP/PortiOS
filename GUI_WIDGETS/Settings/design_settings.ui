@@ -91,7 +91,7 @@ QScrollBar:vertical {
      <property name="geometry">
       <rect>
        <x>0</x>
-       <y>-100</y>
+       <y>0</y>
        <width>180</width>
        <height>400</height>
       </rect>
@@ -144,6 +144,9 @@ QScrollBar:vertical {
              <height>40</height>
             </size>
            </property>
+           <property name="focusPolicy">
+            <enum>Qt::NoFocus</enum>
+           </property>
            <property name="text">
             <string>BRIGHTNESS</string>
            </property>
@@ -183,6 +186,9 @@ QScrollBar:vertical {
              <width>0</width>
              <height>40</height>
             </size>
+           </property>
+           <property name="focusPolicy">
+            <enum>Qt::NoFocus</enum>
            </property>
            <property name="text">
             <string>WIFI</string>
@@ -224,6 +230,9 @@ QScrollBar:vertical {
              <height>40</height>
             </size>
            </property>
+           <property name="focusPolicy">
+            <enum>Qt::NoFocus</enum>
+           </property>
            <property name="text">
             <string>BLUETOOTH</string>
            </property>
@@ -263,6 +272,9 @@ QScrollBar:vertical {
              <width>0</width>
              <height>40</height>
             </size>
+           </property>
+           <property name="focusPolicy">
+            <enum>Qt::NoFocus</enum>
            </property>
            <property name="text">
             <string>REMOTE</string>
@@ -304,6 +316,9 @@ QScrollBar:vertical {
              <height>40</height>
             </size>
            </property>
+           <property name="focusPolicy">
+            <enum>Qt::NoFocus</enum>
+           </property>
            <property name="text">
             <string>STATUS</string>
            </property>
@@ -343,6 +358,9 @@ QScrollBar:vertical {
              <width>0</width>
              <height>40</height>
             </size>
+           </property>
+           <property name="focusPolicy">
+            <enum>Qt::NoFocus</enum>
            </property>
            <property name="text">
             <string>GPIO</string>
@@ -384,6 +402,9 @@ QScrollBar:vertical {
              <height>40</height>
             </size>
            </property>
+           <property name="focusPolicy">
+            <enum>Qt::NoFocus</enum>
+           </property>
            <property name="text">
             <string>SYSTEM INFO</string>
            </property>
@@ -424,6 +445,9 @@ QScrollBar:vertical {
              <height>40</height>
             </size>
            </property>
+           <property name="focusPolicy">
+            <enum>Qt::NoFocus</enum>
+           </property>
            <property name="text">
             <string>TERMINAL</string>
            </property>
@@ -463,6 +487,9 @@ QScrollBar:vertical {
              <width>0</width>
              <height>40</height>
             </size>
+           </property>
+           <property name="focusPolicy">
+            <enum>Qt::NoFocus</enum>
            </property>
            <property name="text">
             <string>ADVANCED</string>
@@ -664,7 +691,7 @@ QScrollBar:vertical {
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>390</width>
+         <width>398</width>
          <height>280</height>
         </rect>
        </property>
@@ -3000,7 +3027,7 @@ QScrollBar:vertical {
          <rect>
           <x>0</x>
           <y>0</y>
-          <width>390</width>
+          <width>398</width>
           <height>440</height>
          </rect>
         </property>

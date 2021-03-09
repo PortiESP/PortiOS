@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'centraloctNuU.ui'
+## Form generated from reading UI file 'centraljkiQSn.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -269,7 +269,7 @@ class Ui_Central(object):
         self.frame_power.setStyleSheet(u"background-color: rgba(24, 24, 24, 200);")
         self.frame_powerMenu = QFrame(self.frame_power)
         self.frame_powerMenu.setObjectName(u"frame_powerMenu")
-        self.frame_powerMenu.setGeometry(QRect(250, 150, 300, 200))
+        self.frame_powerMenu.setGeometry(QRect(250, 100, 300, 250))
         self.frame_powerMenu.setStyleSheet(u"QFrame{\n"
 "	background-color: rgb(61, 61, 61);\n"
 "	border-radius:5px;\n"
@@ -323,9 +323,13 @@ class Ui_Central(object):
         icon7.addFile(u":/icons_red/Resources/Icons/png-red/fi-rr-cross-small.png", QSize(), QIcon.Normal, QIcon.Off)
         self.powerCloseButton.setIcon(icon7)
         self.powerCloseButton.setIconSize(QSize(30, 30))
+        self.centralExitButton = QPushButton(self.frame_powerMenu)
+        self.centralExitButton.setObjectName(u"centralExitButton")
+        self.centralExitButton.setGeometry(QRect(10, 190, 280, 50))
+        self.centralExitButton.setFont(font2)
         Central.setCentralWidget(self.centralwidget)
-        self.frame_volume.raise_()
         self.frame_power.raise_()
+        self.frame_volume.raise_()
         self.frame_background.raise_()
         self.appsWidget.raise_()
         self.frame_logo.raise_()
@@ -345,6 +349,7 @@ class Ui_Central(object):
         self.centralShutdownButton.setText(QCoreApplication.translate("Central", u"SHUTDOWN", None))
         self.label_13.setText(QCoreApplication.translate("Central", u"Power", None))
         self.powerCloseButton.setText("")
+        self.centralExitButton.setText(QCoreApplication.translate("Central", u"EXIT", None))
         pass
     # retranslateUi
 

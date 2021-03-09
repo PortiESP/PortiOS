@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'apps_menuChaAdA.ui'
+## Form generated from reading UI file 'apps_menuYiYMau.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -12,6 +12,7 @@ from PySide2.QtCore import *
 from PySide2.QtGui import *
 from PySide2.QtWidgets import *
 
+import resources_rc
 import resources_rc
 
 class Ui_Apps_widget(object):
@@ -54,6 +55,7 @@ class Ui_Apps_widget(object):
         self.pushButton_4 = QPushButton(self.frame_4)
         self.pushButton_4.setObjectName(u"pushButton_4")
         self.pushButton_4.setGeometry(QRect(0, 0, 200, 80))
+        self.pushButton_4.setFocusPolicy(Qt.NoFocus)
         self.label_11 = QLabel(self.frame_4)
         self.label_11.setObjectName(u"label_11")
         self.label_11.setGeometry(QRect(88, 16, 98, 46))
@@ -86,6 +88,7 @@ class Ui_Apps_widget(object):
         self.pushButton_2 = QPushButton(self.frame_2)
         self.pushButton_2.setObjectName(u"pushButton_2")
         self.pushButton_2.setGeometry(QRect(0, 0, 200, 80))
+        self.pushButton_2.setFocusPolicy(Qt.NoFocus)
         self.label_5 = QLabel(self.frame_2)
         self.label_5.setObjectName(u"label_5")
         self.label_5.setGeometry(QRect(88, 16, 98, 46))
@@ -114,6 +117,7 @@ class Ui_Apps_widget(object):
         self.pushButton_6 = QPushButton(self.frame_6)
         self.pushButton_6.setObjectName(u"pushButton_6")
         self.pushButton_6.setGeometry(QRect(0, 0, 200, 80))
+        self.pushButton_6.setFocusPolicy(Qt.NoFocus)
         self.label_17 = QLabel(self.frame_6)
         self.label_17.setObjectName(u"label_17")
         self.label_17.setGeometry(QRect(88, 16, 98, 46))
@@ -152,6 +156,7 @@ class Ui_Apps_widget(object):
         self.pushButton = QPushButton(self.frame)
         self.pushButton.setObjectName(u"pushButton")
         self.pushButton.setGeometry(QRect(0, 0, 200, 80))
+        self.pushButton.setFocusPolicy(Qt.NoFocus)
         self.label_3.raise_()
         self.label.raise_()
         self.label_2.raise_()
@@ -171,6 +176,7 @@ class Ui_Apps_widget(object):
         self.pushButton_3 = QPushButton(self.frame_3)
         self.pushButton_3.setObjectName(u"pushButton_3")
         self.pushButton_3.setGeometry(QRect(0, 0, 200, 80))
+        self.pushButton_3.setFocusPolicy(Qt.NoFocus)
         self.label_8 = QLabel(self.frame_3)
         self.label_8.setObjectName(u"label_8")
         self.label_8.setGeometry(QRect(88, 16, 98, 46))
@@ -200,6 +206,7 @@ class Ui_Apps_widget(object):
         self.pushButton_5 = QPushButton(self.frame_5)
         self.pushButton_5.setObjectName(u"pushButton_5")
         self.pushButton_5.setGeometry(QRect(0, 0, 200, 80))
+        self.pushButton_5.setFocusPolicy(Qt.NoFocus)
         self.label_14 = QLabel(self.frame_5)
         self.label_14.setObjectName(u"label_14")
         self.label_14.setGeometry(QRect(88, 16, 98, 46))

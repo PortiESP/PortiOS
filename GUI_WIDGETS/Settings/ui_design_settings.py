@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'design_settingsFiwhqI.ui'
+## Form generated from reading UI file 'design_settingsYxTMbN.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -67,7 +67,7 @@ class Ui_Settings_widget(object):
         self.scrollArea.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignTop)
         self.scrollAreaWidgetContents = QWidget()
         self.scrollAreaWidgetContents.setObjectName(u"scrollAreaWidgetContents")
-        self.scrollAreaWidgetContents.setGeometry(QRect(0, -100, 180, 400))
+        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 180, 400))
         self.verticalLayout = QVBoxLayout(self.scrollAreaWidgetContents)
         self.verticalLayout.setSpacing(0)
         self.verticalLayout.setObjectName(u"verticalLayout")
@@ -82,6 +82,7 @@ class Ui_Settings_widget(object):
         self.bearing_settingsBrightness = QPushButton(self.frame_setting_brightness)
         self.bearing_settingsBrightness.setObjectName(u"bearing_settingsBrightness")
         self.bearing_settingsBrightness.setMinimumSize(QSize(0, 40))
+        self.bearing_settingsBrightness.setFocusPolicy(Qt.NoFocus)
 
         self.horizontalLayout_5.addWidget(self.bearing_settingsBrightness)
 
@@ -98,6 +99,7 @@ class Ui_Settings_widget(object):
         self.bearing_settingsWifi = QPushButton(self.frame_setting_wifi)
         self.bearing_settingsWifi.setObjectName(u"bearing_settingsWifi")
         self.bearing_settingsWifi.setMinimumSize(QSize(0, 40))
+        self.bearing_settingsWifi.setFocusPolicy(Qt.NoFocus)
 
         self.horizontalLayout_6.addWidget(self.bearing_settingsWifi)
 
@@ -114,6 +116,7 @@ class Ui_Settings_widget(object):
         self.bearing_settingsBluetooth = QPushButton(self.frame_setting_bluetooth)
         self.bearing_settingsBluetooth.setObjectName(u"bearing_settingsBluetooth")
         self.bearing_settingsBluetooth.setMinimumSize(QSize(0, 40))
+        self.bearing_settingsBluetooth.setFocusPolicy(Qt.NoFocus)
 
         self.horizontalLayout_7.addWidget(self.bearing_settingsBluetooth)
 
@@ -130,6 +133,7 @@ class Ui_Settings_widget(object):
         self.bearing_settingsRemote = QPushButton(self.frame_setting_remote)
         self.bearing_settingsRemote.setObjectName(u"bearing_settingsRemote")
         self.bearing_settingsRemote.setMinimumSize(QSize(0, 40))
+        self.bearing_settingsRemote.setFocusPolicy(Qt.NoFocus)
 
         self.horizontalLayout_8.addWidget(self.bearing_settingsRemote)
 
@@ -146,6 +150,7 @@ class Ui_Settings_widget(object):
         self.bearing_settingsStatus = QPushButton(self.frame_setting_status)
         self.bearing_settingsStatus.setObjectName(u"bearing_settingsStatus")
         self.bearing_settingsStatus.setMinimumSize(QSize(0, 40))
+        self.bearing_settingsStatus.setFocusPolicy(Qt.NoFocus)
 
         self.horizontalLayout_9.addWidget(self.bearing_settingsStatus)
 
@@ -162,6 +167,7 @@ class Ui_Settings_widget(object):
         self.bearing_settingsGpio = QPushButton(self.frame_setting_gpio)
         self.bearing_settingsGpio.setObjectName(u"bearing_settingsGpio")
         self.bearing_settingsGpio.setMinimumSize(QSize(0, 40))
+        self.bearing_settingsGpio.setFocusPolicy(Qt.NoFocus)
 
         self.horizontalLayout_10.addWidget(self.bearing_settingsGpio)
 
@@ -178,6 +184,7 @@ class Ui_Settings_widget(object):
         self.bearing_settingsSystemInfo = QPushButton(self.frame_setting_systemInfo)
         self.bearing_settingsSystemInfo.setObjectName(u"bearing_settingsSystemInfo")
         self.bearing_settingsSystemInfo.setMinimumSize(QSize(0, 40))
+        self.bearing_settingsSystemInfo.setFocusPolicy(Qt.NoFocus)
 
         self.horizontalLayout_12.addWidget(self.bearing_settingsSystemInfo)
 
@@ -194,6 +201,7 @@ class Ui_Settings_widget(object):
         self.bearing_settingsTerminal = QPushButton(self.frame_setting_terminal)
         self.bearing_settingsTerminal.setObjectName(u"bearing_settingsTerminal")
         self.bearing_settingsTerminal.setMinimumSize(QSize(0, 40))
+        self.bearing_settingsTerminal.setFocusPolicy(Qt.NoFocus)
 
         self.horizontalLayout_13.addWidget(self.bearing_settingsTerminal)
 
@@ -210,6 +218,7 @@ class Ui_Settings_widget(object):
         self.bearing_settingsAdvanced = QPushButton(self.frame_setting_advanced)
         self.bearing_settingsAdvanced.setObjectName(u"bearing_settingsAdvanced")
         self.bearing_settingsAdvanced.setMinimumSize(QSize(0, 40))
+        self.bearing_settingsAdvanced.setFocusPolicy(Qt.NoFocus)
 
         self.horizontalLayout_14.addWidget(self.bearing_settingsAdvanced)
 
@@ -312,7 +321,7 @@ class Ui_Settings_widget(object):
         self.scrollArea_wifi.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignTop)
         self.scrollAreaWidgetContents_8 = QWidget()
         self.scrollAreaWidgetContents_8.setObjectName(u"scrollAreaWidgetContents_8")
-        self.scrollAreaWidgetContents_8.setGeometry(QRect(0, 0, 390, 280))
+        self.scrollAreaWidgetContents_8.setGeometry(QRect(0, 0, 398, 280))
         sizePolicy = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Preferred)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -1178,7 +1187,7 @@ class Ui_Settings_widget(object):
         self.scrollArea_4.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignTop)
         self.scrollAreaWidgetContents_7 = QWidget()
         self.scrollAreaWidgetContents_7.setObjectName(u"scrollAreaWidgetContents_7")
-        self.scrollAreaWidgetContents_7.setGeometry(QRect(0, 0, 390, 440))
+        self.scrollAreaWidgetContents_7.setGeometry(QRect(0, 0, 398, 440))
         self.scrollAreaWidgetContents_7.setMinimumSize(QSize(0, 440))
         self.frame_10 = QFrame(self.scrollAreaWidgetContents_7)
         self.frame_10.setObjectName(u"frame_10")

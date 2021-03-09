@@ -96,7 +96,7 @@ QLabel{
         <string/>
        </property>
        <property name="pixmap">
-        <pixmap resource="../resources.qrc">:/icons_white/Resources/Icons/png-white/fi-rr-dashboard.png</pixmap>
+        <pixmap resource="../../resources.qrc">:/icons_white/Resources/Icons/png-white/fi-rr-dashboard.png</pixmap>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -110,6 +110,9 @@ QLabel{
          <width>200</width>
          <height>80</height>
         </rect>
+       </property>
+       <property name="focusPolicy">
+        <enum>Qt::NoFocus</enum>
        </property>
        <property name="text">
         <string/>
@@ -150,7 +153,7 @@ QLabel{
         <string/>
        </property>
        <property name="pixmap">
-        <pixmap resource="../resources.qrc">:/styles/Resources/appbox.png</pixmap>
+        <pixmap resource="../../resources.qrc">:/styles/Resources/appbox.png</pixmap>
        </property>
        <property name="scaledContents">
         <bool>true</bool>
@@ -186,7 +189,7 @@ QLabel{
         <string/>
        </property>
        <property name="pixmap">
-        <pixmap resource="../resources.qrc">:/icons_white/Resources/Icons/png-white/maps-and-flags.png</pixmap>
+        <pixmap resource="../../resources.qrc">:/icons_white/Resources/Icons/png-white/maps-and-flags.png</pixmap>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -200,6 +203,9 @@ QLabel{
          <width>200</width>
          <height>80</height>
         </rect>
+       </property>
+       <property name="focusPolicy">
+        <enum>Qt::NoFocus</enum>
        </property>
        <property name="text">
         <string/>
@@ -240,7 +246,7 @@ QLabel{
         <string/>
        </property>
        <property name="pixmap">
-        <pixmap resource="../resources.qrc">:/styles/Resources/appbox.png</pixmap>
+        <pixmap resource="../../resources.qrc">:/styles/Resources/appbox.png</pixmap>
        </property>
        <property name="scaledContents">
         <bool>true</bool>
@@ -273,7 +279,7 @@ QLabel{
         <string/>
        </property>
        <property name="pixmap">
-        <pixmap resource="../resources.qrc">:/icons_white/Resources/Icons/png-white/fi-rr-settings-sliders.png</pixmap>
+        <pixmap resource="../../resources.qrc">:/icons_white/Resources/Icons/png-white/fi-rr-settings-sliders.png</pixmap>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -287,6 +293,9 @@ QLabel{
          <width>200</width>
          <height>80</height>
         </rect>
+       </property>
+       <property name="focusPolicy">
+        <enum>Qt::NoFocus</enum>
        </property>
        <property name="text">
         <string/>
@@ -327,7 +336,7 @@ QLabel{
         <string/>
        </property>
        <property name="pixmap">
-        <pixmap resource="../resources.qrc">:/styles/Resources/appbox.png</pixmap>
+        <pixmap resource="../../resources.qrc">:/styles/Resources/appbox.png</pixmap>
        </property>
        <property name="scaledContents">
         <bool>true</bool>
@@ -357,7 +366,7 @@ QLabel{
         <string/>
        </property>
        <property name="pixmap">
-        <pixmap resource="../resources.qrc">:/icons_white/Resources/Icons/png-white/chrome (1).png</pixmap>
+        <pixmap resource="../../resources.qrc">:/icons_white/Resources/Icons/png-white/chrome (1).png</pixmap>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -398,7 +407,7 @@ QLabel{
         <string/>
        </property>
        <property name="pixmap">
-        <pixmap resource="../resources.qrc">:/styles/Resources/appbox.png</pixmap>
+        <pixmap resource="../../resources.qrc">:/styles/Resources/appbox.png</pixmap>
        </property>
        <property name="scaledContents">
         <bool>true</bool>
@@ -412,6 +421,9 @@ QLabel{
          <width>200</width>
          <height>80</height>
         </rect>
+       </property>
+       <property name="focusPolicy">
+        <enum>Qt::NoFocus</enum>
        </property>
        <property name="text">
         <string/>
@@ -447,7 +459,7 @@ QLabel{
         <string/>
        </property>
        <property name="pixmap">
-        <pixmap resource="../resources.qrc">:/icons_white/Resources/Icons/png-white/idea.png</pixmap>
+        <pixmap resource="../../resources.qrc">:/icons_white/Resources/Icons/png-white/idea.png</pixmap>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -461,6 +473,9 @@ QLabel{
          <width>200</width>
          <height>80</height>
         </rect>
+       </property>
+       <property name="focusPolicy">
+        <enum>Qt::NoFocus</enum>
        </property>
        <property name="text">
         <string/>
@@ -501,7 +516,7 @@ QLabel{
         <string/>
        </property>
        <property name="pixmap">
-        <pixmap resource="../resources.qrc">:/styles/Resources/appbox.png</pixmap>
+        <pixmap resource="../../resources.qrc">:/styles/Resources/appbox.png</pixmap>
        </property>
        <property name="scaledContents">
         <bool>true</bool>
@@ -537,7 +552,7 @@ QLabel{
         <string/>
        </property>
        <property name="pixmap">
-        <pixmap resource="../resources.qrc">:/icons_white/Resources/Icons/png-white/seno.png</pixmap>
+        <pixmap resource="../../resources.qrc">:/icons_white/Resources/Icons/png-white/seno.png</pixmap>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -551,6 +566,9 @@ QLabel{
          <width>200</width>
          <height>80</height>
         </rect>
+       </property>
+       <property name="focusPolicy">
+        <enum>Qt::NoFocus</enum>
        </property>
        <property name="text">
         <string/>
@@ -591,7 +609,7 @@ QLabel{
         <string/>
        </property>
        <property name="pixmap">
-        <pixmap resource="../resources.qrc">:/styles/Resources/appbox.png</pixmap>
+        <pixmap resource="../../resources.qrc">:/styles/Resources/appbox.png</pixmap>
        </property>
        <property name="scaledContents">
         <bool>true</bool>
@@ -607,6 +625,7 @@ QLabel{
   </widget>
  </widget>
  <resources>
+  <include location="../../resources.qrc"/>
   <include location="../resources.qrc"/>
  </resources>
  <connections/>
