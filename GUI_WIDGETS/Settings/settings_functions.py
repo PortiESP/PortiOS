@@ -40,7 +40,6 @@ class Settings_funcs:
 		}
 
 		# Setting pages
-		self.GUI_Settings.bearing_settingsBrightness.clicked.connect(lambda:Settings_funcs.setPage(self, 0))
 		self.GUI_Settings.bearing_settingsWifi.clicked.connect(lambda:Settings_funcs.setPage(self, 1))
 		self.GUI_Settings.bearing_settingsBluetooth.clicked.connect(lambda:Settings_funcs.setPage(self, 2))
 		self.GUI_Settings.bearing_settingsRemote.clicked.connect(lambda:Settings_funcs.setPage(self, 3))
