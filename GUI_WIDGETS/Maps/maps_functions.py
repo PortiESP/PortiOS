@@ -32,9 +32,9 @@ class Maps_funcs:
 		if setMap == 'go':
 			self.GUI_Maps.navigator.abrir_maps()
 		elif setMap == 'directions':
-			self.GUI_Maps.navigator.direccion(self.GUI_Maps.mapsDirectionFromInput, self.GUI_Maps.mapsDirectionToInput)
+			self.GUI_Maps.navigator.direccion(self.GUI_Maps.mapsDirectionFromInput.text(), self.GUI_Maps.mapsDirectionToInput.text())
 		elif setMap == 'home':
-			self.GUI_Maps.navigator.direccion(self.GUI_Maps.mapsHomeUbicationInput, self.getConfig('home'))
+			self.GUI_Maps.navigator.direccion(self.GUI_Maps.mapsHomeUbicationInput.text(), self.getConfig('home'))
 
 		Maps_funcs.startController(self)
 
