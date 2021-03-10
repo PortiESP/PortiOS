@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'design_settingsJgYeJu.ui'
+## Form generated from reading UI file 'design_settingsneAAZG.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -67,7 +67,7 @@ class Ui_Settings_widget(object):
         self.scrollArea.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignTop)
         self.scrollAreaWidgetContents = QWidget()
         self.scrollAreaWidgetContents.setObjectName(u"scrollAreaWidgetContents")
-        self.scrollAreaWidgetContents.setGeometry(QRect(0, -100, 180, 400))
+        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 180, 400))
         self.verticalLayout = QVBoxLayout(self.scrollAreaWidgetContents)
         self.verticalLayout.setSpacing(0)
         self.verticalLayout.setObjectName(u"verticalLayout")
@@ -913,7 +913,7 @@ class Ui_Settings_widget(object):
         self.frame_11.setGeometry(QRect(0, 60, 370, 40))
         self.bearing_navigatorHomeInput = QLineEdit(self.frame_11)
         self.bearing_navigatorHomeInput.setObjectName(u"bearing_navigatorHomeInput")
-        self.bearing_navigatorHomeInput.setGeometry(QRect(220, 5, 110, 30))
+        self.bearing_navigatorHomeInput.setGeometry(QRect(120, 5, 210, 30))
         font4 = QFont()
         font4.setFamily(u"Bahnschrift SemiLight")
         font4.setPointSize(14)
@@ -933,7 +933,7 @@ class Ui_Settings_widget(object):
         self.bearing_navigatorHomeInput.setAlignment(Qt.AlignCenter)
         self.label_17 = QLabel(self.frame_11)
         self.label_17.setObjectName(u"label_17")
-        self.label_17.setGeometry(QRect(10, 5, 200, 30))
+        self.label_17.setGeometry(QRect(10, 5, 100, 30))
         self.label_17.setMaximumSize(QSize(250, 16777215))
         self.label_17.setFont(font1)
         self.label_17.setStyleSheet(u"color:white;")
@@ -1273,7 +1273,7 @@ class Ui_Settings_widget(object):
         self.scrollArea_4.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignTop)
         self.scrollAreaWidgetContents_7 = QWidget()
         self.scrollAreaWidgetContents_7.setObjectName(u"scrollAreaWidgetContents_7")
-        self.scrollAreaWidgetContents_7.setGeometry(QRect(0, 0, 390, 440))
+        self.scrollAreaWidgetContents_7.setGeometry(QRect(0, 0, 398, 440))
         self.scrollAreaWidgetContents_7.setMinimumSize(QSize(0, 440))
         self.frame_10 = QFrame(self.scrollAreaWidgetContents_7)
         self.frame_10.setObjectName(u"frame_10")
@@ -1702,7 +1702,7 @@ class Ui_Settings_widget(object):
 
         self.retranslateUi(Settings_widget)
 
-        self.stackedWidget_settings.setCurrentIndex(1)
+        self.stackedWidget_settings.setCurrentIndex(4)
 
 
         QMetaObject.connectSlotsByName(Settings_widget)

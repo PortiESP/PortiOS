@@ -91,7 +91,7 @@ QScrollBar:vertical {
      <property name="geometry">
       <rect>
        <x>0</x>
-       <y>-100</y>
+       <y>0</y>
        <width>180</width>
        <height>400</height>
       </rect>
@@ -555,7 +555,7 @@ QScrollBar:vertical {
      </rect>
     </property>
     <property name="currentIndex">
-     <number>1</number>
+     <number>4</number>
     </property>
     <widget class="QWidget" name="page_brightness">
      <widget class="QFrame" name="p_brightnes_title">
@@ -2338,9 +2338,9 @@ border:none;</string>
       <widget class="QLineEdit" name="bearing_navigatorHomeInput">
        <property name="geometry">
         <rect>
-         <x>220</x>
+         <x>120</x>
          <y>5</y>
-         <width>110</width>
+         <width>210</width>
          <height>30</height>
         </rect>
        </property>
@@ -2373,7 +2373,7 @@ QLineEdit:focus{
         <rect>
          <x>10</x>
          <y>5</y>
-         <width>200</width>
+         <width>100</width>
          <height>30</height>
         </rect>
        </property>
@@ -3262,7 +3262,7 @@ QScrollBar:vertical {
          <rect>
           <x>0</x>
           <y>0</y>
-          <width>390</width>
+          <width>398</width>
           <height>440</height>
          </rect>
         </property>
