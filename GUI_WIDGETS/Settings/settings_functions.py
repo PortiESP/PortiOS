@@ -213,9 +213,14 @@ class Settings_funcs:
 			updateData()
 
 		def openManager():
+			def openMgr():
+				time.sleep(1)
+				os.system('xdotool search --name BTmanager windowraise')
+
 			print('Opening bluetoothctl')
 			os.system('x-terminal-emulator -t BTmanager -e bluetoothctl')
-			os.system('xdotool search --name BTmanager windowraise')
+			t = threading.Thread(target=openMgr)
+			t.start()
 
 
 		# SETUP
