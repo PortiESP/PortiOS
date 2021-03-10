@@ -350,8 +350,8 @@ QLabel{
          </property>
          <property name="font">
           <font>
-           <family>Bahnschrift SemiBold Condensed</family>
-           <pointsize>16</pointsize>
+           <family>Bahnschrift SemiLight Condensed</family>
+           <pointsize>19</pointsize>
           </font>
          </property>
          <property name="styleSheet">
@@ -446,8 +446,8 @@ QLineEdit:focus{
          </property>
          <property name="font">
           <font>
-           <family>Bahnschrift SemiBold Condensed</family>
-           <pointsize>16</pointsize>
+           <family>Bahnschrift SemiLight Condensed</family>
+           <pointsize>19</pointsize>
           </font>
          </property>
          <property name="styleSheet">
@@ -646,7 +646,7 @@ QPushButton:pressed{
          </property>
          <property name="font">
           <font>
-           <family>Bahnschrift SemiBold Condensed</family>
+           <family>Bahnschrift SemiLight SemiConde</family>
            <pointsize>16</pointsize>
           </font>
          </property>

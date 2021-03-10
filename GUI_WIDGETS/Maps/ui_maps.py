@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'mapsWuwNbU.ui'
+## Form generated from reading UI file 'mapssqusYK.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -137,8 +137,8 @@ class Ui_Maps_widget(object):
         self.label_13.setMinimumSize(QSize(80, 0))
         self.label_13.setMaximumSize(QSize(0, 16777215))
         font1 = QFont()
-        font1.setFamily(u"Bahnschrift SemiBold Condensed")
-        font1.setPointSize(16)
+        font1.setFamily(u"Bahnschrift SemiLight Condensed")
+        font1.setPointSize(19)
         self.label_13.setFont(font1)
         self.label_13.setStyleSheet(u"QLabel{\n"
 "	background:rgb(220, 0, 0);\n"
@@ -278,7 +278,10 @@ class Ui_Maps_widget(object):
         self.label_15.setObjectName(u"label_15")
         self.label_15.setMinimumSize(QSize(100, 0))
         self.label_15.setMaximumSize(QSize(0, 16777215))
-        self.label_15.setFont(font1)
+        font2 = QFont()
+        font2.setFamily(u"Bahnschrift SemiLight SemiConde")
+        font2.setPointSize(16)
+        self.label_15.setFont(font2)
         self.label_15.setStyleSheet(u"QLabel{\n"
 "	background:rgb(220, 0, 0);\n"
 "	color:white;\n"
@@ -314,10 +317,10 @@ class Ui_Maps_widget(object):
         self.label_12 = QLabel(self.frame_title)
         self.label_12.setObjectName(u"label_12")
         self.label_12.setGeometry(QRect(10, 10, 380, 60))
-        font2 = QFont()
-        font2.setFamily(u"Bahnschrift Light")
-        font2.setPointSize(32)
-        self.label_12.setFont(font2)
+        font3 = QFont()
+        font3.setFamily(u"Bahnschrift Light")
+        font3.setPointSize(32)
+        self.label_12.setFont(font3)
         self.label_12.setStyleSheet(u"color:white;")
         self.label_12.setAlignment(Qt.AlignBottom|Qt.AlignLeading|Qt.AlignLeft)
         self.line_3 = QFrame(self.frame_title)
