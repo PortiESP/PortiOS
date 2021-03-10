@@ -28,7 +28,6 @@ class Maps_funcs:
 
 	def openNavigator(self, setMap='go'):
 		if self.GUI_Maps.navigator: return
-		print('Starting maps')
 		self.GUI_Maps.navigator = Navegador(fullScreen=False)
 		if setMap == 'go':
 			self.GUI_Maps.navigator.abrir_maps()
@@ -42,7 +41,6 @@ class Maps_funcs:
 
 	def endNavigation(self):
 		if not self.GUI_Maps.navigator: return
-		print('Ending maps')
 		self.GUI_Maps.navigator.exit()
 		self.GUI_Maps.navigator = None
 

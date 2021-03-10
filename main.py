@@ -14,12 +14,11 @@ class Main_GUI:
 		# Check if config file exists
 		if not os.path.exists('config.txt'):
 			with open('config.txt', 'w'):
-				print('"config.txt" created')
+				pass
 
 		# Getting config data
 		self.config = {}
 		self.setupConfig()
-		print(self.config)
 
 		# Main loog Hz
 		self.mainLoopHz = 1
@@ -88,7 +87,6 @@ class Main_GUI:
 		
 		if self.BTController.checkConnectedDevices():
 			status = str(self.BTController.get_player_data('Status'))
-			print('Status: ', status)
 			if setStatus: 
 				if setStatus == 'playing': status = 'paused'
 				elif setStatus == 'paused': status = 'playing'
@@ -117,11 +115,8 @@ class Main_GUI:
 		t1.start()
 
 	def mediaDataChanged(self, _, data, __):
-		print('Data changed:')
 		key = list(dict(data).keys())[0]
 		values = list(dict(data).values())[0]
-		print('key --> ', key)
-		print('values --> ', values)
 
 
 		if key == 'Status': 
@@ -159,7 +154,6 @@ class Main_GUI:
 			self.GUI_Central.slider_volume.setValue(vol)
 
 		def navControls(control):
-			print('Map nav: ', control)
 			try:
 				if not self.GUI_Apps.navigator.started_trip: return
 			except AttributeError:
@@ -338,7 +332,6 @@ class Main_GUI:
 						self.GUI_Player.label_currentTime.setText(self.currentMusicTimeF)
 						self.GUI_Player.slider_duration.setValue(self.currentMusicTime)
 
-					print('Time elapsed --> ' + self.currentMusicTimeF)
 
 				
 	

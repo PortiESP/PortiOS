@@ -20,7 +20,6 @@ class Apps_funcs:
 		self.GUI_Apps.pushButton_6.clicked.connect(lambda:self.GUI_Central.appsWidget.setCurrentIndex(2))
 
 	def openBrowser(self):
-		print('Starting browser ')
 		self.GUI_Apps.chrome_options = Options()
 		self.GUI_Apps.chrome_options.add_argument("--kiosk")
 		self.GUI_Apps.chrome_options.add_experimental_option("useAutomationExtension", False)

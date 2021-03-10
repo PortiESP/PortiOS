@@ -50,13 +50,11 @@ class Leds_funcs:
 			self.GUI_Leds.slidersList[i].setValue(color[i])
 			
 
-		print('Setted color: ', color)
 
 
 
 	def toggleLedPower(self):
 		self.GUI_Leds.ledPower = not self.GUI_Leds.ledPower
-		print('Leds status ', self.GUI_Leds.ledPower)
 
 		if self.GUI_Leds.ledsOnOffCheckbox.isChecked() != self.GUI_Leds.ledPower:
 			self.GUI_Leds.ledsOnOffCheckbox.setChecked(self.GUI_Leds.ledPower)
@@ -67,19 +65,16 @@ class Leds_funcs:
 		if not self.GUI_Leds.ledPower:
 			self.GUI_Leds.actualProgram = None
 			self.ledsController.program_stop()
-			print('Led program: None')
 
 
 
 
-		print('Led power is: ', self.GUI_Leds.ledPower)
 
 	def setProgram(self, option):
 		if not self.GUI_Leds.ledPower: return
 		
 
 		if option == self.GUI_Leds.actualProgram and option == 'random': option += '-jump'
-		print('Setting program: ', option)
 
 		self.GUI_Leds.actualProgram = option
 

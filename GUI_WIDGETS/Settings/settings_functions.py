@@ -62,7 +62,6 @@ class Settings_funcs:
 		Settings_funcs.advancedSetup(self)
 
 	def setPage(self, index):
-		print('Changing to page ',index)
 		self.GUI_Settings.stackedWidget_settings.setCurrentIndex(index)
 
 
@@ -88,13 +87,11 @@ class Settings_funcs:
 			else: 
 				setStatus = 'down'
 			subprocess.run([f'sudo ifconfig wlan0 {setStatus}'], shell=True)
-			print('Wifi power ', setStatus)
 			tstart = time.time()
 			def waitNetwork(tstart):
 				while not getSSID():
 					time.sleep(0.5)
 					if (time.time() - tstart) > self.GUI_Settings.TIMEOUT:
-						print('Connection timeout')
 						break
 				refresh()
 			if setStatus == 'up':
@@ -114,7 +111,6 @@ class Settings_funcs:
 				out = subprocess.run('iwgetid', capture_output=True, text=True, shell=True).stdout.split(':')[1].strip()[1:-1]
 			except IndexError:
 				return None
-			print('SSID: ', out)
 			if out: return out
 			else: return None
 
@@ -122,12 +118,10 @@ class Settings_funcs:
 			out = subprocess.run('ifconfig wlan0', capture_output=True, text=True, shell=True).stdout.split('\n')[1].strip().split(' ')
 			if out[0] == 'inet': 
 				out = out[1]
-				print('IP: ', out)
 				return out
 			else: return None
 			
 		def connectWifi():
-			print('Attempting to connect to "', self.GUI_Settings.bearing_wifiSSIDInput.text(), '" with key "', self.GUI_Settings.bearing_wifiPassInput.text(), '"')
 			command = 'ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev\nupdate_config=1\ncountry=ES\n\nnetwork={{\nssid="{}"\npsk="{}"\nkey_mgmt=WPA-PSK\n}}'
 			subprocess.run('sudo chmod 777 /etc/wpa_supplicant/wpa_supplicant.conf', capture_output=True, shell=True)
 			with open('/etc/wpa_supplicant/wpa_supplicant.conf', 'w') as f:
@@ -157,7 +151,6 @@ class Settings_funcs:
 	def btSetup(self):
 		def updateData():
 			out = subprocess.run('bluetoothctl show', capture_output=True, text=True, shell=True).stdout
-			print(out)
 			dataLines = out.split('\n')
 			for line in dataLines:
 				line = line.strip()
@@ -167,7 +160,6 @@ class Settings_funcs:
 			
 			getConnectedDevice()
 
-			print('BT data = ', self.GUI_Settings.BTdataDict)
 
 		def getConnectedDevice():
 			if self.isConnectedDevice:
@@ -175,7 +167,6 @@ class Settings_funcs:
 				if name == 'False': name = 'None'
 			else: 
 				name = 'None'
-			print('BT Connected device: ', name)
 			self.GUI_Settings.BTdataDict['Connected'] = name
 
 		def refresh():
@@ -196,11 +187,9 @@ class Settings_funcs:
 
 		def togglePower():
 			if self.GUI_Settings.bearing_btPowerCheckbox.isChecked():
-				print('Powering BT on')
 				subprocess.run('bluetoothctl power on', capture_output=True, shell=True)
 				refresh()
 			else:
-				print('Powering BT off')
 				subprocess.run('bluetoothctl power off', capture_output=True, shell=True)
 
 		def toggleDiscoverable():
@@ -208,7 +197,6 @@ class Settings_funcs:
 				setStatus = 'on'
 			else:
 				setStatus = 'off'
-			print('Setting discoverable to: ', setStatus)
 			subprocess.run(f'bluetoothctl discoverable {setStatus}', capture_output=True, shell=True)
 			updateData()
 
@@ -217,7 +205,6 @@ class Settings_funcs:
 				time.sleep(1)
 				os.system('xdotool search --name BTmanager windowraise')
 
-			print('Opening bluetoothctl')
 			os.system('x-terminal-emulator -t BTmanager -e bluetoothctl')
 			t = threading.Thread(target=openMgr)
 			t.start()
@@ -246,10 +233,8 @@ class Settings_funcs:
 
 		def toggleMultimedia():
 			if self.GUI_Settings.bearing_remoteMultimediaCheckbox.isChecked():
-				print('Remote multimedia on')
 				self.IRR.startIRR()
 			else:
-				print('Remote multimedia off')
 				self.IRR.stopIRR()
 
 		setup()
@@ -279,7 +264,6 @@ class Settings_funcs:
 			self.GUI_Settings.bearing_statusBtText.setText(getServiceStatus('bluetooth'))
 
 		def restartService(service):
-			print('Restarting ', service)
 			subprocess.run(f'sudo systemctl restart {service}', shell=True)
 
 		# EVENTS
@@ -297,12 +281,10 @@ class Settings_funcs:
 			gp.output(pin, value)
 			self.GUI_Settings.bearing_gpioPinLabel.setText(str(pin))
 			self.GUI_Settings.bearing_gpioPinValueLabel.setText(str(value))
-			print('Pin ', pin , ' set to ', value)
 
 		def getPin():
 			pin = int(self.GUI_Settings.bearing_gpioGetInput.text())
 			value = subprocess.run(f'gpio -1 read {pin}', capture_output=True, text=True, shell=True).stdout
-			print('Pin ', pin , ' value: ', value)
 			self.GUI_Settings.bearing_gpioPinLabel.setText('Pin: ' + self.GUI_Settings.bearing_gpioGetInput.text())
 			self.GUI_Settings.bearing_gpioPinValueLabel.setText(str(value).strip())
 
@@ -364,16 +346,13 @@ class Settings_funcs:
 				Dashboard_funcs.startGauge(self)
 			
 		def autoPowerCallback(self):
-			print('Shuting down')
 			os.system('shutdown -P now')
 
 		def toggleAutoPower():
 			if self.GUI_Settings.bearing_advancedAutopowerCheckbox.isChecked():
-				print('Auto-power on')
 				gp.add_event_detect(self.pinsPower, gp.RISING, callback=autoPowerCallback)
 				self.setConfig('auto-power', 'true')
 			else:
-				print('Auto-power off')
 				gp.remove_event_detect(self.pinsPower)
 				self.setConfig('auto-power', 'false')
 

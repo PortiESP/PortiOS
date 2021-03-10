@@ -28,7 +28,6 @@ class Central_funcs:
 		self.GUI_Central.slider_volume.valueChanged.connect(self.sliderSyncVolume)
 		
 	def toggle_volume(self):
-		print('Toogleing volume')
 		self.GUI_Central.volumeVisivility = (not self.GUI_Central.volumeVisivility)
 		if self.GUI_Central.volumeVisivility:
 			self.GUI_Central.frame_volume.raise_()
@@ -36,7 +35,6 @@ class Central_funcs:
 			self.GUI_Central.frame_volume.lower()
 
 	def toggle_power(self):
-		print('Toogleing power')
 		self.GUI_Central.powerVisivility = (not self.GUI_Central.powerVisivility)
 		if self.GUI_Central.powerVisivility:
 			self.GUI_Central.frame_power.raise_()
@@ -44,7 +42,6 @@ class Central_funcs:
 			self.GUI_Central.frame_power.lower()
 
 	def setPage(self, index):
-		print('Changing to page ',index)
 		self.GUI_Central.appsWidget.setCurrentIndex(index)
 
 	

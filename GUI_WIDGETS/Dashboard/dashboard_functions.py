@@ -41,7 +41,6 @@ class Dashboard_funcs:
 
 	def startGauge(self):
 		def gaugeThreadFunc():
-			print('Starting gauge')
 			while self.GUI_Dashboard.gaugePower:
 				if self.GUI_Central.appsWidget.currentIndex() == 0:
 					try:
@@ -54,13 +53,11 @@ class Dashboard_funcs:
 						Gauge_funcs.setSpeed(self, speed)
 					except:
 						print('Gauge exception')
-					print('Value: ', value, ' - Speed: ', speed)
 
 		self.GUI_Dashboard.gaugePower = True
 		self.GUI_Dashboard.gaugeThread = threading.Thread(target=gaugeThreadFunc)
 		self.GUI_Dashboard.gaugeThread.start()
 
 	def stopGauge(self):
-		print('Stoping gauge')
 		self.GUI_Dashboard.gaugePower = False
 		Gauge_funcs.setSpeed(self, 0)
