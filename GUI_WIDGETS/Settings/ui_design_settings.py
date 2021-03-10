@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'design_settingsSkEZlZ.ui'
+## Form generated from reading UI file 'design_settingsJgYeJu.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -67,11 +67,11 @@ class Ui_Settings_widget(object):
         self.scrollArea.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignTop)
         self.scrollAreaWidgetContents = QWidget()
         self.scrollAreaWidgetContents.setObjectName(u"scrollAreaWidgetContents")
-        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 180, 400))
+        self.scrollAreaWidgetContents.setGeometry(QRect(0, -100, 180, 400))
         self.verticalLayout = QVBoxLayout(self.scrollAreaWidgetContents)
         self.verticalLayout.setSpacing(0)
         self.verticalLayout.setObjectName(u"verticalLayout")
-        self.verticalLayout.setContentsMargins(10, 10, 10, 10)
+        self.verticalLayout.setContentsMargins(10, 0, 10, 0)
         self.frame_setting_brightness = QFrame(self.scrollAreaWidgetContents)
         self.frame_setting_brightness.setObjectName(u"frame_setting_brightness")
         self.frame_setting_brightness.setMaximumSize(QSize(180, 40))
@@ -139,6 +139,23 @@ class Ui_Settings_widget(object):
 
 
         self.verticalLayout.addWidget(self.frame_setting_remote)
+
+        self.frame_setting_navigator = QFrame(self.scrollAreaWidgetContents)
+        self.frame_setting_navigator.setObjectName(u"frame_setting_navigator")
+        self.frame_setting_navigator.setMaximumSize(QSize(180, 40))
+        self.horizontalLayout_11 = QHBoxLayout(self.frame_setting_navigator)
+        self.horizontalLayout_11.setSpacing(0)
+        self.horizontalLayout_11.setObjectName(u"horizontalLayout_11")
+        self.horizontalLayout_11.setContentsMargins(0, 0, 0, 0)
+        self.bearing_settingsNavigator = QPushButton(self.frame_setting_navigator)
+        self.bearing_settingsNavigator.setObjectName(u"bearing_settingsNavigator")
+        self.bearing_settingsNavigator.setMinimumSize(QSize(0, 40))
+        self.bearing_settingsNavigator.setFocusPolicy(Qt.NoFocus)
+
+        self.horizontalLayout_11.addWidget(self.bearing_settingsNavigator)
+
+
+        self.verticalLayout.addWidget(self.frame_setting_navigator)
 
         self.frame_setting_status = QFrame(self.scrollAreaWidgetContents)
         self.frame_setting_status.setObjectName(u"frame_setting_status")
@@ -873,6 +890,68 @@ class Ui_Settings_widget(object):
 "	\n"
 "}")
         self.stackedWidget_settings.addWidget(self.page_remote)
+        self.page = QWidget()
+        self.page.setObjectName(u"page")
+        self.frame_9 = QFrame(self.page)
+        self.frame_9.setObjectName(u"frame_9")
+        self.frame_9.setGeometry(QRect(0, 0, 400, 60))
+        self.label_33 = QLabel(self.frame_9)
+        self.label_33.setObjectName(u"label_33")
+        self.label_33.setGeometry(QRect(10, 10, 380, 40))
+        self.label_33.setFont(font)
+        self.label_33.setStyleSheet(u"color:white;")
+        self.label_33.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignTop)
+        self.line_12 = QFrame(self.frame_9)
+        self.line_12.setObjectName(u"line_12")
+        self.line_12.setGeometry(QRect(10, 50, 380, 2))
+        self.line_12.setStyleSheet(u"background:red;\n"
+"border:none;")
+        self.line_12.setFrameShadow(QFrame.Plain)
+        self.line_12.setFrameShape(QFrame.HLine)
+        self.frame_11 = QFrame(self.page)
+        self.frame_11.setObjectName(u"frame_11")
+        self.frame_11.setGeometry(QRect(0, 60, 370, 40))
+        self.bearing_navigatorHomeInput = QLineEdit(self.frame_11)
+        self.bearing_navigatorHomeInput.setObjectName(u"bearing_navigatorHomeInput")
+        self.bearing_navigatorHomeInput.setGeometry(QRect(220, 5, 110, 30))
+        font4 = QFont()
+        font4.setFamily(u"Bahnschrift SemiLight")
+        font4.setPointSize(14)
+        self.bearing_navigatorHomeInput.setFont(font4)
+        self.bearing_navigatorHomeInput.setStyleSheet(u"QLineEdit{\n"
+"	border:none;\n"
+"	color:white;\n"
+"	background:rgba(57, 57, 57, 150);\n"
+"	border-radius:5px;\n"
+"}\n"
+"\n"
+"QLineEdit:focus{\n"
+"	\n"
+"	\n"
+"	border:1px solid rgb(97, 97, 97);\n"
+"}")
+        self.bearing_navigatorHomeInput.setAlignment(Qt.AlignCenter)
+        self.label_17 = QLabel(self.frame_11)
+        self.label_17.setObjectName(u"label_17")
+        self.label_17.setGeometry(QRect(10, 5, 200, 30))
+        self.label_17.setMaximumSize(QSize(250, 16777215))
+        self.label_17.setFont(font1)
+        self.label_17.setStyleSheet(u"color:white;")
+        self.bearing_navigatorHomeButton = QPushButton(self.frame_11)
+        self.bearing_navigatorHomeButton.setObjectName(u"bearing_navigatorHomeButton")
+        self.bearing_navigatorHomeButton.setGeometry(QRect(340, 5, 30, 30))
+        self.bearing_navigatorHomeButton.setStyleSheet(u"QPushButton{\n"
+"\n"
+"	background:transparent;\n"
+"	border:2px solid red;\n"
+"	border-radius:15px;\n"
+"}\n"
+"QPushButton:pressed{\n"
+"	background:red;\n"
+"}")
+        self.bearing_navigatorHomeButton.setIcon(icon)
+        self.bearing_navigatorHomeButton.setIconSize(QSize(18, 18))
+        self.stackedWidget_settings.addWidget(self.page)
         self.page_status = QWidget()
         self.page_status.setObjectName(u"page_status")
         self.p_status_title = QFrame(self.page_status)
@@ -1015,9 +1094,6 @@ class Ui_Settings_widget(object):
         self.bearing_gpioSetValueInput = QLineEdit(self.p_gpio_setPin)
         self.bearing_gpioSetValueInput.setObjectName(u"bearing_gpioSetValueInput")
         self.bearing_gpioSetValueInput.setGeometry(QRect(280, 5, 50, 30))
-        font4 = QFont()
-        font4.setFamily(u"Bahnschrift SemiLight")
-        font4.setPointSize(14)
         self.bearing_gpioSetValueInput.setFont(font4)
         self.bearing_gpioSetValueInput.setStyleSheet(u"QLineEdit{\n"
 "	border:none;\n"
@@ -1638,6 +1714,7 @@ class Ui_Settings_widget(object):
         self.bearing_settingsWifi.setText(QCoreApplication.translate("Settings_widget", u"WIFI", None))
         self.bearing_settingsBluetooth.setText(QCoreApplication.translate("Settings_widget", u"BLUETOOTH", None))
         self.bearing_settingsRemote.setText(QCoreApplication.translate("Settings_widget", u"REMOTE", None))
+        self.bearing_settingsNavigator.setText(QCoreApplication.translate("Settings_widget", u"NAVIGATOR", None))
         self.bearing_settingsStatus.setText(QCoreApplication.translate("Settings_widget", u"STATUS", None))
         self.bearing_settingsGpio.setText(QCoreApplication.translate("Settings_widget", u"GPIO", None))
         self.bearing_settingsSystemInfo.setText(QCoreApplication.translate("Settings_widget", u"SYSTEM INFO", None))
@@ -1682,6 +1759,9 @@ class Ui_Settings_widget(object):
         self.label_10.setText(QCoreApplication.translate("Settings_widget", u"O", None))
         self.label_12.setText(QCoreApplication.translate("Settings_widget", u"I", None))
         self.bearing_remoteMultimediaCheckbox.setText("")
+        self.label_33.setText(QCoreApplication.translate("Settings_widget", u"Navigator", None))
+        self.label_17.setText(QCoreApplication.translate("Settings_widget", u"Set home", None))
+        self.bearing_navigatorHomeButton.setText("")
         self.label_38.setText(QCoreApplication.translate("Settings_widget", u"Services status", None))
         self.bearing_statusRefreshButton.setText("")
         self.label_55.setText(QCoreApplication.translate("Settings_widget", u"Restart bluetooth", None))

@@ -44,16 +44,18 @@ class Settings_funcs:
 		self.GUI_Settings.bearing_settingsWifi.clicked.connect(lambda:Settings_funcs.setPage(self, 1))
 		self.GUI_Settings.bearing_settingsBluetooth.clicked.connect(lambda:Settings_funcs.setPage(self, 2))
 		self.GUI_Settings.bearing_settingsRemote.clicked.connect(lambda:Settings_funcs.setPage(self, 3))
-		self.GUI_Settings.bearing_settingsStatus.clicked.connect(lambda:Settings_funcs.setPage(self, 4))
-		self.GUI_Settings.bearing_settingsGpio.clicked.connect(lambda:Settings_funcs.setPage(self, 5))
-		self.GUI_Settings.bearing_settingsSystemInfo.clicked.connect(lambda:Settings_funcs.setPage(self, 6))
-		self.GUI_Settings.bearing_settingsTerminal.clicked.connect(lambda:Settings_funcs.setPage(self, 7))
-		self.GUI_Settings.bearing_settingsAdvanced.clicked.connect(lambda:Settings_funcs.setPage(self, 8))
+		self.GUI_Settings.bearing_settingsNavigator.clicked.connect(lambda:Settings_funcs.setPage(self, 4))
+		self.GUI_Settings.bearing_settingsStatus.clicked.connect(lambda:Settings_funcs.setPage(self, 5))
+		self.GUI_Settings.bearing_settingsGpio.clicked.connect(lambda:Settings_funcs.setPage(self, 6))
+		self.GUI_Settings.bearing_settingsSystemInfo.clicked.connect(lambda:Settings_funcs.setPage(self, 7))
+		self.GUI_Settings.bearing_settingsTerminal.clicked.connect(lambda:Settings_funcs.setPage(self, 8))
+		self.GUI_Settings.bearing_settingsAdvanced.clicked.connect(lambda:Settings_funcs.setPage(self, 9))
 
 		# Setting up pages bearings
 		Settings_funcs.brightnessSetup(self)
 		Settings_funcs.wifiSetup(self)
 		Settings_funcs.btSetup(self)
+		Settings_funcs.remoteSetup(self)
 		Settings_funcs.remoteSetup(self)
 		Settings_funcs.servicesStatusSetup(self)
 		Settings_funcs.gpioSetup(self)
@@ -257,6 +259,11 @@ class Settings_funcs:
 		self.GUI_Settings.bearing_remoteMultimediaCheckbox.toggled.connect(toggleMultimedia)
 
 
+# ------------------------------------------------------------------------------------------------------
+
+	def navigatorSetup(self):
+
+		self.GUI_Settings.bearing_navigatorHomeButton.clicked.connect(lambda: self.setConfig('home', self.GUI_Settings.bearing_navigatorHomeInput.text()))
 
 
 # ------------------------------------------------------------------------------------------------------
