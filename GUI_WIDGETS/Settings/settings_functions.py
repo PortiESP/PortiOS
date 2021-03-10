@@ -214,7 +214,9 @@ class Settings_funcs:
 
 		def openManager():
 			print('Opening bluetoothctl')
-			subprocess.run('x-terminal-emulator -e bluetoothctl', capture_output=True, shell=True)
+			os.system('x-terminal-emulator -t BTmanager -e bluetoothctl')
+			os.system('xdotool search --name BTmanager windowraise')
+
 
 		# SETUP
 		refresh()
@@ -335,8 +337,11 @@ class Settings_funcs:
 # ------------------------------------------------------------------------------------------------------
 
 	def terminalSetup(self):
+		def openTerm():
+			os.system('x-terminal-emulator -t newTerminal')
+			os.system('xdotool search --name newTerminal windowraise')
 		# EVENTS
-		self.GUI_Settings.bearing_terminalOpenButton.clicked.connect(lambda: os.system('x-terminal-emulator'))
+		self.GUI_Settings.bearing_terminalOpenButton.clicked.connect(openTerm)
 
 
 # ------------------------------------------------------------------------------------------------------
