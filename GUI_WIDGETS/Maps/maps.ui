@@ -370,8 +370,8 @@ QLabel{
          </property>
          <property name="font">
           <font>
-           <family>Bahnschrift SemiLight Condensed</family>
-           <pointsize>17</pointsize>
+           <family>Bahnschrift SemiLight</family>
+           <pointsize>14</pointsize>
           </font>
          </property>
          <property name="styleSheet">
@@ -473,8 +473,8 @@ QLineEdit:focus{
          </property>
          <property name="font">
           <font>
-           <family>Bahnschrift SemiLight Condensed</family>
-           <pointsize>17</pointsize>
+           <family>Bahnschrift SemiLight</family>
+           <pointsize>14</pointsize>
           </font>
          </property>
          <property name="styleSheet">

@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'mapsdSGQRc.ui'
+## Form generated from reading UI file 'mapsEhKBZA.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -141,8 +141,8 @@ class Ui_Maps_widget(object):
         self.label_13.setMinimumSize(QSize(80, 0))
         self.label_13.setMaximumSize(QSize(0, 16777215))
         font2 = QFont()
-        font2.setFamily(u"Bahnschrift SemiLight Condensed")
-        font2.setPointSize(17)
+        font2.setFamily(u"Bahnschrift SemiLight")
+        font2.setPointSize(14)
         self.label_13.setFont(font2)
         self.label_13.setStyleSheet(u"QLabel{\n"
 "	background:rgb(220, 0, 0);\n"
