@@ -12,18 +12,30 @@ class Maps_funcs:
 		
 		self.GUI_Maps.mapsTitleCloseButton.clicked.connect(lambda: self.GUI_Maps.stackedWidget.setCurrentIndex(0))
 
+		# Main
 		self.GUI_Maps.mapsSelectMapButton.clicked.connect(lambda: Maps_funcs.openNavigator(self))
 		self.GUI_Maps.mapsSelectDirectionsButton.clicked.connect(lambda: self.GUI_Maps.stackedWidget.setCurrentIndex(1))
 		self.GUI_Maps.mapsSelectHomeButton.clicked.connect(lambda: self.GUI_Maps.stackedWidget.setCurrentIndex(2))
 
+		# Directions
+		self.GUI_Maps.mapsDirectionsHomeButton.clicked.connect(lambda: self.GUI_Maps.mapsDirectionFromInput.setText(self.getConfig('home')))
+		self.GUI_Maps.mapsDirectionsGoButton.clicked.connect(lambda: Maps_funcs.openNavigator(self, setMap='directions'))
+
+		# Home
+		self.GUI_Maps.mapsHomeGoButton.clicked.connect(lambda: Maps_funcs.openNavigator(self, setMap='home'))
 
 
-
-	def openNavigator(self):
+	def openNavigator(self, setMap='go'):
 		if self.GUI_Maps.navigator: return
 		print('Starting maps')
-		self.GUI_Maps.navigator = Navegador()
-		self.GUI_Maps.navigator.abrir_maps()
+		self.GUI_Maps.navigator = Navegador(fullscreen=False)
+		if setMap == 'go':
+			self.GUI_Maps.navigator.abrir_maps()
+		elif setMap == 'directions':
+			self.GUI_Maps.navigator.direccion(self.GUI_Maps.mapsDirectionFromInput, self.GUI_Maps.mapsDirectionToInput)
+		elif setMap == 'home':
+			self.GUI_Maps.navigator.direccion(self.GUI_Maps.mapsHomeUbicationInput, self.getConfig('home'))
+
 		Maps_funcs.startController(self)
 
 
