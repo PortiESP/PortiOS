@@ -1,10 +1,10 @@
-from .ui_maps import Ui_Maps_widget
+from .ui_maps import Ui_Map_widget
 from GUI_PACKAGES.navigator_google_maps.navegador import Navegador
 
 class Maps_funcs:
 	
 	def mapSetup(self):
-		self.GUI_Maps = Ui_Apps_widget()
+		self.GUI_Maps = Ui_Maps_widget()
 		self.GUI_Maps.setupUi(self.GUI_Central.page_maps)
 
 		self.GUI_Maps.navigator = None
