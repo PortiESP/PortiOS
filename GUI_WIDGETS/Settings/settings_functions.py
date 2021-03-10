@@ -52,7 +52,6 @@ class Settings_funcs:
 		self.GUI_Settings.bearing_settingsAdvanced.clicked.connect(lambda:Settings_funcs.setPage(self, 9))
 
 		# Setting up pages bearings
-		Settings_funcs.brightnessSetup(self)
 		Settings_funcs.wifiSetup(self)
 		Settings_funcs.btSetup(self)
 		Settings_funcs.remoteSetup(self)
@@ -69,14 +68,6 @@ class Settings_funcs:
 
 
 # ----------------------------------------- MENUS SETUP -------------------------------------------------------------------
-
-	def brightnessSetup(self):
-		def setBrightness(value):
-			print(f'Setting brightness to {value}')
-			subprocess.run(f'sudo echo {value} > /sys/class/backlight/rpi_backlight/brightness', capture_output=True, shell=True)
-
-
-		self.GUI_Settings.bearing_brightnessLevelSlide.valueChanged.connect(lambda: setBrightness(self.GUI_Settings.bearing_brightnessLevelSlide.value()))
 
 # ------------------------------------------------------------------------------------------------------
 

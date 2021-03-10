@@ -113,49 +113,6 @@ QScrollBar:vertical {
        <number>0</number>
       </property>
       <item>
-       <widget class="QFrame" name="frame_setting_brightness">
-        <property name="maximumSize">
-         <size>
-          <width>180</width>
-          <height>40</height>
-         </size>
-        </property>
-        <layout class="QHBoxLayout" name="horizontalLayout_5">
-         <property name="spacing">
-          <number>0</number>
-         </property>
-         <property name="leftMargin">
-          <number>0</number>
-         </property>
-         <property name="topMargin">
-          <number>0</number>
-         </property>
-         <property name="rightMargin">
-          <number>0</number>
-         </property>
-         <property name="bottomMargin">
-          <number>0</number>
-         </property>
-         <item>
-          <widget class="QPushButton" name="bearing_settingsBrightness">
-           <property name="minimumSize">
-            <size>
-             <width>0</width>
-             <height>40</height>
-            </size>
-           </property>
-           <property name="focusPolicy">
-            <enum>Qt::NoFocus</enum>
-           </property>
-           <property name="text">
-            <string>BRIGHTNESS</string>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </widget>
-      </item>
-      <item>
        <widget class="QFrame" name="frame_setting_wifi">
         <property name="maximumSize">
          <size>
@@ -555,10 +512,10 @@ QScrollBar:vertical {
      </rect>
     </property>
     <property name="currentIndex">
-     <number>1</number>
+     <number>0</number>
     </property>
-    <widget class="QWidget" name="page_brightness">
-     <widget class="QFrame" name="p_brightnes_title">
+    <widget class="QWidget" name="page_start">
+     <widget class="QFrame" name="p_start_title">
       <property name="geometry">
        <rect>
         <x>0</x>
@@ -586,7 +543,7 @@ QScrollBar:vertical {
         <string notr="true">color:white;</string>
        </property>
        <property name="text">
-        <string>Brightness</string>
+        <string>Settings</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
@@ -610,73 +567,6 @@ border:none;</string>
        </property>
        <property name="orientation">
         <enum>Qt::Horizontal</enum>
-       </property>
-      </widget>
-     </widget>
-     <widget class="QFrame" name="p_brightness_level">
-      <property name="geometry">
-       <rect>
-        <x>0</x>
-        <y>60</y>
-        <width>370</width>
-        <height>70</height>
-       </rect>
-      </property>
-      <widget class="QSlider" name="bearing_brightnessLevelSlide">
-       <property name="geometry">
-        <rect>
-         <x>10</x>
-         <y>40</y>
-         <width>360</width>
-         <height>22</height>
-        </rect>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">QSlider::groove:horizontal{
-	height:1px;	
-	width:340px;
-	background:gray;
-
-}
-
-QSlider::handle:horizontal{
-	background:red;
-	width:10px;
-	margin:-5px;
-	border-radius:5px;	
-
-}</string>
-       </property>
-       <property name="minimum">
-        <number>20</number>
-       </property>
-       <property name="maximum">
-        <number>255</number>
-       </property>
-       <property name="orientation">
-        <enum>Qt::Horizontal</enum>
-       </property>
-      </widget>
-      <widget class="QLabel" name="label_37">
-       <property name="geometry">
-        <rect>
-         <x>10</x>
-         <y>0</y>
-         <width>380</width>
-         <height>30</height>
-        </rect>
-       </property>
-       <property name="font">
-        <font>
-         <family>Bahnschrift SemiLight</family>
-         <pointsize>13</pointsize>
-        </font>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">color:rgb(211, 211, 211);</string>
-       </property>
-       <property name="text">
-        <string>Level</string>
        </property>
       </widget>
      </widget>

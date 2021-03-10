@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'design_settingsRTnKFP.ui'
+## Form generated from reading UI file 'design_settingstJPtsQ.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -72,23 +72,6 @@ class Ui_Settings_widget(object):
         self.verticalLayout.setSpacing(0)
         self.verticalLayout.setObjectName(u"verticalLayout")
         self.verticalLayout.setContentsMargins(10, 0, 10, 0)
-        self.frame_setting_brightness = QFrame(self.scrollAreaWidgetContents)
-        self.frame_setting_brightness.setObjectName(u"frame_setting_brightness")
-        self.frame_setting_brightness.setMaximumSize(QSize(180, 40))
-        self.horizontalLayout_5 = QHBoxLayout(self.frame_setting_brightness)
-        self.horizontalLayout_5.setSpacing(0)
-        self.horizontalLayout_5.setObjectName(u"horizontalLayout_5")
-        self.horizontalLayout_5.setContentsMargins(0, 0, 0, 0)
-        self.bearing_settingsBrightness = QPushButton(self.frame_setting_brightness)
-        self.bearing_settingsBrightness.setObjectName(u"bearing_settingsBrightness")
-        self.bearing_settingsBrightness.setMinimumSize(QSize(0, 40))
-        self.bearing_settingsBrightness.setFocusPolicy(Qt.NoFocus)
-
-        self.horizontalLayout_5.addWidget(self.bearing_settingsBrightness)
-
-
-        self.verticalLayout.addWidget(self.frame_setting_brightness)
-
         self.frame_setting_wifi = QFrame(self.scrollAreaWidgetContents)
         self.frame_setting_wifi.setObjectName(u"frame_setting_wifi")
         self.frame_setting_wifi.setMaximumSize(QSize(180, 40))
@@ -246,12 +229,12 @@ class Ui_Settings_widget(object):
         self.stackedWidget_settings = QStackedWidget(self.frame_settings)
         self.stackedWidget_settings.setObjectName(u"stackedWidget_settings")
         self.stackedWidget_settings.setGeometry(QRect(300, 0, 400, 300))
-        self.page_brightness = QWidget()
-        self.page_brightness.setObjectName(u"page_brightness")
-        self.p_brightnes_title = QFrame(self.page_brightness)
-        self.p_brightnes_title.setObjectName(u"p_brightnes_title")
-        self.p_brightnes_title.setGeometry(QRect(0, 0, 400, 60))
-        self.label_13 = QLabel(self.p_brightnes_title)
+        self.page_start = QWidget()
+        self.page_start.setObjectName(u"page_start")
+        self.p_start_title = QFrame(self.page_start)
+        self.p_start_title.setObjectName(u"p_start_title")
+        self.p_start_title.setGeometry(QRect(0, 0, 400, 60))
+        self.label_13 = QLabel(self.p_start_title)
         self.label_13.setObjectName(u"label_13")
         self.label_13.setGeometry(QRect(10, 10, 380, 40))
         font = QFont()
@@ -260,45 +243,14 @@ class Ui_Settings_widget(object):
         self.label_13.setFont(font)
         self.label_13.setStyleSheet(u"color:white;")
         self.label_13.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignTop)
-        self.line_4 = QFrame(self.p_brightnes_title)
+        self.line_4 = QFrame(self.p_start_title)
         self.line_4.setObjectName(u"line_4")
         self.line_4.setGeometry(QRect(10, 50, 380, 2))
         self.line_4.setStyleSheet(u"background:red;\n"
 "border:none;")
         self.line_4.setFrameShadow(QFrame.Plain)
         self.line_4.setFrameShape(QFrame.HLine)
-        self.p_brightness_level = QFrame(self.page_brightness)
-        self.p_brightness_level.setObjectName(u"p_brightness_level")
-        self.p_brightness_level.setGeometry(QRect(0, 60, 370, 70))
-        self.bearing_brightnessLevelSlide = QSlider(self.p_brightness_level)
-        self.bearing_brightnessLevelSlide.setObjectName(u"bearing_brightnessLevelSlide")
-        self.bearing_brightnessLevelSlide.setGeometry(QRect(10, 40, 360, 22))
-        self.bearing_brightnessLevelSlide.setStyleSheet(u"QSlider::groove:horizontal{\n"
-"	height:1px;	\n"
-"	width:340px;\n"
-"	background:gray;\n"
-"\n"
-"}\n"
-"\n"
-"QSlider::handle:horizontal{\n"
-"	background:red;\n"
-"	width:10px;\n"
-"	margin:-5px;\n"
-"	border-radius:5px;	\n"
-"\n"
-"}")
-        self.bearing_brightnessLevelSlide.setMinimum(20)
-        self.bearing_brightnessLevelSlide.setMaximum(255)
-        self.bearing_brightnessLevelSlide.setOrientation(Qt.Horizontal)
-        self.label_37 = QLabel(self.p_brightness_level)
-        self.label_37.setObjectName(u"label_37")
-        self.label_37.setGeometry(QRect(10, 0, 380, 30))
-        font1 = QFont()
-        font1.setFamily(u"Bahnschrift SemiLight")
-        font1.setPointSize(13)
-        self.label_37.setFont(font1)
-        self.label_37.setStyleSheet(u"color:rgb(211, 211, 211);")
-        self.stackedWidget_settings.addWidget(self.page_brightness)
+        self.stackedWidget_settings.addWidget(self.page_start)
         self.page_wifi = QWidget()
         self.page_wifi.setObjectName(u"page_wifi")
         self.scrollArea_wifi = QScrollArea(self.page_wifi)
@@ -353,6 +305,9 @@ class Ui_Settings_widget(object):
         self.label_2.setObjectName(u"label_2")
         self.label_2.setGeometry(QRect(10, 5, 240, 30))
         self.label_2.setMaximumSize(QSize(250, 16777215))
+        font1 = QFont()
+        font1.setFamily(u"Bahnschrift SemiLight")
+        font1.setPointSize(13)
         self.label_2.setFont(font1)
         self.label_2.setStyleSheet(u"color:white;")
         self.frame_cb = QFrame(self.p_wifi_power)
@@ -1702,7 +1657,7 @@ class Ui_Settings_widget(object):
 
         self.retranslateUi(Settings_widget)
 
-        self.stackedWidget_settings.setCurrentIndex(1)
+        self.stackedWidget_settings.setCurrentIndex(0)
 
 
         QMetaObject.connectSlotsByName(Settings_widget)
@@ -1710,7 +1665,6 @@ class Ui_Settings_widget(object):
 
     def retranslateUi(self, Settings_widget):
         Settings_widget.setWindowTitle(QCoreApplication.translate("Settings_widget", u"Form", None))
-        self.bearing_settingsBrightness.setText(QCoreApplication.translate("Settings_widget", u"BRIGHTNESS", None))
         self.bearing_settingsWifi.setText(QCoreApplication.translate("Settings_widget", u"WIFI", None))
         self.bearing_settingsBluetooth.setText(QCoreApplication.translate("Settings_widget", u"BLUETOOTH", None))
         self.bearing_settingsRemote.setText(QCoreApplication.translate("Settings_widget", u"REMOTE", None))
@@ -1720,8 +1674,7 @@ class Ui_Settings_widget(object):
         self.bearing_settingsSystemInfo.setText(QCoreApplication.translate("Settings_widget", u"SYSTEM INFO", None))
         self.bearing_settingsTerminal.setText(QCoreApplication.translate("Settings_widget", u"TERMINAL", None))
         self.bearing_settingsAdvanced.setText(QCoreApplication.translate("Settings_widget", u"ADVANCED", None))
-        self.label_13.setText(QCoreApplication.translate("Settings_widget", u"Brightness", None))
-        self.label_37.setText(QCoreApplication.translate("Settings_widget", u"Level", None))
+        self.label_13.setText(QCoreApplication.translate("Settings_widget", u"Settings", None))
         self.label_2.setText(QCoreApplication.translate("Settings_widget", u"Power", None))
         self.label_5.setText(QCoreApplication.translate("Settings_widget", u"O", None))
         self.label_6.setText(QCoreApplication.translate("Settings_widget", u"I", None))
