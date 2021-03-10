@@ -34,8 +34,13 @@
       <height>200</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <pointsize>17</pointsize>
+     </font>
+    </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>2</number>
     </property>
     <widget class="QWidget" name="page_select">
      <property name="styleSheet">
@@ -351,7 +356,7 @@ QLabel{
          <property name="font">
           <font>
            <family>Bahnschrift SemiLight Condensed</family>
-           <pointsize>19</pointsize>
+           <pointsize>17</pointsize>
           </font>
          </property>
          <property name="styleSheet">
@@ -447,7 +452,7 @@ QLineEdit:focus{
          <property name="font">
           <font>
            <family>Bahnschrift SemiLight Condensed</family>
-           <pointsize>19</pointsize>
+           <pointsize>17</pointsize>
           </font>
          </property>
          <property name="styleSheet">
@@ -647,7 +652,7 @@ QPushButton:pressed{
          <property name="font">
           <font>
            <family>Bahnschrift SemiLight SemiConde</family>
-           <pointsize>16</pointsize>
+           <pointsize>14</pointsize>
           </font>
          </property>
          <property name="styleSheet">

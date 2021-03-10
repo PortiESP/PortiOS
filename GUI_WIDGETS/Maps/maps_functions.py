@@ -24,7 +24,7 @@ class Maps_funcs:
 		print('Starting maps')
 		self.GUI_Maps.navigator = Navegador()
 		self.GUI_Maps.navigator.abrir_maps()
-		Maps_funcs.startController()
+		Maps_funcs.startController(self)
 
 
 	def endNavigation(self):

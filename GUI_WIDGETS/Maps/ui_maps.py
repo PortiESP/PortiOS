@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'mapssqusYK.ui'
+## Form generated from reading UI file 'mapsvScahR.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -26,6 +26,9 @@ class Ui_Maps_widget(object):
         self.stackedWidget = QStackedWidget(self.frame_maps)
         self.stackedWidget.setObjectName(u"stackedWidget")
         self.stackedWidget.setGeometry(QRect(100, 170, 600, 200))
+        font = QFont()
+        font.setPointSize(17)
+        self.stackedWidget.setFont(font)
         self.page_select = QWidget()
         self.page_select.setObjectName(u"page_select")
         self.page_select.setStyleSheet(u"QPushButton{\n"
@@ -47,10 +50,10 @@ class Ui_Maps_widget(object):
         self.label_5 = QLabel(self.frame_map)
         self.label_5.setObjectName(u"label_5")
         self.label_5.setGeometry(QRect(88, 16, 98, 46))
-        font = QFont()
-        font.setFamily(u"Bahnschrift SemiLight")
-        font.setPointSize(13)
-        self.label_5.setFont(font)
+        font1 = QFont()
+        font1.setFamily(u"Bahnschrift SemiLight")
+        font1.setPointSize(13)
+        self.label_5.setFont(font1)
         self.label_5.setAlignment(Qt.AlignCenter)
         self.label_6 = QLabel(self.frame_map)
         self.label_6.setObjectName(u"label_6")
@@ -76,7 +79,7 @@ class Ui_Maps_widget(object):
         self.label_8 = QLabel(self.frame_directions)
         self.label_8.setObjectName(u"label_8")
         self.label_8.setGeometry(QRect(88, 16, 98, 46))
-        self.label_8.setFont(font)
+        self.label_8.setFont(font1)
         self.label_8.setAlignment(Qt.AlignCenter)
         self.label_9 = QLabel(self.frame_directions)
         self.label_9.setObjectName(u"label_9")
@@ -102,7 +105,7 @@ class Ui_Maps_widget(object):
         self.label_20 = QLabel(self.frame_home)
         self.label_20.setObjectName(u"label_20")
         self.label_20.setGeometry(QRect(88, 16, 98, 46))
-        self.label_20.setFont(font)
+        self.label_20.setFont(font1)
         self.label_20.setAlignment(Qt.AlignCenter)
         self.label_21 = QLabel(self.frame_home)
         self.label_21.setObjectName(u"label_21")
@@ -136,10 +139,10 @@ class Ui_Maps_widget(object):
         self.label_13.setObjectName(u"label_13")
         self.label_13.setMinimumSize(QSize(80, 0))
         self.label_13.setMaximumSize(QSize(0, 16777215))
-        font1 = QFont()
-        font1.setFamily(u"Bahnschrift SemiLight Condensed")
-        font1.setPointSize(19)
-        self.label_13.setFont(font1)
+        font2 = QFont()
+        font2.setFamily(u"Bahnschrift SemiLight Condensed")
+        font2.setPointSize(17)
+        self.label_13.setFont(font2)
         self.label_13.setStyleSheet(u"QLabel{\n"
 "	background:rgb(220, 0, 0);\n"
 "	color:white;\n"
@@ -184,7 +187,7 @@ class Ui_Maps_widget(object):
         self.label_14.setObjectName(u"label_14")
         self.label_14.setMinimumSize(QSize(80, 0))
         self.label_14.setMaximumSize(QSize(0, 16777215))
-        self.label_14.setFont(font1)
+        self.label_14.setFont(font2)
         self.label_14.setStyleSheet(u"QLabel{\n"
 "	background:rgb(220, 0, 0);\n"
 "	color:white;\n"
@@ -278,10 +281,10 @@ class Ui_Maps_widget(object):
         self.label_15.setObjectName(u"label_15")
         self.label_15.setMinimumSize(QSize(100, 0))
         self.label_15.setMaximumSize(QSize(0, 16777215))
-        font2 = QFont()
-        font2.setFamily(u"Bahnschrift SemiLight SemiConde")
-        font2.setPointSize(16)
-        self.label_15.setFont(font2)
+        font3 = QFont()
+        font3.setFamily(u"Bahnschrift SemiLight SemiConde")
+        font3.setPointSize(14)
+        self.label_15.setFont(font3)
         self.label_15.setStyleSheet(u"QLabel{\n"
 "	background:rgb(220, 0, 0);\n"
 "	color:white;\n"
@@ -317,10 +320,10 @@ class Ui_Maps_widget(object):
         self.label_12 = QLabel(self.frame_title)
         self.label_12.setObjectName(u"label_12")
         self.label_12.setGeometry(QRect(10, 10, 380, 60))
-        font3 = QFont()
-        font3.setFamily(u"Bahnschrift Light")
-        font3.setPointSize(32)
-        self.label_12.setFont(font3)
+        font4 = QFont()
+        font4.setFamily(u"Bahnschrift Light")
+        font4.setPointSize(32)
+        self.label_12.setFont(font4)
         self.label_12.setStyleSheet(u"color:white;")
         self.label_12.setAlignment(Qt.AlignBottom|Qt.AlignLeading|Qt.AlignLeft)
         self.line_3 = QFrame(self.frame_title)
@@ -341,7 +344,7 @@ class Ui_Maps_widget(object):
 
         self.retranslateUi(Maps_widget)
 
-        self.stackedWidget.setCurrentIndex(0)
+        self.stackedWidget.setCurrentIndex(2)
 
 
         QMetaObject.connectSlotsByName(Maps_widget)
