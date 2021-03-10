@@ -1,4 +1,5 @@
 from .ui_maps import Ui_Maps_widget
+import threading
 from GUI_PACKAGES.navigator_google_maps.navegador import Navegador
 
 class Maps_funcs:
