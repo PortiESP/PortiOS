@@ -262,9 +262,12 @@ class Settings_funcs:
 # ------------------------------------------------------------------------------------------------------
 
 	def navigatorSetup(self):
+		def setHome():
+			self.setConfig('home', self.GUI_Settings.bearing_navigatorHomeInput.text())
+			self.GUI_Settings.bearing_navigatorHomeInput.setText('')
 
-		self.GUI_Settings.bearing_navigatorHomeButton.clicked.connect(lambda: self.setConfig('home', self.GUI_Settings.bearing_navigatorHomeInput.text()))
-		self.GUI_Settings.bearing_navigatorHomeInput.setText('')
+		self.GUI_Settings.bearing_navigatorHomeButton.clicked.connect(setHome)
+		
 
 
 # ------------------------------------------------------------------------------------------------------

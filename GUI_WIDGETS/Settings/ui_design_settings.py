@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'design_settingsneAAZG.ui'
+## Form generated from reading UI file 'design_settingsRTnKFP.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -1702,7 +1702,7 @@ class Ui_Settings_widget(object):
 
         self.retranslateUi(Settings_widget)
 
-        self.stackedWidget_settings.setCurrentIndex(4)
+        self.stackedWidget_settings.setCurrentIndex(1)
 
 
         QMetaObject.connectSlotsByName(Settings_widget)
