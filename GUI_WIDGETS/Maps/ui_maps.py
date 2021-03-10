@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'mapsfhefOy.ui'
+## Form generated from reading UI file 'mapsWuwNbU.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -285,7 +285,7 @@ class Ui_Maps_widget(object):
 "	border-top-right-radius:0;\n"
 "	border-bottom-right-radius:0;\n"
 "}")
-        self.label_15.setMargin(10)
+        self.label_15.setMargin(6)
 
         self.horizontalLayout_5.addWidget(self.label_15)
 

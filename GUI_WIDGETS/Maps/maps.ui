@@ -662,7 +662,7 @@ QPushButton:pressed{
           <string>Ubication</string>
          </property>
          <property name="margin">
-          <number>10</number>
+          <number>6</number>
          </property>
         </widget>
        </item>
