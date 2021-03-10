@@ -1,4 +1,4 @@
-from .ui_maps import Ui_Map_widget
+from .ui_maps import Ui_Maps_widget
 from GUI_PACKAGES.navigator_google_maps.navegador import Navegador
 
 class Maps_funcs:
