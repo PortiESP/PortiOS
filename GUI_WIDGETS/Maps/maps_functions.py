@@ -28,7 +28,7 @@ class Maps_funcs:
 	def openNavigator(self, setMap='go'):
 		if self.GUI_Maps.navigator: return
 		print('Starting maps')
-		self.GUI_Maps.navigator = Navegador(fullscreen=False)
+		self.GUI_Maps.navigator = Navegador(fullScreen=False)
 		if setMap == 'go':
 			self.GUI_Maps.navigator.abrir_maps()
 		elif setMap == 'directions':

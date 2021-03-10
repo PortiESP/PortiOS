@@ -36,11 +36,26 @@
     </property>
     <property name="font">
      <font>
-      <pointsize>17</pointsize>
+      <family>Bahnschrift SemiLight SemiConde</family>
+      <pointsize>12</pointsize>
      </font>
     </property>
+    <property name="styleSheet">
+     <string>QLineEdit{
+	color:white;
+	border:none;
+	background:transparent;
+	border-radius:5px;
+	border-top-left-radius:0;
+	border-bottom-left-radius:0;
+}
+
+QLineEdit:focus{
+	background:rgba(57,57,57,150)
+}</string>
+    </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>2</number>
     </property>
     <widget class="QWidget" name="page_select">
      <property name="styleSheet">
@@ -383,8 +398,15 @@ QLabel{
            <height>50</height>
           </size>
          </property>
+         <property name="font">
+          <font>
+           <family>Bahnschrift SemiLight SemiConde</family>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
          <property name="styleSheet">
           <string notr="true">QLineEdit{
+	color:white;
 	border:none;
 	background:transparent;
 	border-radius:5px;
@@ -479,8 +501,15 @@ QLineEdit:focus{
            <height>50</height>
           </size>
          </property>
+         <property name="font">
+          <font>
+           <family>Bahnschrift SemiLight SemiConde</family>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
          <property name="styleSheet">
           <string notr="true">QLineEdit{
+	color:white;
 	border:none;
 	background:transparent;
 	border-radius:5px;
@@ -679,8 +708,15 @@ QPushButton:pressed{
            <height>50</height>
           </size>
          </property>
+         <property name="font">
+          <font>
+           <family>Bahnschrift SemiLight SemiConde</family>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
          <property name="styleSheet">
           <string notr="true">QLineEdit{
+	color:white;
 	border:none;
 	background:transparent;
 	border-radius:5px;

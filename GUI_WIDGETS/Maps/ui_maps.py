@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'mapsvScahR.ui'
+## Form generated from reading UI file 'mapsckSSGu.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -27,7 +27,8 @@ class Ui_Maps_widget(object):
         self.stackedWidget.setObjectName(u"stackedWidget")
         self.stackedWidget.setGeometry(QRect(100, 170, 600, 200))
         font = QFont()
-        font.setPointSize(17)
+        font.setFamily(u"Bahnschrift SemiLight SemiConde")
+        font.setPointSize(12)
         self.stackedWidget.setFont(font)
         self.page_select = QWidget()
         self.page_select.setObjectName(u"page_select")
@@ -156,7 +157,9 @@ class Ui_Maps_widget(object):
         self.mapsDirectionFromInput = QLineEdit(self.frame_11)
         self.mapsDirectionFromInput.setObjectName(u"mapsDirectionFromInput")
         self.mapsDirectionFromInput.setMinimumSize(QSize(0, 50))
+        self.mapsDirectionFromInput.setFont(font)
         self.mapsDirectionFromInput.setStyleSheet(u"QLineEdit{\n"
+"	color:white;\n"
 "	border:none;\n"
 "	background:transparent;\n"
 "	border-radius:5px;\n"
@@ -201,7 +204,9 @@ class Ui_Maps_widget(object):
         self.mapsDirectionToInput = QLineEdit(self.frame_12)
         self.mapsDirectionToInput.setObjectName(u"mapsDirectionToInput")
         self.mapsDirectionToInput.setMinimumSize(QSize(0, 50))
+        self.mapsDirectionToInput.setFont(font)
         self.mapsDirectionToInput.setStyleSheet(u"QLineEdit{\n"
+"	color:white;\n"
 "	border:none;\n"
 "	background:transparent;\n"
 "	border-radius:5px;\n"
@@ -298,7 +303,9 @@ class Ui_Maps_widget(object):
         self.mapsHomeUbicationInput = QLineEdit(self.frame_13)
         self.mapsHomeUbicationInput.setObjectName(u"mapsHomeUbicationInput")
         self.mapsHomeUbicationInput.setMinimumSize(QSize(0, 50))
+        self.mapsHomeUbicationInput.setFont(font)
         self.mapsHomeUbicationInput.setStyleSheet(u"QLineEdit{\n"
+"	color:white;\n"
 "	border:none;\n"
 "	background:transparent;\n"
 "	border-radius:5px;\n"
@@ -344,7 +351,7 @@ class Ui_Maps_widget(object):
 
         self.retranslateUi(Maps_widget)
 
-        self.stackedWidget.setCurrentIndex(2)
+        self.stackedWidget.setCurrentIndex(0)
 
 
         QMetaObject.connectSlotsByName(Maps_widget)
@@ -352,6 +359,18 @@ class Ui_Maps_widget(object):
 
     def retranslateUi(self, Maps_widget):
         Maps_widget.setWindowTitle(QCoreApplication.translate("Maps_widget", u"Form", None))
+        self.stackedWidget.setStyleSheet(QCoreApplication.translate("Maps_widget", u"QLineEdit{\n"
+"	color:white;\n"
+"	border:none;\n"
+"	background:transparent;\n"
+"	border-radius:5px;\n"
+"	border-top-left-radius:0;\n"
+"	border-bottom-left-radius:0;\n"
+"}\n"
+"\n"
+"QLineEdit:focus{\n"
+"	background:rgba(57,57,57,150)\n"
+"}", None))
         self.label_5.setText(QCoreApplication.translate("Maps_widget", u"Map", None))
         self.mapsSelectMapButton.setText("")
         self.label_8.setText(QCoreApplication.translate("Maps_widget", u"Directions", None))
