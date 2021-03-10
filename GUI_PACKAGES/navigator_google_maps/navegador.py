@@ -58,10 +58,6 @@ class Navegador:
 		self.instrucciones_viaje = self.driver.find_elements_by_class_name(self.instructions_class_name)
 		self.instrucciones_titles = self.driver.find_elements_by_class_name(self.instructionsTitle_class_name)
 
-		print('****************** Instructions list ******************')
-		for i in self.instrucciones_viaje:
-			print(i)
-		print('*******************************************************')
 
 
 	# STARTING

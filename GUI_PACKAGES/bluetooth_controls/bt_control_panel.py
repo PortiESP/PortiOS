@@ -33,7 +33,6 @@ class BT_Control_Panel:
 		for i in subprocess.run(['amixer controls'], capture_output=True, text=True, shell=True).stdout.split('\n'):
 			if re.findall('Master Playback Volume', i):
 				self.numid = i.split(',')[0][-1]
-				print('Volulume id: ', self.numid)
 
 		self.AMIXER_MAX = 65536
 				
