@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'mapsFlbMPr.ui'
+## Form generated from reading UI file 'mapsfhefOy.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -327,6 +327,14 @@ class Ui_Maps_widget(object):
 "border:none;")
         self.line_3.setFrameShadow(QFrame.Plain)
         self.line_3.setFrameShape(QFrame.HLine)
+        self.mapsTitleCloseButton = QPushButton(self.frame_title)
+        self.mapsTitleCloseButton.setObjectName(u"mapsTitleCloseButton")
+        self.mapsTitleCloseButton.setGeometry(QRect(540, 20, 50, 50))
+        self.mapsTitleCloseButton.setStyleSheet(u"border:none;")
+        icon2 = QIcon()
+        icon2.addFile(u":/icons_red/Resources/Icons/png-red/fi-rr-cross-small.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.mapsTitleCloseButton.setIcon(icon2)
+        self.mapsTitleCloseButton.setIconSize(QSize(30, 30))
 
         self.retranslateUi(Maps_widget)
 

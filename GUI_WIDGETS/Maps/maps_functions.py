@@ -9,6 +9,8 @@ class Maps_funcs:
 
 		self.GUI_Maps.navigator = None
 		self.GUI_Maps.navThread = None
+		
+		self.GUI_Maps.mapsTitleCloseButton.clicked.connect(lambda: self.GUI_Maps.stackedWidget.setCurrentIndex(0))
 
 		self.GUI_Maps.mapsSelectMapButton.clicked.connect(Maps_funcs.openNavigator)
 		self.GUI_Maps.mapsSelectDirectionsButton.clicked.connect(lambda: self.GUI_Maps.stackedWidget.setCurrentIndex(1))
