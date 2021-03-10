@@ -8,7 +8,7 @@
     <x>0</x>
     <y>0</y>
     <width>800</width>
-    <height>480</height>
+    <height>481</height>
    </rect>
   </property>
   <widget class="QWidget" name="centralwidget">
@@ -510,6 +510,7 @@ QPushButton:hover{
     <widget class="QWidget" name="page_settings"/>
     <widget class="QWidget" name="page_apps"/>
     <widget class="QWidget" name="page_leds"/>
+    <widget class="QWidget" name="page_maps"/>
    </widget>
    <widget class="QFrame" name="frame_volume">
     <property name="geometry">

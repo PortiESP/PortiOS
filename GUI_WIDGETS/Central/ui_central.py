@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'centralncVhGQ.ui'
+## Form generated from reading UI file 'centralOEMQSq.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -18,7 +18,7 @@ class Ui_Central(object):
     def setupUi(self, Central):
         if not Central.objectName():
             Central.setObjectName(u"Central")
-        Central.resize(800, 480)
+        Central.resize(800, 481)
         self.centralwidget = QWidget(Central)
         self.centralwidget.setObjectName(u"centralwidget")
         self.frame_logo = QFrame(self.centralwidget)
@@ -218,6 +218,9 @@ class Ui_Central(object):
         self.page_leds = QWidget()
         self.page_leds.setObjectName(u"page_leds")
         self.appsWidget.addWidget(self.page_leds)
+        self.page_maps = QWidget()
+        self.page_maps.setObjectName(u"page_maps")
+        self.appsWidget.addWidget(self.page_maps)
         self.frame_volume = QFrame(self.centralwidget)
         self.frame_volume.setObjectName(u"frame_volume")
         self.frame_volume.setGeometry(QRect(652, 200, 40, 200))

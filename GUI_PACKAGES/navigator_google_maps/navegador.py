@@ -31,9 +31,9 @@ class Navegador:
 		self.resetItemStyles =  {'background' : 'none',
 									'border' : 'none'}
 
-
+	def abrir_maps(self, url='https://www.google.es/maps/dir/'):
 		# Starting maps on chrome
-		self.driver.get('https://www.google.es/maps/dir/')
+		self.driver.get(url)
 
 		# Get window sizes
 		self.windowHeight = self.driver.get_window_size()['height']
@@ -69,7 +69,7 @@ class Navegador:
 		origen = origen.replace(' ','+')
 		destino = destino.replace(' ','+')
 		url_map = 'https://www.google.es/maps/dir/'+origen+'/'+destino
-		self.driver.get(url_map)
+		self.abrir_maps(url=url_map)
 
 	def iniciar_viaje(self):
 

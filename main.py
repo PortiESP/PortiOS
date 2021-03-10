@@ -69,6 +69,7 @@ class Main_GUI:
 		self.GUI_Leds = None
 		self.GUI_Player = None
 		self.GUI_Settings = None
+		self.GUI_Maps = None
 
 		# Widget funcs setup
 		Central_funcs.centralSetup(self)
@@ -77,6 +78,7 @@ class Main_GUI:
 		Leds_funcs.ledsSetup(self)
 		Player_funcs.playerSetup(self)
 		Settings_funcs.settingsSetup(self)
+		Maps_funcs.mapSetup(self)
 
 
 

@@ -54,6 +54,8 @@
     <file>Resources/Icons/png-red/sound-waves.png</file>
   </qresource>
   <qresource prefix="icons_white">
+    <file>Resources/Icons/png-white/direction.png</file>
+    <file>Resources/Icons/png-white/home.png</file>
     <file>Resources/Icons/png-white/chrome (1).png</file>
     <file>Resources/Icons/png-white/cloud.png</file>
     <file>Resources/Icons/png-white/fi-rr-angle-double-small-left.png</file>
