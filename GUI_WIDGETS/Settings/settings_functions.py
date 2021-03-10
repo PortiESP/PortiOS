@@ -56,7 +56,7 @@ class Settings_funcs:
 		Settings_funcs.wifiSetup(self)
 		Settings_funcs.btSetup(self)
 		Settings_funcs.remoteSetup(self)
-		Settings_funcs.remoteSetup(self)
+		Settings_funcs.navigatorSetup(self)
 		Settings_funcs.servicesStatusSetup(self)
 		Settings_funcs.gpioSetup(self)
 		Settings_funcs.systemInfoSetup(self)
