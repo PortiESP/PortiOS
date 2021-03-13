@@ -9,7 +9,10 @@ class Main_GUI:
 		
 
 		# Setting fullscreen
-		# self.win.showFullScreen()		
+		# self.win.showFullScreen()	
+
+		# Settings mouse
+		self.win.setCursor(Qt.BlankCursor) 
 
 		# Check if config file exists
 		if not os.path.exists('config.txt'):
