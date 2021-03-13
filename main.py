@@ -12,8 +12,11 @@ class Main_GUI:
 		# self.win.showFullScreen()	
 
 		# Settings mouse
-		self.win.setCursor(Qt.BlankCursor) 
+		# self.win.setCursor(Qt.BlankCursor) 
 
+		# Main loog Hz
+		self.mainLoopHz = 1
+		
 		# Check if config file exists
 		if not os.path.exists('config.txt'):
 			with open('config.txt', 'w'):
@@ -23,8 +26,6 @@ class Main_GUI:
 		self.config = {}
 		self.setupConfig()
 
-		# Main loog Hz
-		self.mainLoopHz = 1
 
 		# Setting media player
 		self.isConnectedDevice = False
