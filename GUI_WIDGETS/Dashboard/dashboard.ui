@@ -206,7 +206,7 @@ QLabel{
       <property name="styleSheet">
        <string notr="true">QFrame{
 	border:none;
-	background-color: qconicalgradient(cx:0.5, cy:0.5, angle:240,stop:1.0 rgba(0,0,0,0),  stop:1.0 rgba(255, 170, 0, 255), stop:1.0 rgba(0, 0, 0, 0));
+	background-color: qconicalgradient(cx:0.5, cy:0.5, angle:240,stop:1.0 rgba(0,0,0,0),  stop:1.0 rgba(255, 0, 0, 255), stop:1.0 rgba(0, 0, 0, 0));
 
 	border-radius:125px;
 }
@@ -250,40 +250,6 @@ QLabel{
       <height>300</height>
      </rect>
     </property>
-    <widget class="QLabel" name="label_player_logo">
-     <property name="geometry">
-      <rect>
-       <x>70</x>
-       <y>0</y>
-       <width>140</width>
-       <height>140</height>
-      </rect>
-     </property>
-     <property name="minimumSize">
-      <size>
-       <width>140</width>
-       <height>140</height>
-      </size>
-     </property>
-     <property name="maximumSize">
-      <size>
-       <width>140</width>
-       <height>140</height>
-      </size>
-     </property>
-     <property name="text">
-      <string/>
-     </property>
-     <property name="pixmap">
-      <pixmap resource="../../resources.qrc">:/styles/Resources/spotify-logo.png</pixmap>
-     </property>
-     <property name="scaledContents">
-      <bool>true</bool>
-     </property>
-     <property name="margin">
-      <number>0</number>
-     </property>
-    </widget>
     <widget class="QFrame" name="frame_media_data">
      <property name="geometry">
       <rect>
@@ -483,10 +449,42 @@ QSlider::sub-page:horizontal{
       </item>
      </layout>
     </widget>
-    <zorder>label_player_logo</zorder>
+    <widget class="QLabel" name="label_albumPhoto">
+     <property name="geometry">
+      <rect>
+       <x>70</x>
+       <y>0</y>
+       <width>140</width>
+       <height>140</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>140</width>
+       <height>140</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>140</width>
+       <height>140</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: qlineargradient(spread:pad, x1:0.5, y1:0, x2:0.5, y2:1, stop:0.0681818 rgba(255, 255, 255, 255), stop:1 rgba(152, 152, 152, 255));
+border-radius:1px;</string>
+     </property>
+     <property name="pixmap">
+      <pixmap resource="../../resources.qrc">:/icons_black/Resources/Icons/png-black/musical-note (1).png</pixmap>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
     <zorder>frame_media_data</zorder>
     <zorder>frame_durationLabels</zorder>
     <zorder>slider_duration</zorder>
+    <zorder>label_albumPhoto</zorder>
    </widget>
   </widget>
  </widget>

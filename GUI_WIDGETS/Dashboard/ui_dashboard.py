@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'dashboardnhZwyi.ui'
+## Form generated from reading UI file 'dashboardNWgCby.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -105,7 +105,7 @@ class Ui_Dashboard_widget(object):
         self.needle.setGeometry(QRect(10, 10, 250, 250))
         self.needle.setStyleSheet(u"QFrame{\n"
 "	border:none;\n"
-"	background-color: qconicalgradient(cx:0.5, cy:0.5, angle:240,stop:1.0 rgba(0,0,0,0),  stop:1.0 rgba(255, 170, 0, 255), stop:1.0 rgba(0, 0, 0, 0));\n"
+"	background-color: qconicalgradient(cx:0.5, cy:0.5, angle:240,stop:1.0 rgba(0,0,0,0),  stop:1.0 rgba(255, 0, 0, 255), stop:1.0 rgba(0, 0, 0, 0));\n"
 "\n"
 "	border-radius:125px;\n"
 "}\n"
@@ -129,14 +129,6 @@ class Ui_Dashboard_widget(object):
         self.frame_player = QFrame(self.frame_dashboard)
         self.frame_player.setObjectName(u"frame_player")
         self.frame_player.setGeometry(QRect(470, 50, 280, 300))
-        self.label_player_logo = QLabel(self.frame_player)
-        self.label_player_logo.setObjectName(u"label_player_logo")
-        self.label_player_logo.setGeometry(QRect(70, 0, 140, 140))
-        self.label_player_logo.setMinimumSize(QSize(140, 140))
-        self.label_player_logo.setMaximumSize(QSize(140, 140))
-        self.label_player_logo.setPixmap(QPixmap(u":/styles/Resources/spotify-logo.png"))
-        self.label_player_logo.setScaledContents(True)
-        self.label_player_logo.setMargin(0)
         self.frame_media_data = QFrame(self.frame_player)
         self.frame_media_data.setObjectName(u"frame_media_data")
         self.frame_media_data.setGeometry(QRect(0, 140, 280, 120))
@@ -224,10 +216,19 @@ class Ui_Dashboard_widget(object):
 
         self.horizontalLayout_4.addWidget(self.label_duration)
 
-        self.label_player_logo.raise_()
+        self.label_albumPhoto = QLabel(self.frame_player)
+        self.label_albumPhoto.setObjectName(u"label_albumPhoto")
+        self.label_albumPhoto.setGeometry(QRect(70, 0, 140, 140))
+        self.label_albumPhoto.setMinimumSize(QSize(140, 140))
+        self.label_albumPhoto.setMaximumSize(QSize(140, 140))
+        self.label_albumPhoto.setStyleSheet(u"background-color: qlineargradient(spread:pad, x1:0.5, y1:0, x2:0.5, y2:1, stop:0.0681818 rgba(255, 255, 255, 255), stop:1 rgba(152, 152, 152, 255));\n"
+"border-radius:1px;")
+        self.label_albumPhoto.setPixmap(QPixmap(u":/icons_black/Resources/Icons/png-black/musical-note (1).png"))
+        self.label_albumPhoto.setAlignment(Qt.AlignCenter)
         self.frame_media_data.raise_()
         self.frame_durationLabels.raise_()
         self.slider_duration.raise_()
+        self.label_albumPhoto.raise_()
 
         self.retranslateUi(Dashboard_widget)
 
@@ -238,7 +239,6 @@ class Ui_Dashboard_widget(object):
         Dashboard_widget.setWindowTitle(QCoreApplication.translate("Dashboard_widget", u"Form", None))
         self.label_kmh.setText(QCoreApplication.translate("Dashboard_widget", u"KM/H ", None))
         self.label_vel.setText(QCoreApplication.translate("Dashboard_widget", u"0", None))
-        self.label_player_logo.setText("")
         self.label_cancion.setText(QCoreApplication.translate("Dashboard_widget", u"No data", None))
         self.label_artista.setText(QCoreApplication.translate("Dashboard_widget", u"No data", None))
         self.label_currentTime.setText(QCoreApplication.translate("Dashboard_widget", u"0:00", None))

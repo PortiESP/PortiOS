@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'design_settingstJPtsQ.ui'
+## Form generated from reading UI file 'design_settingsxrPtIN.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -291,7 +291,7 @@ class Ui_Settings_widget(object):
         self.scrollArea_wifi.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignTop)
         self.scrollAreaWidgetContents_8 = QWidget()
         self.scrollAreaWidgetContents_8.setObjectName(u"scrollAreaWidgetContents_8")
-        self.scrollAreaWidgetContents_8.setGeometry(QRect(0, 0, 390, 280))
+        self.scrollAreaWidgetContents_8.setGeometry(QRect(0, 0, 398, 280))
         sizePolicy = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Preferred)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -845,9 +845,9 @@ class Ui_Settings_widget(object):
 "	\n"
 "}")
         self.stackedWidget_settings.addWidget(self.page_remote)
-        self.page = QWidget()
-        self.page.setObjectName(u"page")
-        self.frame_9 = QFrame(self.page)
+        self.page_navigator = QWidget()
+        self.page_navigator.setObjectName(u"page_navigator")
+        self.frame_9 = QFrame(self.page_navigator)
         self.frame_9.setObjectName(u"frame_9")
         self.frame_9.setGeometry(QRect(0, 0, 400, 60))
         self.label_33 = QLabel(self.frame_9)
@@ -863,7 +863,7 @@ class Ui_Settings_widget(object):
 "border:none;")
         self.line_12.setFrameShadow(QFrame.Plain)
         self.line_12.setFrameShape(QFrame.HLine)
-        self.frame_11 = QFrame(self.page)
+        self.frame_11 = QFrame(self.page_navigator)
         self.frame_11.setObjectName(u"frame_11")
         self.frame_11.setGeometry(QRect(0, 60, 370, 40))
         self.bearing_navigatorHomeInput = QLineEdit(self.frame_11)
@@ -906,7 +906,7 @@ class Ui_Settings_widget(object):
 "}")
         self.bearing_navigatorHomeButton.setIcon(icon)
         self.bearing_navigatorHomeButton.setIconSize(QSize(18, 18))
-        self.stackedWidget_settings.addWidget(self.page)
+        self.stackedWidget_settings.addWidget(self.page_navigator)
         self.page_status = QWidget()
         self.page_status.setObjectName(u"page_status")
         self.p_status_title = QFrame(self.page_status)
