@@ -512,7 +512,7 @@ QScrollBar:vertical {
      </rect>
     </property>
     <property name="currentIndex">
-     <number>9</number>
+     <number>3</number>
     </property>
     <widget class="QWidget" name="page_start">
      <widget class="QFrame" name="p_start_title">
@@ -2120,6 +2120,158 @@ QLabel{
         </widget>
        </widget>
        <widget class="QCheckBox" name="bearing_remoteMultimediaCheckbox">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>60</width>
+          <height>40</height>
+         </rect>
+        </property>
+        <property name="focusPolicy">
+         <enum>Qt::NoFocus</enum>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QCheckBox{
+	background:none;
+}
+QCheckBox::indicator{
+	height:20px;
+	width:20px;
+	border-radius:10px;
+
+}
+QCheckBox::indicator:checked{
+	margin-left:6px;
+	background-color: rgb(255, 0, 0);
+
+}
+QCheckBox::indicator:unchecked{
+	margin-left:30px;
+	background:rgb(54, 0, 0);
+
+	
+}</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+      </widget>
+     </widget>
+     <widget class="QFrame" name="frame_4">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>100</y>
+        <width>370</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <widget class="QLabel" name="label_28">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>5</y>
+         <width>240</width>
+         <height>30</height>
+        </rect>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>250</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <family>Bahnschrift SemiLight</family>
+         <pointsize>13</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color:white;</string>
+       </property>
+       <property name="text">
+        <string>Enable buttons</string>
+       </property>
+      </widget>
+      <widget class="QFrame" name="frame_cb_6">
+       <property name="geometry">
+        <rect>
+         <x>310</x>
+         <y>0</y>
+         <width>60</width>
+         <height>40</height>
+        </rect>
+       </property>
+       <widget class="QFrame" name="a_border_3">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>5</y>
+          <width>60</width>
+          <height>30</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QFrame{
+	border-radius:15px;
+	border:2px solid gray; 
+	border-color: rgb(211, 211, 211);
+}
+QLabel{
+	border:none; 
+	color:white;
+	margin-bottom:1px;
+}</string>
+        </property>
+        <widget class="QLabel" name="label_30">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>0</y>
+           <width>30</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Bahnschrift SemiBold</family>
+           <pointsize>14</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>O</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_34">
+         <property name="geometry">
+          <rect>
+           <x>30</x>
+           <y>0</y>
+           <width>30</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Bahnschrift SemiBold</family>
+           <pointsize>14</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>I</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QCheckBox" name="bearing_remoteButtonsCheckbox">
         <property name="geometry">
          <rect>
           <x>0</x>
@@ -4476,130 +4628,6 @@ QCheckBox::indicator:unchecked{
        </widget>
       </widget>
      </widget>
-    </widget>
-   </widget>
-  </widget>
-  <widget class="QFrame" name="frame_4">
-   <property name="geometry">
-    <rect>
-     <x>350</x>
-     <y>180</y>
-     <width>370</width>
-     <height>40</height>
-    </rect>
-   </property>
-   <widget class="QFrame" name="frame_cb_5">
-    <property name="geometry">
-     <rect>
-      <x>310</x>
-      <y>0</y>
-      <width>60</width>
-      <height>40</height>
-     </rect>
-    </property>
-    <widget class="QFrame" name="a_border_2">
-     <property name="geometry">
-      <rect>
-       <x>0</x>
-       <y>5</y>
-       <width>60</width>
-       <height>30</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QFrame{
-	border-radius:15px;
-	border:2px solid gray; 
-	border-color: rgb(211, 211, 211);
-}
-QLabel{
-	border:none; 
-	color:white;
-	margin-bottom:1px;
-}</string>
-     </property>
-     <widget class="QLabel" name="label_20">
-      <property name="geometry">
-       <rect>
-        <x>0</x>
-        <y>0</y>
-        <width>30</width>
-        <height>30</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <family>Bahnschrift SemiBold</family>
-        <pointsize>14</pointsize>
-       </font>
-      </property>
-      <property name="text">
-       <string>O</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignCenter</set>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_24">
-      <property name="geometry">
-       <rect>
-        <x>30</x>
-        <y>0</y>
-        <width>30</width>
-        <height>30</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <family>Bahnschrift SemiBold</family>
-        <pointsize>14</pointsize>
-       </font>
-      </property>
-      <property name="text">
-       <string>I</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignCenter</set>
-      </property>
-     </widget>
-    </widget>
-    <widget class="QCheckBox" name="bearing_remoteButtonsCheckbox">
-     <property name="geometry">
-      <rect>
-       <x>0</x>
-       <y>0</y>
-       <width>60</width>
-       <height>40</height>
-      </rect>
-     </property>
-     <property name="focusPolicy">
-      <enum>Qt::NoFocus</enum>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QCheckBox{
-	background:none;
-}
-QCheckBox::indicator{
-	height:20px;
-	width:20px;
-	border-radius:10px;
-
-}
-QCheckBox::indicator:checked{
-	margin-left:6px;
-	background-color: rgb(255, 0, 0);
-
-}
-QCheckBox::indicator:unchecked{
-	margin-left:30px;
-	background:rgb(54, 0, 0);
-
-	
-}</string>
-     </property>
-     <property name="text">
-      <string/>
-     </property>
     </widget>
    </widget>
   </widget>

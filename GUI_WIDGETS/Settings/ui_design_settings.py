@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'design_settingsytwRBY.ui'
+## Form generated from reading UI file 'design_settingsiQtRsl.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.14.1
 ##
@@ -847,6 +847,65 @@ class Ui_Settings_widget(object):
 "\n"
 "	\n"
 "}")
+        self.frame_4 = QFrame(self.page_remote)
+        self.frame_4.setObjectName(u"frame_4")
+        self.frame_4.setGeometry(QRect(0, 100, 370, 40))
+        self.label_28 = QLabel(self.frame_4)
+        self.label_28.setObjectName(u"label_28")
+        self.label_28.setGeometry(QRect(10, 5, 240, 30))
+        self.label_28.setMaximumSize(QSize(250, 16777215))
+        self.label_28.setFont(font1)
+        self.label_28.setStyleSheet(u"color:white;")
+        self.frame_cb_6 = QFrame(self.frame_4)
+        self.frame_cb_6.setObjectName(u"frame_cb_6")
+        self.frame_cb_6.setGeometry(QRect(310, 0, 60, 40))
+        self.a_border_3 = QFrame(self.frame_cb_6)
+        self.a_border_3.setObjectName(u"a_border_3")
+        self.a_border_3.setGeometry(QRect(0, 5, 60, 30))
+        self.a_border_3.setStyleSheet(u"QFrame{\n"
+"	border-radius:15px;\n"
+"	border:2px solid gray; \n"
+"	border-color: rgb(211, 211, 211);\n"
+"}\n"
+"QLabel{\n"
+"	border:none; \n"
+"	color:white;\n"
+"	margin-bottom:1px;\n"
+"}")
+        self.label_30 = QLabel(self.a_border_3)
+        self.label_30.setObjectName(u"label_30")
+        self.label_30.setGeometry(QRect(0, 0, 30, 30))
+        self.label_30.setFont(font2)
+        self.label_30.setAlignment(Qt.AlignCenter)
+        self.label_34 = QLabel(self.a_border_3)
+        self.label_34.setObjectName(u"label_34")
+        self.label_34.setGeometry(QRect(30, 0, 30, 30))
+        self.label_34.setFont(font2)
+        self.label_34.setAlignment(Qt.AlignCenter)
+        self.bearing_remoteButtonsCheckbox = QCheckBox(self.frame_cb_6)
+        self.bearing_remoteButtonsCheckbox.setObjectName(u"bearing_remoteButtonsCheckbox")
+        self.bearing_remoteButtonsCheckbox.setGeometry(QRect(0, 0, 60, 40))
+        self.bearing_remoteButtonsCheckbox.setFocusPolicy(Qt.NoFocus)
+        self.bearing_remoteButtonsCheckbox.setStyleSheet(u"QCheckBox{\n"
+"	background:none;\n"
+"}\n"
+"QCheckBox::indicator{\n"
+"	height:20px;\n"
+"	width:20px;\n"
+"	border-radius:10px;\n"
+"\n"
+"}\n"
+"QCheckBox::indicator:checked{\n"
+"	margin-left:6px;\n"
+"	background-color: rgb(255, 0, 0);\n"
+"\n"
+"}\n"
+"QCheckBox::indicator:unchecked{\n"
+"	margin-left:30px;\n"
+"	background:rgb(54, 0, 0);\n"
+"\n"
+"	\n"
+"}")
         self.stackedWidget_settings.addWidget(self.page_remote)
         self.page_navigator = QWidget()
         self.page_navigator.setObjectName(u"page_navigator")
@@ -1657,63 +1716,10 @@ class Ui_Settings_widget(object):
 "	\n"
 "}")
         self.stackedWidget_settings.addWidget(self.page_advanced)
-        self.frame_4 = QFrame(Settings_widget)
-        self.frame_4.setObjectName(u"frame_4")
-        self.frame_4.setGeometry(QRect(350, 180, 370, 40))
-        self.frame_cb_5 = QFrame(self.frame_4)
-        self.frame_cb_5.setObjectName(u"frame_cb_5")
-        self.frame_cb_5.setGeometry(QRect(310, 0, 60, 40))
-        self.a_border_2 = QFrame(self.frame_cb_5)
-        self.a_border_2.setObjectName(u"a_border_2")
-        self.a_border_2.setGeometry(QRect(0, 5, 60, 30))
-        self.a_border_2.setStyleSheet(u"QFrame{\n"
-"	border-radius:15px;\n"
-"	border:2px solid gray; \n"
-"	border-color: rgb(211, 211, 211);\n"
-"}\n"
-"QLabel{\n"
-"	border:none; \n"
-"	color:white;\n"
-"	margin-bottom:1px;\n"
-"}")
-        self.label_20 = QLabel(self.a_border_2)
-        self.label_20.setObjectName(u"label_20")
-        self.label_20.setGeometry(QRect(0, 0, 30, 30))
-        self.label_20.setFont(font2)
-        self.label_20.setAlignment(Qt.AlignCenter)
-        self.label_24 = QLabel(self.a_border_2)
-        self.label_24.setObjectName(u"label_24")
-        self.label_24.setGeometry(QRect(30, 0, 30, 30))
-        self.label_24.setFont(font2)
-        self.label_24.setAlignment(Qt.AlignCenter)
-        self.bearing_remoteButtonsCheckbox = QCheckBox(self.frame_cb_5)
-        self.bearing_remoteButtonsCheckbox.setObjectName(u"bearing_remoteButtonsCheckbox")
-        self.bearing_remoteButtonsCheckbox.setGeometry(QRect(0, 0, 60, 40))
-        self.bearing_remoteButtonsCheckbox.setFocusPolicy(Qt.NoFocus)
-        self.bearing_remoteButtonsCheckbox.setStyleSheet(u"QCheckBox{\n"
-"	background:none;\n"
-"}\n"
-"QCheckBox::indicator{\n"
-"	height:20px;\n"
-"	width:20px;\n"
-"	border-radius:10px;\n"
-"\n"
-"}\n"
-"QCheckBox::indicator:checked{\n"
-"	margin-left:6px;\n"
-"	background-color: rgb(255, 0, 0);\n"
-"\n"
-"}\n"
-"QCheckBox::indicator:unchecked{\n"
-"	margin-left:30px;\n"
-"	background:rgb(54, 0, 0);\n"
-"\n"
-"	\n"
-"}")
 
         self.retranslateUi(Settings_widget)
 
-        self.stackedWidget_settings.setCurrentIndex(9)
+        self.stackedWidget_settings.setCurrentIndex(3)
 
 
         QMetaObject.connectSlotsByName(Settings_widget)
@@ -1768,6 +1774,10 @@ class Ui_Settings_widget(object):
         self.label_10.setText(QCoreApplication.translate("Settings_widget", u"O", None))
         self.label_12.setText(QCoreApplication.translate("Settings_widget", u"I", None))
         self.bearing_remoteMultimediaCheckbox.setText("")
+        self.label_28.setText(QCoreApplication.translate("Settings_widget", u"Enable buttons", None))
+        self.label_30.setText(QCoreApplication.translate("Settings_widget", u"O", None))
+        self.label_34.setText(QCoreApplication.translate("Settings_widget", u"I", None))
+        self.bearing_remoteButtonsCheckbox.setText("")
         self.label_33.setText(QCoreApplication.translate("Settings_widget", u"Navigator", None))
         self.label_17.setText(QCoreApplication.translate("Settings_widget", u"Set home", None))
         self.bearing_navigatorHomeButton.setText("")
@@ -1823,8 +1833,5 @@ class Ui_Settings_widget(object):
         self.label_118.setText(QCoreApplication.translate("Settings_widget", u"O", None))
         self.label_119.setText(QCoreApplication.translate("Settings_widget", u"I", None))
         self.bearing_advancedGaugePowerCheckbox.setText("")
-        self.label_20.setText(QCoreApplication.translate("Settings_widget", u"O", None))
-        self.label_24.setText(QCoreApplication.translate("Settings_widget", u"I", None))
-        self.bearing_remoteButtonsCheckbox.setText("")
     # retranslateUi
 
