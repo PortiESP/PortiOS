@@ -239,6 +239,7 @@ class Settings_funcs:
 				print(f"Button: {button}")
 
 			for pin in self.pinsButtons:
+				gp.setup(pin, gp.IN)
 				gp.add_event_detect(pin, gp.RISING, callback=callbackButtons, args=((pin,)))
 
 		def stopButtons():

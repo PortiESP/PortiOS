@@ -252,6 +252,7 @@ class Main_GUI:
 		return out
 
 	def setConfig(self, key, value):
+		print(f"[+] Set config {key} = {value}")
 		self.config[key] = value
 		with open('config.txt', 'w') as file:
 			lines = []
