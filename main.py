@@ -276,78 +276,80 @@ class Main_GUI:
 
 
 	def mediaPlayerThreadFunc(self):
+		try:
+			while 1:
+				time.sleep((1/self.mainLoopHz))
 
-		while 1:
-			time.sleep((1/self.mainLoopHz))
-
-			##################### CONNECTIONS MANAGER ###################################
-			try:
-				checkDevice = self.BTController.checkConnectedDevices()
-			except dbus.exceptions.DBusException:
+				##################### CONNECTIONS MANAGER ###################################
 				try:
-					self.BTController = BT_Control_Panel()
-				except:
-					print('No BT object available')
+					checkDevice = self.BTController.checkConnectedDevices()
+				except dbus.exceptions.DBusException:
+					try:
+						self.BTController = BT_Control_Panel()
+					except:
+						print('No BT object available')
 
-			# Check for connected devices
-			# Setting BT status disconnected
-			if self.isConnectedDevice == True and checkDevice == False:
-				self.isConnectedDevice = False
-				icon = QIcon()
-				icon.addFile(u":/bt_icons/Resources/Icons/bt_states/bluetooth_gray.png", QSize(), QIcon.Normal, QIcon.Off)
-				self.GUI_Central.bluetoothStatusButton.setIcon(icon)
-				continue
+				# Check for connected devices
+				# Setting BT status disconnected
+				if self.isConnectedDevice == True and checkDevice == False:
+					self.isConnectedDevice = False
+					icon = QIcon()
+					icon.addFile(u":/bt_icons/Resources/Icons/bt_states/bluetooth_gray.png", QSize(), QIcon.Normal, QIcon.Off)
+					self.GUI_Central.bluetoothStatusButton.setIcon(icon)
+					continue
 
-			# Setup on new connection
-			if self.isConnectedDevice == False and checkDevice == True:
-				time.sleep(1)
-				self.BTController.setupInterfaces()
-				self.isConnectedDevice = True
-				# BT status icon on
-				icon = QIcon()
-				icon.addFile(u":/bt_icons/Resources/Icons/bt_states/bluetooth_blue.png", QSize(), QIcon.Normal, QIcon.Off)
-				self.GUI_Central.bluetoothStatusButton.setIcon(icon)
-				self.GUI_Central.slider_volume.setValue(self.BTController.get_volume_data())
-				if str(self.BTController.get_player_data('Status')) == 'playing':
-					self.toggle_musicStatus(setStatus='playing')
-					
-				self.BTController.bus.add_signal_receiver(self.mediaDataChanged, 
-											dbus_interface = "org.freedesktop.DBus.Properties",
-            								signal_name = "PropertiesChanged",
-            								 )
-			###########################################################################
+				# Setup on new connection
+				if self.isConnectedDevice == False and checkDevice == True:
+					time.sleep(1)
+					self.BTController.setupInterfaces()
+					self.isConnectedDevice = True
+					# BT status icon on
+					icon = QIcon()
+					icon.addFile(u":/bt_icons/Resources/Icons/bt_states/bluetooth_blue.png", QSize(), QIcon.Normal, QIcon.Off)
+					self.GUI_Central.bluetoothStatusButton.setIcon(icon)
+					self.GUI_Central.slider_volume.setValue(self.BTController.get_volume_data())
+					if str(self.BTController.get_player_data('Status')) == 'playing':
+						self.toggle_musicStatus(setStatus='playing')
+						
+					self.BTController.bus.add_signal_receiver(self.mediaDataChanged, 
+												dbus_interface = "org.freedesktop.DBus.Properties",
+												signal_name = "PropertiesChanged",
+												)
+				###########################################################################
 
-			# THREAD SETUP
+				# THREAD SETUP
 
-			# Central clock
-			self.GUI_Central.label_clock.setText(time.strftime('%H:%M'))
+				# Central clock
+				self.GUI_Central.label_clock.setText(time.strftime('%H:%M'))
 
-			# Volume
-			# value = self.adcController.read_adc(1, gain=self.GAIN)
-			# fvalue = int(value/self.MAX_ADS_VALUE*127)
-			# if self.volume != fvalue: 
-			# 	print("[+] Set volume to ", fvalue)
-			# 	self.BTController.set_local_volume(fvalue, maxlevel=127)
-			# 	self.volume = fvalue
+				# Volume
+				# value = self.adcController.read_adc(1, gain=self.GAIN)
+				# fvalue = int(value/self.MAX_ADS_VALUE*127)
+				# if self.volume != fvalue: 
+				# 	print("[+] Set volume to ", fvalue)
+				# 	self.BTController.set_local_volume(fvalue, maxlevel=127)
+				# 	self.volume = fvalue
 
-			# When device is connected
-			if checkDevice:
+				# When device is connected
+				if checkDevice:
 
-				# Music current time
-				if str(self.BTController.get_player_data('Status')) == 'playing':
-					# Formatin time 
-					self.currentMusicTime = self.BTController.get_player_data('Position')
-					self.currentMusicTimeF =  self.formatDuration(self.currentMusicTime)
-					
-					# Dashboard player
-					if self.GUI_Central.appsWidget.currentIndex() == 0:
-						self.GUI_Dashboard.label_currentTime.setText(self.currentMusicTimeF)
-						self.GUI_Dashboard.slider_duration.setValue(self.currentMusicTime)
+					# Music current time
+					if str(self.BTController.get_player_data('Status')) == 'playing':
+						# Formatin time 
+						self.currentMusicTime = self.BTController.get_player_data('Position')
+						self.currentMusicTimeF =  self.formatDuration(self.currentMusicTime)
+						
+						# Dashboard player
+						if self.GUI_Central.appsWidget.currentIndex() == 0:
+							self.GUI_Dashboard.label_currentTime.setText(self.currentMusicTimeF)
+							self.GUI_Dashboard.slider_duration.setValue(self.currentMusicTime)
 
-					# Media player
-					elif self.GUI_Central.appsWidget.currentIndex() == 1:
-						self.GUI_Player.label_currentTime.setText(self.currentMusicTimeF)
-						self.GUI_Player.slider_duration.setValue(self.currentMusicTime)
+						# Media player
+						elif self.GUI_Central.appsWidget.currentIndex() == 1:
+							self.GUI_Player.label_currentTime.setText(self.currentMusicTimeF)
+							self.GUI_Player.slider_duration.setValue(self.currentMusicTime)
+		except:
+			if self.DEBUG: print("[!] Error at media player thread")
 
 
 				
