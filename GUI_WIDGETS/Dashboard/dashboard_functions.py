@@ -1,3 +1,4 @@
+from msilib.schema import Error
 from .ui_dashboard import Ui_Dashboard_widget
 from .gauge_functions import *
 from PySide2.QtCore import *
@@ -42,21 +43,23 @@ class Dashboard_funcs:
 	def startGauge(self):
 		def gaugeThreadFunc():
 			if self.DEBUG: print("[$] Gauge started")
+			try:
+				while self.GUI_Dashboard.gaugePower:
+					if self.GUI_Central.appsWidget.currentIndex() == 0:
+						try:
+							value = self.adcController.read_adc(self.GAUGE_ADS_CHANNEL, gain=self.GAIN)
+						except OSError:
+							print('ADS1x15 Not found')
+							continue
+						
+						speed = Dashboard_funcs.mapDigitalSpeed(self, value, maxValue=self.MAX_ADS_VALUE)
 
-			while self.GUI_Dashboard.gaugePower:
-				if self.GUI_Central.appsWidget.currentIndex() == 0:
-					try:
-						value = self.adcController.read_adc(self.GAUGE_ADS_CHANNEL, gain=self.GAIN)
-					except OSError:
-						print('ADS1x15 Not found')
-						continue
-					
-					speed = Dashboard_funcs.mapDigitalSpeed(self, value, maxValue=self.MAX_ADS_VALUE)
-
-					try:
-						Gauge_funcs.setSpeed(self, speed)
-					except:
-						print('Gauge exception')
+						try:
+							Gauge_funcs.setSpeed(self, speed)
+						except:
+							print('Gauge exception')
+			except Error as e:
+				if self.DEBUG: print("[#] Gauge error")
 
 		self.GUI_Dashboard.gaugePower = True
 		self.GUI_Dashboard.gaugeThread = threading.Thread(target=gaugeThreadFunc)
