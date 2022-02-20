@@ -279,6 +279,7 @@ class Main_GUI:
 				if volume != fvalue: 
 					print("[+] Set volume to ", fvalue)
 					self.BTController.set_local_volume(fvalue, maxlevel=127)
+					volume = fvalue
 				time.sleep(0.1)
 				
 
