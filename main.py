@@ -270,6 +270,7 @@ class Main_GUI:
 		def t():
 			print("[$] Started volume thread")
 			volume=0
+			value=0
 			while 1:
 				try:
 					value = self.adcController.read_adc(self.VOLUME_ADS_CHANNEL, gain=2, data_rate=16)
