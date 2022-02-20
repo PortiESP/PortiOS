@@ -323,15 +323,12 @@ class Main_GUI:
 			self.GUI_Central.label_clock.setText(time.strftime('%H:%M'))
 
 			# Volume
-			try:
-				value = self.adcController.read_adc(1, gain=self.GAIN)
-				fvalue = int(value/self.MAX_ADS_VALUE*127)
-				if self.volume != fvalue: 
-					print("[+] Set volume to ", fvalue)
-					self.BTController.set_local_volume(fvalue, maxlevel=127)
-					self.volume = fvalue
-			except:
-				if self.DEBUG: print("[!] ADS Error, volume thread")
+			# value = self.adcController.read_adc(1, gain=self.GAIN)
+			# fvalue = int(value/self.MAX_ADS_VALUE*127)
+			# if self.volume != fvalue: 
+			# 	print("[+] Set volume to ", fvalue)
+			# 	self.BTController.set_local_volume(fvalue, maxlevel=127)
+			# 	self.volume = fvalue
 
 			# When device is connected
 			if checkDevice:
