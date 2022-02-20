@@ -52,8 +52,8 @@ class Dashboard_funcs:
 						continue
 					
 					speed = Dashboard_funcs.mapDigitalSpeed(self, value, maxValue=self.MAX_ADS_VALUE)
-					if self.DEBUG: print("[*] Speed ", value)
-					
+					if self.DEBUG: print("[*] Speed ", speed)
+
 					try:
 						Gauge_funcs.setSpeed(self, speed)
 					except:
