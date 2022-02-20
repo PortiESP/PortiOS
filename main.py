@@ -16,6 +16,9 @@ class Main_GUI:
 
 		# Main loog Hz
 		self.mainLoopHz = 1
+
+		# Debug
+		self.DEBUG = True
 		
 		# Check if config file exists
 		if not os.path.exists('config.txt'):
@@ -89,8 +92,7 @@ class Main_GUI:
 		Settings_funcs.settingsSetup(self)
 		Maps_funcs.mapSetup(self)
 
-		# Debug
-		self.DEBUG = True
+		
 
 		
 
