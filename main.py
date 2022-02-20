@@ -49,6 +49,7 @@ class Main_GUI:
 		# ADC converter controller
 		self.adcController = Adafruit_ADS1x15.ADS1115()
 		self.GAUGE_ADS_CHANNEL = 0
+		self.VOLUME_ADS_CHANNEL = 1
 		self.MAX_ADS_VALUE = 32752
 
 		# IRReceive controller
@@ -262,7 +263,21 @@ class Main_GUI:
 			file.writelines(lines)
 
 
+	def startVolumeThread(self):
+		def t():
+			t1 = time.time()
+			while 1:
+				if time.time() - t1 < 5: continue
+				try:
+					value = self.adcController.read_adc(self.VOLUME_ADS_CHANNEL, gain=2, data_rate=16)
+				except OSError:
+					print('ADS1x15 Not found')
+
+				self.BTController.set_local_volume(value/28000*127, maxlevel=127)
+				t1 = time.time()
 				
+
+		threading.Thread(target=t)
 
 
 
