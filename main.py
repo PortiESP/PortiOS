@@ -268,13 +268,16 @@ class Main_GUI:
 
 	def startVolumeThread(self):
 		def t():
+			volume=0
 			while 1:
 				try:
 					value = self.adcController.read_adc(self.VOLUME_ADS_CHANNEL, gain=2, data_rate=16)
 				except OSError:
 					print('ADS1x15 Not found')
 
-				self.BTController.set_local_volume(value/28000*127, maxlevel=127)
+				if volume != value/28000*127: 
+					print("[+] Set volume to ", value/28000*127)
+					self.BTController.set_local_volume(value/28000*127, maxlevel=127)
 				time.sleep(0.1)
 				
 
