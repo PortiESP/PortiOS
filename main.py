@@ -282,7 +282,7 @@ class Main_GUI:
 				time.sleep(0.1)
 				
 
-		threading.Thread(target=t)
+		threading.Thread(target=t).start()
 
 
 
