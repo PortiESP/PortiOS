@@ -1,22 +1,25 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'design_settingsxrPtIN.ui'
+## Form generated from reading UI file 'design_settingsjTwMvK.ui'
 ##
-## Created by: Qt User Interface Compiler version 5.15.2
+## Created by: Qt User Interface Compiler version 5.14.1
 ##
 ## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
 
-from PySide2.QtCore import *
-from PySide2.QtGui import *
+from PySide2.QtCore import (QCoreApplication, QMetaObject, QObject, QPoint,
+    QRect, QSize, QUrl, Qt)
+from PySide2.QtGui import (QBrush, QColor, QConicalGradient, QCursor, QFont,
+    QFontDatabase, QIcon, QLinearGradient, QPalette, QPainter, QPixmap,
+    QRadialGradient)
 from PySide2.QtWidgets import *
 
 import resources_rc
 
 class Ui_Settings_widget(object):
     def setupUi(self, Settings_widget):
-        if not Settings_widget.objectName():
+        if Settings_widget.objectName():
             Settings_widget.setObjectName(u"Settings_widget")
         Settings_widget.resize(800, 480)
         self.frame_settings = QFrame(Settings_widget)
@@ -291,7 +294,7 @@ class Ui_Settings_widget(object):
         self.scrollArea_wifi.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignTop)
         self.scrollAreaWidgetContents_8 = QWidget()
         self.scrollAreaWidgetContents_8.setObjectName(u"scrollAreaWidgetContents_8")
-        self.scrollAreaWidgetContents_8.setGeometry(QRect(0, 0, 398, 280))
+        self.scrollAreaWidgetContents_8.setGeometry(QRect(0, 0, 390, 280))
         sizePolicy = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Preferred)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -1654,10 +1657,69 @@ class Ui_Settings_widget(object):
 "	\n"
 "}")
         self.stackedWidget_settings.addWidget(self.page_advanced)
+        self.frame_4 = QFrame(Settings_widget)
+        self.frame_4.setObjectName(u"frame_4")
+        self.frame_4.setGeometry(QRect(350, 180, 370, 40))
+        self.label_19 = QLabel(self.frame_4)
+        self.label_19.setObjectName(u"label_19")
+        self.label_19.setGeometry(QRect(10, 5, 240, 30))
+        self.label_19.setMaximumSize(QSize(250, 16777215))
+        self.label_19.setFont(font1)
+        self.label_19.setStyleSheet(u"color:white;")
+        self.frame_cb_5 = QFrame(self.frame_4)
+        self.frame_cb_5.setObjectName(u"frame_cb_5")
+        self.frame_cb_5.setGeometry(QRect(310, 0, 60, 40))
+        self.a_border_2 = QFrame(self.frame_cb_5)
+        self.a_border_2.setObjectName(u"a_border_2")
+        self.a_border_2.setGeometry(QRect(0, 5, 60, 30))
+        self.a_border_2.setStyleSheet(u"QFrame{\n"
+"	border-radius:15px;\n"
+"	border:2px solid gray; \n"
+"	border-color: rgb(211, 211, 211);\n"
+"}\n"
+"QLabel{\n"
+"	border:none; \n"
+"	color:white;\n"
+"	margin-bottom:1px;\n"
+"}")
+        self.label_20 = QLabel(self.a_border_2)
+        self.label_20.setObjectName(u"label_20")
+        self.label_20.setGeometry(QRect(0, 0, 30, 30))
+        self.label_20.setFont(font2)
+        self.label_20.setAlignment(Qt.AlignCenter)
+        self.label_24 = QLabel(self.a_border_2)
+        self.label_24.setObjectName(u"label_24")
+        self.label_24.setGeometry(QRect(30, 0, 30, 30))
+        self.label_24.setFont(font2)
+        self.label_24.setAlignment(Qt.AlignCenter)
+        self.bearing_remoteButtonsCheckbox = QCheckBox(self.frame_cb_5)
+        self.bearing_remoteButtonsCheckbox.setObjectName(u"bearing_remoteButtonsCheckbox")
+        self.bearing_remoteButtonsCheckbox.setGeometry(QRect(0, 0, 60, 40))
+        self.bearing_remoteButtonsCheckbox.setFocusPolicy(Qt.NoFocus)
+        self.bearing_remoteButtonsCheckbox.setStyleSheet(u"QCheckBox{\n"
+"	background:none;\n"
+"}\n"
+"QCheckBox::indicator{\n"
+"	height:20px;\n"
+"	width:20px;\n"
+"	border-radius:10px;\n"
+"\n"
+"}\n"
+"QCheckBox::indicator:checked{\n"
+"	margin-left:6px;\n"
+"	background-color: rgb(255, 0, 0);\n"
+"\n"
+"}\n"
+"QCheckBox::indicator:unchecked{\n"
+"	margin-left:30px;\n"
+"	background:rgb(54, 0, 0);\n"
+"\n"
+"	\n"
+"}")
 
         self.retranslateUi(Settings_widget)
 
-        self.stackedWidget_settings.setCurrentIndex(0)
+        self.stackedWidget_settings.setCurrentIndex(3)
 
 
         QMetaObject.connectSlotsByName(Settings_widget)
@@ -1667,7 +1729,7 @@ class Ui_Settings_widget(object):
         Settings_widget.setWindowTitle(QCoreApplication.translate("Settings_widget", u"Form", None))
         self.bearing_settingsWifi.setText(QCoreApplication.translate("Settings_widget", u"WIFI", None))
         self.bearing_settingsBluetooth.setText(QCoreApplication.translate("Settings_widget", u"BLUETOOTH", None))
-        self.bearing_settingsRemote.setText(QCoreApplication.translate("Settings_widget", u"REMOTE", None))
+        self.bearing_settingsRemote.setText(QCoreApplication.translate("Settings_widget", u"HARDWARE", None))
         self.bearing_settingsNavigator.setText(QCoreApplication.translate("Settings_widget", u"NAVIGATOR", None))
         self.bearing_settingsStatus.setText(QCoreApplication.translate("Settings_widget", u"STATUS", None))
         self.bearing_settingsGpio.setText(QCoreApplication.translate("Settings_widget", u"GPIO", None))
@@ -1707,7 +1769,7 @@ class Ui_Settings_widget(object):
         self.bearing_btManagerButton.setText(QCoreApplication.translate("Settings_widget", u"BTManager", None))
         self.label_26.setText(QCoreApplication.translate("Settings_widget", u"Bluetooth", None))
         self.bearing_refreshBtButton.setText("")
-        self.label_32.setText(QCoreApplication.translate("Settings_widget", u"Remote", None))
+        self.label_32.setText(QCoreApplication.translate("Settings_widget", u"Hardware", None))
         self.label_4.setText(QCoreApplication.translate("Settings_widget", u"Multimedia remote", None))
         self.label_10.setText(QCoreApplication.translate("Settings_widget", u"O", None))
         self.label_12.setText(QCoreApplication.translate("Settings_widget", u"I", None))
@@ -1767,5 +1829,9 @@ class Ui_Settings_widget(object):
         self.label_118.setText(QCoreApplication.translate("Settings_widget", u"O", None))
         self.label_119.setText(QCoreApplication.translate("Settings_widget", u"I", None))
         self.bearing_advancedGaugePowerCheckbox.setText("")
+        self.label_19.setText(QCoreApplication.translate("Settings_widget", u"Buttons", None))
+        self.label_20.setText(QCoreApplication.translate("Settings_widget", u"O", None))
+        self.label_24.setText(QCoreApplication.translate("Settings_widget", u"I", None))
+        self.bearing_remoteButtonsCheckbox.setText("")
     # retranslateUi
 
