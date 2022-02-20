@@ -50,6 +50,8 @@ class Gauge_funcs:
 
 	# Set speed in label and update progressbar
 	def setSpeed(self, speed):
+		if self.DEBUG: print("[*] Speed ", speed)
+
 
 		self.GUI_Dashboard.label_vel.setText(str(int(speed)))
 
