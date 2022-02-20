@@ -35,7 +35,7 @@ class Main_GUI:
 		self.GAUGE_ADS_CHANNEL = 0
 		self.VOLUME_ADS_CHANNEL = 1
 		self.GAIN = 1
-		self.MAX_ADS_VALUE = 32752*4/5
+		self.MAX_ADS_VALUE = 32000
 
 		# Setting media player
 		self.isConnectedDevice = False
