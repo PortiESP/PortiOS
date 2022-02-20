@@ -41,7 +41,7 @@ class Main_GUI:
 		self.isConnectedDevice = False
 		self.BTController = BT_Control_Panel()
 		self.startMediaPlayer()
-		self.startVolumeThread()
+		# self.startVolumeThread()
 		
 
 		# GPIO setup
