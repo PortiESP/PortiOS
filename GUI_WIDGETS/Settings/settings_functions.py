@@ -227,9 +227,23 @@ class Settings_funcs:
 	def remoteSetup(self):
 		def setup():
 			self.GUI_Settings.bearing_remoteMultimediaCheckbox.setChecked(self.getConfig('irr_power'))
+			self.GUI_Settings.bearing_remoteButtonsCheckbox.setChacked(self.getConfig('buttonsEnabled'))
 
 			if self.getConfig('irr_power'):
 				self.IRR.startIRR()
+			if self.getConfig('buttonsEnabled'):
+				startButtons()
+
+		def startButtons():
+			def callbackButtons(button):
+				print(f"Button: {button}")
+
+			for pin in self.pinsButtons:
+				gp.add_event_detect(pin, gp.RISING, callback=callbackButtons, args=((pin,)))
+
+		def stopButtons():
+			for pin in self.pinsButtons:
+				gp.remove_event_detect(pin)
 
 		def toggleMultimedia():
 			if self.GUI_Settings.bearing_remoteMultimediaCheckbox.isChecked():
@@ -237,8 +251,17 @@ class Settings_funcs:
 			else:
 				self.IRR.stopIRR()
 
+		def toggleButtons():
+			if self.GUI_Settings.bearing_remoteButtonsCheckbox.isChecked():
+				self.setConfig('buttonsEnabled', "true")
+				startButtons()
+			else:
+				self.setConfig('buttonsEnabled', "false")
+				stopButtons()
+
 		setup()
 		self.GUI_Settings.bearing_remoteMultimediaCheckbox.toggled.connect(toggleMultimedia)
+		self.GUI_Settings.bearing_remoteButtonsCheckbox.toggled.connect(toggleButtons)
 
 
 # ------------------------------------------------------------------------------------------------------

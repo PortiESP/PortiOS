@@ -37,9 +37,10 @@ class Main_GUI:
 		gp.setwarnings(False)
 
 		# Pins
-		self.pinsLeds = (40, 38, 36)
-		self.pinsPower = 32
-		self.pinsIRR = 22
+		self.pinsLeds = (33, 31, 29)
+		self.pinsPower = 26
+		self.pinsIRR = 32
+		self.pinsButtons = (40, 38, 36, 39, 35)
 
 
 		# Leds controller
