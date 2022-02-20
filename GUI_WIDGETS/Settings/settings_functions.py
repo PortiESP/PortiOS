@@ -383,7 +383,6 @@ class Settings_funcs:
 
 
 		def toggleGaugePower():
-			if self.DEBUG: print("gggggggggg")
 			if self.GUI_Settings.bearing_advancedGaugePowerCheckbox.isChecked():
 				Dashboard_funcs.startGauge(self)
 				self.setConfig('gauge_power', 'true')
