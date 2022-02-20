@@ -3,3 +3,4 @@ auto-power=false
 irr_power=false
 led_color=0,0,0
 home=Boadilla del monte
+buttonsEnabled=false
