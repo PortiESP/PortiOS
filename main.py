@@ -34,7 +34,7 @@ class Main_GUI:
 		self.adcController = Adafruit_ADS1x15.ADS1115(address=0x4A)
 		self.GAUGE_ADS_CHANNEL = 0
 		self.VOLUME_ADS_CHANNEL = 1
-		self.GAIN = 1
+		self.GAIN = 2
 		self.MAX_ADS_VALUE = 32000
 
 		# Setting media player
