@@ -273,7 +273,7 @@ class Main_GUI:
 			value=0
 			while 1:
 				
-				value = self.adcController.read_adc(1, gain=2/3)
+				value = int(self.adcController.read_adc(1, gain=2/3))
 				
 
 				if volume != value/28000*127: 
