@@ -40,7 +40,7 @@ class Main_GUI:
 		self.pinsLeds = (33, 31, 29)
 		self.pinsPower = 26
 		self.pinsIRR = 32
-		self.pinsButtons = (40, 38, 36, 39, 35)
+		self.pinsButtons = (40, 38, 36, 37, 35)
 
 
 		# Leds controller
