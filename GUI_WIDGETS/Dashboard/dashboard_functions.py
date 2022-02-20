@@ -36,7 +36,7 @@ class Dashboard_funcs:
 
 
 	def mapDigitalSpeed(self, value, maxValue=200):
-		value = int(value / maxValue) * self.GUI_Dashboard.TOP_SPEED
+		value = int(value / maxValue * self.GUI_Dashboard.TOP_SPEED)
 		return value
 
 	def startGauge(self):
