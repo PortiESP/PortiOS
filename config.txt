@@ -1,4 +1,4 @@
-gauge_power=false
+gauge_power=true
 auto-power=false
 irr_power=false
 led_color=0,0,0
