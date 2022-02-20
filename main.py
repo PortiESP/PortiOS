@@ -268,6 +268,7 @@ class Main_GUI:
 
 	def startVolumeThread(self):
 		def t():
+			print("[$] Started volume thread")
 			volume=0
 			while 1:
 				try:
