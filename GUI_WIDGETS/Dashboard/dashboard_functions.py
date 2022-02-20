@@ -50,7 +50,10 @@ class Dashboard_funcs:
 					except OSError:
 						print('ADS1x15 Not found')
 						continue
+					
 					speed = Dashboard_funcs.mapDigitalSpeed(self, value, maxValue=self.MAX_ADS_VALUE)
+					if self.DEBUG: print("[*] Speed ", value)
+					
 					try:
 						Gauge_funcs.setSpeed(self, speed)
 					except:
