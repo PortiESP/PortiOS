@@ -27,10 +27,18 @@ class Main_GUI:
 		self.setupConfig()
 
 
+		# ADC converter controller
+		self.adcController = Adafruit_ADS1x15.ADS1115()
+		self.GAUGE_ADS_CHANNEL = 0
+		self.VOLUME_ADS_CHANNEL = 1
+		self.MAX_ADS_VALUE = 32752
+
 		# Setting media player
 		self.isConnectedDevice = False
 		self.BTController = BT_Control_Panel()
 		self.startMediaPlayer()
+		self.startVolumeThread()
+		
 
 		# GPIO setup
 		gp.setmode(gp.BOARD)
@@ -46,11 +54,6 @@ class Main_GUI:
 		# Leds controller
 		self.ledsController = RGB_Controller(self.pinsLeds) # Pins
 
-		# ADC converter controller
-		self.adcController = Adafruit_ADS1x15.ADS1115()
-		self.GAUGE_ADS_CHANNEL = 0
-		self.VOLUME_ADS_CHANNEL = 1
-		self.MAX_ADS_VALUE = 32752
 
 		# IRReceive controller
 		self.IRR = IRReceiver(self.pinsIRR, self.IRRCallback)
