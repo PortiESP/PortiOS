@@ -512,7 +512,7 @@ QScrollBar:vertical {
      </rect>
     </property>
     <property name="currentIndex">
-     <number>3</number>
+     <number>9</number>
     </property>
     <widget class="QWidget" name="page_start">
      <widget class="QFrame" name="p_start_title">
@@ -3152,7 +3152,7 @@ QScrollBar:vertical {
          <rect>
           <x>0</x>
           <y>0</y>
-          <width>398</width>
+          <width>390</width>
           <height>440</height>
          </rect>
         </property>
@@ -4488,34 +4488,6 @@ QCheckBox::indicator:unchecked{
      <height>40</height>
     </rect>
    </property>
-   <widget class="QLabel" name="label_19">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>5</y>
-      <width>240</width>
-      <height>30</height>
-     </rect>
-    </property>
-    <property name="maximumSize">
-     <size>
-      <width>250</width>
-      <height>16777215</height>
-     </size>
-    </property>
-    <property name="font">
-     <font>
-      <family>Bahnschrift SemiLight</family>
-      <pointsize>13</pointsize>
-     </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">color:white;</string>
-    </property>
-    <property name="text">
-     <string>Buttons</string>
-    </property>
-   </widget>
    <widget class="QFrame" name="frame_cb_5">
     <property name="geometry">
      <rect>

@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'design_settingsjTwMvK.ui'
+## Form generated from reading UI file 'design_settingsytwRBY.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.14.1
 ##
@@ -1231,7 +1231,7 @@ class Ui_Settings_widget(object):
         self.scrollArea_4.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignTop)
         self.scrollAreaWidgetContents_7 = QWidget()
         self.scrollAreaWidgetContents_7.setObjectName(u"scrollAreaWidgetContents_7")
-        self.scrollAreaWidgetContents_7.setGeometry(QRect(0, 0, 398, 440))
+        self.scrollAreaWidgetContents_7.setGeometry(QRect(0, 0, 390, 440))
         self.scrollAreaWidgetContents_7.setMinimumSize(QSize(0, 440))
         self.frame_10 = QFrame(self.scrollAreaWidgetContents_7)
         self.frame_10.setObjectName(u"frame_10")
@@ -1660,12 +1660,6 @@ class Ui_Settings_widget(object):
         self.frame_4 = QFrame(Settings_widget)
         self.frame_4.setObjectName(u"frame_4")
         self.frame_4.setGeometry(QRect(350, 180, 370, 40))
-        self.label_19 = QLabel(self.frame_4)
-        self.label_19.setObjectName(u"label_19")
-        self.label_19.setGeometry(QRect(10, 5, 240, 30))
-        self.label_19.setMaximumSize(QSize(250, 16777215))
-        self.label_19.setFont(font1)
-        self.label_19.setStyleSheet(u"color:white;")
         self.frame_cb_5 = QFrame(self.frame_4)
         self.frame_cb_5.setObjectName(u"frame_cb_5")
         self.frame_cb_5.setGeometry(QRect(310, 0, 60, 40))
@@ -1719,7 +1713,7 @@ class Ui_Settings_widget(object):
 
         self.retranslateUi(Settings_widget)
 
-        self.stackedWidget_settings.setCurrentIndex(3)
+        self.stackedWidget_settings.setCurrentIndex(9)
 
 
         QMetaObject.connectSlotsByName(Settings_widget)
@@ -1829,7 +1823,6 @@ class Ui_Settings_widget(object):
         self.label_118.setText(QCoreApplication.translate("Settings_widget", u"O", None))
         self.label_119.setText(QCoreApplication.translate("Settings_widget", u"I", None))
         self.bearing_advancedGaugePowerCheckbox.setText("")
-        self.label_19.setText(QCoreApplication.translate("Settings_widget", u"Buttons", None))
         self.label_20.setText(QCoreApplication.translate("Settings_widget", u"O", None))
         self.label_24.setText(QCoreApplication.translate("Settings_widget", u"I", None))
         self.bearing_remoteButtonsCheckbox.setText("")
