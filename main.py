@@ -28,10 +28,10 @@ class Main_GUI:
 
 
 		# ADC converter controller
-		self.adcController = Adafruit_ADS1x15.ADS1115()
+		self.adcController = Adafruit_ADS1x15.ADS1115(address=0x4A, gain=2/3)
 		self.GAUGE_ADS_CHANNEL = 0
 		self.VOLUME_ADS_CHANNEL = 1
-		self.MAX_ADS_VALUE = 32752
+		self.MAX_ADS_VALUE = 28000
 
 		# Setting media player
 		self.isConnectedDevice = False
@@ -273,7 +273,7 @@ class Main_GUI:
 			value=0
 			while 1:
 				
-				value = self.adcController.read_adc(1, gain=2, data_rate=16)
+				value = self.adcController.read_adc(1)
 				
 
 				if volume != value/28000*127: 

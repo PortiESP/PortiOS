@@ -44,7 +44,7 @@ class Dashboard_funcs:
 			while self.GUI_Dashboard.gaugePower:
 				if self.GUI_Central.appsWidget.currentIndex() == 0:
 					try:
-						value = self.adcController.read_adc(self.GAUGE_ADS_CHANNEL, gain=2, data_rate=16)
+						value = self.adcController.read_adc(self.GAUGE_ADS_CHANNEL)
 					except OSError:
 						print('ADS1x15 Not found')
 						continue
