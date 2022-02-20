@@ -32,6 +32,7 @@ class Main_GUI:
 		self.GAUGE_ADS_CHANNEL = 0
 		self.VOLUME_ADS_CHANNEL = 1
 		self.MAX_ADS_VALUE = 28000
+		self.GAIN = 1
 
 		# Setting media player
 		self.isConnectedDevice = False
@@ -88,7 +89,8 @@ class Main_GUI:
 		Settings_funcs.settingsSetup(self)
 		Maps_funcs.mapSetup(self)
 
-
+		# Debug
+		self.DEBUG = True
 
 		
 
@@ -273,8 +275,8 @@ class Main_GUI:
 			value=0
 			while 1:
 				
-				value = self.adcController.read_adc(1, gain=1)
-				fvalue = int(value/28000*127)
+				value = self.adcController.read_adc(1, gain=self.GAIN)
+				fvalue = int(value/self.MAX_ADS_VALUE*127)
 
 				if volume != fvalue: 
 					print("[+] Set volume to ", fvalue)

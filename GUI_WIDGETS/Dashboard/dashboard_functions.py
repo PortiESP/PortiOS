@@ -41,10 +41,12 @@ class Dashboard_funcs:
 
 	def startGauge(self):
 		def gaugeThreadFunc():
+			if self.DEBUG: print("[$] Gauge started")
+			
 			while self.GUI_Dashboard.gaugePower:
 				if self.GUI_Central.appsWidget.currentIndex() == 0:
 					try:
-						value = self.adcController.read_adc(self.GAUGE_ADS_CHANNEL, gain=1)
+						value = self.adcController.read_adc(self.GAUGE_ADS_CHANNEL, gain=self.GAIN)
 					except OSError:
 						print('ADS1x15 Not found')
 						continue
