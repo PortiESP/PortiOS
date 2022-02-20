@@ -273,10 +273,10 @@ class Main_GUI:
 			value=0
 			while 1:
 				
-				value = int(self.adcController.read_adc(1, gain=2/3))
+				value = self.adcController.read_adc(1, gain=2/3)
 				
 
-				if volume != value/28000*127: 
+				if volume != int(value/28000*127): 
 					print("[+] Set volume to ", value/28000*127)
 					self.BTController.set_local_volume(value/28000*127, maxlevel=127)
 				time.sleep(0.1)
