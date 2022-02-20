@@ -272,10 +272,9 @@ class Main_GUI:
 			volume=0
 			value=0
 			while 1:
-				try:
-					value = self.adcController.read_adc(1)
-				except OSError:
-					print('ADS1x15 Not found')
+				
+				value = self.adcController.read_adc(1)
+				
 
 				if volume != value/28000*127: 
 					print("[+] Set volume to ", value/28000*127)
