@@ -50,13 +50,15 @@ class Dashboard_funcs:
 					except OSError:
 						print('ADS1x15 Not found')
 						continue
+					except:
+						if self.DEBUG: print("[!] ADS1x15 Error")
 					
 					speed = Dashboard_funcs.mapDigitalSpeed(self, value, maxValue=self.MAX_ADS_VALUE)
 
 					try:
 						Gauge_funcs.setSpeed(self, speed)
 					except:
-						print('Gauge exception')
+						if self.DEBUG: print('[!] Gauge exception')
 
 		self.GUI_Dashboard.gaugePower = True
 		self.GUI_Dashboard.gaugeThread = threading.Thread(target=gaugeThreadFunc)
