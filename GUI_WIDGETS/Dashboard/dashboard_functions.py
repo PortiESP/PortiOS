@@ -57,7 +57,6 @@ class Dashboard_funcs:
 						Gauge_funcs.setSpeed(self, speed)
 					except:
 						print('Gauge exception')
-					time.sleep(.1)
 
 		self.GUI_Dashboard.gaugePower = True
 		self.GUI_Dashboard.gaugeThread = threading.Thread(target=gaugeThreadFunc)

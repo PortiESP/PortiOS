@@ -41,7 +41,7 @@ class Main_GUI:
 		self.isConnectedDevice = False
 		self.BTController = BT_Control_Panel()
 		self.startMediaPlayer()
-		# self.startVolumeThread()
+		self.volume = 0
 		
 
 		# GPIO setup
@@ -270,28 +270,6 @@ class Main_GUI:
 			file.writelines(lines)
 
 
-	def startVolumeThread(self):
-		def t():
-			print("[$] Started volume thread")
-			volume=0
-			value=0
-			while 1:
-				
-				value = self.adcController.read_adc(1, gain=self.GAIN)
-				fvalue = int(value/self.MAX_ADS_VALUE*127)
-
-				if volume != fvalue: 
-					print("[+] Set volume to ", fvalue)
-					self.BTController.set_local_volume(fvalue, maxlevel=127)
-					volume = fvalue
-				time.sleep(0.1)
-				
-
-		threading.Thread(target=t).start()
-
-
-
-
 	def startMediaPlayer(self):
 		self.mediaPlayerThread = threading.Thread(target=self.mediaPlayerThreadFunc)
 		self.mediaPlayerThread.start()
@@ -343,6 +321,14 @@ class Main_GUI:
 
 			# Central clock
 			self.GUI_Central.label_clock.setText(time.strftime('%H:%M'))
+
+			# Volume
+			value = self.adcController.read_adc(1, gain=self.GAIN)
+			fvalue = int(value/self.MAX_ADS_VALUE*127)
+			if self.volume != fvalue: 
+				print("[+] Set volume to ", fvalue)
+				self.BTController.set_local_volume(fvalue, maxlevel=127)
+				self.volume = fvalue
 
 			# When device is connected
 			if checkDevice:
