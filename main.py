@@ -273,7 +273,7 @@ class Main_GUI:
 			value=0
 			while 1:
 				try:
-					value = self.adcController.read_adc(self.VOLUME_ADS_CHANNEL, gain=2, data_rate=16)
+					value = self.adcController.read_adc(0, gain=2, data_rate=16)
 				except OSError:
 					print('ADS1x15 Not found')
 
