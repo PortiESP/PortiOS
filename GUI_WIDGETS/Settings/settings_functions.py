@@ -227,7 +227,7 @@ class Settings_funcs:
 	def remoteSetup(self):
 		def setup():
 			self.GUI_Settings.bearing_remoteMultimediaCheckbox.setChecked(self.getConfig('irr_power'))
-			self.GUI_Settings.bearing_remoteButtonsCheckbox.setChacked(self.getConfig('buttonsEnabled'))
+			self.GUI_Settings.bearing_remoteButtonsCheckbox.setChecked(self.getConfig('buttonsEnabled'))
 
 			if self.getConfig('irr_power'):
 				self.IRR.startIRR()
